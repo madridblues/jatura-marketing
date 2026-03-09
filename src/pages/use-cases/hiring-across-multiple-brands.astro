@@ -1,0 +1,508 @@
+---
+export const prerender = true;
+import MarketingLayout from '@/layouts/MarketingLayout.astro';
+import { ArrowRight, Building2, CheckCircle, Layers, BarChart3, Repeat, Users, FileText, Database } from 'lucide-react';
+import { Button } from '@/components/ui/button';
+import { Badge } from '@/components/ui/badge';
+
+const title = "Multi-Brand Hiring Solution | Jatura ATS";
+const description = "Hire across multiple brands and subsidiaries from one Jatura workspace. Separate pipelines, custom career sites, and branded candidate communications for each entity — all in one account.";
+
+const schemaOrg = [
+  {
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://jatura.com" },
+      { "@type": "ListItem", "position": 2, "name": "Use Cases", "item": "https://jatura.com/use-cases" },
+      { "@type": "ListItem", "position": 3, "name": "Multi-Brand Hiring", "item": "https://jatura.com/use-cases/hiring-across-multiple-brands" }
+    ]
+  },
+  {
+    "@type": "WebPage",
+    "name": "Multi-Brand Hiring Solution | Jatura ATS",
+    "description": "Hire across multiple brands and subsidiaries from one Jatura workspace. Separate pipelines, custom career sites, and branded candidate communications for each entity — all in one account.",
+    "url": "https://jatura.com/use-cases/hiring-across-multiple-brands"
+  }
+];
+---
+
+<MarketingLayout {title} {description} {schemaOrg}>
+
+      {/* Hero Section */}
+      <section class="pt-24 pb-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-slate-50 to-white dark:from-slate-950/20 dark:to-slate-950">
+        <div class="max-w-5xl mx-auto">
+          <a href="/use-cases">
+            <Button variant="ghost" class="mb-6 -ml-4">
+              ← Back to all use cases
+            </Button>
+          </a>
+          
+          <Badge
+            variant="secondary"
+            class="mb-6 px-5 py-2 text-sm font-medium bg-slate-100 dark:bg-slate-900/30 text-slate-900 dark:text-slate-100"
+          >
+            <Building2 class="w-4 h-4 mr-2" />
+            Hiring Across Multiple Brands
+          </Badge>
+          
+          <h1 class="text-5xl sm:text-6xl font-bold text-slate-900 dark:text-white mb-6 leading-tight">
+            One platform, many brands,<br />unified talent
+          </h1>
+          
+          <p class="text-xl sm:text-2xl text-slate-600 dark:text-slate-400 mb-8 leading-relaxed">
+            Whether you're managing a portfolio of brands or integrating acquired companies, Jatura makes it easy to recruit under multiple identities while keeping everything connected, compliant, and easy to manage.
+          </p>
+
+          <div class="grid md:grid-cols-3 gap-6 mb-10">
+            <div class="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-900/30 rounded-xl p-6">
+              <div class="text-3xl font-bold text-emerald-600 mb-2">∞</div>
+              <div class="text-sm text-slate-600 dark:text-slate-400">Unlimited brands in one ATS</div>
+            </div>
+            <div class="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-900/30 rounded-xl p-6">
+              <div class="text-3xl font-bold text-emerald-600 mb-2">1</div>
+              <div class="text-sm text-slate-600 dark:text-slate-400">Unified talent pool across all brands</div>
+            </div>
+            <div class="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-900/30 rounded-xl p-6">
+              <div class="text-3xl font-bold text-emerald-600 mb-2">100%</div>
+              <div class="text-sm text-slate-600 dark:text-slate-400">Brand customization for each career site</div>
+            </div>
+          </div>
+
+          <div class="flex flex-col sm:flex-row gap-4">
+            <a href="/login">
+              <Button
+                size="lg"
+                class="bg-emerald-600 hover:bg-emerald-700 text-white px-10 py-6 text-lg group shadow-lg"
+              >
+                Start free trial
+                <ArrowRight class="ml-2 h-5 w-5 group-hover:translate-x-1 transition" />
+              </Button>
+            </a>
+            <a href="/pricing">
+              <Button
+                size="lg"
+                variant="outline"
+                class="px-10 py-6 text-lg border-slate-300 dark:border-slate-700"
+              >
+                View pricing
+              </Button>
+            </a>
+          </div>
+        </div>
+      </section>
+
+      {/* Problem Statement */}
+      <section class="py-20 px-4 sm:px-6 lg:px-8">
+        <div class="max-w-5xl mx-auto">
+          <h2 class="text-4xl font-bold text-slate-900 dark:text-white mb-6">
+            The multi-brand hiring challenge
+          </h2>
+          <p class="text-xl text-slate-600 dark:text-slate-400 mb-12">
+            Portfolio companies, holding groups, and multi-brand organizations need distinct recruitment identities without fragmenting their talent operations.
+          </p>
+
+          <div class="grid md:grid-cols-2 gap-6">
+            <div class="bg-slate-50 dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-xl p-6">
+              <div class="w-12 h-12 bg-red-100 dark:bg-red-900/20 rounded-lg flex items-center justify-center mb-4">
+                <Layers class="w-6 h-6 text-red-600 dark:text-red-400" />
+              </div>
+              <h3 class="text-xl font-semibold text-slate-900 dark:text-white mb-3">
+                Fragmented systems
+              </h3>
+              <p class="text-slate-600 dark:text-slate-400">
+                Running separate ATS platforms for each brand creates data silos, duplicates costs, and prevents cross-brand talent sharing. Reporting and compliance become nightmares.
+              </p>
+            </div>
+
+            <div class="bg-slate-50 dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-xl p-6">
+              <div class="w-12 h-12 bg-red-100 dark:bg-red-900/20 rounded-lg flex items-center justify-center mb-4">
+                <Users class="w-6 h-6 text-red-600 dark:text-red-400" />
+              </div>
+              <h3 class="text-xl font-semibold text-slate-900 dark:text-white mb-3">
+                Losing qualified candidates
+              </h3>
+              <p class="text-slate-600 dark:text-slate-400">
+                A candidate who's not quite right for Brand A might be perfect for Brand B. Without a unified talent pool, you lose these opportunities and force candidates to reapply separately.
+              </p>
+            </div>
+
+            <div class="bg-slate-50 dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-xl p-6">
+              <div class="w-12 h-12 bg-red-100 dark:bg-red-900/20 rounded-lg flex items-center justify-center mb-4">
+                <FileText class="w-6 h-6 text-red-600 dark:text-red-400" />
+              </div>
+              <h3 class="text-xl font-semibold text-slate-900 dark:text-white mb-3">
+                Inconsistent processes
+              </h3>
+              <p class="text-slate-600 dark:text-slate-400">
+                Each brand develops its own workflows, interview questions, and evaluation criteria. This creates compliance gaps, inconsistent candidate experiences, and makes it impossible to compare hiring performance.
+              </p>
+            </div>
+
+            <div class="bg-slate-50 dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-xl p-6">
+              <div class="w-12 h-12 bg-red-100 dark:bg-red-900/20 rounded-lg flex items-center justify-center mb-4">
+                <BarChart3 class="w-6 h-6 text-red-600 dark:text-red-400" />
+              </div>
+              <h3 class="text-xl font-semibold text-slate-900 dark:text-white mb-3">
+                No portfolio-wide visibility
+              </h3>
+              <p class="text-slate-600 dark:text-slate-400">
+                Corporate HR teams can't see hiring performance across the portfolio. No way to identify best practices, compare metrics, or allocate recruiting resources strategically.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* How Jatura Solves It */}
+      <section class="py-20 px-4 sm:px-6 lg:px-8 bg-slate-50 dark:bg-slate-950/10">
+        <div class="max-w-5xl mx-auto">
+          <h2 class="text-4xl font-bold text-slate-900 dark:text-white mb-4 text-center">
+            How Jatura solves multi-brand hiring
+          </h2>
+          <p class="text-xl text-slate-600 dark:text-slate-400 text-center mb-12">
+            Centralize the backend, customize the front-end. Best of both worlds.
+          </p>
+
+          <div class="space-y-8">
+            <div class="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-900/30 rounded-2xl p-8">
+              <div class="flex items-start gap-6">
+                <div class="w-14 h-14 bg-slate-100 dark:bg-slate-900/30 rounded-xl flex items-center justify-center flex-shrink-0">
+                  <Building2 class="w-7 h-7 text-emerald-600" />
+                </div>
+                <div>
+                  <h3 class="text-2xl font-bold text-slate-900 dark:text-white mb-3">
+                    Separate branded career sites
+                  </h3>
+                  <p class="text-lg text-slate-600 dark:text-slate-400 mb-4">
+                    Create unique career sites for each brand with custom domains, logos, colors, messaging, and job listings. Candidates experience each brand authentically while all applications flow into one centralized system.
+                  </p>
+                  <ul class="space-y-2">
+                    <li class="flex items-start gap-2">
+                      <CheckCircle class="w-5 h-5 text-emerald-600 flex-shrink-0 mt-0.5" />
+                      <span class="text-slate-600 dark:text-slate-400">Fully customizable branding per brand (colors, logos, fonts)</span>
+                    </li>
+                    <li class="flex items-start gap-2">
+                      <CheckCircle class="w-5 h-5 text-emerald-600 flex-shrink-0 mt-0.5" />
+                      <span class="text-slate-600 dark:text-slate-400">Custom domains (careers.brandA.com, jobs.brandB.com)</span>
+                    </li>
+                    <li class="flex items-start gap-2">
+                      <CheckCircle class="w-5 h-5 text-emerald-600 flex-shrink-0 mt-0.5" />
+                      <span class="text-slate-600 dark:text-slate-400">Brand-specific messaging and employer value propositions</span>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            <div class="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-900/30 rounded-2xl p-8">
+              <div class="flex items-start gap-6">
+                <div class="w-14 h-14 bg-slate-100 dark:bg-slate-900/30 rounded-xl flex items-center justify-center flex-shrink-0">
+                  <Database class="w-7 h-7 text-emerald-600" />
+                </div>
+                <div>
+                  <h3 class="text-2xl font-bold text-slate-900 dark:text-white mb-3">
+                    Unified talent pool
+                  </h3>
+                  <p class="text-lg text-slate-600 dark:text-slate-400 mb-4">
+                    All candidates from all brands flow into one centralized database. Tag by brand preference, skills, location, and more. Enable cross-brand sourcing—candidates who applied to Brand A can be considered for Brand B opportunities.
+                  </p>
+                  <ul class="space-y-2">
+                    <li class="flex items-start gap-2">
+                      <CheckCircle class="w-5 h-5 text-emerald-600 flex-shrink-0 mt-0.5" />
+                      <span class="text-slate-600 dark:text-slate-400">Single candidate database across all brands</span>
+                    </li>
+                    <li class="flex items-start gap-2">
+                      <CheckCircle class="w-5 h-5 text-emerald-600 flex-shrink-0 mt-0.5" />
+                      <span class="text-slate-600 dark:text-slate-400">Cross-brand candidate matching and recommendations</span>
+                    </li>
+                    <li class="flex items-start gap-2">
+                      <CheckCircle class="w-5 h-5 text-emerald-600 flex-shrink-0 mt-0.5" />
+                      <span class="text-slate-600 dark:text-slate-400">Flexible permissions: brand-specific or portfolio-wide access</span>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            <div class="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-900/30 rounded-2xl p-8">
+              <div class="flex items-start gap-6">
+                <div class="w-14 h-14 bg-slate-100 dark:bg-slate-900/30 rounded-xl flex items-center justify-center flex-shrink-0">
+                  <Repeat class="w-7 h-7 text-emerald-600" />
+                </div>
+                <div>
+                  <h3 class="text-2xl font-bold text-slate-900 dark:text-white mb-3">
+                    Customizable workflows per brand
+                  </h3>
+                  <p class="text-lg text-slate-600 dark:text-slate-400 mb-4">
+                    Each brand can have unique hiring workflows, pipeline stages, interview processes, and approval chains—while maintaining standardized evaluation criteria and compliance requirements across the portfolio.
+                  </p>
+                  <ul class="space-y-2">
+                    <li class="flex items-start gap-2">
+                      <CheckCircle class="w-5 h-5 text-emerald-600 flex-shrink-0 mt-0.5" />
+                      <span class="text-slate-600 dark:text-slate-400">Brand-specific pipeline stages and workflows</span>
+                    </li>
+                    <li class="flex items-start gap-2">
+                      <CheckCircle class="w-5 h-5 text-emerald-600 flex-shrink-0 mt-0.5" />
+                      <span class="text-slate-600 dark:text-slate-400">Standardized compliance and evaluation templates</span>
+                    </li>
+                    <li class="flex items-start gap-2">
+                      <CheckCircle class="w-5 h-5 text-emerald-600 flex-shrink-0 mt-0.5" />
+                      <span class="text-slate-600 dark:text-slate-400">Custom approval chains per brand hierarchy</span>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            <div class="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-900/30 rounded-2xl p-8">
+              <div class="flex items-start gap-6">
+                <div class="w-14 h-14 bg-slate-100 dark:bg-slate-900/30 rounded-xl flex items-center justify-center flex-shrink-0">
+                  <BarChart3 class="w-7 h-7 text-emerald-600" />
+                </div>
+                <div>
+                  <h3 class="text-2xl font-bold text-slate-900 dark:text-white mb-3">
+                    Consolidated portfolio analytics
+                  </h3>
+                  <p class="text-lg text-slate-600 dark:text-slate-400 mb-4">
+                    Get portfolio-wide visibility with consolidated reporting. Compare hiring performance across brands, identify best practices, track diversity metrics, and allocate recruiting resources strategically—all from one dashboard.
+                  </p>
+                  <ul class="space-y-2">
+                    <li class="flex items-start gap-2">
+                      <CheckCircle class="w-5 h-5 text-emerald-600 flex-shrink-0 mt-0.5" />
+                      <span class="text-slate-600 dark:text-slate-400">Brand-by-brand performance dashboards</span>
+                    </li>
+                    <li class="flex items-start gap-2">
+                      <CheckCircle class="w-5 h-5 text-emerald-600 flex-shrink-0 mt-0.5" />
+                      <span class="text-slate-600 dark:text-slate-400">Cross-brand hiring metrics comparisons</span>
+                    </li>
+                    <li class="flex items-start gap-2">
+                      <CheckCircle class="w-5 h-5 text-emerald-600 flex-shrink-0 mt-0.5" />
+                      <span class="text-slate-600 dark:text-slate-400">Unified compliance reporting across portfolio</span>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            <div class="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-900/30 rounded-2xl p-8">
+              <div class="flex items-start gap-6">
+                <div class="w-14 h-14 bg-slate-100 dark:bg-slate-900/30 rounded-xl flex items-center justify-center flex-shrink-0">
+                  <Users class="w-7 h-7 text-emerald-600" />
+                </div>
+                <div>
+                  <h3 class="text-2xl font-bold text-slate-900 dark:text-white mb-3">
+                    Flexible user permissions
+                  </h3>
+                  <p class="text-lg text-slate-600 dark:text-slate-400 mb-4">
+                    Give brand hiring managers access to their brand only. Give corporate HR teams portfolio-wide visibility. Enable talent sharing with granular permissions. All on unlimited user plans—no per-seat fees.
+                  </p>
+                  <ul class="space-y-2">
+                    <li class="flex items-start gap-2">
+                      <CheckCircle class="w-5 h-5 text-emerald-600 flex-shrink-0 mt-0.5" />
+                      <span class="text-slate-600 dark:text-slate-400">Brand-specific or portfolio-wide access levels</span>
+                    </li>
+                    <li class="flex items-start gap-2">
+                      <CheckCircle class="w-5 h-5 text-emerald-600 flex-shrink-0 mt-0.5" />
+                      <span class="text-slate-600 dark:text-slate-400">Unlimited users—no per-seat costs</span>
+                    </li>
+                    <li class="flex items-start gap-2">
+                      <CheckCircle class="w-5 h-5 text-emerald-600 flex-shrink-0 mt-0.5" />
+                      <span class="text-slate-600 dark:text-slate-400">Role-based permissions for hiring teams</span>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* How It Works */}
+      <section class="py-20 px-4 sm:px-6 lg:px-8">
+        <div class="max-w-5xl mx-auto">
+          <h2 class="text-4xl font-bold text-slate-900 dark:text-white mb-12 text-center">
+            How it works
+          </h2>
+
+          <div class="space-y-8">
+            <div class="flex gap-6">
+              <div class="flex-shrink-0">
+                <div class="w-12 h-12 bg-emerald-600 rounded-full flex items-center justify-center text-white font-bold text-lg">
+                  1
+                </div>
+              </div>
+              <div>
+                <h3 class="text-xl font-bold text-slate-900 dark:text-white mb-2">
+                  Set up your brands
+                </h3>
+                <p class="text-slate-600 dark:text-slate-400">
+                  Create a profile for each brand in your portfolio. Upload logos, define brand colors, set custom domains, and configure unique employer value propositions for each career site.
+                </p>
+              </div>
+            </div>
+
+            <div class="flex gap-6">
+              <div class="flex-shrink-0">
+                <div class="w-12 h-12 bg-emerald-600 rounded-full flex items-center justify-center text-white font-bold text-lg">
+                  2
+                </div>
+              </div>
+              <div>
+                <h3 class="text-xl font-bold text-slate-900 dark:text-white mb-2">
+                  Customize workflows and permissions
+                </h3>
+                <p class="text-slate-600 dark:text-slate-400">
+                  Configure brand-specific hiring workflows, pipeline stages, and interview processes. Set user permissions—brand managers see only their brand, corporate HR sees everything.
+                </p>
+              </div>
+            </div>
+
+            <div class="flex gap-6">
+              <div class="flex-shrink-0">
+                <div class="w-12 h-12 bg-emerald-600 rounded-full flex items-center justify-center text-white font-bold text-lg">
+                  3
+                </div>
+              </div>
+              <div>
+                <h3 class="text-xl font-bold text-slate-900 dark:text-white mb-2">
+                  Post jobs and receive applications
+                </h3>
+                <p class="text-slate-600 dark:text-slate-400">
+                  Create job postings under any brand. Candidates apply through branded career sites. All applications automatically flow into your unified talent database, tagged by brand and source.
+                </p>
+              </div>
+            </div>
+
+            <div class="flex gap-6">
+              <div class="flex-shrink-0">
+                <div class="w-12 h-12 bg-emerald-600 rounded-full flex items-center justify-center text-white font-bold text-lg">
+                  4
+                </div>
+              </div>
+              <div>
+                <h3 class="text-xl font-bold text-slate-900 dark:text-white mb-2">
+                  Source across brands
+                </h3>
+                <p class="text-slate-600 dark:text-slate-400">
+                  When a candidate isn't quite right for Brand A, search the unified talent pool to find opportunities at Brand B or C. AI suggests cross-brand matches automatically.
+                </p>
+              </div>
+            </div>
+
+            <div class="flex gap-6">
+              <div class="flex-shrink-0">
+                <div class="w-12 h-12 bg-emerald-600 rounded-full flex items-center justify-center text-white font-bold text-lg">
+                  5
+                </div>
+              </div>
+              <div>
+                <h3 class="text-xl font-bold text-slate-900 dark:text-white mb-2">
+                  Analyze and optimize across portfolio
+                </h3>
+                <p class="text-slate-600 dark:text-slate-400">
+                  View consolidated analytics across all brands. Compare time-to-hire, cost-per-hire, source effectiveness, and quality-of-hire. Identify best practices and replicate them across the portfolio.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Ideal For */}
+      <section class="py-20 px-4 sm:px-6 lg:px-8 bg-slate-50 dark:bg-slate-900/50">
+        <div class="max-w-5xl mx-auto">
+          <h2 class="text-4xl font-bold text-slate-900 dark:text-white mb-12 text-center">
+            Perfect for
+          </h2>
+
+          <div class="grid md:grid-cols-2 gap-6">
+            <div class="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-xl p-6">
+              <h3 class="text-xl font-semibold text-slate-900 dark:text-white mb-3">
+                Portfolio Companies & PE-Backed Firms
+              </h3>
+              <p class="text-slate-600 dark:text-slate-400">
+                Managing recruitment across 3-20+ portfolio brands. Need consolidated reporting for investors while maintaining brand independence.
+              </p>
+            </div>
+
+            <div class="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-xl p-6">
+              <h3 class="text-xl font-semibold text-slate-900 dark:text-white mb-3">
+                Holding Companies
+              </h3>
+              <p class="text-slate-600 dark:text-slate-400">
+                Parent company with multiple subsidiary brands. Corporate HR needs visibility across all entities with standardized compliance and reporting.
+              </p>
+            </div>
+
+            <div class="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-xl p-6">
+              <h3 class="text-xl font-semibold text-slate-900 dark:text-white mb-3">
+                Multi-Brand Retail & Hospitality
+              </h3>
+              <p class="text-slate-600 dark:text-slate-400">
+                Operating multiple restaurant concepts, hotel brands, or retail chains. Each brand needs distinct recruiting identity but shared talent operations.
+              </p>
+            </div>
+
+            <div class="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-xl p-6">
+              <h3 class="text-xl font-semibold text-slate-900 dark:text-white mb-3">
+                Post-Acquisition Integration
+              </h3>
+              <p class="text-slate-600 dark:text-slate-400">
+                Acquired companies maintaining separate brands during integration. Need to consolidate recruiting operations while preserving brand identities.
+              </p>
+            </div>
+
+            <div class="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-xl p-6">
+              <h3 class="text-xl font-semibold text-slate-900 dark:text-white mb-3">
+                Franchise Organizations
+              </h3>
+              <p class="text-slate-600 dark:text-slate-400">
+                Corporate support for franchise hiring across multiple locations. Maintain brand consistency while enabling local hiring autonomy.
+              </p>
+            </div>
+
+            <div class="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-xl p-6">
+              <h3 class="text-xl font-semibold text-slate-900 dark:text-white mb-3">
+                Conglomerates
+              </h3>
+              <p class="text-slate-600 dark:text-slate-400">
+                Diversified companies with brands across multiple industries. Need flexibility for brand-specific recruiting strategies with centralized governance.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* CTA Section */}
+      <section class="py-28 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-emerald-600 to-emerald-700">
+        <div class="max-w-4xl mx-auto text-center">
+          <h2 class="text-4xl sm:text-5xl font-bold text-white mb-6">
+            Ready to unify your multi-brand hiring?
+          </h2>
+          <p class="text-xl text-slate-50 mb-10">
+            Join portfolio companies managing recruitment across dozens of brands with one powerful platform.
+          </p>
+          <div class="flex flex-col sm:flex-row gap-4 justify-center">
+            <a href="/login">
+              <Button
+                size="lg"
+                class="bg-white text-emerald-600 hover:bg-slate-50 px-10 py-6 text-lg"
+              >
+                Start free trial
+                <ArrowRight class="ml-2 h-5 w-5" />
+              </Button>
+            </a>
+            <a href="/pricing">
+              <Button
+                size="lg"
+                variant="outline"
+                class="px-10 py-6 text-lg border-white text-white hover:bg-emerald-600"
+              >
+                View pricing
+              </Button>
+            </a>
+          </div>
+        </div>
+      </section>
+
+</MarketingLayout>

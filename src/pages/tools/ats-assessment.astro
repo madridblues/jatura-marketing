@@ -1,0 +1,32 @@
+---
+export const prerender = true;
+import MarketingLayout from '@/layouts/MarketingLayout.astro';
+import ATSAssessmentPage from '@/components/islands/ATSAssessmentPage';
+
+const title = "Free ATS Assessment Tool | Evaluate Your Hiring Process | Jatura";
+const description = "Free ATS assessment tool to evaluate your hiring maturity. Get personalized recommendations to improve your recruitment process. 12-question quiz takes 5 minutes.";
+
+const schemaOrg = [
+  {
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://jatura.com" },
+      { "@type": "ListItem", "position": 2, "name": "Free Recruiting Tools", "item": "https://jatura.com/tools" },
+      { "@type": "ListItem", "position": 3, "name": "ATS Assessment", "item": "https://jatura.com/tools/ats-assessment" }
+    ]
+  },
+  {
+    "@type": "WebApplication",
+    "name": "Free ATS Assessment Quiz",
+    "applicationCategory": "BusinessApplication",
+    "operatingSystem": "Web",
+    "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
+    "description": "Free quiz to evaluate your hiring maturity and get personalized ATS recommendations",
+    "url": "https://jatura.com/tools/ats-assessment"
+  }
+];
+---
+
+<MarketingLayout {title} {description} {schemaOrg}>
+  <ATSAssessmentPage client:load />
+</MarketingLayout>

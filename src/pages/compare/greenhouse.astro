@@ -1,0 +1,693 @@
+---
+export const prerender = true;
+import MarketingLayout from '@/layouts/MarketingLayout.astro';
+import { ArrowRight, CheckCircle, XCircle, MinusCircle, DollarSign, Users, Zap, TrendingUp, Scale, Building2 } from 'lucide-react';
+import { Button } from '@/components/ui/button';
+import { Badge } from '@/components/ui/badge';
+
+const title = "Jatura vs Greenhouse - Honest ATS Comparison 2025";
+const description = "Jatura vs Greenhouse: honest 2025 ATS comparison of features, pricing, AI tools, and onboarding time. Find out which recruiting platform fits your team size and growth stage.";
+
+const schemaOrg = [
+  {
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://jatura.com" },
+      { "@type": "ListItem", "position": 2, "name": "Compare ATS", "item": "https://jatura.com/compare" },
+      { "@type": "ListItem", "position": 3, "name": "Jatura vs Greenhouse", "item": "https://jatura.com/compare/greenhouse" }
+    ]
+  },
+  {
+    "@type": "WebPage",
+    "name": "Jatura vs Greenhouse - ATS Comparison 2025",
+    "description": "Detailed feature, pricing, and AI capability comparison between Jatura and Greenhouse",
+    "url": "https://jatura.com/compare/greenhouse",
+    "about": [
+      { "@type": "SoftwareApplication", "name": "Jatura", "applicationCategory": "BusinessApplication" },
+      { "@type": "SoftwareApplication", "name": "Greenhouse", "applicationCategory": "BusinessApplication" }
+    ]
+  }
+];
+---
+
+<MarketingLayout {title} {description} {schemaOrg}>
+
+      {/* Hero Section */}
+      <section class="pt-24 pb-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-slate-50 to-white dark:from-slate-900/50 dark:to-slate-950">
+        <div class="max-w-5xl mx-auto">
+          <a href="/compare">
+            <Button variant="ghost" class="mb-6 -ml-4">
+              ← Back to all comparisons
+            </Button>
+          </a>
+          
+          <Badge
+            variant="secondary"
+            class="mb-6 px-5 py-2 text-sm font-medium bg-slate-100 dark:bg-slate-800 text-slate-900 dark:text-slate-100"
+          >
+            <Scale class="w-4 h-4 mr-2" />
+            Honest Comparison
+          </Badge>
+          
+          <h1 class="text-5xl sm:text-6xl font-bold text-slate-900 dark:text-white mb-6 leading-tight">
+            Jatura vs Greenhouse
+          </h1>
+          
+          <p class="text-xl sm:text-2xl text-slate-600 dark:text-slate-400 mb-8 leading-relaxed">
+            Greenhouse is a premium ATS for enterprise teams. Jatura gives you the same power—structured hiring, AI features, advanced analytics—at a fraction of the cost, with transparent pricing and faster setup.
+          </p>
+
+          <div class="bg-slate-100 dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-2xl p-8 mb-8">
+            <h3 class="text-lg font-semibold text-slate-900 dark:text-white mb-4">
+              TL;DR
+            </h3>
+            <div class="space-y-3 text-slate-600 dark:text-slate-400">
+              <p>
+                <strong class="text-slate-900 dark:text-white">Greenhouse</strong> is excellent for large enterprises with complex hiring needs and $10K+ budgets. It offers comprehensive features, strong DEI tools, and 500+ integrations—but requires significant setup time and dedicated admin resources.
+              </p>
+              <p>
+                <strong class="text-slate-900 dark:text-white">Jatura</strong> delivers the same core capabilities—AI screening, structured interviews, advanced analytics—at $99-$299/month with transparent pricing. You get faster implementation, built-in AI (not add-ons), and a modern UX without the enterprise complexity.
+              </p>
+            </div>
+          </div>
+
+          <div class="flex flex-col sm:flex-row gap-4">
+            <a href="/login">
+              <Button
+                size="lg"
+                class="bg-slate-900 dark:bg-white text-white dark:text-slate-900 hover:bg-slate-800 dark:hover:bg-slate-100 px-10 py-6 text-lg group shadow-lg"
+              >
+                Try Jatura free
+                <ArrowRight class="ml-2 h-5 w-5 group-hover:translate-x-1 transition" />
+              </Button>
+            </a>
+            <a href="/pricing">
+              <Button
+                size="lg"
+                variant="outline"
+                class="px-10 py-6 text-lg border-slate-300 dark:border-slate-700"
+              >
+                View pricing
+              </Button>
+            </a>
+          </div>
+        </div>
+      </section>
+
+      {/* What Greenhouse Does Well */}
+      <section class="py-20 px-4 sm:px-6 lg:px-8">
+        <div class="max-w-5xl mx-auto">
+          <div class="flex items-center gap-3 mb-8">
+            <TrendingUp class="w-8 h-8 text-emerald-600" />
+            <h2 class="text-4xl font-bold text-slate-900 dark:text-white">
+              What Greenhouse does well
+            </h2>
+          </div>
+          
+          <p class="text-lg text-slate-600 dark:text-slate-400 mb-8">
+            Greenhouse is a mature, feature-rich platform trusted by 7,500+ companies. Here's where they excel:
+          </p>
+
+          <div class="grid md:grid-cols-2 gap-6">
+            <div class="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-xl p-6">
+              <h3 class="text-xl font-semibold text-slate-900 dark:text-white mb-3">
+                Enterprise-grade infrastructure
+              </h3>
+              <p class="text-slate-600 dark:text-slate-400">
+                Proven scalability for companies hiring hundreds of people. Handles complex workflows, multiple locations, and high-volume recruiting without performance issues (most of the time).
+              </p>
+            </div>
+
+            <div class="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-xl p-6">
+              <h3 class="text-xl font-semibold text-slate-900 dark:text-white mb-3">
+                Structured hiring methodology
+              </h3>
+              <p class="text-slate-600 dark:text-slate-400">
+                Industry-leading interview kits, scorecards, and standardized evaluation frameworks that reduce bias and improve hiring consistency across teams.
+              </p>
+            </div>
+
+            <div class="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-xl p-6">
+              <h3 class="text-xl font-semibold text-slate-900 dark:text-white mb-3">
+                500+ integrations
+              </h3>
+              <p class="text-slate-600 dark:text-slate-400">
+                Massive marketplace of pre-built connectors with HRIS systems (Workday, BambooHR), job boards, background check providers, assessment tools, and video platforms.
+              </p>
+            </div>
+
+            <div class="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-xl p-6">
+              <h3 class="text-xl font-semibold text-slate-900 dark:text-white mb-3">
+                Strong DEI focus
+              </h3>
+              <p class="text-slate-600 dark:text-slate-400">
+                Built-in diversity tracking, anonymized resumes, bias reduction tools, and comprehensive EEOC/GDPR compliance features—important for regulated industries.
+              </p>
+            </div>
+
+            <div class="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-xl p-6">
+              <h3 class="text-xl font-semibold text-slate-900 dark:text-white mb-3">
+                Comprehensive analytics
+              </h3>
+              <p class="text-slate-600 dark:text-slate-400">
+                40+ pre-built reports with real-time dashboards, source effectiveness tracking, time-to-hire metrics, and predictive analytics for data-driven recruiting.
+              </p>
+            </div>
+
+            <div class="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-xl p-6">
+              <h3 class="text-xl font-semibold text-slate-900 dark:text-white mb-3">
+                Global capabilities
+              </h3>
+              <p class="text-slate-600 dark:text-slate-400">
+                Job boards in 19 languages, interview support in 6 languages, and multi-region deployment for companies with international hiring needs.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Where Greenhouse Falls Short */}
+      <section class="py-20 px-4 sm:px-6 lg:px-8 bg-slate-50 dark:bg-slate-900/50">
+        <div class="max-w-5xl mx-auto">
+          <div class="flex items-center gap-3 mb-8">
+            <XCircle class="w-8 h-8 text-red-600" />
+            <h2 class="text-4xl font-bold text-slate-900 dark:text-white">
+              Where Greenhouse falls short
+            </h2>
+          </div>
+          
+          <p class="text-lg text-slate-600 dark:text-slate-400 mb-8">
+            Based on real customer reviews and user feedback, here are the common pain points teams face:
+          </p>
+
+          <div class="space-y-6">
+            <div class="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-xl p-6">
+              <div class="flex items-start gap-4">
+                <DollarSign class="w-6 h-6 text-red-600 flex-shrink-0 mt-1" />
+                <div>
+                  <h3 class="text-xl font-semibold text-slate-900 dark:text-white mb-2">
+                    Expensive with hidden costs
+                  </h3>
+                  <p class="text-slate-600 dark:text-slate-400 mb-3">
+                    Pricing starts at $6,000-$10,000/year for small teams, median cost is $12,250/year, and can reach $70,000+ for enterprises. No transparent pricing on website—you must contact sales for quotes. Many integrations and advanced features cost extra.
+                  </p>
+                  <p class="text-sm italic text-slate-500 dark:text-slate-500">
+                    "It's expensive for small businesses" — Verified Capterra review
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div class="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-xl p-6">
+              <div class="flex items-start gap-4">
+                <Building2 class="w-6 h-6 text-red-600 flex-shrink-0 mt-1" />
+                <div>
+                  <h3 class="text-xl font-semibold text-slate-900 dark:text-white mb-2">
+                    Complex setup and steep learning curve
+                  </h3>
+                  <p class="text-slate-600 dark:text-slate-400 mb-3">
+                    Implementation requires significant time and dedicated admin resources. Not plug-and-play—you need technical expertise to configure workflows, permissions, and custom fields. Overwhelming for lean recruiting teams.
+                  </p>
+                  <p class="text-sm italic text-slate-500 dark:text-slate-500">
+                    "The interface would take time to learn...complex setup" — Software Advice review
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div class="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-xl p-6">
+              <div class="flex items-start gap-4">
+                <Users class="w-6 h-6 text-red-600 flex-shrink-0 mt-1" />
+                <div>
+                  <h3 class="text-xl font-semibold text-slate-900 dark:text-white mb-2">
+                    Poor support for smaller clients
+                  </h3>
+                  <p class="text-slate-600 dark:text-slate-400 mb-3">
+                    Support has not scaled with growth. Users report slow response times (waiting days for help), no phone support on lower tiers, and feeling deprioritized if you're not an enterprise client.
+                  </p>
+                  <p class="text-sm italic text-slate-500 dark:text-slate-500">
+                    "Support takes a long time to respond, especially for small clients" — TrustRadius review
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div class="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-xl p-6">
+              <div class="flex items-start gap-4">
+                <MinusCircle class="w-6 h-6 text-red-600 flex-shrink-0 mt-1" />
+                <div>
+                  <h3 class="text-xl font-semibold text-slate-900 dark:text-white mb-2">
+                    Limited customization unless you pay more
+                  </h3>
+                  <p class="text-slate-600 dark:text-slate-400 mb-3">
+                    Despite being "customizable," many features (custom reports, granular permissions, advanced automation) require higher-tier plans or additional fees. Feels like a "closed system" where you constantly hit paywalls.
+                  </p>
+                  <p class="text-sm italic text-slate-500 dark:text-slate-500">
+                    "Limited customization...closed system unless you pay additionally" — G2 review
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div class="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-xl p-6">
+              <div class="flex items-start gap-4">
+                <Zap class="w-6 h-6 text-red-600 flex-shrink-0 mt-1" />
+                <div>
+                  <h3 class="text-xl font-semibold text-slate-900 dark:text-white mb-2">
+                    Weak AI capabilities
+                  </h3>
+                  <p class="text-slate-600 dark:text-slate-400 mb-3">
+                    While improving, Greenhouse's AI features lag behind newer competitors. AI interview questions and candidate summaries exist but feel basic compared to modern AI-powered screening and matching tools.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* How Jatura is Different */}
+      <section class="py-20 px-4 sm:px-6 lg:px-8">
+        <div class="max-w-5xl mx-auto">
+          <div class="flex items-center gap-3 mb-8">
+            <CheckCircle class="w-8 h-8 text-emerald-600" />
+            <h2 class="text-4xl font-bold text-slate-900 dark:text-white">
+              How Jatura is different
+            </h2>
+          </div>
+
+          <p class="text-lg text-slate-600 dark:text-slate-400 mb-8">
+            We built Jatura to give you enterprise-level recruiting without the enterprise complexity, cost, or headaches.
+          </p>
+
+          <div class="grid md:grid-cols-2 gap-6 mb-12">
+            <div class="bg-emerald-50 dark:bg-emerald-950/20 border border-emerald-200 dark:border-emerald-900 rounded-xl p-6">
+              <h3 class="text-xl font-semibold text-slate-900 dark:text-white mb-3">
+                Transparent, predictable pricing
+              </h3>
+              <p class="text-slate-600 dark:text-slate-400">
+                <strong>$99/month (Starter), $199/month (Pro), $299/month (Enterprise).</strong> No hidden fees. All AI features included. No sales calls required. Cancel anytime.
+              </p>
+            </div>
+
+            <div class="bg-emerald-50 dark:bg-emerald-950/20 border border-emerald-200 dark:border-emerald-900 rounded-xl p-6">
+              <h3 class="text-xl font-semibold text-slate-900 dark:text-white mb-3">
+                5-minute setup, not 5 weeks
+              </h3>
+              <p class="text-slate-600 dark:text-slate-400">
+                Start recruiting in minutes, not months. Intuitive onboarding, smart defaults, and guided setup wizards get you productive immediately—no consultants needed.
+              </p>
+            </div>
+
+            <div class="bg-emerald-50 dark:bg-emerald-950/20 border border-emerald-200 dark:border-emerald-900 rounded-xl p-6">
+              <h3 class="text-xl font-semibold text-slate-900 dark:text-white mb-3">
+                AI Copilot built-in
+              </h3>
+              <p class="text-slate-600 dark:text-slate-400">
+                AI-powered resume screening, candidate matching, job description generation, and interview question suggestions—all included. No add-on fees or separate tools.
+              </p>
+            </div>
+
+            <div class="bg-emerald-50 dark:bg-emerald-950/20 border border-emerald-200 dark:border-emerald-900 rounded-xl p-6">
+              <h3 class="text-xl font-semibold text-slate-900 dark:text-white mb-3">
+                Modern, delightful UX
+              </h3>
+              <p class="text-slate-600 dark:text-slate-400">
+                Clean, Apple-inspired interface that recruiters and hiring managers actually enjoy using. Drag-and-drop pipelines, instant search, and keyboard shortcuts for power users.
+              </p>
+            </div>
+
+            <div class="bg-emerald-50 dark:bg-emerald-950/20 border border-emerald-200 dark:border-emerald-900 rounded-xl p-6">
+              <h3 class="text-xl font-semibold text-slate-900 dark:text-white mb-3">
+                Responsive support for everyone
+              </h3>
+              <p class="text-slate-600 dark:text-slate-400">
+                Email, chat, and dedicated Slack channel for all customers—not just enterprise clients. We respond in hours, not days. Your success matters regardless of company size.
+              </p>
+            </div>
+
+            <div class="bg-emerald-50 dark:bg-emerald-950/20 border border-emerald-200 dark:border-emerald-900 rounded-xl p-6">
+              <h3 class="text-xl font-semibold text-slate-900 dark:text-white mb-3">
+                Talent CRM included
+              </h3>
+              <p class="text-slate-600 dark:text-slate-400">
+                Build talent pools, nurture passive candidates, and track relationships over time. No separate CRM tool needed—it's all integrated.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Feature Comparison Table */}
+      <section class="py-20 px-4 sm:px-6 lg:px-8 bg-slate-50 dark:bg-slate-900/50">
+        <div class="max-w-6xl mx-auto">
+          <h2 class="text-4xl font-bold text-slate-900 dark:text-white mb-4 text-center">
+            Side-by-side feature comparison
+          </h2>
+          <p class="text-xl text-slate-600 dark:text-slate-400 text-center mb-12">
+            Based on publicly available information and user reviews
+          </p>
+
+          <div class="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-2xl overflow-hidden">
+            <div class="overflow-x-auto">
+              <table class="w-full">
+                <thead>
+                  <tr class="bg-slate-100 dark:bg-slate-800">
+                    <th class="text-left p-6 text-slate-900 dark:text-white font-semibold">Feature</th>
+                    <th class="text-center p-6 text-slate-900 dark:text-white font-semibold">Jatura</th>
+                    <th class="text-center p-6 text-slate-900 dark:text-white font-semibold">Greenhouse</th>
+                  </tr>
+                </thead>
+                <tbody class="divide-y divide-slate-200 dark:divide-slate-800">
+                  <tr>
+                    <td class="p-6 text-slate-900 dark:text-white font-medium">Starting price (annual)</td>
+                    <td class="p-6 text-center text-slate-600 dark:text-slate-400">$99/month ($1,188/year)</td>
+                    <td class="p-6 text-center text-slate-600 dark:text-slate-400">~$6,000-$10,000/year</td>
+                  </tr>
+                  <tr>
+                    <td class="p-6 text-slate-900 dark:text-white font-medium">Transparent pricing</td>
+                    <td class="p-6 text-center"><CheckCircle class="w-5 h-5 text-emerald-600 mx-auto" /></td>
+                    <td class="p-6 text-center"><XCircle class="w-5 h-5 text-red-600 mx-auto" /></td>
+                  </tr>
+                  <tr>
+                    <td class="p-6 text-slate-900 dark:text-white font-medium">Setup time</td>
+                    <td class="p-6 text-center text-slate-600 dark:text-slate-400">5-10 minutes</td>
+                    <td class="p-6 text-center text-slate-600 dark:text-slate-400">Days to weeks</td>
+                  </tr>
+                  <tr>
+                    <td class="p-6 text-slate-900 dark:text-white font-medium">Applicant tracking</td>
+                    <td class="p-6 text-center"><CheckCircle class="w-5 h-5 text-emerald-600 mx-auto" /></td>
+                    <td class="p-6 text-center"><CheckCircle class="w-5 h-5 text-emerald-600 mx-auto" /></td>
+                  </tr>
+                  <tr>
+                    <td class="p-6 text-slate-900 dark:text-white font-medium">Kanban pipeline</td>
+                    <td class="p-6 text-center"><CheckCircle class="w-5 h-5 text-emerald-600 mx-auto" /></td>
+                    <td class="p-6 text-center"><CheckCircle class="w-5 h-5 text-emerald-600 mx-auto" /></td>
+                  </tr>
+                  <tr>
+                    <td class="p-6 text-slate-900 dark:text-white font-medium">Interview scheduling</td>
+                    <td class="p-6 text-center"><CheckCircle class="w-5 h-5 text-emerald-600 mx-auto" /></td>
+                    <td class="p-6 text-center"><CheckCircle class="w-5 h-5 text-emerald-600 mx-auto" /></td>
+                  </tr>
+                  <tr>
+                    <td class="p-6 text-slate-900 dark:text-white font-medium">Interview kits & scorecards</td>
+                    <td class="p-6 text-center"><CheckCircle class="w-5 h-5 text-emerald-600 mx-auto" /></td>
+                    <td class="p-6 text-center"><CheckCircle class="w-5 h-5 text-emerald-600 mx-auto" /></td>
+                  </tr>
+                  <tr>
+                    <td class="p-6 text-slate-900 dark:text-white font-medium">AI resume screening</td>
+                    <td class="p-6 text-center text-emerald-600 font-medium">Built-in</td>
+                    <td class="p-6 text-center text-slate-600 dark:text-slate-400">Basic</td>
+                  </tr>
+                  <tr>
+                    <td class="p-6 text-slate-900 dark:text-white font-medium">AI candidate matching</td>
+                    <td class="p-6 text-center text-emerald-600 font-medium">Advanced</td>
+                    <td class="p-6 text-center text-slate-600 dark:text-slate-400">Basic</td>
+                  </tr>
+                  <tr>
+                    <td class="p-6 text-slate-900 dark:text-white font-medium">AI job description writer</td>
+                    <td class="p-6 text-center"><CheckCircle class="w-5 h-5 text-emerald-600 mx-auto" /></td>
+                    <td class="p-6 text-center"><XCircle class="w-5 h-5 text-red-600 mx-auto" /></td>
+                  </tr>
+                  <tr>
+                    <td class="p-6 text-slate-900 dark:text-white font-medium">AI Copilot</td>
+                    <td class="p-6 text-center text-emerald-600 font-medium">Included</td>
+                    <td class="p-6 text-center"><XCircle class="w-5 h-5 text-red-600 mx-auto" /></td>
+                  </tr>
+                  <tr>
+                    <td class="p-6 text-slate-900 dark:text-white font-medium">Talent CRM</td>
+                    <td class="p-6 text-center"><CheckCircle class="w-5 h-5 text-emerald-600 mx-auto" /></td>
+                    <td class="p-6 text-center text-slate-600 dark:text-slate-400">Via add-on</td>
+                  </tr>
+                  <tr>
+                    <td class="p-6 text-slate-900 dark:text-white font-medium">Custom career pages</td>
+                    <td class="p-6 text-center"><CheckCircle class="w-5 h-5 text-emerald-600 mx-auto" /></td>
+                    <td class="p-6 text-center"><CheckCircle class="w-5 h-5 text-emerald-600 mx-auto" /></td>
+                  </tr>
+                  <tr>
+                    <td class="p-6 text-slate-900 dark:text-white font-medium">Advanced analytics</td>
+                    <td class="p-6 text-center"><CheckCircle class="w-5 h-5 text-emerald-600 mx-auto" /></td>
+                    <td class="p-6 text-center"><CheckCircle class="w-5 h-5 text-emerald-600 mx-auto" /></td>
+                  </tr>
+                  <tr>
+                    <td class="p-6 text-slate-900 dark:text-white font-medium">Custom reports</td>
+                    <td class="p-6 text-center"><CheckCircle class="w-5 h-5 text-emerald-600 mx-auto" /></td>
+                    <td class="p-6 text-center text-slate-600 dark:text-slate-400">Higher tiers only</td>
+                  </tr>
+                  <tr>
+                    <td class="p-6 text-slate-900 dark:text-white font-medium">DEI tracking</td>
+                    <td class="p-6 text-center"><CheckCircle class="w-5 h-5 text-emerald-600 mx-auto" /></td>
+                    <td class="p-6 text-center"><CheckCircle class="w-5 h-5 text-emerald-600 mx-auto" /></td>
+                  </tr>
+                  <tr>
+                    <td class="p-6 text-slate-900 dark:text-white font-medium">Multi-channel messaging</td>
+                    <td class="p-6 text-center text-emerald-600 font-medium">Email, SMS, In-App</td>
+                    <td class="p-6 text-center text-slate-600 dark:text-slate-400">Email, limited SMS</td>
+                  </tr>
+                  <tr>
+                    <td class="p-6 text-slate-900 dark:text-white font-medium">Email templates</td>
+                    <td class="p-6 text-center"><CheckCircle class="w-5 h-5 text-emerald-600 mx-auto" /></td>
+                    <td class="p-6 text-center"><CheckCircle class="w-5 h-5 text-emerald-600 mx-auto" /></td>
+                  </tr>
+                  <tr>
+                    <td class="p-6 text-slate-900 dark:text-white font-medium">Mobile app</td>
+                    <td class="p-6 text-center"><CheckCircle class="w-5 h-5 text-emerald-600 mx-auto" /></td>
+                    <td class="p-6 text-center"><CheckCircle class="w-5 h-5 text-emerald-600 mx-auto" /></td>
+                  </tr>
+                  <tr>
+                    <td class="p-6 text-slate-900 dark:text-white font-medium">Integrations</td>
+                    <td class="p-6 text-center text-slate-600 dark:text-slate-400">50+ (growing)</td>
+                    <td class="p-6 text-center text-slate-600 dark:text-slate-400">500+</td>
+                  </tr>
+                  <tr>
+                    <td class="p-6 text-slate-900 dark:text-white font-medium">Customer support</td>
+                    <td class="p-6 text-center text-emerald-600 font-medium">All plans</td>
+                    <td class="p-6 text-center text-slate-600 dark:text-slate-400">Slower for small clients</td>
+                  </tr>
+                  <tr>
+                    <td class="p-6 text-slate-900 dark:text-white font-medium">Free trial</td>
+                    <td class="p-6 text-center text-emerald-600 font-medium">14 days</td>
+                    <td class="p-6 text-center"><XCircle class="w-5 h-5 text-red-600 mx-auto" /></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Pricing Comparison */}
+      <section class="py-20 px-4 sm:px-6 lg:px-8">
+        <div class="max-w-5xl mx-auto">
+          <h2 class="text-4xl font-bold text-slate-900 dark:text-white mb-12 text-center">
+            Pricing comparison
+          </h2>
+
+          <div class="grid md:grid-cols-2 gap-8 mb-12">
+            {/* Jatura Pricing */}
+            <div class="bg-emerald-50 dark:bg-emerald-950/20 border-2 border-emerald-200 dark:border-emerald-900 rounded-2xl p-8">
+              <div class="text-sm font-semibold text-emerald-600 mb-2">JATURA</div>
+              <div class="text-4xl font-bold text-slate-900 dark:text-white mb-2">
+                $99-$299<span class="text-xl text-slate-600 dark:text-slate-400">/mo</span>
+              </div>
+              <p class="text-slate-600 dark:text-slate-400 mb-6">
+                All plans include AI features, unlimited jobs, career pages, and email support
+              </p>
+              <ul class="space-y-3">
+                <li class="flex items-start gap-2">
+                  <CheckCircle class="w-5 h-5 text-emerald-600 flex-shrink-0 mt-0.5" />
+                  <span class="text-slate-600 dark:text-slate-400">
+                    <strong class="text-slate-900 dark:text-white">Free ($0/mo):</strong> Up to 3 active jobs, unlimited applications
+                  </span>
+                </li>
+                <li class="flex items-start gap-2">
+                  <CheckCircle class="w-5 h-5 text-emerald-600 flex-shrink-0 mt-0.5" />
+                  <span class="text-slate-600 dark:text-slate-400">
+                    <strong class="text-slate-900 dark:text-white">Pro ($199/mo):</strong> Unlimited jobs, advanced analytics
+                  </span>
+                </li>
+                <li class="flex items-start gap-2">
+                  <CheckCircle class="w-5 h-5 text-emerald-600 flex-shrink-0 mt-0.5" />
+                  <span class="text-slate-600 dark:text-slate-400">
+                    <strong class="text-slate-900 dark:text-white">Enterprise ($299/mo):</strong> Custom integrations, SSO, SLA
+                  </span>
+                </li>
+                <li class="flex items-start gap-2">
+                  <CheckCircle class="w-5 h-5 text-emerald-600 flex-shrink-0 mt-0.5" />
+                  <span class="text-slate-600 dark:text-slate-400">14-day free trial, cancel anytime</span>
+                </li>
+              </ul>
+            </div>
+
+            {/* Greenhouse Pricing */}
+            <div class="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-2xl p-8">
+              <div class="text-sm font-semibold text-slate-600 dark:text-slate-400 mb-2">GREENHOUSE</div>
+              <div class="text-4xl font-bold text-slate-900 dark:text-white mb-2">
+                $6K-$70K+<span class="text-xl text-slate-600 dark:text-slate-400">/year</span>
+              </div>
+              <p class="text-slate-600 dark:text-slate-400 mb-6">
+                Contact sales for custom quote (no transparent pricing)
+              </p>
+              <ul class="space-y-3">
+                <li class="flex items-start gap-2">
+                  <MinusCircle class="w-5 h-5 text-slate-400 flex-shrink-0 mt-0.5" />
+                  <span class="text-slate-600 dark:text-slate-400">
+                    <strong class="text-slate-900 dark:text-white">Essential:</strong> ~$6K-$10K/year for small teams
+                  </span>
+                </li>
+                <li class="flex items-start gap-2">
+                  <MinusCircle class="w-5 h-5 text-slate-400 flex-shrink-0 mt-0.5" />
+                  <span class="text-slate-600 dark:text-slate-400">
+                    <strong class="text-slate-900 dark:text-white">Advanced:</strong> ~$12K-$34K/year (median: $12,250)
+                  </span>
+                </li>
+                <li class="flex items-start gap-2">
+                  <MinusCircle class="w-5 h-5 text-slate-400 flex-shrink-0 mt-0.5" />
+                  <span class="text-slate-600 dark:text-slate-400">
+                    <strong class="text-slate-900 dark:text-white">Expert:</strong> $50K-$70K+/year for enterprises
+                  </span>
+                </li>
+                <li class="flex items-start gap-2">
+                  <MinusCircle class="w-5 h-5 text-slate-400 flex-shrink-0 mt-0.5" />
+                  <span class="text-slate-600 dark:text-slate-400">Add-on fees for CRM, onboarding, integrations</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="bg-slate-100 dark:bg-slate-800 rounded-xl p-6 text-center">
+            <p class="text-lg text-slate-700 dark:text-slate-300">
+              <strong>Jatura costs 83-95% less than Greenhouse</strong> while delivering similar core capabilities plus better AI features.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* Who Should Choose Which */}
+      <section class="py-20 px-4 sm:px-6 lg:px-8 bg-slate-50 dark:bg-slate-900/50">
+        <div class="max-w-5xl mx-auto">
+          <h2 class="text-4xl font-bold text-slate-900 dark:text-white mb-12 text-center">
+            Which should you choose?
+          </h2>
+
+          <div class="grid md:grid-cols-2 gap-8">
+            {/* Choose Greenhouse */}
+            <div class="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-2xl p-8">
+              <h3 class="text-2xl font-bold text-slate-900 dark:text-white mb-6">
+                Choose Greenhouse if:
+              </h3>
+              <ul class="space-y-4">
+                <li class="flex items-start gap-3">
+                  <CheckCircle class="w-5 h-5 text-slate-400 flex-shrink-0 mt-0.5" />
+                  <span class="text-slate-600 dark:text-slate-400">
+                    You're a <strong class="text-slate-900 dark:text-white">large enterprise (500+ employees)</strong> with $10K+ budget
+                  </span>
+                </li>
+                <li class="flex items-start gap-3">
+                  <CheckCircle class="w-5 h-5 text-slate-400 flex-shrink-0 mt-0.5" />
+                  <span class="text-slate-600 dark:text-slate-400">
+                    You need <strong class="text-slate-900 dark:text-white">500+ integrations</strong> with legacy enterprise systems
+                  </span>
+                </li>
+                <li class="flex items-start gap-3">
+                  <CheckCircle class="w-5 h-5 text-slate-400 flex-shrink-0 mt-0.5" />
+                  <span class="text-slate-600 dark:text-slate-400">
+                    You have <strong class="text-slate-900 dark:text-white">dedicated admin team</strong> for setup and configuration
+                  </span>
+                </li>
+                <li class="flex items-start gap-3">
+                  <CheckCircle class="w-5 h-5 text-slate-400 flex-shrink-0 mt-0.5" />
+                  <span class="text-slate-600 dark:text-slate-400">
+                    You're in <strong class="text-slate-900 dark:text-white">highly regulated industries</strong> requiring audit logs and compliance
+                  </span>
+                </li>
+                <li class="flex items-start gap-3">
+                  <CheckCircle class="w-5 h-5 text-slate-400 flex-shrink-0 mt-0.5" />
+                  <span class="text-slate-600 dark:text-slate-400">
+                    You prefer <strong class="text-slate-900 dark:text-white">enterprise sales process</strong> with custom pricing
+                  </span>
+                </li>
+              </ul>
+            </div>
+
+            {/* Choose Jatura */}
+            <div class="bg-emerald-50 dark:bg-emerald-950/20 border-2 border-emerald-200 dark:border-emerald-900 rounded-2xl p-8">
+              <h3 class="text-2xl font-bold text-slate-900 dark:text-white mb-6">
+                Choose Jatura if:
+              </h3>
+              <ul class="space-y-4">
+                <li class="flex items-start gap-3">
+                  <CheckCircle class="w-5 h-5 text-emerald-600 flex-shrink-0 mt-0.5" />
+                  <span class="text-slate-600 dark:text-slate-400">
+                    You're a <strong class="text-slate-900 dark:text-white">startup or mid-sized company (5-500 people)</strong>
+                  </span>
+                </li>
+                <li class="flex items-start gap-3">
+                  <CheckCircle class="w-5 h-5 text-emerald-600 flex-shrink-0 mt-0.5" />
+                  <span class="text-slate-600 dark:text-slate-400">
+                    You want <strong class="text-slate-900 dark:text-white">transparent pricing</strong> under $300/month
+                  </span>
+                </li>
+                <li class="flex items-start gap-3">
+                  <CheckCircle class="w-5 h-5 text-emerald-600 flex-shrink-0 mt-0.5" />
+                  <span class="text-slate-600 dark:text-slate-400">
+                    You need to <strong class="text-slate-900 dark:text-white">start recruiting this week</strong>, not next quarter
+                  </span>
+                </li>
+                <li class="flex items-start gap-3">
+                  <CheckCircle class="w-5 h-5 text-emerald-600 flex-shrink-0 mt-0.5" />
+                  <span class="text-slate-600 dark:text-slate-400">
+                    You want <strong class="text-slate-900 dark:text-white">built-in AI features</strong> without add-on costs
+                  </span>
+                </li>
+                <li class="flex items-start gap-3">
+                  <CheckCircle class="w-5 h-5 text-emerald-600 flex-shrink-0 mt-0.5" />
+                  <span class="text-slate-600 dark:text-slate-400">
+                    You value <strong class="text-slate-900 dark:text-white">modern UX and responsive support</strong>
+                  </span>
+                </li>
+                <li class="flex items-start gap-3">
+                  <CheckCircle class="w-5 h-5 text-emerald-600 flex-shrink-0 mt-0.5" />
+                  <span class="text-slate-600 dark:text-slate-400">
+                    You want to <strong class="text-slate-900 dark:text-white">try before you buy</strong> (14-day free trial)
+                  </span>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* CTA Section */}
+      <section class="py-28 px-4 sm:px-6 lg:px-8 bg-slate-900 dark:bg-white">
+        <div class="max-w-4xl mx-auto text-center">
+          <h2 class="text-4xl sm:text-5xl font-bold text-white dark:text-slate-900 mb-6">
+            Ready to try Jatura?
+          </h2>
+          <p class="text-xl text-slate-300 dark:text-slate-600 mb-10">
+            Start your free 14-day trial. No credit card required. Setup takes 5 minutes.
+          </p>
+          <div class="flex flex-col sm:flex-row gap-4 justify-center">
+            <a href="/login">
+              <Button
+                size="lg"
+                class="bg-white dark:bg-slate-900 text-slate-900 dark:text-white hover:bg-slate-100 dark:hover:bg-slate-800 px-10 py-6 text-lg"
+              >
+                Start free trial
+                <ArrowRight class="ml-2 h-5 w-5" />
+              </Button>
+            </a>
+            <a href="/pricing">
+              <Button
+                size="lg"
+                variant="outline"
+                class="px-10 py-6 text-lg border-slate-700 dark:border-slate-300 text-white dark:text-slate-900 hover:bg-slate-800 dark:hover:bg-slate-100"
+              >
+                View pricing
+              </Button>
+            </a>
+          </div>
+        </div>
+      </section>
+
+</MarketingLayout>

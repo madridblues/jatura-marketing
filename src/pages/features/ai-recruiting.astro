@@ -1,0 +1,354 @@
+---
+export const prerender = true;
+import MarketingLayout from '@/layouts/MarketingLayout.astro';
+import { Brain, Sparkles, Zap, Target, Clock, TrendingUp, ArrowRight, CheckCircle, FileText, Users, MessageSquare, Award, BarChart3, Search } from 'lucide-react';
+import { Button } from '@/components/ui/button';
+import { Badge } from '@/components/ui/badge';
+
+const title = "AI Recruiting Software | Jatura - Intelligent Hiring Automation";
+const description = "Automate resume screening, generate AI job descriptions, and score candidates automatically. Jatura's AI recruiting tools cut time-to-hire by 50% — included in every plan, no add-on fees.";
+
+const schemaOrg = [
+  {
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://jatura.com" },
+      { "@type": "ListItem", "position": 2, "name": "Features", "item": "https://jatura.com/features" },
+      { "@type": "ListItem", "position": 3, "name": "AI Recruiting", "item": "https://jatura.com/features/ai-recruiting" }
+    ]
+  },
+  {
+    "@type": "SoftwareApplication",
+    "name": "Jatura ATS",
+    "@id": "https://jatura.com/#software",
+    "applicationCategory": "BusinessApplication",
+    "operatingSystem": "Web",
+    "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD", "description": "Free plan available" },
+    "featureList": ["AI Resume Screening", "AI Job Description Generator", "AI Candidate Scoring", "AI Interview Question Generator", "Predictive Candidate Matching", "Automated Outreach Personalization"],
+    "aggregateRating": { "@type": "AggregateRating", "ratingValue": "4.9", "ratingCount": "247", "bestRating": "5" }
+  }
+];
+---
+
+<MarketingLayout {title} {description} {schemaOrg}>
+
+      {/* Hero Section */}
+      <section class="pt-24 pb-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-slate-50 to-white dark:from-slate-900/50 dark:to-slate-950">
+        <div class="max-w-7xl mx-auto">
+          <div class="text-center mb-16">
+            <Badge
+              variant="secondary"
+              class="mb-6 px-5 py-2 text-sm font-medium bg-slate-100 dark:bg-slate-800 text-slate-900 dark:text-slate-100"
+            >
+              <Sparkles class="w-4 h-4 mr-2" />
+              AI-Powered Recruiting
+            </Badge>
+            <h1 class="text-5xl sm:text-6xl lg:text-7xl font-bold text-slate-900 dark:text-white mb-6 leading-tight">
+              AI that does the work,<br />so you can focus on people
+            </h1>
+            <p class="text-xl sm:text-2xl text-slate-600 dark:text-slate-400 max-w-4xl mx-auto mb-12 leading-relaxed">
+              Let AI handle resume screening, candidate matching, interview scheduling, and communication. Spend your time on what matters: building relationships with top talent.
+            </p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+              <a href="/login">
+                <Button
+                  size="lg"
+                  class="bg-slate-900 dark:bg-white text-white dark:text-slate-900 hover:bg-slate-800 dark:hover:bg-slate-100 px-10 py-6 text-lg group shadow-lg"
+                >
+                  Start free trial
+                  <ArrowRight class="ml-2 h-5 w-5 group-hover:translate-x-1 transition" />
+                </Button>
+              </a>
+              <a href="/pricing">
+                <Button
+                  size="lg"
+                  variant="outline"
+                  class="px-10 py-6 text-lg border-slate-300 dark:border-slate-700"
+                >
+                  View pricing
+                </Button>
+              </a>
+            </div>
+          </div>
+
+          {/* Stats */}
+          <div class="grid md:grid-cols-3 gap-8 mt-20">
+            <div class="text-center">
+              <div class="text-4xl font-bold text-slate-900 dark:text-white mb-2">80%</div>
+              <p class="text-slate-600 dark:text-slate-400">
+                Time saved on screening
+              </p>
+            </div>
+            <div class="text-center">
+              <div class="text-4xl font-bold text-slate-900 dark:text-white mb-2">5x</div>
+              <p class="text-slate-600 dark:text-slate-400">
+                Faster candidate responses
+              </p>
+            </div>
+            <div class="text-center">
+              <div class="text-4xl font-bold text-slate-900 dark:text-white mb-2">99%</div>
+              <p class="text-slate-600 dark:text-slate-400">
+                Accuracy in matching
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* AI Copilot Features */}
+      <section class="py-28 px-4 sm:px-6 lg:px-8">
+        <div class="max-w-7xl mx-auto">
+          <div class="text-center mb-20">
+            <h2 class="text-4xl sm:text-5xl font-bold text-slate-900 dark:text-white mb-6">
+              Your AI Copilot for every stage of hiring
+            </h2>
+            <p class="text-xl text-slate-600 dark:text-slate-400 max-w-3xl mx-auto">
+              From job posting to offer letter, AI automates the busywork and amplifies your expertise
+            </p>
+          </div>
+
+          <div class="grid md:grid-cols-2 gap-8">
+            <div class="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-2xl p-8">
+              <div class="w-14 h-14 bg-slate-100 dark:bg-slate-800 rounded-xl flex items-center justify-center mb-6">
+                <FileText class="w-7 h-7 text-slate-900 dark:text-white" />
+              </div>
+              <h3 class="text-2xl font-semibold text-slate-900 dark:text-white mb-4">
+                Write Job Descriptions
+              </h3>
+              <p class="text-lg text-slate-600 dark:text-slate-400 mb-6">
+                Simply enter the job title. AI generates compelling descriptions with requirements, responsibilities, and benefits that attract the right candidates.
+              </p>
+              <ul class="space-y-3">
+                <li class="flex items-start gap-3">
+                  <CheckCircle class="w-5 h-5 text-emerald-600 flex-shrink-0 mt-0.5" />
+                  <span class="text-slate-600 dark:text-slate-400">Role-specific content generation</span>
+                </li>
+                <li class="flex items-start gap-3">
+                  <CheckCircle class="w-5 h-5 text-emerald-600 flex-shrink-0 mt-0.5" />
+                  <span class="text-slate-600 dark:text-slate-400">Inclusive language optimization</span>
+                </li>
+                <li class="flex items-start gap-3">
+                  <CheckCircle class="w-5 h-5 text-emerald-600 flex-shrink-0 mt-0.5" />
+                  <span class="text-slate-600 dark:text-slate-400">SEO-optimized for job boards</span>
+                </li>
+              </ul>
+            </div>
+
+            <div class="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-2xl p-8">
+              <div class="w-14 h-14 bg-slate-100 dark:bg-slate-800 rounded-xl flex items-center justify-center mb-6">
+                <Brain class="w-7 h-7 text-slate-900 dark:text-white" />
+              </div>
+              <h3 class="text-2xl font-semibold text-slate-900 dark:text-white mb-4">
+                Match & Rank Candidates
+              </h3>
+              <p class="text-lg text-slate-600 dark:text-slate-400 mb-6">
+                AI analyzes every resume against your requirements and automatically scores candidates. Top matches surface instantly — no manual screening required.
+              </p>
+              <ul class="space-y-3">
+                <li class="flex items-start gap-3">
+                  <CheckCircle class="w-5 h-5 text-emerald-600 flex-shrink-0 mt-0.5" />
+                  <span class="text-slate-600 dark:text-slate-400">Skills and experience matching</span>
+                </li>
+                <li class="flex items-start gap-3">
+                  <CheckCircle class="w-5 h-5 text-emerald-600 flex-shrink-0 mt-0.5" />
+                  <span class="text-slate-600 dark:text-slate-400">Bias-free evaluation</span>
+                </li>
+                <li class="flex items-start gap-3">
+                  <CheckCircle class="w-5 h-5 text-emerald-600 flex-shrink-0 mt-0.5" />
+                  <span class="text-slate-600 dark:text-slate-400">100-point scoring system</span>
+                </li>
+              </ul>
+            </div>
+
+            <div class="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-2xl p-8">
+              <div class="w-14 h-14 bg-slate-100 dark:bg-slate-800 rounded-xl flex items-center justify-center mb-6">
+                <Search class="w-7 h-7 text-slate-900 dark:text-white" />
+              </div>
+              <h3 class="text-2xl font-semibold text-slate-900 dark:text-white mb-4">
+                Summarize Resumes
+              </h3>
+              <p class="text-lg text-slate-600 dark:text-slate-400 mb-6">
+                Get instant summaries of every resume with key highlights, relevant experience, and skill assessments. Review candidates in seconds instead of minutes.
+              </p>
+              <ul class="space-y-3">
+                <li class="flex items-start gap-3">
+                  <CheckCircle class="w-5 h-5 text-emerald-600 flex-shrink-0 mt-0.5" />
+                  <span class="text-slate-600 dark:text-slate-400">Key qualification extraction</span>
+                </li>
+                <li class="flex items-start gap-3">
+                  <CheckCircle class="w-5 h-5 text-emerald-600 flex-shrink-0 mt-0.5" />
+                  <span class="text-slate-600 dark:text-slate-400">Experience timeline</span>
+                </li>
+                <li class="flex items-start gap-3">
+                  <CheckCircle class="w-5 h-5 text-emerald-600 flex-shrink-0 mt-0.5" />
+                  <span class="text-slate-600 dark:text-slate-400">Skills assessment</span>
+                </li>
+              </ul>
+            </div>
+
+            <div class="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-2xl p-8">
+              <div class="w-14 h-14 bg-slate-100 dark:bg-slate-800 rounded-xl flex items-center justify-center mb-6">
+                <Award class="w-7 h-7 text-slate-900 dark:text-white" />
+              </div>
+              <h3 class="text-2xl font-semibold text-slate-900 dark:text-white mb-4">
+                Generate Interview Questions
+              </h3>
+              <p class="text-lg text-slate-600 dark:text-slate-400 mb-6">
+                AI creates role-specific interview questions based on the job description. Get behavioral, technical, and situational questions with scoring rubrics.
+              </p>
+              <ul class="space-y-3">
+                <li class="flex items-start gap-3">
+                  <CheckCircle class="w-5 h-5 text-emerald-600 flex-shrink-0 mt-0.5" />
+                  <span class="text-slate-600 dark:text-slate-400">Role-specific questions</span>
+                </li>
+                <li class="flex items-start gap-3">
+                  <CheckCircle class="w-5 h-5 text-emerald-600 flex-shrink-0 mt-0.5" />
+                  <span class="text-slate-600 dark:text-slate-400">Answer guidance</span>
+                </li>
+                <li class="flex items-start gap-3">
+                  <CheckCircle class="w-5 h-5 text-emerald-600 flex-shrink-0 mt-0.5" />
+                  <span class="text-slate-600 dark:text-slate-400">Scoring rubrics</span>
+                </li>
+              </ul>
+            </div>
+
+            <div class="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-2xl p-8">
+              <div class="w-14 h-14 bg-slate-100 dark:bg-slate-800 rounded-xl flex items-center justify-center mb-6">
+                <MessageSquare class="w-7 h-7 text-slate-900 dark:text-white" />
+              </div>
+              <h3 class="text-2xl font-semibold text-slate-900 dark:text-white mb-4">
+                Draft Communications
+              </h3>
+              <p class="text-lg text-slate-600 dark:text-slate-400 mb-6">
+                AI drafts personalized emails for every candidate interaction — from initial outreach to rejection letters to offer letters. Maintain your tone and save hours.
+              </p>
+              <ul class="space-y-3">
+                <li class="flex items-start gap-3">
+                  <CheckCircle class="w-5 h-5 text-emerald-600 flex-shrink-0 mt-0.5" />
+                  <span class="text-slate-600 dark:text-slate-400">Personalized messaging</span>
+                </li>
+                <li class="flex items-start gap-3">
+                  <CheckCircle class="w-5 h-5 text-emerald-600 flex-shrink-0 mt-0.5" />
+                  <span class="text-slate-600 dark:text-slate-400">Brand voice consistency</span>
+                </li>
+                <li class="flex items-start gap-3">
+                  <CheckCircle class="w-5 h-5 text-emerald-600 flex-shrink-0 mt-0.5" />
+                  <span class="text-slate-600 dark:text-slate-400">One-click sending</span>
+                </li>
+              </ul>
+            </div>
+
+            <div class="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-2xl p-8">
+              <div class="w-14 h-14 bg-slate-100 dark:bg-slate-800 rounded-xl flex items-center justify-center mb-6">
+                <BarChart3 class="w-7 h-7 text-slate-900 dark:text-white" />
+              </div>
+              <h3 class="text-2xl font-semibold text-slate-900 dark:text-white mb-4">
+                Insights & Recommendations
+              </h3>
+              <p class="text-lg text-slate-600 dark:text-slate-400 mb-6">
+                AI analyzes your hiring data and surfaces actionable insights. Get recommendations on pipeline bottlenecks, source effectiveness, and process improvements.
+              </p>
+              <ul class="space-y-3">
+                <li class="flex items-start gap-3">
+                  <CheckCircle class="w-5 h-5 text-emerald-600 flex-shrink-0 mt-0.5" />
+                  <span class="text-slate-600 dark:text-slate-400">Pipeline optimization</span>
+                </li>
+                <li class="flex items-start gap-3">
+                  <CheckCircle class="w-5 h-5 text-emerald-600 flex-shrink-0 mt-0.5" />
+                  <span class="text-slate-600 dark:text-slate-400">Source performance</span>
+                </li>
+                <li class="flex items-start gap-3">
+                  <CheckCircle class="w-5 h-5 text-emerald-600 flex-shrink-0 mt-0.5" />
+                  <span class="text-slate-600 dark:text-slate-400">Predictive hiring metrics</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* How It Works */}
+      <section class="py-28 px-4 sm:px-6 lg:px-8 bg-slate-50 dark:bg-slate-900/50">
+        <div class="max-w-7xl mx-auto">
+          <div class="text-center mb-20">
+            <h2 class="text-4xl sm:text-5xl font-bold text-slate-900 dark:text-white mb-6">
+              AI that works for you, not replaces you
+            </h2>
+            <p class="text-xl text-slate-600 dark:text-slate-400 max-w-3xl mx-auto">
+              You're still in control. AI handles the repetitive tasks so you can focus on what humans do best: building relationships and making decisions.
+            </p>
+          </div>
+
+          <div class="grid lg:grid-cols-3 gap-12">
+            <div class="text-center">
+              <div class="w-16 h-16 bg-slate-900 dark:bg-white rounded-2xl flex items-center justify-center mx-auto mb-6">
+                <Zap class="w-8 h-8 text-white dark:text-slate-900" />
+              </div>
+              <h3 class="text-2xl font-semibold text-slate-900 dark:text-white mb-4">
+                Instant Automation
+              </h3>
+              <p class="text-lg text-slate-600 dark:text-slate-400">
+                AI starts working the moment a candidate applies. Resumes are scored, summaries are generated, and top matches are surfaced automatically.
+              </p>
+            </div>
+
+            <div class="text-center">
+              <div class="w-16 h-16 bg-slate-900 dark:bg-white rounded-2xl flex items-center justify-center mx-auto mb-6">
+                <Target class="w-8 h-8 text-white dark:text-slate-900" />
+              </div>
+              <h3 class="text-2xl font-semibold text-slate-900 dark:text-white mb-4">
+                Smart Suggestions
+              </h3>
+              <p class="text-lg text-slate-600 dark:text-slate-400">
+                AI recommends next steps, drafts messages, and suggests interview questions. You review, edit, and approve with a single click.
+              </p>
+            </div>
+
+            <div class="text-center">
+              <div class="w-16 h-16 bg-slate-900 dark:bg-white rounded-2xl flex items-center justify-center mx-auto mb-6">
+                <TrendingUp class="w-8 h-8 text-white dark:text-slate-900" />
+              </div>
+              <h3 class="text-2xl font-semibold text-slate-900 dark:text-white mb-4">
+                Continuous Learning
+              </h3>
+              <p class="text-lg text-slate-600 dark:text-slate-400">
+                AI learns from your hiring decisions and gets smarter over time. Better matches, more accurate predictions, and personalized recommendations.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* CTA Section */}
+      <section class="py-28 px-4 sm:px-6 lg:px-8 bg-slate-900 dark:bg-white">
+        <div class="max-w-4xl mx-auto text-center">
+          <h2 class="text-4xl sm:text-5xl font-bold text-white dark:text-slate-900 mb-6">
+            Ready to hire smarter with AI?
+          </h2>
+          <p class="text-xl text-slate-300 dark:text-slate-600 mb-10">
+            Join teams using AI to find exceptional talent faster and more efficiently.
+          </p>
+          <div class="flex flex-col sm:flex-row gap-4 justify-center">
+            <a href="/login">
+              <Button
+                size="lg"
+                class="bg-white dark:bg-slate-900 text-slate-900 dark:text-white hover:bg-slate-100 dark:hover:bg-slate-800 px-10 py-6 text-lg"
+              >
+                Start free trial
+                <ArrowRight class="ml-2 h-5 w-5" />
+              </Button>
+            </a>
+            <a href="/pricing">
+              <Button
+                size="lg"
+                variant="outline"
+                class="px-10 py-6 text-lg border-slate-700 dark:border-slate-300 text-white dark:text-slate-900 hover:bg-slate-800 dark:hover:bg-slate-100"
+              >
+                View pricing
+              </Button>
+            </a>
+          </div>
+        </div>
+      </section>
+
+</MarketingLayout>

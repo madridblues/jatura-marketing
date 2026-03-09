@@ -1,0 +1,305 @@
+---
+export const prerender = true;
+import MarketingLayout from '@/layouts/MarketingLayout.astro';
+import {
+  ArrowLeft,
+  Shield,
+  Download,
+  Trash2,
+  Eye,
+  Settings,
+  Clock,
+  CheckCircle,
+  FileText,
+  Lock,
+  Globe,
+  UserCheck,
+  ArrowRight,
+} from 'lucide-react';
+
+const schemaOrg = [{ "@type": "WebPage", "name": "Privacy Hub — Your Data Rights", "url": "https://jatura.com/privacy-hub" }];
+---
+
+<MarketingLayout title="Privacy Hub | Jatura ATS - Your Data Rights" description="Learn about your data rights, privacy preferences, and how Jatura protects your information." {schemaOrg}>
+  <article class="py-20 px-4 sm:px-6 lg:px-8">
+    <div class="max-w-4xl mx-auto">
+      <a
+        href="/"
+        class="inline-flex items-center gap-2 text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white mb-8 group"
+      >
+        <ArrowLeft class="w-4 h-4 group-hover:-translate-x-1 transition" />
+        Back to home
+      </a>
+
+      <!-- Hero -->
+      <div class="mb-16">
+        <div class="w-16 h-16 bg-slate-900 dark:bg-white rounded-2xl flex items-center justify-center mb-6">
+          <Shield class="w-8 h-8 text-white dark:text-slate-900" />
+        </div>
+        <h1 class="text-4xl sm:text-5xl md:text-6xl font-bold text-slate-900 dark:text-white mb-6 leading-tight">
+          Privacy Hub
+        </h1>
+        <p class="text-xl text-slate-600 dark:text-slate-400 max-w-2xl">
+          Your data, your rights. Jatura is committed to transparency and giving you full control over your personal information.
+        </p>
+      </div>
+
+      <!-- Your Data Rights Cards -->
+      <section class="mb-16">
+        <h2 class="text-3xl font-bold text-slate-900 dark:text-white mb-8">
+          Your Data Rights
+        </h2>
+        <div class="grid sm:grid-cols-2 gap-6">
+          <div class="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-2xl p-8">
+            <Eye class="w-10 h-10 text-slate-900 dark:text-white mb-4" />
+            <h3 class="text-xl font-bold text-slate-900 dark:text-white mb-3">Right to Access</h3>
+            <p class="text-slate-600 dark:text-slate-400">
+              Request a copy of all personal data we hold about you. We will provide a comprehensive export within 30 days of your request.
+            </p>
+          </div>
+          <div class="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-2xl p-8">
+            <Download class="w-10 h-10 text-slate-900 dark:text-white mb-4" />
+            <h3 class="text-xl font-bold text-slate-900 dark:text-white mb-3">Right to Portability</h3>
+            <p class="text-slate-600 dark:text-slate-400">
+              Download your data in a structured, machine-readable format. Transfer your information to another service at any time.
+            </p>
+          </div>
+          <div class="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-2xl p-8">
+            <Trash2 class="w-10 h-10 text-slate-900 dark:text-white mb-4" />
+            <h3 class="text-xl font-bold text-slate-900 dark:text-white mb-3">Right to Deletion</h3>
+            <p class="text-slate-600 dark:text-slate-400">
+              Request the permanent deletion of your personal data. We will erase your information within 30 days, subject to legal retention requirements.
+            </p>
+          </div>
+          <div class="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-2xl p-8">
+            <Settings class="w-10 h-10 text-slate-900 dark:text-white mb-4" />
+            <h3 class="text-xl font-bold text-slate-900 dark:text-white mb-3">Right to Rectification</h3>
+            <p class="text-slate-600 dark:text-slate-400">
+              Update or correct inaccurate personal data. You can edit your profile directly or submit a correction request to our team.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- GDPR Compliance -->
+      <section class="mb-16">
+        <h2 class="text-3xl font-bold text-slate-900 dark:text-white mb-8">
+          GDPR Compliance
+        </h2>
+        <div class="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-2xl p-8">
+          <div class="flex items-start gap-4 mb-6">
+            <Globe class="w-8 h-8 text-slate-900 dark:text-white flex-shrink-0" />
+            <div>
+              <h3 class="text-xl font-bold text-slate-900 dark:text-white mb-2">Full GDPR Compliance</h3>
+              <p class="text-slate-600 dark:text-slate-400 mb-6">
+                Jatura is fully compliant with the General Data Protection Regulation (GDPR). We serve as a data processor on behalf of our customers and maintain robust data protection practices.
+              </p>
+            </div>
+          </div>
+          <div class="space-y-4">
+            <div class="flex items-start gap-3">
+              <CheckCircle class="w-5 h-5 text-emerald-600 flex-shrink-0 mt-0.5" />
+              <span class="text-slate-600 dark:text-slate-400">Lawful basis for processing documented for all data activities</span>
+            </div>
+            <div class="flex items-start gap-3">
+              <CheckCircle class="w-5 h-5 text-emerald-600 flex-shrink-0 mt-0.5" />
+              <span class="text-slate-600 dark:text-slate-400">Data Protection Impact Assessments (DPIA) conducted regularly</span>
+            </div>
+            <div class="flex items-start gap-3">
+              <CheckCircle class="w-5 h-5 text-emerald-600 flex-shrink-0 mt-0.5" />
+              <span class="text-slate-600 dark:text-slate-400">Designated Data Protection Officer (DPO) available at dpo@jatura.com</span>
+            </div>
+            <div class="flex items-start gap-3">
+              <CheckCircle class="w-5 h-5 text-emerald-600 flex-shrink-0 mt-0.5" />
+              <span class="text-slate-600 dark:text-slate-400">Data Processing Agreements (DPA) available for all customers</span>
+            </div>
+            <div class="flex items-start gap-3">
+              <CheckCircle class="w-5 h-5 text-emerald-600 flex-shrink-0 mt-0.5" />
+              <span class="text-slate-600 dark:text-slate-400">72-hour breach notification policy in compliance with GDPR Article 33</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Consent Management -->
+      <section class="mb-16">
+        <h2 class="text-3xl font-bold text-slate-900 dark:text-white mb-8">
+          Consent Management
+        </h2>
+        <div class="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-2xl p-8">
+          <div class="flex items-start gap-4 mb-6">
+            <UserCheck class="w-8 h-8 text-slate-900 dark:text-white flex-shrink-0" />
+            <div>
+              <h3 class="text-xl font-bold text-slate-900 dark:text-white mb-2">Transparent Consent Controls</h3>
+              <p class="text-slate-600 dark:text-slate-400 mb-6">
+                We believe in informed consent. Candidates and users always know what data is being collected and why. You can manage your preferences at any time.
+              </p>
+            </div>
+          </div>
+          <div class="space-y-4">
+            <div class="flex items-start gap-3">
+              <CheckCircle class="w-5 h-5 text-emerald-600 flex-shrink-0 mt-0.5" />
+              <span class="text-slate-600 dark:text-slate-400">Granular consent options for different types of data processing</span>
+            </div>
+            <div class="flex items-start gap-3">
+              <CheckCircle class="w-5 h-5 text-emerald-600 flex-shrink-0 mt-0.5" />
+              <span class="text-slate-600 dark:text-slate-400">Easy-to-use preference center for candidates and users</span>
+            </div>
+            <div class="flex items-start gap-3">
+              <CheckCircle class="w-5 h-5 text-emerald-600 flex-shrink-0 mt-0.5" />
+              <span class="text-slate-600 dark:text-slate-400">Consent records maintained with full audit trail</span>
+            </div>
+            <div class="flex items-start gap-3">
+              <CheckCircle class="w-5 h-5 text-emerald-600 flex-shrink-0 mt-0.5" />
+              <span class="text-slate-600 dark:text-slate-400">One-click consent withdrawal with immediate effect</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Data Retention Policy -->
+      <section class="mb-16">
+        <h2 class="text-3xl font-bold text-slate-900 dark:text-white mb-8">
+          Data Retention Policy
+        </h2>
+        <div class="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-2xl p-8">
+          <div class="flex items-start gap-4 mb-6">
+            <Clock class="w-8 h-8 text-slate-900 dark:text-white flex-shrink-0" />
+            <div>
+              <h3 class="text-xl font-bold text-slate-900 dark:text-white mb-2">Clear Retention Periods</h3>
+              <p class="text-slate-600 dark:text-slate-400">
+                We only keep your data for as long as necessary. Here are our standard retention periods:
+              </p>
+            </div>
+          </div>
+          <div class="border border-slate-200 dark:border-slate-800 rounded-xl overflow-hidden mt-6">
+            <table class="w-full text-left">
+              <thead>
+                <tr class="bg-slate-50 dark:bg-slate-800/50">
+                  <th class="px-6 py-4 text-sm font-semibold text-slate-900 dark:text-white">Data Type</th>
+                  <th class="px-6 py-4 text-sm font-semibold text-slate-900 dark:text-white">Retention Period</th>
+                </tr>
+              </thead>
+              <tbody class="divide-y divide-slate-200 dark:divide-slate-800">
+                <tr>
+                  <td class="px-6 py-4 text-sm text-slate-600 dark:text-slate-400">Candidate applications</td>
+                  <td class="px-6 py-4 text-sm text-slate-600 dark:text-slate-400">Up to 2 years after last activity</td>
+                </tr>
+                <tr>
+                  <td class="px-6 py-4 text-sm text-slate-600 dark:text-slate-400">Account data</td>
+                  <td class="px-6 py-4 text-sm text-slate-600 dark:text-slate-400">Duration of account plus 90 days</td>
+                </tr>
+                <tr>
+                  <td class="px-6 py-4 text-sm text-slate-600 dark:text-slate-400">Analytics and usage data</td>
+                  <td class="px-6 py-4 text-sm text-slate-600 dark:text-slate-400">12 months (anonymized after)</td>
+                </tr>
+                <tr>
+                  <td class="px-6 py-4 text-sm text-slate-600 dark:text-slate-400">Communication records</td>
+                  <td class="px-6 py-4 text-sm text-slate-600 dark:text-slate-400">Duration of account plus 30 days</td>
+                </tr>
+                <tr>
+                  <td class="px-6 py-4 text-sm text-slate-600 dark:text-slate-400">Audit logs</td>
+                  <td class="px-6 py-4 text-sm text-slate-600 dark:text-slate-400">3 years (regulatory requirement)</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <p class="text-sm text-slate-500 dark:text-slate-500 mt-4">
+            Employers may configure shorter retention periods. Data subject to legal holds may be retained longer as required by law.
+          </p>
+        </div>
+      </section>
+
+      <!-- How to Exercise Your Rights -->
+      <section class="mb-16">
+        <h2 class="text-3xl font-bold text-slate-900 dark:text-white mb-8">
+          How to Exercise Your Rights
+        </h2>
+        <div class="space-y-4">
+          <div class="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-xl p-6 flex items-start gap-4">
+            <div class="w-8 h-8 bg-slate-100 dark:bg-slate-800 rounded-lg flex items-center justify-center flex-shrink-0">
+              <span class="text-sm font-bold text-slate-900 dark:text-white">1</span>
+            </div>
+            <div>
+              <h3 class="text-lg font-bold text-slate-900 dark:text-white mb-1">Through Your Account</h3>
+              <p class="text-slate-600 dark:text-slate-400">
+                Log in to your Jatura account and navigate to Settings &gt; Privacy to manage your data preferences, download your data, or request deletion directly.
+              </p>
+            </div>
+          </div>
+          <div class="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-xl p-6 flex items-start gap-4">
+            <div class="w-8 h-8 bg-slate-100 dark:bg-slate-800 rounded-lg flex items-center justify-center flex-shrink-0">
+              <span class="text-sm font-bold text-slate-900 dark:text-white">2</span>
+            </div>
+            <div>
+              <h3 class="text-lg font-bold text-slate-900 dark:text-white mb-1">Contact Our Privacy Team</h3>
+              <p class="text-slate-600 dark:text-slate-400">
+                Email us at{" "}
+                <a href="mailto:privacy@jatura.com" class="text-blue-600 dark:text-blue-400 hover:underline">privacy@jatura.com</a>{" "}
+                with your request. Please include your name, email address, and the specific right you wish to exercise.
+              </p>
+            </div>
+          </div>
+          <div class="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-xl p-6 flex items-start gap-4">
+            <div class="w-8 h-8 bg-slate-100 dark:bg-slate-800 rounded-lg flex items-center justify-center flex-shrink-0">
+              <span class="text-sm font-bold text-slate-900 dark:text-white">3</span>
+            </div>
+            <div>
+              <h3 class="text-lg font-bold text-slate-900 dark:text-white mb-1">Submit a Support Request</h3>
+              <p class="text-slate-600 dark:text-slate-400">
+                Visit our{" "}
+                <a href="/support" class="text-blue-600 dark:text-blue-400 hover:underline">Support page</a>{" "}
+                and select "Account Management" as the category to submit a formal privacy request.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Related Pages -->
+      <section class="mb-8">
+        <h2 class="text-3xl font-bold text-slate-900 dark:text-white mb-8">
+          Related Resources
+        </h2>
+        <div class="grid sm:grid-cols-3 gap-6">
+          <a
+            href="/privacy"
+            class="group bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-xl p-6 hover:border-slate-300 dark:hover:border-slate-700 transition-all hover:shadow-lg"
+          >
+            <FileText class="w-8 h-8 text-slate-900 dark:text-white mb-3" />
+            <h3 class="text-lg font-bold text-slate-900 dark:text-white mb-2">Privacy Policy</h3>
+            <p class="text-sm text-slate-600 dark:text-slate-400 mb-3">Our full privacy policy with detailed information about data handling</p>
+            <span class="inline-flex items-center gap-1 text-sm font-medium text-slate-900 dark:text-white">
+              Read policy
+              <ArrowRight class="w-3 h-3 group-hover:translate-x-1 transition-transform" />
+            </span>
+          </a>
+          <a
+            href="/security"
+            class="group bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-xl p-6 hover:border-slate-300 dark:hover:border-slate-700 transition-all hover:shadow-lg"
+          >
+            <Lock class="w-8 h-8 text-slate-900 dark:text-white mb-3" />
+            <h3 class="text-lg font-bold text-slate-900 dark:text-white mb-2">Security</h3>
+            <p class="text-sm text-slate-600 dark:text-slate-400 mb-3">Learn about our enterprise-grade security measures and certifications</p>
+            <span class="inline-flex items-center gap-1 text-sm font-medium text-slate-900 dark:text-white">
+              View security
+              <ArrowRight class="w-3 h-3 group-hover:translate-x-1 transition-transform" />
+            </span>
+          </a>
+          <a
+            href="/terms"
+            class="group bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-xl p-6 hover:border-slate-300 dark:hover:border-slate-700 transition-all hover:shadow-lg"
+          >
+            <Shield class="w-8 h-8 text-slate-900 dark:text-white mb-3" />
+            <h3 class="text-lg font-bold text-slate-900 dark:text-white mb-2">Terms of Service</h3>
+            <p class="text-sm text-slate-600 dark:text-slate-400 mb-3">Our terms of service and conditions for using Jatura ATS</p>
+            <span class="inline-flex items-center gap-1 text-sm font-medium text-slate-900 dark:text-white">
+              Read terms
+              <ArrowRight class="w-3 h-3 group-hover:translate-x-1 transition-transform" />
+            </span>
+          </a>
+        </div>
+      </section>
+    </div>
+  </article>
+</MarketingLayout>

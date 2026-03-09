@@ -1,0 +1,518 @@
+---
+export const prerender = true;
+import MarketingLayout from '@/layouts/MarketingLayout.astro';
+import { ArrowRight, BarChart3, TrendingUp, Users, Clock, Target, CheckCircle, Zap, Filter, Download, Eye, Brain, PieChart, Activity, Gauge, LineChart, DollarSign } from 'lucide-react';
+import { Button } from '@/components/ui/button';
+import { Badge } from '@/components/ui/badge';
+import { Card, CardContent } from '@/components/ui/card';
+
+const title = "Recruiting Analytics & Reporting | Real-Time Dashboards & Insights | Jatura";
+const description = "Transform recruiting data into actionable insights with Jatura's analytics platform. Real-time dashboards, custom reports, predictive analytics, and data-driven hiring metrics for smarter decisions.";
+
+const schemaOrg = [
+  {
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://jatura.com" },
+      { "@type": "ListItem", "position": 2, "name": "Features", "item": "https://jatura.com/features" },
+      { "@type": "ListItem", "position": 3, "name": "Reporting & Analytics", "item": "https://jatura.com/features/reporting" }
+    ]
+  },
+  {
+    "@type": "SoftwareApplication",
+    "name": "Jatura ATS",
+    "@id": "https://jatura.com/#software",
+    "applicationCategory": "BusinessApplication",
+    "operatingSystem": "Web",
+    "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD", "description": "Free plan available" },
+    "featureList": ["Real-Time Dashboards", "Custom Reports", "Time-to-Hire Analytics", "Source Effectiveness", "Pipeline Conversion Rates", "DEI Reporting", "Predictive Analytics", "Data Export"],
+    "aggregateRating": { "@type": "AggregateRating", "ratingValue": "4.9", "ratingCount": "247", "bestRating": "5" }
+  }
+];
+
+const _data1 = [
+                    { label: "Time to Hire", value: "18 days", trend: "-22%", color: "green" },
+                    { label: "Offer Accept Rate", value: "89%", trend: "+12%", color: "green" },
+                    { label: "Cost per Hire", value: "$3,240", trend: "-15%", color: "green" },
+                    { label: "Quality of Hire", value: "4.2/5", trend: "+0.3", color: "green" }
+                  ];
+
+const _data2 = [40, 65, 45, 80, 60, 90, 75];
+
+const _data3 = [
+              {
+                icon: Activity,
+                title: "Real-Time Dashboards",
+                description: "Monitor hiring activity as it happens with live dashboards that update automatically. Track open positions, candidate pipelines, and team performance at a glance.",
+                features: ["Live data sync", "Customizable views", "Mobile responsive"]
+              },
+              {
+                icon: Filter,
+                title: "Custom Report Builder",
+                description: "Build exactly the reports you need with intuitive drag-and-drop tools. Filter by department, role, location, date range, and 50+ other dimensions.",
+                features: ["Self-service builder", "Advanced filters", "Save & share reports"]
+              },
+              {
+                icon: Brain,
+                title: "AI-Powered Insights",
+                description: "Let AI surface trends, bottlenecks, and opportunities you might miss. Get automated recommendations to improve your hiring process.",
+                features: ["Trend detection", "Bottleneck alerts", "Smart suggestions"]
+              },
+              {
+                icon: LineChart,
+                title: "Pipeline Analytics",
+                description: "Visualize candidate flow through every hiring stage. Identify drop-off points and conversion rates to optimize your funnel.",
+                features: ["Stage conversion rates", "Drop-off analysis", "Funnel visualization"]
+              },
+              {
+                icon: Clock,
+                title: "Time-to-Hire Tracking",
+                description: "Measure and reduce time-to-hire with detailed breakdowns by role, department, and hiring manager. Benchmark against industry standards.",
+                features: ["Stage-level timing", "Historical trends", "Team comparisons"]
+              },
+              {
+                icon: Target,
+                title: "Source Effectiveness",
+                description: "Track which sourcing channels deliver the best candidates. Calculate ROI for job boards, agencies, referrals, and social media.",
+                features: ["Source of hire", "Quality by channel", "Cost per source"]
+              },
+              {
+                icon: Users,
+                title: "Team Performance",
+                description: "Monitor recruiter productivity, interview feedback quality, and hiring manager responsiveness. Identify top performers and coaching opportunities.",
+                features: ["Recruiter metrics", "Interview analytics", "Activity tracking"]
+              },
+              {
+                icon: PieChart,
+                title: "Diversity & Inclusion",
+                description: "Track diversity metrics at every stage of your hiring funnel. Ensure fair, inclusive hiring with comprehensive DEI dashboards.",
+                features: ["EEO/OFCCP reports", "Funnel diversity", "Bias detection"]
+              },
+              {
+                icon: TrendingUp,
+                title: "Predictive Analytics",
+                description: "Forecast hiring needs, time-to-fill, and resource requirements using historical data and machine learning algorithms.",
+                features: ["Hiring forecasts", "Capacity planning", "Trend predictions"]
+              }
+            ];
+
+const _data4 = [
+              {
+                category: "Pipeline Health",
+                reports: ["Active Candidates by Stage", "Conversion Rates", "Stage Duration", "Drop-off Analysis"]
+              },
+              {
+                category: "Hiring Velocity",
+                reports: ["Time-to-Hire by Role", "Time-to-Fill Trends", "Scheduling Efficiency", "Interview Speed"]
+              },
+              {
+                category: "Source Quality",
+                reports: ["Source of Hire", "Channel Performance", "Referral Analytics", "Agency ROI"]
+              },
+              {
+                category: "Team Metrics",
+                reports: ["Recruiter Activity", "Interview Feedback", "Hiring Manager Speed", "Coordinator Load"]
+              },
+              {
+                category: "Quality of Hire",
+                reports: ["Offer Accept Rate", "First-Year Retention", "Performance Reviews", "Manager Satisfaction"]
+              },
+              {
+                category: "Cost Analysis",
+                reports: ["Cost per Hire", "Budget Tracking", "Agency Spend", "Job Board ROI"]
+              },
+              {
+                category: "Diversity & Inclusion",
+                reports: ["EEO Demographics", "Funnel Diversity", "Offer Equity", "Bias Detection"]
+              },
+              {
+                category: "Candidate Experience",
+                reports: ["Application Drop-off", "Survey Responses", "Interview Ratings", "NPS Scores"]
+              }
+            ];
+
+const _data5 = [
+              {
+                step: "1",
+                title: "Choose Your Report",
+                description: "Pick from 50+ pre-built reports or use the custom report builder to create exactly what you need. Filter by any dimension—role, department, date, source, and more.",
+                icon: Eye
+              },
+              {
+                step: "2",
+                title: "Analyze Insights",
+                description: "Review real-time data with interactive charts and tables. Drill down into specific metrics, identify trends, and discover bottlenecks automatically flagged by AI.",
+                icon: Brain
+              },
+              {
+                step: "3",
+                title: "Take Action",
+                description: "Share reports with stakeholders, schedule automated delivery, or export to PDF/CSV. Use insights to optimize your hiring process and hit your goals faster.",
+                icon: Zap
+              }
+            ];
+
+const _data6 = [
+              {
+                role: "Recruiters",
+                description: "Track your personal metrics, identify your best sources, and prove your impact with data-backed performance reports.",
+                metrics: ["Active pipelines", "Personal time-to-fill", "Source effectiveness", "Interview volume"],
+                icon: Users
+              },
+              {
+                role: "Recruiting Leaders",
+                description: "Monitor team performance, forecast hiring needs, and allocate resources strategically with comprehensive analytics.",
+                metrics: ["Team productivity", "Capacity planning", "Budget tracking", "Quality of hire"],
+                icon: Target
+              },
+              {
+                role: "Executives",
+                description: "Get high-level insights on hiring velocity, costs, and business impact without digging through spreadsheets.",
+                metrics: ["Company-wide metrics", "Cost per hire", "Headcount progress", "Strategic forecasts"],
+                icon: Gauge
+              }
+            ];
+
+const _data7 = [
+              {
+                icon: Zap,
+                title: "5-Minute Setup",
+                description: "Start analyzing immediately with zero configuration. Pre-built dashboards work out of the box with your hiring data."
+              },
+              {
+                icon: Eye,
+                title: "Always Up-to-Date",
+                description: "Real-time data sync means you're always looking at the latest numbers—no manual exports or stale reports."
+              },
+              {
+                icon: Filter,
+                title: "Unlimited Customization",
+                description: "Filter by 50+ dimensions to get exactly the view you need. Save custom reports and share with your team."
+              },
+              {
+                icon: Download,
+                title: "Easy Sharing & Export",
+                description: "Schedule automated report delivery to stakeholders or export to PDF, CSV, and Excel with one click."
+              },
+              {
+                icon: DollarSign,
+                title: "No Extra Costs",
+                description: "Advanced analytics included in every plan. No separate BI tools or data analyst fees required."
+              },
+              {
+                icon: Brain,
+                title: "AI-Assisted Analysis",
+                description: "AI automatically flags trends, bottlenecks, and opportunities so you never miss important insights."
+              }
+            ];
+---
+
+<MarketingLayout {title} {description} {schemaOrg}>
+
+      {/* Hero Section */}
+      <section class="pt-20 pb-16 px-4 sm:px-6 lg:px-8 bg-black border-b border-slate-800">
+        <div class="max-w-7xl mx-auto">
+          <div class="grid lg:grid-cols-2 gap-12 items-center">
+            <div>
+              <Badge class="mb-4">
+                <BarChart3 class="h-3 w-3 mr-1" />
+                Analytics & Reporting
+              </Badge>
+              <h1 class="text-4xl sm:text-5xl lg:text-6xl font-bold text-slate-900 dark:text-white mb-6 leading-tight">
+                Turn Data Into Hiring Success
+              </h1>
+              <p class="text-xl text-slate-600 dark:text-slate-400 mb-8 leading-relaxed">
+                Make smarter recruiting decisions with real-time analytics, custom reports, and AI-powered insights that reveal what's working and what needs improvement.
+              </p>
+              <div class="flex flex-col sm:flex-row gap-4">
+                <a href="/signup">
+                  <Button size="lg" class="w-full sm:w-auto" data-testid="button-get-started">
+                    Start Free - Up to 3 active jobs
+                    <ArrowRight class="ml-2 h-5 w-5" />
+                  </Button>
+                </a>
+                <a href="/pricing">
+                  <Button size="lg" variant="outline" class="w-full sm:w-auto" data-testid="button-see-pricing">
+                    See Pricing
+                  </Button>
+                </a>
+              </div>
+              <div class="mt-8 flex items-center gap-6">
+                <div class="flex items-center gap-2">
+                  <CheckCircle class="h-5 w-5 text-green-600" />
+                  <span class="text-sm text-slate-600 dark:text-slate-400">50+ pre-built reports</span>
+                </div>
+                <div class="flex items-center gap-2">
+                  <CheckCircle class="h-5 w-5 text-green-600" />
+                  <span class="text-sm text-slate-600 dark:text-slate-400">Real-time dashboards</span>
+                </div>
+              </div>
+            </div>
+            <div class="relative">
+              <div class="bg-white dark:bg-slate-800 rounded-2xl p-6 shadow-2xl border border-slate-200 dark:border-slate-700">
+                <div class="flex items-center justify-between mb-6">
+                  <h3 class="text-lg font-semibold text-slate-900 dark:text-white">Hiring Performance</h3>
+                  <Badge variant="secondary">Live</Badge>
+                </div>
+                <div class="grid grid-cols-2 gap-4 mb-6">
+                  {_data1.map((metric, idx) => (
+                    <div class="bg-slate-50 dark:bg-slate-900 rounded-lg p-4">
+                      <div class="text-xs text-slate-600 dark:text-slate-400 mb-1">{metric.label}</div>
+                      <div class="text-2xl font-bold text-slate-900 dark:text-white mb-1">{metric.value}</div>
+                      <div class={`text-xs font-medium text-${metric.color}-600 flex items-center gap-1`}>
+                        <TrendingUp class="h-3 w-3" />
+                        {metric.trend}
+                      </div>
+                    </div>
+                  ))}
+                </div>
+                <div class="h-32 bg-gradient-to-r from-blue-500/10 to-green-500/10 rounded-lg flex items-end justify-around p-4">
+                  {_data2.map((height, idx) => (
+                    <div class="flex-1 mx-1">
+                      <div 
+                        class="bg-gradient-to-t from-blue-600 to-green-500 rounded-t"
+                        style={{ height: `${height}%` }}
+                      />
+                    </div>
+                  ))}
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Stats Section */}
+      <section class="py-16 px-4 sm:px-6 lg:px-8 border-b border-slate-200 dark:border-slate-800">
+        <div class="max-w-7xl mx-auto">
+          <div class="grid md:grid-cols-4 gap-8 text-center">
+            <div>
+              <div class="text-4xl font-bold text-blue-600 mb-2">50+</div>
+              <div class="text-slate-600 dark:text-slate-400">Pre-Built Reports</div>
+            </div>
+            <div>
+              <div class="text-4xl font-bold text-blue-600 mb-2">Real-Time</div>
+              <div class="text-slate-600 dark:text-slate-400">Data Updates</div>
+            </div>
+            <div>
+              <div class="text-4xl font-bold text-green-600 mb-2">0</div>
+              <div class="text-slate-600 dark:text-slate-400">Manual Exports</div>
+            </div>
+            <div>
+              <div class="text-4xl font-bold text-orange-600 mb-2">5 min</div>
+              <div class="text-slate-600 dark:text-slate-400">Setup Time</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Key Features */}
+      <section class="py-20 px-4 sm:px-6 lg:px-8">
+        <div class="max-w-7xl mx-auto">
+          <div class="text-center mb-16">
+            <h2 class="text-3xl sm:text-4xl font-bold text-slate-900 dark:text-white mb-4">
+              Analytics Built for Recruiters
+            </h2>
+            <p class="text-xl text-slate-600 dark:text-slate-400 max-w-3xl mx-auto">
+              No data analysts required. Get instant insights with intuitive dashboards and self-service reporting.
+            </p>
+          </div>
+
+          <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {_data3.map((feature, idx) => (
+              <Card class="hover:shadow-lg transition">
+                <CardContent class="p-6">
+                  <div class="w-12 h-12 bg-blue-100 dark:bg-blue-950 rounded-lg flex items-center justify-center mb-4">
+                    {(() => { const DynIcon = feature.icon; return <DynIcon class="h-6 w-6 text-blue-600 dark:text-blue-400" />; })()}
+                  </div>
+                  <h3 class="text-xl font-semibold text-slate-900 dark:text-white mb-3">
+                    {feature.title}
+                  </h3>
+                  <p class="text-slate-600 dark:text-slate-400 mb-4 leading-relaxed">
+                    {feature.description}
+                  </p>
+                  <ul class="space-y-2">
+                    {feature.features.map((item, i) => (
+                      <li class="flex items-center gap-2 text-sm text-slate-600 dark:text-slate-400">
+                        <CheckCircle class="h-4 w-4 text-green-600 flex-shrink-0" />
+                        {item}
+                      </li>
+                    ))}
+                  </ul>
+                </CardContent>
+              </Card>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Pre-Built Reports */}
+      <section class="py-20 px-4 sm:px-6 lg:px-8 bg-slate-50 dark:bg-slate-900">
+        <div class="max-w-7xl mx-auto">
+          <div class="text-center mb-16">
+            <h2 class="text-3xl sm:text-4xl font-bold text-slate-900 dark:text-white mb-4">
+              50+ Pre-Built Reports
+            </h2>
+            <p class="text-xl text-slate-600 dark:text-slate-400 max-w-3xl mx-auto">
+              Start analyzing immediately with ready-to-use reports covering every aspect of recruiting
+            </p>
+          </div>
+
+          <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+            {_data4.map((group, idx) => (
+              <Card class="hover:shadow-lg transition">
+                <CardContent class="p-6">
+                  <div class="flex items-center gap-2 mb-4">
+                    <BarChart3 class="h-5 w-5 text-blue-600" />
+                    <h3 class="font-semibold text-slate-900 dark:text-white">{group.category}</h3>
+                  </div>
+                  <ul class="space-y-2">
+                    {group.reports.map((report, i) => (
+                      <li class="text-sm text-slate-600 dark:text-slate-400 flex items-start gap-2">
+                        <CheckCircle class="h-4 w-4 text-green-600 flex-shrink-0 mt-0.5" />
+                        {report}
+                      </li>
+                    ))}
+                  </ul>
+                </CardContent>
+              </Card>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* How It Works */}
+      <section class="py-20 px-4 sm:px-6 lg:px-8">
+        <div class="max-w-7xl mx-auto">
+          <div class="text-center mb-16">
+            <h2 class="text-3xl sm:text-4xl font-bold text-slate-900 dark:text-white mb-4">
+              From Data to Decisions in 3 Steps
+            </h2>
+          </div>
+
+          <div class="grid md:grid-cols-3 gap-8">
+            {_data5.map((step, idx) => (
+              <div class="relative">
+                <div class="bg-white dark:bg-slate-800 rounded-xl p-8 shadow-lg h-full border border-slate-200 dark:border-slate-700">
+                  <div class="flex items-center gap-4 mb-4">
+                    <div class="w-12 h-12 bg-blue-600 rounded-full flex items-center justify-center text-white font-bold text-xl">
+                      {step.step}
+                    </div>
+                    {(() => { const DynIcon = step.icon; return <DynIcon class="h-8 w-8 text-blue-600 dark:text-blue-400" />; })()}
+                  </div>
+                  <h3 class="text-xl font-semibold text-slate-900 dark:text-white mb-3">
+                    {step.title}
+                  </h3>
+                  <p class="text-slate-600 dark:text-slate-400 leading-relaxed">
+                    {step.description}
+                  </p>
+                </div>
+                {idx < 2 && (
+                  <div class="hidden md:block absolute top-1/2 right-0 transform translate-x-1/2 -translate-y-1/2">
+                    <ArrowRight class="h-6 w-6 text-slate-400" />
+                  </div>
+                )}
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Use Cases */}
+      <section class="py-20 px-4 sm:px-6 lg:px-8 bg-slate-50 dark:bg-slate-900">
+        <div class="max-w-7xl mx-auto">
+          <div class="text-center mb-16">
+            <h2 class="text-3xl sm:text-4xl font-bold text-slate-900 dark:text-white mb-4">
+              Analytics for Every Role
+            </h2>
+          </div>
+
+          <div class="grid md:grid-cols-3 gap-8">
+            {_data6.map((persona, idx) => (
+              <Card class="hover:shadow-xl transition">
+                <CardContent class="p-8">
+                  <div class="w-14 h-14 bg-blue-600 rounded-xl flex items-center justify-center mb-4">
+                    {(() => { const DynIcon = persona.icon; return <DynIcon class="h-7 w-7 text-white" />; })()}
+                  </div>
+                  <h3 class="text-2xl font-semibold text-slate-900 dark:text-white mb-3">
+                    {persona.role}
+                  </h3>
+                  <p class="text-slate-600 dark:text-slate-400 mb-6 leading-relaxed">
+                    {persona.description}
+                  </p>
+                  <div class="space-y-2">
+                    {persona.metrics.map((metric, i) => (
+                      <div class="flex items-center gap-2 text-sm text-slate-600 dark:text-slate-400">
+                        <CheckCircle class="h-4 w-4 text-green-600 flex-shrink-0" />
+                        {metric}
+                      </div>
+                    ))}
+                  </div>
+                </CardContent>
+              </Card>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Benefits Section */}
+      <section class="py-20 px-4 sm:px-6 lg:px-8">
+        <div class="max-w-7xl mx-auto">
+          <div class="text-center mb-16">
+            <h2 class="text-3xl sm:text-4xl font-bold text-slate-900 dark:text-white mb-4">
+              Why Teams Love Jatura Analytics
+            </h2>
+          </div>
+
+          <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {_data7.map((benefit, idx) => (
+              <div class="bg-white dark:bg-slate-800 rounded-xl p-6 shadow-lg border border-slate-200 dark:border-slate-700">
+                {(() => { const DynIcon = benefit.icon; return <DynIcon class="h-10 w-10 text-blue-600 dark:text-blue-400 mb-4" />; })()}
+                <h3 class="text-xl font-semibold text-slate-900 dark:text-white mb-2">
+                  {benefit.title}
+                </h3>
+                <p class="text-slate-600 dark:text-slate-400 leading-relaxed">
+                  {benefit.description}
+                </p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* CTA Section */}
+      <section class="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-blue-600 to-green-600">
+        <div class="max-w-4xl mx-auto text-center">
+          <h2 class="text-3xl sm:text-4xl md:text-5xl font-bold text-white mb-6">
+            Start Making Data-Driven Hiring Decisions Today
+          </h2>
+          <p class="text-xl text-blue-100 mb-8 max-w-2xl mx-auto">
+            Join hundreds of companies using Jatura's analytics to hire smarter, faster, and more strategically.
+          </p>
+          <div class="flex flex-col sm:flex-row gap-4 justify-center">
+            <a href="/signup">
+              <Button size="lg" class="bg-white text-blue-600 hover:bg-blue-50 w-full sm:w-auto">
+                Start Free - Up to 3 active jobs
+                <ArrowRight class="ml-2 h-5 w-5" />
+              </Button>
+            </a>
+            <a href="/pricing">
+              <Button size="lg" variant="outline" class="border-white text-white hover:bg-white/10 w-full sm:w-auto">
+                View Pricing
+              </Button>
+            </a>
+          </div>
+          <div class="mt-8 flex items-center justify-center gap-6 text-blue-100 text-sm">
+            <div class="flex items-center gap-2">
+              <CheckCircle class="h-5 w-5" />
+              <span>50+ pre-built reports</span>
+            </div>
+            <div class="flex items-center gap-2">
+              <CheckCircle class="h-5 w-5" />
+              <span>Real-time dashboards</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+</MarketingLayout>

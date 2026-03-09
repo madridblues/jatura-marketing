@@ -1,0 +1,389 @@
+---
+export const prerender = true;
+import MarketingLayout from '@/layouts/MarketingLayout.astro';
+import { ArrowRight, CheckCircle2, BookOpen, TrendingUp, Users, Zap, Shield, BarChart3 } from 'lucide-react';
+import { Button } from '@/components/ui/button';
+
+const title = "Complete Guide to Applicant Tracking Systems (ATS) | Jatura";
+const description = "Everything you need to know about Applicant Tracking Systems. From implementation to best practices, features, pricing, and choosing the right ATS for your business.";
+
+const schemaOrg = [
+  {
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://jatura.com" },
+      { "@type": "ListItem", "position": 2, "name": "Recruiting Guides", "item": "https://jatura.com/guide" },
+      { "@type": "ListItem", "position": 3, "name": "Complete Guide to ATS", "item": "https://jatura.com/guide/complete-guide-to-ats" }
+    ]
+  },
+  {
+    "@type": "Article",
+    "headline": "The Complete Guide to Applicant Tracking Systems (ATS)",
+    "description": "Everything you need to know about ATS: features, pricing, implementation, and how to choose the right system for your business",
+    "url": "https://jatura.com/guide/complete-guide-to-ats",
+    "author": { "@type": "Organization", "name": "Jatura", "url": "https://jatura.com" },
+    "publisher": { "@type": "Organization", "name": "Jatura", "logo": { "@type": "ImageObject", "url": "https://jatura.com/logo.png" } },
+    "dateModified": "2025-01-01"
+  }
+];
+
+const _data1 = [
+              { title: "What is an ATS?", anchor: "#what-is-ats" },
+              { title: "Key Features & Capabilities", anchor: "#features" },
+              { title: "Benefits of Using an ATS", anchor: "#benefits" },
+              { title: "Implementation Best Practices", link: "/guide/ats-implementation-best-practices" },
+              { title: "Choosing the Right ATS", link: "/guide/best-ats-for-small-business" },
+              { title: "ATS vs. HRIS Comparison", link: "/guide/ats-vs-hris" },
+              { title: "Essential Features Checklist", link: "/guide/ats-features-checklist" },
+              { title: "Pricing & ROI Guide", link: "/guide/ats-pricing-guide" },
+            ];
+
+const _data2 = [
+                {
+                  icon: Users,
+                  title: "Job Distribution",
+                  desc: "Post to 100+ job boards simultaneously with one click. Your ATS auto-formats postings and distributes them across LinkedIn, Indeed, Glassdoor, and niche industry boards."
+                },
+                {
+                  icon: Zap,
+                  title: "Application Management",
+                  desc: "Candidates apply through branded career pages. AI screens resumes, extracts key data, and ranks applicants based on your criteria—automatically."
+                },
+                {
+                  icon: TrendingUp,
+                  title: "Pipeline Tracking",
+                  desc: "Visual kanban boards show exactly where each candidate stands. Drag-and-drop candidates through stages: screening, phone interview, on-site, offer, hired."
+                },
+                {
+                  icon: BarChart3,
+                  title: "Collaboration & Analytics",
+                  desc: "Team members score candidates, leave feedback, and schedule interviews—all in one place. Real-time dashboards show time-to-hire, source effectiveness, and pipeline health."
+                }
+              ];
+
+const _data3 = [
+                {
+                  title: "AI-Powered Resume Screening",
+                  desc: "Machine learning algorithms scan resumes for skills, experience, and qualifications. The best systems achieve 85%+ accuracy in matching candidates to job requirements, saving recruiters 10+ hours per week on manual screening."
+                },
+                {
+                  title: "Customizable Pipeline Stages",
+                  desc: "Every company hires differently. Your ATS should let you define custom stages (e.g., 'Culture Fit Interview,' 'Technical Assessment,' 'Executive Panel') and set automated workflows for each stage. Learn more in our ATS Implementation Best Practices guide.",
+                  link: "/guide/ats-implementation-best-practices"
+                },
+                {
+                  title: "Collaborative Hiring Tools",
+                  desc: "Modern hiring is a team sport. Look for features like scorecards, @mentions, internal messaging, and permission-based access so hiring managers, recruiters, and executives can collaborate effectively."
+                },
+                {
+                  title: "Candidate Relationship Management (CRM)",
+                  desc: "The best candidates aren't always actively applying. A built-in CRM lets you nurture passive candidates, build talent pools, and run targeted outreach campaigns for future roles."
+                },
+                {
+                  title: "Interview Scheduling & Coordination",
+                  desc: "Eliminate the email back-and-forth. Modern ATS platforms integrate with Google Calendar, Outlook, and Zoom to let candidates self-schedule based on interviewer availability, send automated reminders, and generate meeting links."
+                },
+                {
+                  title: "Robust Analytics & Reporting",
+                  desc: "Track metrics that matter: time-to-hire, cost-per-hire, source effectiveness, pipeline conversion rates, and diversity metrics. Explore our complete Recruiting Metrics & KPIs guide for benchmarks.",
+                  link: "/guide/recruiting-metrics-kpis"
+                }
+              ];
+
+const _data4 = [
+                { metric: "70%", desc: "Reduction in time-to-hire" },
+                { metric: "50%", desc: "Lower cost-per-hire" },
+                { metric: "10+ hrs", desc: "Saved per recruiter weekly" },
+                { metric: "3x", desc: "Increase in qualified applicants" },
+                { metric: "85%", desc: "Improved candidate experience" },
+                { metric: "60%", desc: "Better hiring quality scores" }
+              ];
+
+const _data5 = [
+                {
+                  title: "1. Speed & Efficiency Gains",
+                  points: [
+                    "Automated resume screening reduces manual review time by 75%",
+                    "One-click job board distribution saves 5+ hours per posting",
+                    "Automated interview scheduling eliminates 20+ back-and-forth emails",
+                    "Bulk actions (reject, move stage, send emails) process 100s of candidates in seconds"
+                  ]
+                },
+                {
+                  title: "2. Improved Candidate Quality",
+                  points: [
+                    "AI matching surfaces top candidates that manual screening might miss",
+                    "Structured interview scorecards reduce bias and improve assessment consistency",
+                    "Data-driven insights reveal which sources deliver the best candidates",
+                    "Talent pools let you re-engage strong past applicants for new roles"
+                  ]
+                },
+                {
+                  title: "3. Enhanced Candidate Experience",
+                  points: [
+                    "Mobile-optimized application forms reduce drop-off rates by 40%",
+                    "Automated status updates keep candidates informed (reducing ghosting complaints)",
+                    "Self-service interview scheduling respects candidate time",
+                    "Branded career pages showcase your employer brand professionally"
+                  ]
+                },
+                {
+                  title: "4. Compliance & Risk Mitigation",
+                  points: [
+                    "EEOC/OFCCP-compliant reporting reduces audit risk",
+                    "GDPR/CCPA data privacy features protect candidate information",
+                    "Audit trails document hiring decisions for legal protection",
+                    "Standardized workflows ensure consistent, fair treatment of all applicants"
+                  ]
+                },
+                {
+                  title: "5. Data-Driven Decision Making",
+                  points: [
+                    "Identify bottlenecks: which stage has the highest drop-off?",
+                    "Optimize spend: which job boards deliver the best ROI?",
+                    "Forecast hiring: predict when you'll fill open roles based on historical data",
+                    "Diversity analytics help you track and improve representation"
+                  ]
+                }
+              ];
+
+const _data6 = [
+                {
+                  title: "ATS Implementation Best Practices",
+                  desc: "Step-by-step playbook for rolling out your ATS successfully, from data migration to team training.",
+                  link: "/guide/ats-implementation-best-practices"
+                },
+                {
+                  title: "Best ATS for Small Business",
+                  desc: "Choosing the right ATS when you're under 100 employees: features, pricing, and vendor comparisons.",
+                  link: "/guide/best-ats-for-small-business"
+                },
+                {
+                  title: "ATS vs. HRIS: What's the Difference?",
+                  desc: "Understand when you need an ATS, HRIS, or both. Compare features, use cases, and integration options.",
+                  link: "/guide/ats-vs-hris"
+                },
+                {
+                  title: "Essential ATS Features Checklist",
+                  desc: "Don't buy the wrong system. Use this comprehensive checklist to evaluate vendors feature-by-feature.",
+                  link: "/guide/ats-features-checklist"
+                },
+                {
+                  title: "ATS Pricing Guide & ROI Calculator",
+                  desc: "What you'll actually pay for an ATS (including hidden costs) plus ROI formulas to justify your investment.",
+                  link: "/guide/ats-pricing-guide"
+                },
+                {
+                  title: "ATS Integration Guide",
+                  desc: "Connect your ATS with HRIS, background check providers, assessment tools, and more for seamless workflows.",
+                  link: "/guide/ats-integration-guide"
+                },
+                {
+                  title: "Recruiting Metrics & KPIs",
+                  desc: "The essential recruiting metrics every talent leader should track—with industry benchmarks and formulas.",
+                  link: "/guide/recruiting-metrics-kpis"
+                },
+                {
+                  title: "Candidate Experience Best Practices",
+                  desc: "Design a candidate journey that attracts top talent and strengthens your employer brand.",
+                  link: "/guide/candidate-experience-best-practices"
+                }
+              ];
+---
+
+<MarketingLayout {title} {description} {schemaOrg}>
+      
+      {/* Hero Section */}
+      <section class="pt-32 pb-16 px-4 bg-gradient-to-b from-slate-50 to-white dark:from-slate-900 dark:to-slate-950">
+        <div class="max-w-4xl mx-auto">
+          <div class="inline-flex items-center gap-2 px-4 py-2 bg-blue-50 dark:bg-blue-950 text-blue-700 dark:text-blue-300 rounded-full text-sm font-medium mb-6">
+            <BookOpen class="w-4 h-4" />
+            Comprehensive Guide · 15 min read
+          </div>
+          
+          <h1 class="text-5xl md:text-6xl font-bold text-slate-900 dark:text-white mb-6">
+            Complete Guide to Applicant Tracking Systems
+          </h1>
+          
+          <p class="text-xl text-slate-600 dark:text-slate-400 mb-8">
+            Everything you need to know about modern ATS platforms—from implementation and features to pricing and best practices. This comprehensive guide will help you choose, implement, and maximize your recruiting technology.
+          </p>
+          
+          <div class="flex flex-wrap gap-4 mb-12">
+            <a href="/signup">
+              <Button class="bg-blue-600 hover:bg-blue-700 text-white">
+                Try Jatura Free
+                <ArrowRight class="ml-2 h-4 w-4" />
+              </Button>
+            </a>
+            <a href="/demo">
+              <Button variant="outline" class="border-slate-300 dark:border-slate-700">
+                Explore Interactive Demo
+              </Button>
+            </a>
+          </div>
+        </div>
+      </section>
+
+      {/* Table of Contents */}
+      <section class="py-12 px-4 bg-slate-50 dark:bg-slate-900 border-y border-slate-200 dark:border-slate-800">
+        <div class="max-w-4xl mx-auto">
+          <h2 class="text-2xl font-bold text-slate-900 dark:text-white mb-6">What You'll Learn</h2>
+          <div class="grid md:grid-cols-2 gap-4">
+            {_data1.map((item, idx) => (
+              <a href={item.link || item.anchor || "#"}>
+                <div class="flex items-center gap-3 p-3 rounded-lg hover:bg-white dark:hover:bg-slate-800 transition-colors cursor-pointer">
+                  <CheckCircle2 class="w-5 h-5 text-emerald-600 dark:text-emerald-400 flex-shrink-0" />
+                  <span class="text-slate-700 dark:text-slate-300 font-medium">{item.title}</span>
+                </div>
+              </a>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Main Content */}
+      <article class="py-16 px-4">
+        <div class="max-w-4xl mx-auto prose prose-slate dark:prose-invert max-w-none">
+          
+          {/* Section 1: What is an ATS? */}
+          <section id="what-is-ats" class="mb-16">
+            <h2 class="text-3xl font-bold text-slate-900 dark:text-white mb-6">What is an Applicant Tracking System (ATS)?</h2>
+            
+            <p class="text-lg text-slate-700 dark:text-slate-300 mb-6">
+              An Applicant Tracking System (ATS) is a software application that manages the entire recruitment and hiring process digitally. Think of it as your recruiting command center—a centralized platform where job postings, candidate applications, resume screening, interview scheduling, team collaboration, and hiring decisions all happen seamlessly.
+            </p>
+
+            <div class="bg-blue-50 dark:bg-blue-950 border-l-4 border-blue-600 p-6 rounded-r-lg mb-8">
+              <p class="text-slate-800 dark:text-slate-200 font-medium">
+                <strong>Key Insight:</strong> Modern ATS platforms have evolved from simple resume databases to comprehensive talent acquisition suites powered by AI, automation, and advanced analytics.
+              </p>
+            </div>
+
+            <h3 class="text-2xl font-bold text-slate-900 dark:text-white mb-4 mt-8">How ATS Systems Work</h3>
+            
+            <p class="text-slate-700 dark:text-slate-300 mb-4">
+              An ATS streamlines hiring through four core workflows:
+            </p>
+
+            <div class="grid md:grid-cols-2 gap-6 mb-8">
+              {_data2.map((item, idx) => (
+                <div class="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 p-6 rounded-lg">
+                  {(() => { const DynIcon = item.icon; return <DynIcon class="w-8 h-8 text-blue-600 dark:text-blue-400 mb-3" />; })()}
+                  <h4 class="text-lg font-bold text-slate-900 dark:text-white mb-2">{item.title}</h4>
+                  <p class="text-slate-600 dark:text-slate-400">{item.desc}</p>
+                </div>
+              ))}
+            </div>
+          </section>
+
+          {/* Section 2: Key Features */}
+          <section id="features" class="mb-16">
+            <h2 class="text-3xl font-bold text-slate-900 dark:text-white mb-6">Essential ATS Features & Capabilities</h2>
+            
+            <p class="text-lg text-slate-700 dark:text-slate-300 mb-6">
+              Not all ATS platforms are created equal. Here are the must-have features that separate basic resume databases from true talent acquisition platforms:
+            </p>
+
+            <div class="space-y-6 mb-8">
+              {_data3.map((item, idx) => (
+                <div class="bg-slate-50 dark:bg-slate-900 border border-slate-200 dark:border-slate-800 p-6 rounded-lg">
+                  <h3 class="text-xl font-bold text-slate-900 dark:text-white mb-3">{item.title}</h3>
+                  <p class="text-slate-700 dark:text-slate-300">
+                    {item.desc}
+                    {item.link &&
+                      <span> <a href={item.link}><span class="text-blue-600 dark:text-blue-400 hover:underline cursor-pointer">Learn more &rarr;</span></a></span>
+                    }
+                  </p>
+                </div>
+              ))}
+            </div>
+
+            <div class="bg-emerald-50 dark:bg-emerald-950 border border-emerald-200 dark:border-emerald-800 p-6 rounded-lg">
+              <p class="text-slate-800 dark:text-slate-200">
+                <strong>Pro Tip:</strong> Use our <a href="/guide/ats-features-checklist"><span class="text-blue-600 dark:text-blue-400 hover:underline cursor-pointer">Essential ATS Features Checklist</span></a> to evaluate vendors and ensure you're not missing critical capabilities.
+              </p>
+            </div>
+          </section>
+
+          {/* Section 3: Benefits */}
+          <section id="benefits" class="mb-16">
+            <h2 class="text-3xl font-bold text-slate-900 dark:text-white mb-6">Why Companies Use an ATS: Proven Benefits</h2>
+            
+            <p class="text-lg text-slate-700 dark:text-slate-300 mb-8">
+              Investing in an ATS isn't just about organization—it's about measurable business impact. Here's what leading companies achieve with the right platform:
+            </p>
+
+            <div class="grid md:grid-cols-3 gap-6 mb-8">
+              {_data4.map((item, idx) => (
+                <div class="text-center p-6 bg-gradient-to-br from-blue-50 to-emerald-50 dark:from-slate-900 dark:to-slate-800 rounded-lg border border-slate-200 dark:border-slate-700">
+                  <div class="text-4xl font-bold text-blue-600 dark:text-blue-400 mb-2">{item.metric}</div>
+                  <div class="text-slate-700 dark:text-slate-300">{item.desc}</div>
+                </div>
+              ))}
+            </div>
+
+            <h3 class="text-2xl font-bold text-slate-900 dark:text-white mb-4 mt-12">Detailed Benefits Breakdown</h3>
+
+            <div class="space-y-6">
+              {_data5.map((section, idx) => (
+                <div class="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 p-6 rounded-lg">
+                  <h4 class="text-xl font-bold text-slate-900 dark:text-white mb-4">{section.title}</h4>
+                  <ul class="space-y-2">
+                    {section.points.map((point, pidx) => (
+                      <li class="flex items-start gap-3 text-slate-700 dark:text-slate-300">
+                        <CheckCircle2 class="w-5 h-5 text-emerald-600 dark:text-emerald-400 flex-shrink-0 mt-0.5" />
+                        <span>{point}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              ))}
+            </div>
+          </section>
+
+          {/* Deep Dive Cluster Links */}
+          <section class="mb-16 bg-gradient-to-br from-slate-50 to-blue-50 dark:from-slate-900 dark:to-slate-800 p-8 rounded-xl border border-slate-200 dark:border-slate-700">
+            <h2 class="text-3xl font-bold text-slate-900 dark:text-white mb-6">Dive Deeper: Specialized ATS Guides</h2>
+            <p class="text-slate-700 dark:text-slate-300 mb-8">
+              Explore these comprehensive guides for specific aspects of choosing and using an ATS:
+            </p>
+            
+            <div class="grid md:grid-cols-2 gap-6">
+              {_data6.map((guide, idx) => (
+                <a href={guide.link}>
+                  <div class="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-700 p-6 rounded-lg hover:shadow-lg transition-shadow cursor-pointer h-full">
+                    <h3 class="text-lg font-bold text-slate-900 dark:text-white mb-2 flex items-start gap-2">
+                      <ArrowRight class="w-5 h-5 text-blue-600 dark:text-blue-400 flex-shrink-0 mt-1" />
+                      {guide.title}
+                    </h3>
+                    <p class="text-slate-600 dark:text-slate-400">{guide.desc}</p>
+                  </div>
+                </a>
+              ))}
+            </div>
+          </section>
+
+          {/* CTA Section */}
+          <section class="bg-gradient-to-r from-blue-600 to-emerald-600 text-white p-12 rounded-2xl text-center">
+            <h2 class="text-3xl font-bold mb-4">Ready to Transform Your Hiring?</h2>
+            <p class="text-xl mb-8 text-blue-50">
+              See why 500+ companies trust Jatura to power their recruiting process.
+            </p>
+            <div class="flex flex-wrap gap-4 justify-center">
+              <a href="/signup">
+                <Button class="bg-white text-blue-600 hover:bg-blue-50 text-lg px-8 py-6">
+                  Start Free Trial
+                  <ArrowRight class="ml-2 h-5 w-5" />
+                </Button>
+              </a>
+              <a href="/demo">
+                <Button variant="outline" class="border-2 border-white text-white hover:bg-white/10 text-lg px-8 py-6">
+                  Try Interactive Demo
+                </Button>
+              </a>
+            </div>
+          </section>
+        </div>
+      </article>
+</MarketingLayout>

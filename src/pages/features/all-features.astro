@@ -1,0 +1,501 @@
+---
+export const prerender = true;
+import MarketingLayout from '@/layouts/MarketingLayout.astro';
+import { ArrowRight, CheckCircle, Sparkles, Users, BarChart3, Zap, MessageSquare, Calendar, FileText, Globe, Shield, Brain, Target, Clock, Mail, Phone, Video, Search, Database, Settings, Award, TrendingUp, Heart, Lock, Briefcase, GraduationCap, Building, DollarSign, Bell, Share2, Filter, Tag, Star, Rocket, Package } from 'lucide-react';
+import { Button } from '@/components/ui/button';
+import { Badge } from '@/components/ui/badge';
+import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
+
+const title = "Complete Feature List | All Jatura ATS Features | Recruiting Platform";
+const description = "Explore all Jatura features: AI-powered ATS, omni-channel messaging, smart scheduling, advanced analytics, workflow automation, DEI tracking, and 100+ integrations for complete recruiting success.";
+
+const schemaOrg = [
+  {
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://jatura.com" },
+      { "@type": "ListItem", "position": 2, "name": "Features", "item": "https://jatura.com/features" },
+      { "@type": "ListItem", "position": 3, "name": "All Features", "item": "https://jatura.com/features/all-features" }
+    ]
+  },
+  {
+    "@type": "SoftwareApplication",
+    "name": "Jatura ATS",
+    "@id": "https://jatura.com/#software",
+    "applicationCategory": "BusinessApplication",
+    "operatingSystem": "Web",
+    "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD", "description": "Free plan available" },
+    "featureList": ["AI Resume Screening", "Kanban Pipeline", "Omni-Channel Messaging", "Interview Scheduling", "Analytics Dashboard", "Workflow Automation", "Career Site Builder", "100+ Integrations", "DEI Tracking", "Employer Branding"],
+    "aggregateRating": { "@type": "AggregateRating", "ratingValue": "4.9", "ratingCount": "247", "bestRating": "5" }
+  }
+];
+
+  const featureCategories = [
+    {
+      title: "Applicant Tracking",
+      icon: Users,
+      color: "blue",
+      features: [
+        "Visual Kanban pipeline",
+        "Drag and drop candidates",
+        "Custom pipeline stages",
+        "Advanced search and filters",
+        "Resume parsing",
+        "Bulk actions",
+        "Application tracking",
+        "Candidate deduplication"
+      ]
+    },
+    {
+      title: "AI-Powered Recruiting",
+      icon: Brain,
+      color: "blue",
+      features: [
+        "AI resume screening",
+        "Smart candidate matching",
+        "Job description generator",
+        "Interview question suggestions",
+        "AI email drafting",
+        "Predictive analytics",
+        "Automated scoring"
+      ]
+    },
+    {
+      title: "Communication",
+      icon: MessageSquare,
+      color: "green",
+      features: [
+        "Email, SMS, and in-app chat",
+        "Unified inbox",
+        "Message templates",
+        "Automated sequences",
+        "Personalization",
+        "Two-way conversations",
+        "Read tracking"
+      ]
+    },
+    {
+      title: "Interview Scheduling",
+      icon: Calendar,
+      color: "orange",
+      features: [
+        "Self-scheduling links",
+        "Calendar sync (Google, Outlook)",
+        "Automated reminders",
+        "Panel interview coordination",
+        "Video meeting links",
+        "Buffer time management",
+        "Conflict detection"
+      ]
+    },
+    {
+      title: "Automation",
+      icon: Zap,
+      color: "yellow",
+      features: [
+        "Stage-based triggers",
+        "Email workflows",
+        "Task automation",
+        "Custom rules",
+        "Pre-built templates",
+        "Conditional logic",
+        "Multi-step sequences"
+      ]
+    },
+    {
+      title: "Analytics & Reporting",
+      icon: BarChart3,
+      color: "indigo",
+      features: [
+        "Real-time dashboards",
+        "50+ pre-built reports",
+        "Custom report builder",
+        "Time-to-hire metrics",
+        "Source effectiveness",
+        "Pipeline analytics",
+        "Export to PDF/CSV"
+      ]
+    },
+    {
+      title: "Career Site",
+      icon: Globe,
+      color: "teal",
+      features: [
+        "Branded career pages",
+        "Mobile-optimized listings",
+        "One-click job posting",
+        "SEO optimization",
+        "Custom application forms",
+        "Social sharing",
+        "Multi-language support"
+      ]
+    },
+    {
+      title: "Candidate Experience",
+      icon: Heart,
+      color: "pink",
+      features: [
+        "Application portal",
+        "Status tracking",
+        "Mobile-friendly forms",
+        "Text-to-apply",
+        "Privacy controls",
+        "Automated updates",
+        "Interview prep materials"
+      ]
+    },
+    {
+      title: "Team Collaboration",
+      icon: Users,
+      color: "cyan",
+      features: [
+        "Shared profiles",
+        "Internal notes",
+        "@mentions",
+        "Interview scorecards",
+        "Role-based permissions",
+        "Activity feed",
+        "Real-time sync"
+      ]
+    },
+    {
+      title: "Diversity & Inclusion",
+      icon: Award,
+      color: "rose",
+      features: [
+        "DEI dashboards",
+        "Diversity tracking",
+        "Bias detection",
+        "Anonymous review",
+        "EEO compliance",
+        "Inclusive job descriptions",
+        "Structured interviews"
+      ]
+    },
+    {
+      title: "Talent Pools",
+      icon: Target,
+      color: "violet",
+      features: [
+        "Talent pool management",
+        "Passive candidate tracking",
+        "Nurture campaigns",
+        "Re-engagement workflows",
+        "Relationship scoring",
+        "Segmentation",
+        "Long-term pipeline"
+      ]
+    },
+    {
+      title: "Sourcing",
+      icon: Search,
+      color: "amber",
+      features: [
+        "Boolean search",
+        "LinkedIn integration",
+        "Resume database",
+        "Skills matching",
+        "Chrome extension",
+        "Saved searches",
+        "Bulk import"
+      ]
+    },
+    {
+      title: "Documents & Offers",
+      icon: FileText,
+      color: "lime",
+      features: [
+        "Offer letter generation",
+        "E-signatures",
+        "Template library",
+        "Document routing",
+        "Version control",
+        "Secure storage",
+        "PDF generation"
+      ]
+    },
+    {
+      title: "Integrations",
+      icon: Package,
+      color: "emerald",
+      features: [
+        "100+ integrations",
+        "Job board connections",
+        "HRIS sync",
+        "Background checks",
+        "Assessment tools",
+        "RESTful API",
+        "Webhooks"
+      ]
+    },
+    {
+      title: "Security & Compliance",
+      icon: Shield,
+      color: "slate",
+      features: [
+        "SOC 2 Type II",
+        "GDPR compliant",
+        "CCPA compliant",
+        "Data encryption",
+        "SSO support",
+        "Two-factor auth",
+        "Audit logs"
+      ]
+    }
+  ];
+
+  const getColorClasses = (color) => {
+    const colorMap = {
+      blue: { bg: "bg-blue-100 dark:bg-blue-950", text: "text-blue-600 dark:text-blue-400", icon: "text-blue-600" },
+      indigo: { bg: "bg-indigo-100 dark:bg-indigo-950", text: "text-indigo-600 dark:text-indigo-400", icon: "text-indigo-600" },
+      green: { bg: "bg-green-100 dark:bg-green-950", text: "text-green-600 dark:text-green-400", icon: "text-green-600" },
+      orange: { bg: "bg-orange-100 dark:bg-orange-950", text: "text-orange-600 dark:text-orange-400", icon: "text-orange-600" },
+      yellow: { bg: "bg-yellow-100 dark:bg-yellow-950", text: "text-yellow-600 dark:text-yellow-400", icon: "text-yellow-600" },
+      teal: { bg: "bg-teal-100 dark:bg-teal-950", text: "text-teal-600 dark:text-teal-400", icon: "text-teal-600" },
+      pink: { bg: "bg-pink-100 dark:bg-pink-950", text: "text-pink-600 dark:text-pink-400", icon: "text-pink-600" },
+      cyan: { bg: "bg-cyan-100 dark:bg-cyan-950", text: "text-cyan-600 dark:text-cyan-400", icon: "text-cyan-600" },
+      rose: { bg: "bg-rose-100 dark:bg-rose-950", text: "text-rose-600 dark:text-rose-400", icon: "text-rose-600" },
+      violet: { bg: "bg-violet-100 dark:bg-violet-950", text: "text-violet-600 dark:text-violet-400", icon: "text-violet-600" },
+      amber: { bg: "bg-amber-100 dark:bg-amber-950", text: "text-amber-600 dark:text-amber-400", icon: "text-amber-600" },
+      lime: { bg: "bg-lime-100 dark:bg-lime-950", text: "text-lime-600 dark:text-lime-400", icon: "text-lime-600" },
+      emerald: { bg: "bg-emerald-100 dark:bg-emerald-950", text: "text-emerald-600 dark:text-emerald-400", icon: "text-emerald-600" },
+      slate: { bg: "bg-slate-100 dark:bg-slate-800", text: "text-slate-600 dark:text-slate-400", icon: "text-slate-600" },
+      sky: { bg: "bg-sky-100 dark:bg-sky-950", text: "text-sky-600 dark:text-sky-400", icon: "text-sky-600" },
+      red: { bg: "bg-red-100 dark:bg-red-950", text: "text-red-600 dark:text-red-400", icon: "text-red-600" }
+    };
+    return colorMap[color] || colorMap.blue;
+  };
+
+const _data1 = [
+              {
+                icon: Rocket,
+                title: "All in one place",
+                description: "No juggling 5 different tools. ATS, scheduling, messaging, and analytics in a single platform."
+              },
+              {
+                icon: Brain,
+                title: "AI that actually helps",
+                description: "Screen resumes, draft emails, and match candidates automatically. Save 10+ hours per week."
+              },
+              {
+                icon: TrendingUp,
+                title: "Ready in minutes",
+                description: "Your team will get it immediately. No training sessions, no consultants, no complexity."
+              },
+              {
+                icon: DollarSign,
+                title: "Starts free",
+                description: "Up to 3 active jobs completely free. Upgrade when you're ready. No credit card needed."
+              },
+              {
+                icon: Shield,
+                title: "Enterprise secure",
+                description: "SOC 2, GDPR, and CCPA compliant. Your candidate data is protected."
+              },
+              {
+                icon: Settings,
+                title: "Works your way",
+                description: "Customize pipelines, fields, and workflows to match how your team actually hires."
+              },
+              {
+                icon: Users,
+                title: "Unlimited users",
+                description: "Bring your whole team. Hiring managers, recruiters, interviewers. No extra fees."
+              },
+              {
+                icon: Star,
+                title: "Real support",
+                description: "Actual humans who respond fast and actually care about helping you succeed."
+              }
+            ];
+---
+
+<MarketingLayout {title} {description} {schemaOrg}>
+
+      {/* Hero Section */}
+      <section class="pt-20 pb-16 px-4 sm:px-6 lg:px-8 bg-black border-b border-slate-800">
+        <div class="max-w-7xl mx-auto text-center">
+          <Badge class="mb-4">
+            <Sparkles class="h-3 w-3 mr-1" />
+            Complete Feature List
+          </Badge>
+          <h1 class="text-4xl sm:text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight">
+            Every feature you need to hire faster
+          </h1>
+          <p class="text-xl text-slate-400 mb-8 max-w-3xl mx-auto leading-relaxed">
+            From AI screening to interview scheduling, Jatura brings together everything modern recruiting teams need in one powerful platform.
+          </p>
+          <div class="flex flex-col sm:flex-row gap-4 justify-center">
+            <a href="/signup">
+              <Button size="lg" class="w-full sm:w-auto" data-testid="button-get-started">
+                Start Free
+                <ArrowRight class="ml-2 h-5 w-5" />
+              </Button>
+            </a>
+            <a href="/pricing">
+              <Button size="lg" variant="outline" class="w-full sm:w-auto border-slate-700 text-white hover:bg-slate-900" data-testid="button-see-pricing">
+                See Pricing
+              </Button>
+            </a>
+          </div>
+          <div class="mt-8 flex items-center justify-center gap-6 flex-wrap">
+            <div class="flex items-center gap-2">
+              <CheckCircle class="h-5 w-5 text-green-500" />
+              <span class="text-sm text-slate-400">150+ features</span>
+            </div>
+            <div class="flex items-center gap-2">
+              <CheckCircle class="h-5 w-5 text-green-500" />
+              <span class="text-sm text-slate-400">100+ integrations</span>
+            </div>
+            <div class="flex items-center gap-2">
+              <CheckCircle class="h-5 w-5 text-green-500" />
+              <span class="text-sm text-slate-400">Free up to 3 jobs</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Feature Categories with Side Menu */}
+      <section class="py-20 px-4 sm:px-6 lg:px-8">
+        <div class="max-w-7xl mx-auto">
+          <div class="flex gap-12">
+            {/* Side Navigation - Desktop Only */}
+            <aside class="hidden lg:block w-64 flex-shrink-0">
+              <div class="sticky top-24">
+                <h3 class="text-sm font-semibold text-slate-400 uppercase tracking-wider mb-4">
+                  Quick Navigation
+                </h3>
+                <nav class="space-y-1">
+                  {featureCategories.map((category, idx) => {
+                    const Icon = category.icon;
+                    return (
+                      <a
+                        href={`#${category.title.toLowerCase().replace(/\s+/g, '-')}`}
+                        class="flex items-center gap-3 px-3 py-2 rounded-lg text-sm font-medium text-slate-400 hover:text-white hover:bg-slate-900 transition-colors group"
+                      >
+                        <Icon class="h-4 w-4 flex-shrink-0 group-hover:text-blue-400 transition-colors" />
+                        <span class="truncate">{category.title}</span>
+                      </a>
+                    );
+                  })}
+                </nav>
+              </div>
+            </aside>
+
+            {/* Main Content */}
+            <div class="flex-1 min-w-0">
+          <div class="text-center mb-16">
+            <h2 class="text-3xl sm:text-4xl font-bold text-white mb-4">
+              15 Core Feature Categories
+            </h2>
+            <p class="text-xl text-slate-400 max-w-3xl mx-auto">
+              Everything you need to source, screen, schedule, and hire the best candidates.
+            </p>
+          </div>
+
+              <div class="grid md:grid-cols-2 gap-8">
+                {featureCategories.map((category, idx) => {
+                  const colors = getColorClasses(category.color);
+                  const Icon = category.icon;
+                  return (
+                    <Card 
+                      id={category.title.toLowerCase().replace(/\s+/g, '-')}
+                      class="hover:shadow-lg transition scroll-mt-24"
+                    >
+                      <CardHeader>
+                        <div class="flex items-center gap-3 mb-3">
+                          <div class={`w-12 h-12 ${colors.bg} rounded-lg flex items-center justify-center`}>
+                            <Icon class={`h-6 w-6 ${colors.icon}`} />
+                          </div>
+                          <CardTitle class="text-lg">{category.title}</CardTitle>
+                        </div>
+                      </CardHeader>
+                      <CardContent>
+                        <ul class="space-y-2">
+                          {category.features.map((feature, i) => (
+                            <li class="flex items-start gap-2 text-sm text-slate-600 dark:text-slate-400">
+                              <CheckCircle class="h-4 w-4 text-green-600 flex-shrink-0 mt-0.5" />
+                              <span>{feature}</span>
+                            </li>
+                          ))}
+                        </ul>
+                      </CardContent>
+                    </Card>
+                  );
+                })}
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Platform Benefits */}
+      <section class="py-20 px-4 sm:px-6 lg:px-8 bg-slate-900 border-y border-slate-800">
+        <div class="max-w-7xl mx-auto">
+          <div class="text-center mb-16">
+            <h2 class="text-3xl sm:text-4xl font-bold text-white mb-4">
+              Why teams love Jatura
+            </h2>
+            <p class="text-xl text-slate-400 max-w-3xl mx-auto">
+              Built for speed, designed for simplicity, powered by AI.
+            </p>
+          </div>
+
+          <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {_data1.map((benefit, idx) => (
+              <div class="bg-slate-800 rounded-xl p-6 shadow-lg border border-slate-700 text-center">
+                <div class="inline-flex items-center justify-center w-14 h-14 bg-blue-600 rounded-xl mb-4">
+                  {(() => { const DynIcon = benefit.icon; return <DynIcon class="h-7 w-7 text-white" />; })()}
+                </div>
+                <h3 class="text-lg font-semibold text-white mb-2">
+                  {benefit.title}
+                </h3>
+                <p class="text-sm text-slate-400 leading-relaxed">
+                  {benefit.description}
+                </p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* CTA Section */}
+      <section class="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-blue-600 to-blue-700">
+        <div class="max-w-4xl mx-auto text-center">
+          <h2 class="text-3xl sm:text-4xl md:text-5xl font-bold text-white mb-6">
+            Start hiring smarter today
+          </h2>
+          <p class="text-xl text-blue-100 mb-8 max-w-2xl mx-auto">
+            Join hundreds of companies who switched to Jatura and never looked back. Free for up to 3 jobs.
+          </p>
+          <div class="flex flex-col sm:flex-row gap-4 justify-center">
+            <a href="/signup">
+              <Button size="lg" class="bg-white text-blue-600 hover:bg-blue-50 w-full sm:w-auto">
+                Start Free
+                <ArrowRight class="ml-2 h-5 w-5" />
+              </Button>
+            </a>
+            <a href="/pricing">
+              <Button size="lg" variant="outline" class="border-white text-white hover:bg-white/10 w-full sm:w-auto">
+                View Pricing
+              </Button>
+            </a>
+          </div>
+          <div class="mt-8 flex items-center justify-center gap-6 text-blue-100 text-sm flex-wrap">
+            <div class="flex items-center gap-2">
+              <CheckCircle class="h-5 w-5" />
+              <span>14-day free trial</span>
+            </div>
+            <div class="flex items-center gap-2">
+              <CheckCircle class="h-5 w-5" />
+              <span>No credit card required</span>
+            </div>
+            <div class="flex items-center gap-2">
+              <CheckCircle class="h-5 w-5" />
+              <span>Free up to 3 jobs</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+</MarketingLayout>

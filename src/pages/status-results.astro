@@ -1,0 +1,13 @@
+---
+export const prerender = true;
+import MarketingLayout from '@/layouts/MarketingLayout.astro';
+import StatusResultsPage from '@/components/islands/StatusResultsPage';
+
+const title = "Application Status Results | Jatura ATS";
+const description = "View your job application status and track your progress through the hiring pipeline.";
+const schemaOrg = [{ "@type": "WebPage", "name": "Application Status Results", "url": "https://jatura.com/status-results" }];
+---
+
+<MarketingLayout {title} {description} {schemaOrg} noindex={true}>
+  <StatusResultsPage client:load />
+</MarketingLayout>

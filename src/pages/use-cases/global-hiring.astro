@@ -1,0 +1,511 @@
+---
+export const prerender = true;
+import MarketingLayout from '@/layouts/MarketingLayout.astro';
+import { ArrowRight, Globe, CheckCircle, Clock, Shield, Languages, Map, Scale, Calendar, FileText } from 'lucide-react';
+import { Button } from '@/components/ui/button';
+import { Badge } from '@/components/ui/badge';
+
+const title = "Global Hiring Solution | Jatura ATS - Hire Across Borders";
+const description = "Hire globally with Jatura. Multi-currency job postings, localized candidate communications, GDPR-compliant data handling, and timezone-aware scheduling for international recruiting teams.";
+
+const schemaOrg = [
+  {
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://jatura.com" },
+      { "@type": "ListItem", "position": 2, "name": "Use Cases", "item": "https://jatura.com/use-cases" },
+      { "@type": "ListItem", "position": 3, "name": "Global Hiring", "item": "https://jatura.com/use-cases/global-hiring" }
+    ]
+  },
+  {
+    "@type": "WebPage",
+    "name": "Global Hiring Solution | Jatura ATS",
+    "description": "Hire globally with Jatura. Multi-currency job postings, localized candidate communications, GDPR-compliant data handling, and timezone-aware scheduling for international recruiting teams.",
+    "url": "https://jatura.com/use-cases/global-hiring"
+  }
+];
+---
+
+<MarketingLayout {title} {description} {schemaOrg}>
+
+      {/* Hero Section */}
+      <section class="pt-24 pb-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-blue-50 to-white dark:from-blue-950/20 dark:to-slate-950">
+        <div class="max-w-5xl mx-auto">
+          <a href="/use-cases">
+            <Button variant="ghost" class="mb-6 -ml-4">
+              ← Back to all use cases
+            </Button>
+          </a>
+          
+          <Badge
+            variant="secondary"
+            class="mb-6 px-5 py-2 text-sm font-medium bg-blue-100 dark:bg-blue-900/30 text-blue-900 dark:text-blue-100"
+          >
+            <Globe class="w-4 h-4 mr-2" />
+            Global Hiring
+          </Badge>
+          
+          <h1 class="text-5xl sm:text-6xl font-bold text-slate-900 dark:text-white mb-6 leading-tight">
+            Hire the best talent<br />wherever they are
+          </h1>
+          
+          <p class="text-xl sm:text-2xl text-slate-600 dark:text-slate-400 mb-8 leading-relaxed">
+            Whether you're scaling across countries, balancing local compliance with global goals, or coordinating teams across timezones—Jatura helps you hire with confidence, clarity, and control.
+          </p>
+
+          <div class="grid md:grid-cols-3 gap-6 mb-10">
+            <div class="bg-white dark:bg-slate-900 border border-blue-200 dark:border-blue-900/30 rounded-xl p-6">
+              <div class="text-3xl font-bold text-blue-600 mb-2">100+</div>
+              <div class="text-sm text-slate-600 dark:text-slate-400">Countries supported with local compliance</div>
+            </div>
+            <div class="bg-white dark:bg-slate-900 border border-blue-200 dark:border-blue-900/30 rounded-xl p-6">
+              <div class="text-3xl font-bold text-blue-600 mb-2">40+</div>
+              <div class="text-sm text-slate-600 dark:text-slate-400">Language packs for career sites & communications</div>
+            </div>
+            <div class="bg-white dark:bg-slate-900 border border-blue-200 dark:border-blue-900/30 rounded-xl p-6">
+              <div class="text-3xl font-bold text-blue-600 mb-2">24/7</div>
+              <div class="text-sm text-slate-600 dark:text-slate-400">Automated timezone-aware interview scheduling</div>
+            </div>
+          </div>
+
+          <div class="flex flex-col sm:flex-row gap-4">
+            <a href="/login">
+              <Button
+                size="lg"
+                class="bg-blue-600 hover:bg-blue-700 text-white px-10 py-6 text-lg group shadow-lg"
+              >
+                Start free trial
+                <ArrowRight class="ml-2 h-5 w-5 group-hover:translate-x-1 transition" />
+              </Button>
+            </a>
+            <a href="/pricing">
+              <Button
+                size="lg"
+                variant="outline"
+                class="px-10 py-6 text-lg border-slate-300 dark:border-slate-700"
+              >
+                View pricing
+              </Button>
+            </a>
+          </div>
+        </div>
+      </section>
+
+      {/* Problem Statement */}
+      <section class="py-20 px-4 sm:px-6 lg:px-8">
+        <div class="max-w-5xl mx-auto">
+          <h2 class="text-4xl font-bold text-slate-900 dark:text-white mb-6">
+            The global hiring challenge
+          </h2>
+          <p class="text-xl text-slate-600 dark:text-slate-400 mb-12">
+            Global hiring is a $380 billion market, but 78% of multinational companies faced compliance challenges in 2024 alone.
+          </p>
+
+          <div class="grid md:grid-cols-2 gap-6">
+            <div class="bg-slate-50 dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-xl p-6">
+              <div class="w-12 h-12 bg-red-100 dark:bg-red-900/20 rounded-lg flex items-center justify-center mb-4">
+                <Scale class="w-6 h-6 text-red-600 dark:text-red-400" />
+              </div>
+              <h3 class="text-xl font-semibold text-slate-900 dark:text-white mb-3">
+                Compliance complexity
+              </h3>
+              <p class="text-slate-600 dark:text-slate-400 mb-3">
+                31+ different notification systems across EU/EEA. GDPR fines up to €20M or 4% of global turnover. Employment laws vary wildly—35-hour workweeks (France) vs. 48+ hours (Asia).
+              </p>
+              <p class="text-sm italic text-slate-500 dark:text-slate-500">
+                "78% of companies faced compliance challenges due to shifting employment laws" — ILO 2024
+              </p>
+            </div>
+
+            <div class="bg-slate-50 dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-xl p-6">
+              <div class="w-12 h-12 bg-red-100 dark:bg-red-900/20 rounded-lg flex items-center justify-center mb-4">
+                <Clock class="w-6 h-6 text-red-600 dark:text-red-400" />
+              </div>
+              <h3 class="text-xl font-semibold text-slate-900 dark:text-white mb-3">
+                Timezone coordination nightmares
+              </h3>
+              <p class="text-slate-600 dark:text-slate-400">
+                Coordinating interviews across global teams means endless email back-and-forth. Manual timezone conversions lead to no-shows. Candidates frustrated by scheduling delays.
+              </p>
+            </div>
+
+            <div class="bg-slate-50 dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-xl p-6">
+              <div class="w-12 h-12 bg-red-100 dark:bg-red-900/20 rounded-lg flex items-center justify-center mb-4">
+                <Languages class="w-6 h-6 text-red-600 dark:text-red-400" />
+              </div>
+              <h3 class="text-xl font-semibold text-slate-900 dark:text-white mb-3">
+                Language & localization barriers
+              </h3>
+              <p class="text-slate-600 dark:text-slate-400">
+                Generic translated career sites don't resonate locally. Application forms don't adapt to regional requirements. Communication feels impersonal and disconnected.
+              </p>
+            </div>
+
+            <div class="bg-slate-50 dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-xl p-6">
+              <div class="w-12 h-12 bg-red-100 dark:bg-red-900/20 rounded-lg flex items-center justify-center mb-4">
+                <Map class="w-6 h-6 text-red-600 dark:text-red-400" />
+              </div>
+              <h3 class="text-xl font-semibold text-slate-900 dark:text-white mb-3">
+                Fragmented data & reporting
+              </h3>
+              <p class="text-slate-600 dark:text-slate-400">
+                Different systems per region. No centralized view of global hiring metrics. Can't identify regional bottlenecks or compare performance across markets.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* How Jatura Solves It */}
+      <section class="py-20 px-4 sm:px-6 lg:px-8 bg-blue-50 dark:bg-blue-950/10">
+        <div class="max-w-5xl mx-auto">
+          <h2 class="text-4xl font-bold text-slate-900 dark:text-white mb-4 text-center">
+            How Jatura simplifies global hiring
+          </h2>
+          <p class="text-xl text-slate-600 dark:text-slate-400 text-center mb-12">
+            One platform to manage your entire global recruiting operation—from compliance to candidate experience.
+          </p>
+
+          <div class="space-y-8">
+            <div class="bg-white dark:bg-slate-900 border border-blue-200 dark:border-blue-900/30 rounded-2xl p-8">
+              <div class="flex items-start gap-6">
+                <div class="w-14 h-14 bg-blue-100 dark:bg-blue-900/30 rounded-xl flex items-center justify-center flex-shrink-0">
+                  <Languages class="w-7 h-7 text-blue-600" />
+                </div>
+                <div>
+                  <h3 class="text-2xl font-bold text-slate-900 dark:text-white mb-3">
+                    Multi-language career sites
+                  </h3>
+                  <p class="text-lg text-slate-600 dark:text-slate-400 mb-4">
+                    Create localized career sites in 40+ languages with intelligent language detection. Not just translation—true localization with culturally adapted content, regional job titles, and local benefits descriptions.
+                  </p>
+                  <ul class="space-y-2">
+                    <li class="flex items-start gap-2">
+                      <CheckCircle class="w-5 h-5 text-blue-600 flex-shrink-0 mt-0.5" />
+                      <span class="text-slate-600 dark:text-slate-400">Auto-detect candidate location and display preferred language</span>
+                    </li>
+                    <li class="flex items-start gap-2">
+                      <CheckCircle class="w-5 h-5 text-blue-600 flex-shrink-0 mt-0.5" />
+                      <span class="text-slate-600 dark:text-slate-400">Localized application forms with regional compliance fields</span>
+                    </li>
+                    <li class="flex items-start gap-2">
+                      <CheckCircle class="w-5 h-5 text-blue-600 flex-shrink-0 mt-0.5" />
+                      <span class="text-slate-600 dark:text-slate-400">Mobile-optimized for global candidate experience</span>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            <div class="bg-white dark:bg-slate-900 border border-blue-200 dark:border-blue-900/30 rounded-2xl p-8">
+              <div class="flex items-start gap-6">
+                <div class="w-14 h-14 bg-blue-100 dark:bg-blue-900/30 rounded-xl flex items-center justify-center flex-shrink-0">
+                  <Calendar class="w-7 h-7 text-blue-600" />
+                </div>
+                <div>
+                  <h3 class="text-2xl font-bold text-slate-900 dark:text-white mb-3">
+                    Timezone-aware scheduling
+                  </h3>
+                  <p class="text-lg text-slate-600 dark:text-slate-400 mb-4">
+                    Eliminate scheduling nightmares with intelligent timezone detection and automatic time conversion. Self-service calendar links work across all timezones. Candidates and interviewers see times in their local timezone automatically.
+                  </p>
+                  <ul class="space-y-2">
+                    <li class="flex items-start gap-2">
+                      <CheckCircle class="w-5 h-5 text-blue-600 flex-shrink-0 mt-0.5" />
+                      <span class="text-slate-600 dark:text-slate-400">Automatic timezone conversion in all communications</span>
+                    </li>
+                    <li class="flex items-start gap-2">
+                      <CheckCircle class="w-5 h-5 text-blue-600 flex-shrink-0 mt-0.5" />
+                      <span class="text-slate-600 dark:text-slate-400">Calendar integrations with Google, Outlook, Apple Calendar</span>
+                    </li>
+                    <li class="flex items-start gap-2">
+                      <CheckCircle class="w-5 h-5 text-blue-600 flex-shrink-0 mt-0.5" />
+                      <span class="text-slate-600 dark:text-slate-400">Automated reminders in candidate's local time</span>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            <div class="bg-white dark:bg-slate-900 border border-blue-200 dark:border-blue-900/30 rounded-2xl p-8">
+              <div class="flex items-start gap-6">
+                <div class="w-14 h-14 bg-blue-100 dark:bg-blue-900/30 rounded-xl flex items-center justify-center flex-shrink-0">
+                  <Shield class="w-7 h-7 text-blue-600" />
+                </div>
+                <div>
+                  <h3 class="text-2xl font-bold text-slate-900 dark:text-white mb-3">
+                    Regional compliance support
+                  </h3>
+                  <p class="text-lg text-slate-600 dark:text-slate-400 mb-4">
+                    Stay compliant across 100+ countries with built-in GDPR, CCPA, and local labor law support. Country-specific disclosure requirements, data retention policies, and privacy controls ensure you're always audit-ready.
+                  </p>
+                  <ul class="space-y-2">
+                    <li class="flex items-start gap-2">
+                      <CheckCircle class="w-5 h-5 text-blue-600 flex-shrink-0 mt-0.5" />
+                      <span class="text-slate-600 dark:text-slate-400">GDPR, CCPA, PIPEDA compliant data handling</span>
+                    </li>
+                    <li class="flex items-start gap-2">
+                      <CheckCircle class="w-5 h-5 text-blue-600 flex-shrink-0 mt-0.5" />
+                      <span class="text-slate-600 dark:text-slate-400">Regional employment law templates & workflows</span>
+                    </li>
+                    <li class="flex items-start gap-2">
+                      <CheckCircle class="w-5 h-5 text-blue-600 flex-shrink-0 mt-0.5" />
+                      <span class="text-slate-600 dark:text-slate-400">Automated data retention and right-to-deletion</span>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            <div class="bg-white dark:bg-slate-900 border border-blue-200 dark:border-blue-900/30 rounded-2xl p-8">
+              <div class="flex items-start gap-6">
+                <div class="w-14 h-14 bg-blue-100 dark:bg-blue-900/30 rounded-xl flex items-center justify-center flex-shrink-0">
+                  <FileText class="w-7 h-7 text-blue-600" />
+                </div>
+                <div>
+                  <h3 class="text-2xl font-bold text-slate-900 dark:text-white mb-3">
+                    Localized offer letters & contracts
+                  </h3>
+                  <p class="text-lg text-slate-600 dark:text-slate-400 mb-4">
+                    Generate legally compliant offer letters and employment contracts for any country. Pre-built templates meet local labor laws. Support for multiple currencies, benefit structures, and termination clauses.
+                  </p>
+                  <ul class="space-y-2">
+                    <li class="flex items-start gap-2">
+                      <CheckCircle class="w-5 h-5 text-blue-600 flex-shrink-0 mt-0.5" />
+                      <span class="text-slate-600 dark:text-slate-400">Country-specific offer letter templates</span>
+                    </li>
+                    <li class="flex items-start gap-2">
+                      <CheckCircle class="w-5 h-5 text-blue-600 flex-shrink-0 mt-0.5" />
+                      <span class="text-slate-600 dark:text-slate-400">Multi-currency compensation management</span>
+                    </li>
+                    <li class="flex items-start gap-2">
+                      <CheckCircle class="w-5 h-5 text-blue-600 flex-shrink-0 mt-0.5" />
+                      <span class="text-slate-600 dark:text-slate-400">Regional benefits and mandatory bonus structures</span>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            <div class="bg-white dark:bg-slate-900 border border-blue-200 dark:border-blue-900/30 rounded-2xl p-8">
+              <div class="flex items-start gap-6">
+                <div class="w-14 h-14 bg-blue-100 dark:bg-blue-900/30 rounded-xl flex items-center justify-center flex-shrink-0">
+                  <Globe class="w-7 h-7 text-blue-600" />
+                </div>
+                <div>
+                  <h3 class="text-2xl font-bold text-slate-900 dark:text-white mb-3">
+                    Centralized global reporting
+                  </h3>
+                  <p class="text-lg text-slate-600 dark:text-slate-400 mb-4">
+                    Get a unified view of your global hiring performance. Compare time-to-hire across regions, track source effectiveness by country, identify bottlenecks, and make data-driven decisions about where to invest recruiting resources.
+                  </p>
+                  <ul class="space-y-2">
+                    <li class="flex items-start gap-2">
+                      <CheckCircle class="w-5 h-5 text-blue-600 flex-shrink-0 mt-0.5" />
+                      <span class="text-slate-600 dark:text-slate-400">Region-by-region hiring dashboards</span>
+                    </li>
+                    <li class="flex items-start gap-2">
+                      <CheckCircle class="w-5 h-5 text-blue-600 flex-shrink-0 mt-0.5" />
+                      <span class="text-slate-600 dark:text-slate-400">Global headcount planning and forecasting</span>
+                    </li>
+                    <li class="flex items-start gap-2">
+                      <CheckCircle class="w-5 h-5 text-blue-600 flex-shrink-0 mt-0.5" />
+                      <span class="text-slate-600 dark:text-slate-400">Multi-currency cost-per-hire analytics</span>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* How It Works */}
+      <section class="py-20 px-4 sm:px-6 lg:px-8">
+        <div class="max-w-5xl mx-auto">
+          <h2 class="text-4xl font-bold text-slate-900 dark:text-white mb-12 text-center">
+            How it works
+          </h2>
+
+          <div class="space-y-8">
+            <div class="flex gap-6">
+              <div class="flex-shrink-0">
+                <div class="w-12 h-12 bg-blue-600 rounded-full flex items-center justify-center text-white font-bold text-lg">
+                  1
+                </div>
+              </div>
+              <div>
+                <h3 class="text-xl font-bold text-slate-900 dark:text-white mb-2">
+                  Set up localized career sites
+                </h3>
+                <p class="text-slate-600 dark:text-slate-400">
+                  Choose your target markets and activate language packs. Customize career sites with regional branding, local benefits, and culturally adapted content. Connect to region-specific job boards.
+                </p>
+              </div>
+            </div>
+
+            <div class="flex gap-6">
+              <div class="flex-shrink-0">
+                <div class="w-12 h-12 bg-blue-600 rounded-full flex items-center justify-center text-white font-bold text-lg">
+                  2
+                </div>
+              </div>
+              <div>
+                <h3 class="text-xl font-bold text-slate-900 dark:text-white mb-2">
+                  Configure regional compliance settings
+                </h3>
+                <p class="text-slate-600 dark:text-slate-400">
+                  Select your hiring countries. Jatura automatically applies the correct compliance requirements, data protection rules, and application form fields for each region. Templates for offer letters and contracts are pre-configured.
+                </p>
+              </div>
+            </div>
+
+            <div class="flex gap-6">
+              <div class="flex-shrink-0">
+                <div class="w-12 h-12 bg-blue-600 rounded-full flex items-center justify-center text-white font-bold text-lg">
+                  3
+                </div>
+              </div>
+              <div>
+                <h3 class="text-xl font-bold text-slate-900 dark:text-white mb-2">
+                  Post jobs and receive localized applications
+                </h3>
+                <p class="text-slate-600 dark:text-slate-400">
+                  Create job postings and distribute globally. Candidates apply in their preferred language. Applications automatically tagged with timezone, language preference, and location metadata for easy filtering.
+                </p>
+              </div>
+            </div>
+
+            <div class="flex gap-6">
+              <div class="flex-shrink-0">
+                <div class="w-12 h-12 bg-blue-600 rounded-full flex items-center justify-center text-white font-bold text-lg">
+                  4
+                </div>
+              </div>
+              <div>
+                <h3 class="text-xl font-bold text-slate-900 dark:text-white mb-2">
+                  Schedule interviews across timezones effortlessly
+                </h3>
+                <p class="text-slate-600 dark:text-slate-400">
+                  Send self-service scheduling links that automatically detect candidate timezone. All interview times display in local time for both candidates and interviewers. Automated reminders prevent no-shows.
+                </p>
+              </div>
+            </div>
+
+            <div class="flex gap-6">
+              <div class="flex-shrink-0">
+                <div class="w-12 h-12 bg-blue-600 rounded-full flex items-center justify-center text-white font-bold text-lg">
+                  5
+                </div>
+              </div>
+              <div>
+                <h3 class="text-xl font-bold text-slate-900 dark:text-white mb-2">
+                  Send compliant offers and track global metrics
+                </h3>
+                <p class="text-slate-600 dark:text-slate-400">
+                  Generate localized offer letters with correct currency, benefits, and legal terms. Track hiring performance by region, compare metrics across countries, and optimize your global recruiting strategy with unified analytics.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Ideal For */}
+      <section class="py-20 px-4 sm:px-6 lg:px-8 bg-slate-50 dark:bg-slate-900/50">
+        <div class="max-w-5xl mx-auto">
+          <h2 class="text-4xl font-bold text-slate-900 dark:text-white mb-12 text-center">
+            Perfect for
+          </h2>
+
+          <div class="grid md:grid-cols-2 gap-6">
+            <div class="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-xl p-6">
+              <h3 class="text-xl font-semibold text-slate-900 dark:text-white mb-3">
+                Multinational Corporations
+              </h3>
+              <p class="text-slate-600 dark:text-slate-400">
+                Hiring across multiple countries with centralized HR teams. Need unified platform for global talent acquisition with local compliance.
+              </p>
+            </div>
+
+            <div class="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-xl p-6">
+              <h3 class="text-xl font-semibold text-slate-900 dark:text-white mb-3">
+                Remote-First Companies
+              </h3>
+              <p class="text-slate-600 dark:text-slate-400">
+                Building distributed teams across timezones. Hiring talent from anywhere while managing regional employment requirements.
+              </p>
+            </div>
+
+            <div class="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-xl p-6">
+              <h3 class="text-xl font-semibold text-slate-900 dark:text-white mb-3">
+                Global Tech Companies
+              </h3>
+              <p class="text-slate-600 dark:text-slate-400">
+                Scaling engineering, product, and operations teams internationally. Need to compete for talent in competitive global markets.
+              </p>
+            </div>
+
+            <div class="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-xl p-6">
+              <h3 class="text-xl font-semibold text-slate-900 dark:text-white mb-3">
+                International Expansion Teams
+              </h3>
+              <p class="text-slate-600 dark:text-slate-400">
+                Entering new markets and building local teams. Managing hiring across regions with different languages, currencies, and regulations.
+              </p>
+            </div>
+
+            <div class="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-xl p-6">
+              <h3 class="text-xl font-semibold text-slate-900 dark:text-white mb-3">
+                Global Professional Services
+              </h3>
+              <p class="text-slate-600 dark:text-slate-400">
+                Consulting firms, agencies, and service companies hiring across multiple offices worldwide. Maintaining consistent process while respecting local needs.
+              </p>
+            </div>
+
+            <div class="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-xl p-6">
+              <h3 class="text-xl font-semibold text-slate-900 dark:text-white mb-3">
+                E-commerce & Retail (Global)
+              </h3>
+              <p class="text-slate-600 dark:text-slate-400">
+                Operating stores or fulfillment centers in multiple countries. Hiring local staff while maintaining global brand standards and reporting.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* CTA Section */}
+      <section class="py-28 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-blue-600 to-blue-700">
+        <div class="max-w-4xl mx-auto text-center">
+          <h2 class="text-4xl sm:text-5xl font-bold text-white mb-6">
+            Ready to hire globally without the complexity?
+          </h2>
+          <p class="text-xl text-blue-50 mb-10">
+            Join companies hiring across 100+ countries with Jatura's compliance-first global recruiting platform.
+          </p>
+          <div class="flex flex-col sm:flex-row gap-4 justify-center">
+            <a href="/login">
+              <Button
+                size="lg"
+                class="bg-white text-blue-600 hover:bg-blue-50 px-10 py-6 text-lg"
+              >
+                Start free trial
+                <ArrowRight class="ml-2 h-5 w-5" />
+              </Button>
+            </a>
+            <a href="/pricing">
+              <Button
+                size="lg"
+                variant="outline"
+                class="px-10 py-6 text-lg border-white text-white hover:bg-blue-600"
+              >
+                View pricing
+              </Button>
+            </a>
+          </div>
+        </div>
+      </section>
+
+</MarketingLayout>

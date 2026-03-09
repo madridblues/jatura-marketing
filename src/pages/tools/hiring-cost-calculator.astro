@@ -1,0 +1,32 @@
+---
+export const prerender = true;
+import MarketingLayout from '@/layouts/MarketingLayout.astro';
+import HiringCostCalculatorPage from '@/components/islands/HiringCostCalculatorPage';
+
+const title = "Hiring Cost Calculator | Calculate True Cost Per Hire | Jatura";
+const description = "Free hiring cost calculator to determine your true cost per hire. Calculate recruiter salaries, job board costs, ATS expenses, and time-to-fill costs. Get actionable insights to reduce hiring costs.";
+
+const schemaOrg = [
+  {
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://jatura.com" },
+      { "@type": "ListItem", "position": 2, "name": "Free Recruiting Tools", "item": "https://jatura.com/tools" },
+      { "@type": "ListItem", "position": 3, "name": "Hiring Cost Calculator", "item": "https://jatura.com/tools/hiring-cost-calculator" }
+    ]
+  },
+  {
+    "@type": "WebApplication",
+    "name": "Hiring Cost Calculator",
+    "applicationCategory": "BusinessApplication",
+    "operatingSystem": "Web",
+    "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
+    "description": "Free calculator to determine your true cost per hire",
+    "url": "https://jatura.com/tools/hiring-cost-calculator"
+  }
+];
+---
+
+<MarketingLayout {title} {description} {schemaOrg}>
+  <HiringCostCalculatorPage client:load />
+</MarketingLayout>

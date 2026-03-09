@@ -1,0 +1,486 @@
+---
+export const prerender = true;
+import MarketingLayout from '@/layouts/MarketingLayout.astro';
+import { Brain, Workflow, Users, MessageSquare, Calendar, BarChart3, CheckCircle, ArrowRight, Sparkles, Clock, TrendingUp, Target, Zap, Shield, FileText, Search, Award } from 'lucide-react';
+import { Button } from '@/components/ui/button';
+import { Badge } from '@/components/ui/badge';
+
+const title = "Applicant Tracking System | Jatura - AI-Native ATS";
+const description = "Jatura's visual Kanban ATS tracks every candidate from first touch to hire. AI-powered screening, collaborative interview kits, two-way messaging, and 100+ integrations. Free up to 3 active jobs.";
+
+const schemaOrg = [
+  {
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://jatura.com" },
+      { "@type": "ListItem", "position": 2, "name": "Features", "item": "https://jatura.com/features" },
+      { "@type": "ListItem", "position": 3, "name": "Applicant Tracking System", "item": "https://jatura.com/features/applicant-tracking-system" }
+    ]
+  },
+  {
+    "@type": "SoftwareApplication",
+    "name": "Jatura ATS",
+    "@id": "https://jatura.com/#software",
+    "applicationCategory": "BusinessApplication",
+    "operatingSystem": "Web",
+    "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD", "description": "Free plan available" },
+    "featureList": ["Visual Kanban Pipeline", "AI Resume Screening", "Candidate Profiles", "Interview Scheduling", "Collaborative Hiring", "Job Board Syndication", "Offer Management", "Pipeline Analytics"],
+    "aggregateRating": { "@type": "AggregateRating", "ratingValue": "4.9", "ratingCount": "247", "bestRating": "5" }
+  }
+];
+
+const activeStep = 1;
+
+  const steps = [
+    {
+      number: 1,
+      title: "Post & Distribute",
+      description: "Create and publish job openings across multiple channels",
+      features: [
+        {
+          icon: Brain,
+          title: "AI Job Description Generator",
+          description: "Generate compelling job descriptions in seconds. Our AI understands your requirements and creates descriptions that attract the right candidates.",
+        },
+        {
+          icon: Target,
+          title: "Professional Career Pages",
+          description: "Beautiful, mobile-optimized career sites that showcase your employer brand and convert visitors into applicants.",
+        },
+        {
+          icon: FileText,
+          title: "Custom Application Forms",
+          description: "Build tailored application forms with knockout questions, file uploads, and custom fields to pre-screen candidates automatically.",
+        },
+      ],
+    },
+    {
+      number: 2,
+      title: "Screen & Match",
+      description: "Find the best candidates faster with intelligent screening",
+      features: [
+        {
+          icon: Brain,
+          title: "AI-Powered Candidate Matching",
+          description: "Automatically score and rank every applicant based on skills, experience, and job fit. Our AI reads resumes and surfaces top matches instantly.",
+        },
+        {
+          icon: Search,
+          title: "Advanced Search & Filtering",
+          description: "Filter by skills, location, experience, education, and custom tags. Save your favorite filters for instant access.",
+        },
+        {
+          icon: Users,
+          title: "Talent Pool Management",
+          description: "Build and nurture talent pools for future roles. Keep promising candidates engaged with automated campaigns.",
+        },
+      ],
+    },
+    {
+      number: 3,
+      title: "Interview & Evaluate",
+      description: "Structured interviews and collaborative decision-making",
+      features: [
+        {
+          icon: Calendar,
+          title: "Self-Service Scheduling",
+          description: "Candidates book interviews directly from your available slots. Automated reminders and calendar sync keep everyone prepared.",
+        },
+        {
+          icon: Award,
+          title: "Interview Kits & Scorecards",
+          description: "AI-generated interview questions and standardized evaluation criteria ensure fair, consistent assessments across your team.",
+        },
+        {
+          icon: MessageSquare,
+          title: "Team Collaboration",
+          description: "Share feedback, notes, and evaluations in real-time. Everyone on the hiring team stays aligned throughout the process.",
+        },
+      ],
+    },
+    {
+      number: 4,
+      title: "Track & Analyze",
+      description: "Data-driven insights to optimize your hiring process",
+      features: [
+        {
+          icon: Workflow,
+          title: "Custom Pipeline Automation",
+          description: "Design your perfect workflow with configurable stages. Automated triggers move candidates forward without manual work.",
+        },
+        {
+          icon: BarChart3,
+          title: "Hiring Analytics Dashboard",
+          description: "Track time-to-hire, source effectiveness, pipeline health, and team performance with real-time dashboards.",
+        },
+        {
+          icon: MessageSquare,
+          title: "Multi-Channel Communication",
+          description: "Send emails and SMS directly from the platform. All candidate conversations in one place with complete history.",
+        },
+      ],
+    },
+  ];
+
+const _data1 = [
+              {
+                icon: Workflow,
+                title: "Customizable Workflows",
+                description: "Configure pipeline stages, automation rules, and approval flows that match your unique hiring process.",
+              },
+              {
+                icon: Brain,
+                title: "AI & Automation",
+                description: "Let AI handle resume screening, candidate matching, and interview scheduling so your team focuses on conversations.",
+              },
+              {
+                icon: Shield,
+                title: "Compliance & Security",
+                description: "GDPR and CCPA compliant with enterprise-grade security. Role-based access keeps sensitive data protected.",
+              },
+              {
+                icon: BarChart3,
+                title: "Analytics & Reporting",
+                description: "Track time-to-hire, source effectiveness, pipeline health, and team performance with real-time dashboards.",
+              },
+              {
+                icon: Users,
+                title: "Team Collaboration",
+                description: "Shared feedback, notes, and evaluations keep everyone aligned. No more scattered emails or spreadsheets.",
+              },
+              {
+                icon: Zap,
+                title: "Easy Integration",
+                description: "Seamlessly connect with your existing HR tools, calendar apps, and communication platforms.",
+              },
+            ];
+---
+
+<MarketingLayout {title} {description} {schemaOrg}>
+
+      {/* Hero Section */}
+      <section class="pt-24 pb-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-slate-50 to-white dark:from-slate-900/50 dark:to-slate-950">
+        <div class="max-w-7xl mx-auto">
+          <div class="text-center mb-16">
+            <Badge
+              variant="secondary"
+              class="mb-6 px-5 py-2 text-sm font-medium bg-slate-100 dark:bg-slate-800 text-slate-900 dark:text-slate-100"
+              data-testid="badge-ats"
+            >
+              <Sparkles class="w-4 h-4 mr-2" />
+              AI-Native Applicant Tracking
+            </Badge>
+            <h1 class="text-5xl sm:text-6xl lg:text-7xl font-bold text-slate-900 dark:text-white mb-6 leading-tight">
+              Hiring that moves at<br />the speed of business
+            </h1>
+            <p class="text-xl sm:text-2xl text-slate-600 dark:text-slate-400 max-w-4xl mx-auto mb-12 leading-relaxed">
+              From job posting to offer acceptance in record time. Jatura's AI-native ATS eliminates manual work so you can focus on finding exceptional talent.
+            </p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+              <a href="/login">
+                <Button
+                  size="lg"
+                  class="bg-slate-900 dark:bg-white text-white dark:text-slate-900 hover:bg-slate-800 dark:hover:bg-slate-100 px-10 py-6 text-lg group shadow-lg"
+                >
+                  Start free trial
+                  <ArrowRight class="ml-2 h-5 w-5 group-hover:translate-x-1 transition" />
+                </Button>
+              </a>
+              <a href="/pricing">
+                <Button
+                  size="lg"
+                  variant="outline"
+                  class="px-10 py-6 text-lg border-slate-300 dark:border-slate-700"
+                >
+                  View pricing
+                </Button>
+              </a>
+            </div>
+          </div>
+
+          {/* Value Props */}
+          <div class="grid md:grid-cols-3 gap-8 mt-20">
+            <div class="text-center">
+              <div class="w-14 h-14 bg-slate-100 dark:bg-slate-800 rounded-2xl flex items-center justify-center mx-auto mb-4">
+                <TrendingUp class="w-7 h-7 text-slate-900 dark:text-white" />
+              </div>
+              <h3 class="text-xl font-semibold text-slate-900 dark:text-white mb-3">
+                97% Better Candidate Quality
+              </h3>
+              <p class="text-slate-600 dark:text-slate-400">
+                AI-powered screening surfaces the best matches automatically
+              </p>
+            </div>
+
+            <div class="text-center">
+              <div class="w-14 h-14 bg-slate-100 dark:bg-slate-800 rounded-2xl flex items-center justify-center mx-auto mb-4">
+                <Clock class="w-7 h-7 text-slate-900 dark:text-white" />
+              </div>
+              <h3 class="text-xl font-semibold text-slate-900 dark:text-white mb-3">
+                60% Faster Time-to-Hire
+              </h3>
+              <p class="text-slate-600 dark:text-slate-400">
+                Automation eliminates bottlenecks and speeds up every stage
+              </p>
+            </div>
+
+            <div class="text-center">
+              <div class="w-14 h-14 bg-slate-100 dark:bg-slate-800 rounded-2xl flex items-center justify-center mx-auto mb-4">
+                <Users class="w-7 h-7 text-slate-900 dark:text-white" />
+              </div>
+              <h3 class="text-xl font-semibold text-slate-900 dark:text-white mb-3">
+                Exceptional Experience
+              </h3>
+              <p class="text-slate-600 dark:text-slate-400">
+                Mobile-first portal with real-time updates candidates love
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* How It Works - 4 Steps */}
+      <section class="py-28 px-4 sm:px-6 lg:px-8">
+        <div class="max-w-7xl mx-auto">
+          <div class="text-center mb-20">
+            <h2 class="text-4xl sm:text-5xl font-bold text-slate-900 dark:text-white mb-6">
+              How Jatura streamlines your hiring workflow
+            </h2>
+            <p class="text-xl text-slate-600 dark:text-slate-400 max-w-3xl mx-auto">
+              Everything you need from job posting to offer acceptance, in one intelligent platform
+            </p>
+          </div>
+
+          {/* Step Navigation */}
+          <div class="flex flex-wrap justify-center gap-4 mb-16">
+            {steps.map((step) => (
+              <button
+                class={`px-6 py-4 rounded-xl font-semibold transition-all ${
+                  activeStep === step.number
+                    ? "bg-slate-900 dark:bg-white text-white dark:text-slate-900 shadow-lg scale-105"
+                    : "bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-400 hover:bg-slate-200 dark:hover:bg-slate-700"
+                }`}
+              >
+                <div class="text-sm opacity-75 mb-1">Step {step.number}</div>
+                <div>{step.title}</div>
+              </button>
+            ))}
+          </div>
+
+          {/* Step Content */}
+          {steps.map(
+            (step) =>
+              activeStep === step.number && (
+                <div class="animate-fadeIn">
+                  <p class="text-center text-lg text-slate-600 dark:text-slate-400 mb-12">
+                    {step.description}
+                  </p>
+                  <div class="grid md:grid-cols-3 gap-6">
+                    {step.features.map((feature, idx) => {
+                      const Icon = feature.icon;
+                      return (
+                        <div
+                          class="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-2xl p-8 hover:border-slate-300 dark:hover:border-slate-700 transition-all hover:shadow-lg"
+                        >
+                          <div class="w-14 h-14 bg-slate-100 dark:bg-slate-800 rounded-xl flex items-center justify-center mb-6">
+                            <Icon class="w-7 h-7 text-slate-900 dark:text-white" />
+                          </div>
+                          <h3 class="text-xl font-semibold mb-4 text-slate-900 dark:text-white">
+                            {feature.title}
+                          </h3>
+                          <p class="text-slate-600 dark:text-slate-400 leading-relaxed">
+                            {feature.description}
+                          </p>
+                        </div>
+                      );
+                    })}
+                  </div>
+                </div>
+              )
+          )}
+        </div>
+      </section>
+
+      {/* What is an ATS */}
+      <section class="py-28 px-4 sm:px-6 lg:px-8 bg-slate-50 dark:bg-slate-900/50">
+        <div class="max-w-7xl mx-auto">
+          <div class="grid lg:grid-cols-2 gap-16 items-center">
+            <div>
+              <h2 class="text-4xl sm:text-5xl font-bold text-slate-900 dark:text-white mb-8">
+                What is an applicant tracking system?
+              </h2>
+              <div class="space-y-6 text-lg text-slate-600 dark:text-slate-400">
+                <p>
+                  An applicant tracking system (ATS) is software that helps companies{" "}
+                  <strong class="text-slate-900 dark:text-white">
+                    streamline hiring by automating manual tasks
+                  </strong>
+                  .
+                </p>
+                <p>
+                  Modern ATS platforms are used by HR teams and recruiters to{" "}
+                  <strong class="text-slate-900 dark:text-white">
+                    track, organize, and screen applications
+                  </strong>
+                  , schedule interviews, and manage all candidate communication.
+                </p>
+                <div class="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-2xl p-8 mt-8">
+                  <h3 class="text-xl font-semibold text-slate-900 dark:text-white mb-6">
+                    With Jatura's ATS you can:
+                  </h3>
+                  <div class="space-y-4">
+                    <div class="flex items-start gap-3">
+                      <CheckCircle class="w-6 h-6 text-emerald-600 flex-shrink-0 mt-0.5" />
+                      <span class="text-slate-700 dark:text-slate-300">
+                        Improve hire quality with AI-powered candidate matching
+                      </span>
+                    </div>
+                    <div class="flex items-start gap-3">
+                      <CheckCircle class="w-6 h-6 text-emerald-600 flex-shrink-0 mt-0.5" />
+                      <span class="text-slate-700 dark:text-slate-300">
+                        Reduce time-to-hire by automating repetitive workflows
+                      </span>
+                    </div>
+                    <div class="flex items-start gap-3">
+                      <CheckCircle class="w-6 h-6 text-emerald-600 flex-shrink-0 mt-0.5" />
+                      <span class="text-slate-700 dark:text-slate-300">
+                        Create exceptional candidate experiences that strengthen your employer brand
+                      </span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* Visual Process Flow */}
+            <div class="bg-white dark:bg-slate-900 rounded-3xl p-10 border border-slate-200 dark:border-slate-800 shadow-xl">
+              <div class="space-y-6">
+                <div class="flex items-center gap-4 p-6 bg-slate-900 dark:bg-white rounded-2xl">
+                  <div class="w-12 h-12 bg-white dark:bg-slate-900 rounded-xl flex items-center justify-center flex-shrink-0">
+                    <FileText class="w-6 h-6 text-slate-900 dark:text-white" />
+                  </div>
+                  <div>
+                    <div class="font-semibold text-white dark:text-slate-900 mb-1">
+                      Job Posted
+                    </div>
+                    <div class="text-sm text-slate-200 dark:text-slate-600">
+                      Multi-channel distribution
+                    </div>
+                  </div>
+                </div>
+
+                <div class="flex items-center gap-4 p-6 bg-slate-50 dark:bg-slate-800 rounded-2xl">
+                  <div class="w-12 h-12 bg-slate-100 dark:bg-slate-700 rounded-xl flex items-center justify-center flex-shrink-0">
+                    <Brain class="w-6 h-6 text-slate-600 dark:text-slate-400" />
+                  </div>
+                  <div>
+                    <div class="font-semibold text-slate-900 dark:text-white mb-1">
+                      AI Screening
+                    </div>
+                    <div class="text-sm text-slate-600 dark:text-slate-400">
+                      Automatic candidate ranking
+                    </div>
+                  </div>
+                </div>
+
+                <div class="flex items-center gap-4 p-6 bg-slate-50 dark:bg-slate-800 rounded-2xl">
+                  <div class="w-12 h-12 bg-slate-100 dark:bg-slate-700 rounded-xl flex items-center justify-center flex-shrink-0">
+                    <Calendar class="w-6 h-6 text-slate-600 dark:text-slate-400" />
+                  </div>
+                  <div>
+                    <div class="font-semibold text-slate-900 dark:text-white mb-1">
+                      Interview Scheduled
+                    </div>
+                    <div class="text-sm text-slate-600 dark:text-slate-400">
+                      Self-service booking
+                    </div>
+                  </div>
+                </div>
+
+                <div class="flex items-center gap-4 p-6 bg-slate-50 dark:bg-slate-800 rounded-2xl">
+                  <div class="w-12 h-12 bg-slate-100 dark:bg-slate-700 rounded-xl flex items-center justify-center flex-shrink-0">
+                    <CheckCircle class="w-6 h-6 text-slate-600 dark:text-slate-400" />
+                  </div>
+                  <div>
+                    <div class="font-semibold text-slate-900 dark:text-white mb-1">
+                      Offer Sent
+                    </div>
+                    <div class="text-sm text-slate-600 dark:text-slate-400">
+                      Digital offer letters
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Key Features Grid */}
+      <section class="py-28 px-4 sm:px-6 lg:px-8">
+        <div class="max-w-7xl mx-auto">
+          <div class="text-center mb-20">
+            <h2 class="text-4xl sm:text-5xl font-bold text-slate-900 dark:text-white mb-6">
+              What to look for in your ATS
+            </h2>
+            <p class="text-xl text-slate-600 dark:text-slate-400 max-w-3xl mx-auto">
+              Essential capabilities every modern applicant tracking system should have
+            </p>
+          </div>
+
+          <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {_data1.map((feature, idx) => {
+              const Icon = feature.icon;
+              return (
+                <div
+                  class="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-2xl p-8"
+                >
+                  <div class="w-12 h-12 bg-slate-100 dark:bg-slate-800 rounded-xl flex items-center justify-center mb-6">
+                    <Icon class="w-6 h-6 text-slate-900 dark:text-white" />
+                  </div>
+                  <h3 class="text-xl font-semibold text-slate-900 dark:text-white mb-4">
+                    {feature.title}
+                  </h3>
+                  <p class="text-slate-600 dark:text-slate-400">
+                    {feature.description}
+                  </p>
+                </div>
+              );
+            })}
+          </div>
+        </div>
+      </section>
+
+      {/* CTA Section */}
+      <section class="py-28 px-4 sm:px-6 lg:px-8 bg-slate-900 dark:bg-white">
+        <div class="max-w-4xl mx-auto text-center">
+          <h2 class="text-4xl sm:text-5xl font-bold text-white dark:text-slate-900 mb-6">
+            Ready to transform your hiring?
+          </h2>
+          <p class="text-xl text-slate-300 dark:text-slate-600 mb-10">
+            Join modern hiring teams using Jatura to find exceptional talent faster.
+          </p>
+          <div class="flex flex-col sm:flex-row gap-4 justify-center">
+            <a href="/login">
+              <Button
+                size="lg"
+                class="bg-white dark:bg-slate-900 text-slate-900 dark:text-white hover:bg-slate-100 dark:hover:bg-slate-800 px-10 py-6 text-lg"
+              >
+                Start free trial
+                <ArrowRight class="ml-2 h-5 w-5" />
+              </Button>
+            </a>
+            <a href="/pricing">
+              <Button
+                size="lg"
+                variant="outline"
+                class="px-10 py-6 text-lg border-slate-700 dark:border-slate-300 text-white dark:text-slate-900 hover:bg-slate-800 dark:hover:bg-slate-100"
+              >
+                View pricing
+              </Button>
+            </a>
+          </div>
+        </div>
+      </section>
+
+</MarketingLayout>

@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0f172a"/>
+      <stop offset="100%" style="stop-color:#1e293b"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#6366f1"/>
+      <stop offset="100%" style="stop-color:#8b5cf6"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1200" height="630" fill="url(#bg)"/>
+
+  <!-- Subtle grid lines -->
+  <g stroke="#1e293b" stroke-width="1" opacity="0.5">
+    <line x1="0" y1="210" x2="1200" y2="210"/>
+    <line x1="0" y1="420" x2="1200" y2="420"/>
+    <line x1="400" y1="0" x2="400" y2="630"/>
+    <line x1="800" y1="0" x2="800" y2="630"/>
+  </g>
+
+  <!-- Accent bar top -->
+  <rect x="80" y="80" width="120" height="6" rx="3" fill="url(#accent)"/>
+
+  <!-- Logo / Brand -->
+  <text x="80" y="230" font-family="system-ui, -apple-system, sans-serif" font-size="72" font-weight="700" fill="#ffffff" letter-spacing="-2">Jatura</text>
+
+  <!-- Tagline -->
+  <text x="80" y="300" font-family="system-ui, -apple-system, sans-serif" font-size="32" font-weight="400" fill="#94a3b8">All-in-One Recruiting Platform</text>
+
+  <!-- Description -->
+  <text x="80" y="370" font-family="system-ui, -apple-system, sans-serif" font-size="24" font-weight="400" fill="#64748b">The ATS that evolves at the speed of AI.</text>
+  <text x="80" y="405" font-family="system-ui, -apple-system, sans-serif" font-size="24" font-weight="400" fill="#64748b">Built for ambitious teams from Startups to Mid-Market.</text>
+
+  <!-- Rating badge -->
+  <rect x="80" y="460" width="220" height="60" rx="8" fill="#1e293b" stroke="#334155" stroke-width="1"/>
+  <text x="105" y="483" font-family="system-ui, sans-serif" font-size="13" fill="#94a3b8">G2 Rating</text>
+  <text x="105" y="508" font-family="system-ui, sans-serif" font-size="22" font-weight="700" fill="#facc15">★ 4.9/5</text>
+
+  <!-- Free badge -->
+  <rect x="320" y="460" width="180" height="60" rx="8" fill="#1e293b" stroke="#334155" stroke-width="1"/>
+  <text x="345" y="483" font-family="system-ui, sans-serif" font-size="13" fill="#94a3b8">Start Free</text>
+  <text x="345" y="508" font-family="system-ui, sans-serif" font-size="20" font-weight="700" fill="#4ade80">No Credit Card</text>
+
+  <!-- Right side decorative element -->
+  <circle cx="950" cy="315" r="200" fill="none" stroke="#6366f1" stroke-width="1" opacity="0.3"/>
+  <circle cx="950" cy="315" r="140" fill="none" stroke="#8b5cf6" stroke-width="1" opacity="0.2"/>
+  <circle cx="950" cy="315" r="80" fill="#6366f1" opacity="0.1"/>
+  <text x="950" y="295" text-anchor="middle" font-family="system-ui, sans-serif" font-size="18" fill="#a5b4fc">AI-Native</text>
+  <text x="950" y="325" text-anchor="middle" font-family="system-ui, sans-serif" font-size="18" fill="#a5b4fc">ATS</text>
+  <text x="950" y="355" text-anchor="middle" font-family="system-ui, sans-serif" font-size="14" fill="#6366f1">jatura.com</text>
+</svg>

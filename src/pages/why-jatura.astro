@@ -1,0 +1,18 @@
+---
+export const prerender = true;
+import MarketingLayout from '@/layouts/MarketingLayout.astro';
+import WhyJaturaPage from '@/components/islands/WhyJaturaPage';
+
+const schemaOrg = [
+  {
+    "@type": "WebPage",
+    "name": "Why Jatura",
+    "url": "https://jatura.com/why-jatura",
+    "description": "The five pillars that make Jatura the ATS of choice for ambitious hiring teams"
+  }
+];
+---
+
+<MarketingLayout title="Why Jatura? | Modern ATS for Teams That Want Better Hires" description="Why leading hiring teams choose Jatura: attract top talent, screen smarter with AI, engage candidates across every channel, make confident hiring decisions, and build a lasting talent pipeline." {schemaOrg}>
+  <WhyJaturaPage client:load />
+</MarketingLayout>

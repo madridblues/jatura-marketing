@@ -1,0 +1,27 @@
+User-agent: *
+Allow: /
+
+# Block utility/app pages from indexing
+Disallow: /check-status
+Disallow: /status-results
+
+# AI crawlers — allow for GEO/AIO visibility
+User-agent: GPTBot
+Allow: /
+
+User-agent: Claude-Web
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: Amazonbot
+Allow: /
+
+User-agent: anthropic-ai
+Allow: /
+
+Sitemap: https://jatura.com/sitemap-index.xml

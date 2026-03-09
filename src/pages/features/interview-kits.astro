@@ -1,0 +1,378 @@
+---
+export const prerender = true;
+import MarketingLayout from '@/layouts/MarketingLayout.astro';
+import { Award, FileText, Users, CheckCircle, ArrowRight, Sparkles, Target, BarChart3, Brain, Clock, TrendingUp, Zap } from 'lucide-react';
+import { Button } from '@/components/ui/button';
+import { Badge } from '@/components/ui/badge';
+
+const title = "Interview Kits | Jatura - Structured Interview Guides";
+const description = "Structure every interview with AI-generated interview kits. Role-specific questions, scoring rubrics, and collaborative candidate scorecards — built directly into your Jatura pipeline.";
+
+const schemaOrg = [
+  {
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://jatura.com" },
+      { "@type": "ListItem", "position": 2, "name": "Features", "item": "https://jatura.com/features" },
+      { "@type": "ListItem", "position": 3, "name": "Interview Kits", "item": "https://jatura.com/features/interview-kits" }
+    ]
+  },
+  {
+    "@type": "SoftwareApplication",
+    "name": "Jatura ATS",
+    "@id": "https://jatura.com/#software",
+    "applicationCategory": "BusinessApplication",
+    "operatingSystem": "Web",
+    "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD", "description": "Free plan available" },
+    "featureList": ["AI Interview Question Generation", "Structured Interview Guides", "Scoring Rubrics", "Collaborative Scorecards", "Role-Specific Templates", "Interview Feedback Collection", "Hiring Decision Support"],
+    "aggregateRating": { "@type": "AggregateRating", "ratingValue": "4.9", "ratingCount": "247", "bestRating": "5" }
+  }
+];
+---
+
+<MarketingLayout {title} {description} {schemaOrg}>
+
+      {/* Hero Section */}
+      <section class="pt-24 pb-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-slate-50 to-white dark:from-slate-900/50 dark:to-slate-950">
+        <div class="max-w-7xl mx-auto">
+          <div class="text-center mb-16">
+            <Badge
+              variant="secondary"
+              class="mb-6 px-5 py-2 text-sm font-medium bg-slate-100 dark:bg-slate-800 text-slate-900 dark:text-slate-100"
+            >
+              <Award class="w-4 h-4 mr-2" />
+              Structured Interviews
+            </Badge>
+            <h1 class="text-5xl sm:text-6xl lg:text-7xl font-bold text-slate-900 dark:text-white mb-6 leading-tight">
+              Every interview,<br />perfectly structured
+            </h1>
+            <p class="text-xl sm:text-2xl text-slate-600 dark:text-slate-400 max-w-4xl mx-auto mb-12 leading-relaxed">
+              Stop winging interviews. Use AI-generated interview kits with role-specific questions, scoring rubrics, and standardized evaluation criteria.
+            </p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+              <a href="/login">
+                <Button
+                  size="lg"
+                  class="bg-slate-900 dark:bg-white text-white dark:text-slate-900 hover:bg-slate-800 dark:hover:bg-slate-100 px-10 py-6 text-lg group shadow-lg"
+                >
+                  Start free trial
+                  <ArrowRight class="ml-2 h-5 w-5 group-hover:translate-x-1 transition" />
+                </Button>
+              </a>
+              <a href="/pricing">
+                <Button
+                  size="lg"
+                  variant="outline"
+                  class="px-10 py-6 text-lg border-slate-300 dark:border-slate-700"
+                >
+                  View pricing
+                </Button>
+              </a>
+            </div>
+          </div>
+
+          {/* Stats */}
+          <div class="grid md:grid-cols-3 gap-8 mt-20">
+            <div class="text-center">
+              <div class="text-4xl font-bold text-slate-900 dark:text-white mb-2">87%</div>
+              <p class="text-slate-600 dark:text-slate-400">
+                Better hiring decisions
+              </p>
+            </div>
+            <div class="text-center">
+              <div class="text-4xl font-bold text-slate-900 dark:text-white mb-2">60%</div>
+              <p class="text-slate-600 dark:text-slate-400">
+                Reduction in bias
+              </p>
+            </div>
+            <div class="text-center">
+              <div class="text-4xl font-bold text-slate-900 dark:text-white mb-2">3x</div>
+              <p class="text-slate-600 dark:text-slate-400">
+                Faster interview prep
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Features */}
+      <section class="py-28 px-4 sm:px-6 lg:px-8">
+        <div class="max-w-7xl mx-auto">
+          <div class="text-center mb-20">
+            <h2 class="text-4xl sm:text-5xl font-bold text-slate-900 dark:text-white mb-6">
+              What makes a great interview kit?
+            </h2>
+            <p class="text-xl text-slate-600 dark:text-slate-400 max-w-3xl mx-auto">
+              Everything your team needs to conduct fair, effective interviews
+            </p>
+          </div>
+
+          <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div class="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-2xl p-8">
+              <div class="w-14 h-14 bg-slate-100 dark:bg-slate-800 rounded-xl flex items-center justify-center mb-6">
+                <Brain class="w-7 h-7 text-slate-900 dark:text-white" />
+              </div>
+              <h3 class="text-xl font-semibold text-slate-900 dark:text-white mb-4">
+                AI-Generated Questions
+              </h3>
+              <p class="text-slate-600 dark:text-slate-400">
+                Get 5-8 targeted questions for each role automatically. Behavioral, technical, and situational questions tailored to the job requirements.
+              </p>
+            </div>
+
+            <div class="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-2xl p-8">
+              <div class="w-14 h-14 bg-slate-100 dark:bg-slate-800 rounded-xl flex items-center justify-center mb-6">
+                <BarChart3 class="w-7 h-7 text-slate-900 dark:text-white" />
+              </div>
+              <h3 class="text-xl font-semibold text-slate-900 dark:text-white mb-4">
+                Scoring Rubrics
+              </h3>
+              <p class="text-slate-600 dark:text-slate-400">
+                Detailed 1-5 scoring criteria for each question. Interviewers know exactly what to look for in candidate responses.
+              </p>
+            </div>
+
+            <div class="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-2xl p-8">
+              <div class="w-14 h-14 bg-slate-100 dark:bg-slate-800 rounded-xl flex items-center justify-center mb-6">
+                <Target class="w-7 h-7 text-slate-900 dark:text-white" />
+              </div>
+              <h3 class="text-xl font-semibold text-slate-900 dark:text-white mb-4">
+                Core Competencies
+              </h3>
+              <p class="text-slate-600 dark:text-slate-400">
+                4-5 key competencies with weights to focus evaluation on what matters most for the role.
+              </p>
+            </div>
+
+            <div class="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-2xl p-8">
+              <div class="w-14 h-14 bg-slate-100 dark:bg-slate-800 rounded-xl flex items-center justify-center mb-6">
+                <FileText class="w-7 h-7 text-slate-900 dark:text-white" />
+              </div>
+              <h3 class="text-xl font-semibold text-slate-900 dark:text-white mb-4">
+                Answer Guidance
+              </h3>
+              <p class="text-slate-600 dark:text-slate-400">
+                Expected answer guidance helps interviewers recognize great responses and probe deeper when needed.
+              </p>
+            </div>
+
+            <div class="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-2xl p-8">
+              <div class="w-14 h-14 bg-slate-100 dark:bg-slate-800 rounded-xl flex items-center justify-center mb-6">
+                <Users class="w-7 h-7 text-slate-900 dark:text-white" />
+              </div>
+              <h3 class="text-xl font-semibold text-slate-900 dark:text-white mb-4">
+                Team Collaboration
+              </h3>
+              <p class="text-slate-600 dark:text-slate-400">
+                Everyone uses the same kit. Collect consistent feedback from all interviewers for accurate comparisons.
+              </p>
+            </div>
+
+            <div class="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-2xl p-8">
+              <div class="w-14 h-14 bg-slate-100 dark:bg-slate-800 rounded-xl flex items-center justify-center mb-6">
+                <Zap class="w-7 h-7 text-slate-900 dark:text-white" />
+              </div>
+              <h3 class="text-xl font-semibold text-slate-900 dark:text-white mb-4">
+                Auto-Generated on Job Creation
+              </h3>
+              <p class="text-slate-600 dark:text-slate-400">
+                Interview kits are created automatically when you publish a job. No manual setup required.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* How It Works */}
+      <section class="py-28 px-4 sm:px-6 lg:px-8 bg-slate-50 dark:bg-slate-900/50">
+        <div class="max-w-7xl mx-auto">
+          <div class="text-center mb-20">
+            <h2 class="text-4xl sm:text-5xl font-bold text-slate-900 dark:text-white mb-6">
+              From job posting to structured interview in seconds
+            </h2>
+          </div>
+
+          <div class="grid lg:grid-cols-3 gap-12">
+            <div>
+              <div class="w-12 h-12 bg-slate-900 dark:bg-white text-white dark:text-slate-900 rounded-full flex items-center justify-center font-bold text-lg mb-6">
+                1
+              </div>
+              <h3 class="text-2xl font-semibold text-slate-900 dark:text-white mb-4">
+                Publish Your Job
+              </h3>
+              <p class="text-lg text-slate-600 dark:text-slate-400 mb-6">
+                When you create a job posting, AI analyzes the role requirements and responsibilities.
+              </p>
+              <div class="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-xl p-6">
+                <p class="text-sm font-mono text-slate-600 dark:text-slate-400">
+                  → Job: Senior Product Manager<br />
+                  → AI analyzing role...<br />
+                  → Generating interview kit...
+                </p>
+              </div>
+            </div>
+
+            <div>
+              <div class="w-12 h-12 bg-slate-900 dark:bg-white text-white dark:text-slate-900 rounded-full flex items-center justify-center font-bold text-lg mb-6">
+                2
+              </div>
+              <h3 class="text-2xl font-semibold text-slate-900 dark:text-white mb-4">
+                AI Generates Your Kit
+              </h3>
+              <p class="text-lg text-slate-600 dark:text-slate-400 mb-6">
+                Get a complete interview kit with questions, rubrics, and competencies in seconds.
+              </p>
+              <div class="space-y-3">
+                <div class="flex items-start gap-3">
+                  <CheckCircle class="w-5 h-5 text-emerald-600 flex-shrink-0 mt-0.5" />
+                  <span class="text-slate-600 dark:text-slate-400">5-8 targeted questions</span>
+                </div>
+                <div class="flex items-start gap-3">
+                  <CheckCircle class="w-5 h-5 text-emerald-600 flex-shrink-0 mt-0.5" />
+                  <span class="text-slate-600 dark:text-slate-400">Detailed scoring rubrics</span>
+                </div>
+                <div class="flex items-start gap-3">
+                  <CheckCircle class="w-5 h-5 text-emerald-600 flex-shrink-0 mt-0.5" />
+                  <span class="text-slate-600 dark:text-slate-400">Core competencies with weights</span>
+                </div>
+              </div>
+            </div>
+
+            <div>
+              <div class="w-12 h-12 bg-slate-900 dark:bg-white text-white dark:text-slate-900 rounded-full flex items-center justify-center font-bold text-lg mb-6">
+                3
+              </div>
+              <h3 class="text-2xl font-semibold text-slate-900 dark:text-white mb-4">
+                Conduct Interviews
+              </h3>
+              <p class="text-lg text-slate-600 dark:text-slate-400 mb-6">
+                Your team uses the kit to conduct structured, consistent interviews. Feedback is collected automatically.
+              </p>
+              <div class="space-y-3">
+                <div class="flex items-start gap-3">
+                  <CheckCircle class="w-5 h-5 text-emerald-600 flex-shrink-0 mt-0.5" />
+                  <span class="text-slate-600 dark:text-slate-400">Ask the same questions</span>
+                </div>
+                <div class="flex items-start gap-3">
+                  <CheckCircle class="w-5 h-5 text-emerald-600 flex-shrink-0 mt-0.5" />
+                  <span class="text-slate-600 dark:text-slate-400">Score with consistency</span>
+                </div>
+                <div class="flex items-start gap-3">
+                  <CheckCircle class="w-5 h-5 text-emerald-600 flex-shrink-0 mt-0.5" />
+                  <span class="text-slate-600 dark:text-slate-400">Compare candidates fairly</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Benefits */}
+      <section class="py-28 px-4 sm:px-6 lg:px-8">
+        <div class="max-w-7xl mx-auto">
+          <div class="grid lg:grid-cols-2 gap-16 items-center">
+            <div>
+              <h2 class="text-4xl sm:text-5xl font-bold text-slate-900 dark:text-white mb-8">
+                Why structured interviews matter
+              </h2>
+              <div class="space-y-6 text-lg text-slate-600 dark:text-slate-400">
+                <p>
+                  Unstructured interviews lead to inconsistent evaluations, bias, and bad hires. When every interviewer asks different questions,{" "}
+                  <strong class="text-slate-900 dark:text-white">
+                    you can't fairly compare candidates
+                  </strong>
+                  .
+                </p>
+                <p>
+                  Structured interviews with standardized questions and scoring rubrics{" "}
+                  <strong class="text-slate-900 dark:text-white">
+                    increase predictive validity by 2x
+                  </strong>{" "}
+                  compared to unstructured interviews.
+                </p>
+                <p>
+                  Interview kits ensure every candidate gets the same questions, every interviewer evaluates using the same criteria, and every hiring decision is data-driven.
+                </p>
+              </div>
+            </div>
+
+            <div class="space-y-6">
+              <div class="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-2xl p-8">
+                <div class="flex items-center gap-3 mb-4">
+                  <div class="w-10 h-10 bg-emerald-100 dark:bg-emerald-900/30 rounded-lg flex items-center justify-center">
+                    <CheckCircle class="w-6 h-6 text-emerald-600" />
+                  </div>
+                  <h4 class="text-xl font-semibold text-slate-900 dark:text-white">
+                    Fair & Unbiased
+                  </h4>
+                </div>
+                <p class="text-slate-600 dark:text-slate-400">
+                  Standardized questions reduce unconscious bias. Every candidate is evaluated on the same criteria.
+                </p>
+              </div>
+
+              <div class="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-2xl p-8">
+                <div class="flex items-center gap-3 mb-4">
+                  <div class="w-10 h-10 bg-emerald-100 dark:bg-emerald-900/30 rounded-lg flex items-center justify-center">
+                    <TrendingUp class="w-6 h-6 text-emerald-600" />
+                  </div>
+                  <h4 class="text-xl font-semibold text-slate-900 dark:text-white">
+                    Better Predictions
+                  </h4>
+                </div>
+                <p class="text-slate-600 dark:text-slate-400">
+                  Structured interviews are the best predictor of job performance — better than resumes, references, or years of experience.
+                </p>
+              </div>
+
+              <div class="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-2xl p-8">
+                <div class="flex items-center gap-3 mb-4">
+                  <div class="w-10 h-10 bg-emerald-100 dark:bg-emerald-900/30 rounded-lg flex items-center justify-center">
+                    <Clock class="w-6 h-6 text-emerald-600" />
+                  </div>
+                  <h4 class="text-xl font-semibold text-slate-900 dark:text-white">
+                    Faster Decisions
+                  </h4>
+                </div>
+                <p class="text-slate-600 dark:text-slate-400">
+                  Consistent scoring rubrics make it easy to compare candidates and reach consensus quickly.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* CTA Section */}
+      <section class="py-28 px-4 sm:px-6 lg:px-8 bg-slate-900 dark:bg-white">
+        <div class="max-w-4xl mx-auto text-center">
+          <h2 class="text-4xl sm:text-5xl font-bold text-white dark:text-slate-900 mb-6">
+            Ready for better interviews?
+          </h2>
+          <p class="text-xl text-slate-300 dark:text-slate-600 mb-10">
+            Start conducting structured, fair interviews that lead to better hires.
+          </p>
+          <div class="flex flex-col sm:flex-row gap-4 justify-center">
+            <a href="/login">
+              <Button
+                size="lg"
+                class="bg-white dark:bg-slate-900 text-slate-900 dark:text-white hover:bg-slate-100 dark:hover:bg-slate-800 px-10 py-6 text-lg"
+              >
+                Start free trial
+                <ArrowRight class="ml-2 h-5 w-5" />
+              </Button>
+            </a>
+            <a href="/pricing">
+              <Button
+                size="lg"
+                variant="outline"
+                class="px-10 py-6 text-lg border-slate-700 dark:border-slate-300 text-white dark:text-slate-900 hover:bg-slate-800 dark:hover:bg-slate-100"
+              >
+                View pricing
+              </Button>
+            </a>
+          </div>
+        </div>
+      </section>
+
+</MarketingLayout>

@@ -1,0 +1,699 @@
+---
+export const prerender = true;
+import MarketingLayout from '@/layouts/MarketingLayout.astro';
+import { ArrowRight, CheckCircle, XCircle, MinusCircle, DollarSign, Users, Zap, TrendingUp, Scale, Building2 } from 'lucide-react';
+import { Button } from '@/components/ui/button';
+import { Badge } from '@/components/ui/badge';
+
+const title = "Jatura vs Lever - Honest ATS Comparison 2025";
+const description = "Jatura vs Lever: side-by-side 2025 comparison of features, pricing, and AI recruiting tools. See why startups and scale-ups choose Jatura as a smarter, more affordable Lever alternative.";
+
+const schemaOrg = [
+  {
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://jatura.com" },
+      { "@type": "ListItem", "position": 2, "name": "Compare ATS", "item": "https://jatura.com/compare" },
+      { "@type": "ListItem", "position": 3, "name": "Jatura vs Lever", "item": "https://jatura.com/compare/lever" }
+    ]
+  },
+  {
+    "@type": "WebPage",
+    "name": "Jatura vs Lever - ATS Comparison 2025",
+    "description": "Detailed feature, pricing, and AI capability comparison between Jatura and Lever",
+    "url": "https://jatura.com/compare/lever",
+    "about": [
+      { "@type": "SoftwareApplication", "name": "Jatura", "applicationCategory": "BusinessApplication" },
+      { "@type": "SoftwareApplication", "name": "Lever", "applicationCategory": "BusinessApplication" }
+    ]
+  }
+];
+---
+
+<MarketingLayout {title} {description} {schemaOrg}>
+
+      {/* Hero Section */}
+      <section class="pt-24 pb-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-slate-50 to-white dark:from-slate-900/50 dark:to-slate-950">
+        <div class="max-w-5xl mx-auto">
+          <a href="/compare">
+            <Button variant="ghost" class="mb-6 -ml-4">
+              ← Back to all comparisons
+            </Button>
+          </a>
+          
+          <Badge
+            variant="secondary"
+            class="mb-6 px-5 py-2 text-sm font-medium bg-slate-100 dark:bg-slate-800 text-slate-900 dark:text-slate-100"
+          >
+            <Scale class="w-4 h-4 mr-2" />
+            Honest Comparison
+          </Badge>
+          
+          <h1 class="text-5xl sm:text-6xl font-bold text-slate-900 dark:text-white mb-6 leading-tight">
+            Jatura vs Lever
+          </h1>
+          
+          <p class="text-xl sm:text-2xl text-slate-600 dark:text-slate-400 mb-8 leading-relaxed">
+            Lever pioneered the combined ATS+CRM approach. Jatura takes it further—same integrated recruiting platform, plus superior AI, better reporting, and modern UX at a fraction of the cost.
+          </p>
+
+          <div class="bg-slate-100 dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-2xl p-8 mb-8">
+            <h3 class="text-lg font-semibold text-slate-900 dark:text-white mb-4">
+              TL;DR
+            </h3>
+            <div class="space-y-3 text-slate-600 dark:text-slate-400">
+              <p>
+                <strong class="text-slate-900 dark:text-white">Lever</strong> is a solid mid-market ATS+CRM with a clean interface and strong LinkedIn integration. It's best for companies that value simplicity and are willing to trade advanced features for ease of use. Starts at $3,500+/year with custom pricing.
+              </p>
+              <p>
+                <strong class="text-slate-900 dark:text-white">Jatura</strong> gives you the same ATS+CRM foundation plus powerful AI screening, advanced analytics with custom reports, modern candidate experience, and transparent $99-$299/month pricing. No sales calls, no hidden fees, no feature paywalls.
+              </p>
+            </div>
+          </div>
+
+          <div class="flex flex-col sm:flex-row gap-4">
+            <a href="/login">
+              <Button
+                size="lg"
+                class="bg-slate-900 dark:bg-white text-white dark:text-slate-900 hover:bg-slate-800 dark:hover:bg-slate-100 px-10 py-6 text-lg group shadow-lg"
+              >
+                Try Jatura free
+                <ArrowRight class="ml-2 h-5 w-5 group-hover:translate-x-1 transition" />
+              </Button>
+            </a>
+            <a href="/pricing">
+              <Button
+                size="lg"
+                variant="outline"
+                class="px-10 py-6 text-lg border-slate-300 dark:border-slate-700"
+              >
+                View pricing
+              </Button>
+            </a>
+          </div>
+        </div>
+      </section>
+
+      {/* What Lever Does Well */}
+      <section class="py-20 px-4 sm:px-6 lg:px-8">
+        <div class="max-w-5xl mx-auto">
+          <div class="flex items-center gap-3 mb-8">
+            <TrendingUp class="w-8 h-8 text-emerald-600" />
+            <h2 class="text-4xl font-bold text-slate-900 dark:text-white">
+              What Lever does well
+            </h2>
+          </div>
+          
+          <p class="text-lg text-slate-600 dark:text-slate-400 mb-8">
+            Lever is trusted by 5,000+ companies including Netflix, Spotify, and KPMG. Here's where they excel:
+          </p>
+
+          <div class="grid md:grid-cols-2 gap-6">
+            <div class="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-xl p-6">
+              <h3 class="text-xl font-semibold text-slate-900 dark:text-white mb-3">
+                Integrated ATS + CRM
+              </h3>
+              <p class="text-slate-600 dark:text-slate-400">
+                Pioneered the unified talent relationship management approach. Track active applicants and nurture passive candidates in one platform—no need for separate CRM tools.
+              </p>
+            </div>
+
+            <div class="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-xl p-6">
+              <h3 class="text-xl font-semibold text-slate-900 dark:text-white mb-3">
+                User-friendly interface
+              </h3>
+              <p class="text-slate-600 dark:text-slate-400">
+                Clean, intuitive design with minimal learning curve. Recruiters and hiring managers can get productive quickly without extensive training.
+              </p>
+            </div>
+
+            <div class="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-xl p-6">
+              <h3 class="text-xl font-semibold text-slate-900 dark:text-white mb-3">
+                Strong LinkedIn integration
+              </h3>
+              <p class="text-slate-600 dark:text-slate-400">
+                Seamless LinkedIn Recruiter System Connect integration with Chrome extension makes sourcing candidates from LinkedIn effortless.
+              </p>
+            </div>
+
+            <div class="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-xl p-6">
+              <h3 class="text-xl font-semibold text-slate-900 dark:text-white mb-3">
+                Good DEI features
+              </h3>
+              <p class="text-slate-600 dark:text-slate-400">
+                Built-in EEO surveys, diversity dashboards, and tools to anonymize candidate information support fair hiring practices.
+              </p>
+            </div>
+
+            <div class="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-xl p-6">
+              <h3 class="text-xl font-semibold text-slate-900 dark:text-white mb-3">
+                Collaboration tools
+              </h3>
+              <p class="text-slate-600 dark:text-slate-400">
+                Shared scorecards, automated feedback requests, and role-based permissions make team coordination smooth.
+              </p>
+            </div>
+
+            <div class="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-xl p-6">
+              <h3 class="text-xl font-semibold text-slate-900 dark:text-white mb-3">
+                Quick deployment
+              </h3>
+              <p class="text-slate-600 dark:text-slate-400">
+                Faster implementation than enterprise ATS platforms. Responsive onboarding and training support get teams up to speed.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Where Lever Falls Short */}
+      <section class="py-20 px-4 sm:px-6 lg:px-8 bg-slate-50 dark:bg-slate-900/50">
+        <div class="max-w-5xl mx-auto">
+          <div class="flex items-center gap-3 mb-8">
+            <XCircle class="w-8 h-8 text-red-600" />
+            <h2 class="text-4xl font-bold text-slate-900 dark:text-white">
+              Where Lever falls short
+            </h2>
+          </div>
+          
+          <p class="text-lg text-slate-600 dark:text-slate-400 mb-8">
+            Based on real customer reviews and user feedback, here are the common pain points:
+          </p>
+
+          <div class="space-y-6">
+            <div class="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-xl p-6">
+              <div class="flex items-start gap-4">
+                <Zap class="w-6 h-6 text-red-600 flex-shrink-0 mt-1" />
+                <div>
+                  <h3 class="text-xl font-semibold text-slate-900 dark:text-white mb-2">
+                    Limited reporting and analytics
+                  </h3>
+                  <p class="text-slate-600 dark:text-slate-400 mb-3">
+                    "Extremely basic ATS—reporting functionality is poor." Custom reports are limited, and many teams need to export data to Excel for deeper analysis. Less flexible than competitors like Greenhouse or SmartRecruiters.
+                  </p>
+                  <p class="text-sm italic text-slate-500 dark:text-slate-500">
+                    "Less flexible than competitors...difficult to extract specific data" — Verified review
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div class="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-xl p-6">
+              <div class="flex items-start gap-4">
+                <Building2 class="w-6 h-6 text-red-600 flex-shrink-0 mt-1" />
+                <div>
+                  <h3 class="text-xl font-semibold text-slate-900 dark:text-white mb-2">
+                    Not built for enterprise scale
+                  </h3>
+                  <p class="text-slate-600 dark:text-slate-400 mb-3">
+                    Performance issues with high-volume hiring. Better suited for mid-sized companies (under 1,000 employees) than large enterprises with complex workflows and massive candidate pipelines.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div class="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-xl p-6">
+              <div class="flex items-start gap-4">
+                <DollarSign class="w-6 h-6 text-red-600 flex-shrink-0 mt-1" />
+                <div>
+                  <h3 class="text-xl font-semibold text-slate-900 dark:text-white mb-2">
+                    Expensive API access and hidden costs
+                  </h3>
+                  <p class="text-slate-600 dark:text-slate-400 mb-3">
+                    Starting at $3,500+/year with ~$6-8 per employee per month typical. But the real pain point: API access requires significant additional fees. Many integrations cost extra, and there's no transparent pricing—must contact sales for quotes.
+                  </p>
+                  <p class="text-sm italic text-slate-500 dark:text-slate-500">
+                    "High API access fees...major cost consideration" — Customer review
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div class="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-xl p-6">
+              <div class="flex items-start gap-4">
+                <MinusCircle class="w-6 h-6 text-red-600 flex-shrink-0 mt-1" />
+                <div>
+                  <h3 class="text-xl font-semibold text-slate-900 dark:text-white mb-2">
+                    Limited customization
+                  </h3>
+                  <p class="text-slate-600 dark:text-slate-400 mb-3">
+                    Rigid scheduling tool doesn't support multiple interviewers well. Unified pipeline can be problematic for multi-country hiring. Less customizable than competitors for unique recruiting workflows.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div class="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-xl p-6">
+              <div class="flex items-start gap-4">
+                <Users class="w-6 h-6 text-red-600 flex-shrink-0 mt-1" />
+                <div>
+                  <h3 class="text-xl font-semibold text-slate-900 dark:text-white mb-2">
+                    Support quality declined post-acquisition
+                  </h3>
+                  <p class="text-slate-600 dark:text-slate-400 mb-3">
+                    Since Employ acquired Lever in 2023, customers report customer service turnover, slower response times, and bugs not being fixed promptly. "Customer service leaves a lot to be desired."
+                  </p>
+                  <p class="text-sm italic text-slate-500 dark:text-slate-500">
+                    "Not innovative—feedback not implemented" — Capterra review
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div class="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-xl p-6">
+              <div class="flex items-start gap-4">
+                <Zap class="w-6 h-6 text-red-600 flex-shrink-0 mt-1" />
+                <div>
+                  <h3 class="text-xl font-semibold text-slate-900 dark:text-white mb-2">
+                    Basic AI capabilities
+                  </h3>
+                  <p class="text-slate-600 dark:text-slate-400 mb-3">
+                    AI features (resume parsing, candidate matching, interview summaries) exist but lag behind modern competitors. No AI-powered job description writing or advanced screening tools.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* How Jatura is Different */}
+      <section class="py-20 px-4 sm:px-6 lg:px-8">
+        <div class="max-w-5xl mx-auto">
+          <div class="flex items-center gap-3 mb-8">
+            <CheckCircle class="w-8 h-8 text-emerald-600" />
+            <h2 class="text-4xl font-bold text-slate-900 dark:text-white">
+              How Jatura is different
+            </h2>
+          </div>
+
+          <p class="text-lg text-slate-600 dark:text-slate-400 mb-8">
+            We built Jatura to solve exactly the problems that frustrate Lever users: limited reporting, weak AI, and expensive API access.
+          </p>
+
+          <div class="grid md:grid-cols-2 gap-6 mb-12">
+            <div class="bg-emerald-50 dark:bg-emerald-950/20 border border-emerald-200 dark:border-emerald-900 rounded-xl p-6">
+              <h3 class="text-xl font-semibold text-slate-900 dark:text-white mb-3">
+                Advanced analytics out of the box
+              </h3>
+              <p class="text-slate-600 dark:text-slate-400">
+                Custom reports, source effectiveness tracking, conversion funnels, and predictive insights—all included. Export to CSV or analyze in-app with interactive dashboards.
+              </p>
+            </div>
+
+            <div class="bg-emerald-50 dark:bg-emerald-950/20 border border-emerald-200 dark:border-emerald-900 rounded-xl p-6">
+              <h3 class="text-xl font-semibold text-slate-900 dark:text-white mb-3">
+                Powerful AI included
+              </h3>
+              <p class="text-slate-600 dark:text-slate-400">
+                AI resume screening, candidate matching, job description generation, interview kit creation, and AI Copilot—all standard features, not add-ons.
+              </p>
+            </div>
+
+            <div class="bg-emerald-50 dark:bg-emerald-950/20 border border-emerald-200 dark:border-emerald-900 rounded-xl p-6">
+              <h3 class="text-xl font-semibold text-slate-900 dark:text-white mb-3">
+                Free API access
+              </h3>
+              <p class="text-slate-600 dark:text-slate-400">
+                Full API access included on all plans. Build custom integrations, automate workflows, and connect with your tools—no hidden fees.
+              </p>
+            </div>
+
+            <div class="bg-emerald-50 dark:bg-emerald-950/20 border border-emerald-200 dark:border-emerald-900 rounded-xl p-6">
+              <h3 class="text-xl font-semibold text-slate-900 dark:text-white mb-3">
+                $99-$299/month, not $3,500+/year
+              </h3>
+              <p class="text-slate-600 dark:text-slate-400">
+                Transparent pricing on our website. No sales calls required. Start with our Starter plan ($99/mo) and scale up as you grow. Cancel anytime.
+              </p>
+            </div>
+
+            <div class="bg-emerald-50 dark:bg-emerald-950/20 border border-emerald-200 dark:border-emerald-900 rounded-xl p-6">
+              <h3 class="text-xl font-semibold text-slate-900 dark:text-white mb-3">
+                Built for scale
+              </h3>
+              <p class="text-slate-600 dark:text-slate-400">
+                Handles high-volume hiring without performance degradation. Optimized database queries, intelligent caching, and enterprise-grade infrastructure.
+              </p>
+            </div>
+
+            <div class="bg-emerald-50 dark:bg-emerald-950/20 border border-emerald-200 dark:border-emerald-900 rounded-xl p-6">
+              <h3 class="text-xl font-semibold text-slate-900 dark:text-white mb-3">
+                Modern candidate experience
+              </h3>
+              <p class="text-slate-600 dark:text-slate-400">
+                Mobile-first application forms, self-scheduling with conflict detection, real-time status updates, two-way messaging, and privacy hub—everything candidates expect in 2025.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Feature Comparison Table */}
+      <section class="py-20 px-4 sm:px-6 lg:px-8 bg-slate-50 dark:bg-slate-900/50">
+        <div class="max-w-6xl mx-auto">
+          <h2 class="text-4xl font-bold text-slate-900 dark:text-white mb-4 text-center">
+            Side-by-side feature comparison
+          </h2>
+          <p class="text-xl text-slate-600 dark:text-slate-400 text-center mb-12">
+            Based on publicly available information and user reviews
+          </p>
+
+          <div class="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-2xl overflow-hidden">
+            <div class="overflow-x-auto">
+              <table class="w-full">
+                <thead>
+                  <tr class="bg-slate-100 dark:bg-slate-800">
+                    <th class="text-left p-6 text-slate-900 dark:text-white font-semibold">Feature</th>
+                    <th class="text-center p-6 text-slate-900 dark:text-white font-semibold">Jatura</th>
+                    <th class="text-center p-6 text-slate-900 dark:text-white font-semibold">Lever</th>
+                  </tr>
+                </thead>
+                <tbody class="divide-y divide-slate-200 dark:divide-slate-800">
+                  <tr>
+                    <td class="p-6 text-slate-900 dark:text-white font-medium">Starting price (annual)</td>
+                    <td class="p-6 text-center text-slate-600 dark:text-slate-400">$99/month ($1,188/year)</td>
+                    <td class="p-6 text-center text-slate-600 dark:text-slate-400">$3,500+/year</td>
+                  </tr>
+                  <tr>
+                    <td class="p-6 text-slate-900 dark:text-white font-medium">Transparent pricing</td>
+                    <td class="p-6 text-center"><CheckCircle class="w-5 h-5 text-emerald-600 mx-auto" /></td>
+                    <td class="p-6 text-center"><XCircle class="w-5 h-5 text-red-600 mx-auto" /></td>
+                  </tr>
+                  <tr>
+                    <td class="p-6 text-slate-900 dark:text-white font-medium">Free trial</td>
+                    <td class="p-6 text-center text-emerald-600 font-medium">14 days</td>
+                    <td class="p-6 text-center"><XCircle class="w-5 h-5 text-red-600 mx-auto" /></td>
+                  </tr>
+                  <tr>
+                    <td class="p-6 text-slate-900 dark:text-white font-medium">ATS + CRM integrated</td>
+                    <td class="p-6 text-center"><CheckCircle class="w-5 h-5 text-emerald-600 mx-auto" /></td>
+                    <td class="p-6 text-center"><CheckCircle class="w-5 h-5 text-emerald-600 mx-auto" /></td>
+                  </tr>
+                  <tr>
+                    <td class="p-6 text-slate-900 dark:text-white font-medium">Kanban pipeline</td>
+                    <td class="p-6 text-center"><CheckCircle class="w-5 h-5 text-emerald-600 mx-auto" /></td>
+                    <td class="p-6 text-center"><CheckCircle class="w-5 h-5 text-emerald-600 mx-auto" /></td>
+                  </tr>
+                  <tr>
+                    <td class="p-6 text-slate-900 dark:text-white font-medium">Interview scheduling</td>
+                    <td class="p-6 text-center text-emerald-600 font-medium">Advanced with conflict detection</td>
+                    <td class="p-6 text-center text-slate-600 dark:text-slate-400">Basic</td>
+                  </tr>
+                  <tr>
+                    <td class="p-6 text-slate-900 dark:text-white font-medium">AI resume screening</td>
+                    <td class="p-6 text-center text-emerald-600 font-medium">Advanced</td>
+                    <td class="p-6 text-center text-slate-600 dark:text-slate-400">Basic</td>
+                  </tr>
+                  <tr>
+                    <td class="p-6 text-slate-900 dark:text-white font-medium">AI candidate matching</td>
+                    <td class="p-6 text-center text-emerald-600 font-medium">Advanced</td>
+                    <td class="p-6 text-center text-slate-600 dark:text-slate-400">Basic</td>
+                  </tr>
+                  <tr>
+                    <td class="p-6 text-slate-900 dark:text-white font-medium">AI job description writer</td>
+                    <td class="p-6 text-center"><CheckCircle class="w-5 h-5 text-emerald-600 mx-auto" /></td>
+                    <td class="p-6 text-center"><XCircle class="w-5 h-5 text-red-600 mx-auto" /></td>
+                  </tr>
+                  <tr>
+                    <td class="p-6 text-slate-900 dark:text-white font-medium">AI Copilot</td>
+                    <td class="p-6 text-center text-emerald-600 font-medium">Included</td>
+                    <td class="p-6 text-center"><XCircle class="w-5 h-5 text-red-600 mx-auto" /></td>
+                  </tr>
+                  <tr>
+                    <td class="p-6 text-slate-900 dark:text-white font-medium">Custom career pages</td>
+                    <td class="p-6 text-center"><CheckCircle class="w-5 h-5 text-emerald-600 mx-auto" /></td>
+                    <td class="p-6 text-center"><CheckCircle class="w-5 h-5 text-emerald-600 mx-auto" /></td>
+                  </tr>
+                  <tr>
+                    <td class="p-6 text-slate-900 dark:text-white font-medium">Advanced analytics</td>
+                    <td class="p-6 text-center text-emerald-600 font-medium">Unlimited custom reports</td>
+                    <td class="p-6 text-center text-slate-600 dark:text-slate-400">Limited customization</td>
+                  </tr>
+                  <tr>
+                    <td class="p-6 text-slate-900 dark:text-white font-medium">DEI tracking</td>
+                    <td class="p-6 text-center"><CheckCircle class="w-5 h-5 text-emerald-600 mx-auto" /></td>
+                    <td class="p-6 text-center"><CheckCircle class="w-5 h-5 text-emerald-600 mx-auto" /></td>
+                  </tr>
+                  <tr>
+                    <td class="p-6 text-slate-900 dark:text-white font-medium">LinkedIn integration</td>
+                    <td class="p-6 text-center"><CheckCircle class="w-5 h-5 text-emerald-600 mx-auto" /></td>
+                    <td class="p-6 text-center"><CheckCircle class="w-5 h-5 text-emerald-600 mx-auto" /></td>
+                  </tr>
+                  <tr>
+                    <td class="p-6 text-slate-900 dark:text-white font-medium">API access</td>
+                    <td class="p-6 text-center text-emerald-600 font-medium">Free, unlimited</td>
+                    <td class="p-6 text-center text-slate-600 dark:text-slate-400">Additional fees</td>
+                  </tr>
+                  <tr>
+                    <td class="p-6 text-slate-900 dark:text-white font-medium">Multi-channel messaging</td>
+                    <td class="p-6 text-center text-emerald-600 font-medium">Email, SMS, In-App</td>
+                    <td class="p-6 text-center text-slate-600 dark:text-slate-400">Email, limited SMS</td>
+                  </tr>
+                  <tr>
+                    <td class="p-6 text-slate-900 dark:text-white font-medium">Email templates</td>
+                    <td class="p-6 text-center"><CheckCircle class="w-5 h-5 text-emerald-600 mx-auto" /></td>
+                    <td class="p-6 text-center"><CheckCircle class="w-5 h-5 text-emerald-600 mx-auto" /></td>
+                  </tr>
+                  <tr>
+                    <td class="p-6 text-slate-900 dark:text-white font-medium">Mobile app</td>
+                    <td class="p-6 text-center"><CheckCircle class="w-5 h-5 text-emerald-600 mx-auto" /></td>
+                    <td class="p-6 text-center text-slate-600 dark:text-slate-400">Mobile browser only</td>
+                  </tr>
+                  <tr>
+                    <td class="p-6 text-slate-900 dark:text-white font-medium">Integrations</td>
+                    <td class="p-6 text-center text-slate-600 dark:text-slate-400">50+ (growing)</td>
+                    <td class="p-6 text-center text-slate-600 dark:text-slate-400">200+</td>
+                  </tr>
+                  <tr>
+                    <td class="p-6 text-slate-900 dark:text-white font-medium">Customer support</td>
+                    <td class="p-6 text-center text-emerald-600 font-medium">Responsive, all plans</td>
+                    <td class="p-6 text-center text-slate-600 dark:text-slate-400">Declined post-acquisition</td>
+                  </tr>
+                  <tr>
+                    <td class="p-6 text-slate-900 dark:text-white font-medium">Enterprise scalability</td>
+                    <td class="p-6 text-center text-emerald-600 font-medium">High-volume ready</td>
+                    <td class="p-6 text-center text-slate-600 dark:text-slate-400">Mid-market focused</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Pricing Comparison */}
+      <section class="py-20 px-4 sm:px-6 lg:px-8">
+        <div class="max-w-5xl mx-auto">
+          <h2 class="text-4xl font-bold text-slate-900 dark:text-white mb-12 text-center">
+            Pricing comparison
+          </h2>
+
+          <div class="grid md:grid-cols-2 gap-8 mb-12">
+            {/* Jatura Pricing */}
+            <div class="bg-emerald-50 dark:bg-emerald-950/20 border-2 border-emerald-200 dark:border-emerald-900 rounded-2xl p-8">
+              <div class="text-sm font-semibold text-emerald-600 mb-2">JATURA</div>
+              <div class="text-4xl font-bold text-slate-900 dark:text-white mb-2">
+                $99-$299<span class="text-xl text-slate-600 dark:text-slate-400">/mo</span>
+              </div>
+              <p class="text-slate-600 dark:text-slate-400 mb-6">
+                All plans include AI features, unlimited jobs, career pages, and API access
+              </p>
+              <ul class="space-y-3">
+                <li class="flex items-start gap-2">
+                  <CheckCircle class="w-5 h-5 text-emerald-600 flex-shrink-0 mt-0.5" />
+                  <span class="text-slate-600 dark:text-slate-400">
+                    <strong class="text-slate-900 dark:text-white">Free ($0/mo):</strong> Up to 3 active jobs, unlimited applications
+                  </span>
+                </li>
+                <li class="flex items-start gap-2">
+                  <CheckCircle class="w-5 h-5 text-emerald-600 flex-shrink-0 mt-0.5" />
+                  <span class="text-slate-600 dark:text-slate-400">
+                    <strong class="text-slate-900 dark:text-white">Pro ($199/mo):</strong> Unlimited jobs, advanced analytics
+                  </span>
+                </li>
+                <li class="flex items-start gap-2">
+                  <CheckCircle class="w-5 h-5 text-emerald-600 flex-shrink-0 mt-0.5" />
+                  <span class="text-slate-600 dark:text-slate-400">
+                    <strong class="text-slate-900 dark:text-white">Enterprise ($299/mo):</strong> Custom integrations, SSO, SLA
+                  </span>
+                </li>
+                <li class="flex items-start gap-2">
+                  <CheckCircle class="w-5 h-5 text-emerald-600 flex-shrink-0 mt-0.5" />
+                  <span class="text-slate-600 dark:text-slate-400">14-day free trial, cancel anytime</span>
+                </li>
+              </ul>
+            </div>
+
+            {/* Lever Pricing */}
+            <div class="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-2xl p-8">
+              <div class="text-sm font-semibold text-slate-600 dark:text-slate-400 mb-2">LEVER</div>
+              <div class="text-4xl font-bold text-slate-900 dark:text-white mb-2">
+                $3,500+<span class="text-xl text-slate-600 dark:text-slate-400">/year</span>
+              </div>
+              <p class="text-slate-600 dark:text-slate-400 mb-6">
+                Contact sales for custom quote (no transparent pricing)
+              </p>
+              <ul class="space-y-3">
+                <li class="flex items-start gap-2">
+                  <MinusCircle class="w-5 h-5 text-slate-400 flex-shrink-0 mt-0.5" />
+                  <span class="text-slate-600 dark:text-slate-400">
+                    ~$6-8 per employee per month (PEPM) typical
+                  </span>
+                </li>
+                <li class="flex items-start gap-2">
+                  <MinusCircle class="w-5 h-5 text-slate-400 flex-shrink-0 mt-0.5" />
+                  <span class="text-slate-600 dark:text-slate-400">
+                    Can exceed $140,000+/year for large organizations
+                  </span>
+                </li>
+                <li class="flex items-start gap-2">
+                  <MinusCircle class="w-5 h-5 text-slate-400 flex-shrink-0 mt-0.5" />
+                  <span class="text-slate-600 dark:text-slate-400">
+                    Additional fees for API access
+                  </span>
+                </li>
+                <li class="flex items-start gap-2">
+                  <MinusCircle class="w-5 h-5 text-slate-400 flex-shrink-0 mt-0.5" />
+                  <span class="text-slate-600 dark:text-slate-400">No free trial available</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="bg-slate-100 dark:bg-slate-800 rounded-xl p-6 text-center">
+            <p class="text-lg text-slate-700 dark:text-slate-300">
+              <strong>Jatura costs 66-97% less than Lever</strong> while delivering superior AI, analytics, and candidate experience.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* Who Should Choose Which */}
+      <section class="py-20 px-4 sm:px-6 lg:px-8 bg-slate-50 dark:bg-slate-900/50">
+        <div class="max-w-5xl mx-auto">
+          <h2 class="text-4xl font-bold text-slate-900 dark:text-white mb-12 text-center">
+            Which should you choose?
+          </h2>
+
+          <div class="grid md:grid-cols-2 gap-8">
+            {/* Choose Lever */}
+            <div class="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-2xl p-8">
+              <h3 class="text-2xl font-bold text-slate-900 dark:text-white mb-6">
+                Choose Lever if:
+              </h3>
+              <ul class="space-y-4">
+                <li class="flex items-start gap-3">
+                  <CheckCircle class="w-5 h-5 text-slate-400 flex-shrink-0 mt-0.5" />
+                  <span class="text-slate-600 dark:text-slate-400">
+                    You have a <strong class="text-slate-900 dark:text-white">mid-sized team (100-1,000 employees)</strong>
+                  </span>
+                </li>
+                <li class="flex items-start gap-3">
+                  <CheckCircle class="w-5 h-5 text-slate-400 flex-shrink-0 mt-0.5" />
+                  <span class="text-slate-600 dark:text-slate-400">
+                    <strong class="text-slate-900 dark:text-white">LinkedIn sourcing</strong> is your primary recruiting channel
+                  </span>
+                </li>
+                <li class="flex items-start gap-3">
+                  <CheckCircle class="w-5 h-5 text-slate-400 flex-shrink-0 mt-0.5" />
+                  <span class="text-slate-600 dark:text-slate-400">
+                    You value <strong class="text-slate-900 dark:text-white">simplicity over advanced features</strong>
+                  </span>
+                </li>
+                <li class="flex items-start gap-3">
+                  <CheckCircle class="w-5 h-5 text-slate-400 flex-shrink-0 mt-0.5" />
+                  <span class="text-slate-600 dark:text-slate-400">
+                    Your hiring volume is <strong class="text-slate-900 dark:text-white">low to moderate</strong>
+                  </span>
+                </li>
+                <li class="flex items-start gap-3">
+                  <CheckCircle class="w-5 h-5 text-slate-400 flex-shrink-0 mt-0.5" />
+                  <span class="text-slate-600 dark:text-slate-400">
+                    You have <strong class="text-slate-900 dark:text-white">$3,500+ budget</strong> and prefer sales-driven pricing
+                  </span>
+                </li>
+              </ul>
+            </div>
+
+            {/* Choose Jatura */}
+            <div class="bg-emerald-50 dark:bg-emerald-950/20 border-2 border-emerald-200 dark:border-emerald-900 rounded-2xl p-8">
+              <h3 class="text-2xl font-bold text-slate-900 dark:text-white mb-6">
+                Choose Jatura if:
+              </h3>
+              <ul class="space-y-4">
+                <li class="flex items-start gap-3">
+                  <CheckCircle class="w-5 h-5 text-emerald-600 flex-shrink-0 mt-0.5" />
+                  <span class="text-slate-600 dark:text-slate-400">
+                    You want <strong class="text-slate-900 dark:text-white">transparent pricing under $300/month</strong>
+                  </span>
+                </li>
+                <li class="flex items-start gap-3">
+                  <CheckCircle class="w-5 h-5 text-emerald-600 flex-shrink-0 mt-0.5" />
+                  <span class="text-slate-600 dark:text-slate-400">
+                    You need <strong class="text-slate-900 dark:text-white">powerful AI features</strong> without add-on costs
+                  </span>
+                </li>
+                <li class="flex items-start gap-3">
+                  <CheckCircle class="w-5 h-5 text-emerald-600 flex-shrink-0 mt-0.5" />
+                  <span class="text-slate-600 dark:text-slate-400">
+                    <strong class="text-slate-900 dark:text-white">Custom reports and advanced analytics</strong> are critical
+                  </span>
+                </li>
+                <li class="flex items-start gap-3">
+                  <CheckCircle class="w-5 h-5 text-emerald-600 flex-shrink-0 mt-0.5" />
+                  <span class="text-slate-600 dark:text-slate-400">
+                    You're scaling fast and need <strong class="text-slate-900 dark:text-white">enterprise-grade performance</strong>
+                  </span>
+                </li>
+                <li class="flex items-start gap-3">
+                  <CheckCircle class="w-5 h-5 text-emerald-600 flex-shrink-0 mt-0.5" />
+                  <span class="text-slate-600 dark:text-slate-400">
+                    You want to <strong class="text-slate-900 dark:text-white">try before you buy</strong> (14-day free trial)
+                  </span>
+                </li>
+                <li class="flex items-start gap-3">
+                  <CheckCircle class="w-5 h-5 text-emerald-600 flex-shrink-0 mt-0.5" />
+                  <span class="text-slate-600 dark:text-slate-400">
+                    You value <strong class="text-slate-900 dark:text-white">responsive support</strong> that hasn't been compromised by acquisitions
+                  </span>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* CTA Section */}
+      <section class="py-28 px-4 sm:px-6 lg:px-8 bg-slate-900 dark:bg-white">
+        <div class="max-w-4xl mx-auto text-center">
+          <h2 class="text-4xl sm:text-5xl font-bold text-white dark:text-slate-900 mb-6">
+            Ready to try Jatura?
+          </h2>
+          <p class="text-xl text-slate-300 dark:text-slate-600 mb-10">
+            Start your free 14-day trial. No credit card required. Setup takes 5 minutes.
+          </p>
+          <div class="flex flex-col sm:flex-row gap-4 justify-center">
+            <a href="/login">
+              <Button
+                size="lg"
+                class="bg-white dark:bg-slate-900 text-slate-900 dark:text-white hover:bg-slate-100 dark:hover:bg-slate-800 px-10 py-6 text-lg"
+              >
+                Start free trial
+                <ArrowRight class="ml-2 h-5 w-5" />
+              </Button>
+            </a>
+            <a href="/pricing">
+              <Button
+                size="lg"
+                variant="outline"
+                class="px-10 py-6 text-lg border-slate-700 dark:border-slate-300 text-white dark:text-slate-900 hover:bg-slate-800 dark:hover:bg-slate-100"
+              >
+                View pricing
+              </Button>
+            </a>
+          </div>
+        </div>
+      </section>
+
+</MarketingLayout>

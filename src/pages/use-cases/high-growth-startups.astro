@@ -1,0 +1,508 @@
+---
+export const prerender = true;
+import MarketingLayout from '@/layouts/MarketingLayout.astro';
+import { ArrowRight, TrendingUp, CheckCircle, Zap, Users, Target, BarChart3, Rocket, Heart } from 'lucide-react';
+import { Button } from '@/components/ui/button';
+import { Badge } from '@/components/ui/badge';
+
+const title = "High-Growth Startup Hiring | Jatura ATS";
+const description = "Jatura is built for high-growth startups. Start free with 3 active jobs. Scale to unlimited with AI screening, structured interviews, real-time analytics, and team collaboration tools.";
+
+const schemaOrg = [
+  {
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://jatura.com" },
+      { "@type": "ListItem", "position": 2, "name": "Use Cases", "item": "https://jatura.com/use-cases" },
+      { "@type": "ListItem", "position": 3, "name": "High-Growth Startups", "item": "https://jatura.com/use-cases/high-growth-startups" }
+    ]
+  },
+  {
+    "@type": "WebPage",
+    "name": "High-Growth Startup Hiring | Jatura ATS",
+    "description": "Jatura is built for high-growth startups. Start free with 3 active jobs. Scale to unlimited with AI screening, structured interviews, real-time analytics, and team collaboration tools.",
+    "url": "https://jatura.com/use-cases/high-growth-startups"
+  }
+];
+---
+
+<MarketingLayout {title} {description} {schemaOrg}>
+
+      {/* Hero Section */}
+      <section class="pt-24 pb-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-indigo-50 to-white dark:from-indigo-950/20 dark:to-slate-950">
+        <div class="max-w-5xl mx-auto">
+          <a href="/use-cases">
+            <Button variant="ghost" class="mb-6 -ml-4">
+              ← Back to all use cases
+            </Button>
+          </a>
+          
+          <Badge
+            variant="secondary"
+            class="mb-6 px-5 py-2 text-sm font-medium bg-indigo-100 dark:bg-indigo-900/30 text-indigo-900 dark:text-indigo-100"
+          >
+            <TrendingUp class="w-4 h-4 mr-2" />
+            High-Growth Startups
+          </Badge>
+          
+          <h1 class="text-5xl sm:text-6xl font-bold text-slate-900 dark:text-white mb-6 leading-tight">
+            Scale your team fast<br />without sacrificing quality
+          </h1>
+          
+          <p class="text-xl sm:text-2xl text-slate-600 dark:text-slate-400 mb-8 leading-relaxed">
+            Jatura gives high-growth startups the tools to build great teams while maintaining a stellar candidate experience. Hire faster, smarter, and more collaboratively as you scale from 10 to 100+ employees.
+          </p>
+
+          <div class="grid md:grid-cols-3 gap-6 mb-10">
+            <div class="bg-white dark:bg-slate-900 border border-indigo-200 dark:border-indigo-900/30 rounded-xl p-6">
+              <div class="text-3xl font-bold text-indigo-600 mb-2">25-35d</div>
+              <div class="text-sm text-slate-600 dark:text-slate-400">Optimized time-to-hire for engineering roles vs. 45-60d industry average</div>
+            </div>
+            <div class="bg-white dark:bg-slate-900 border border-indigo-200 dark:border-indigo-900/30 rounded-xl p-6">
+              <div class="text-3xl font-bold text-indigo-600 mb-2">20-30%</div>
+              <div class="text-sm text-slate-600 dark:text-slate-400">Monthly headcount growth target for early-stage startups</div>
+            </div>
+            <div class="bg-white dark:bg-slate-900 border border-indigo-200 dark:border-indigo-900/30 rounded-xl p-6">
+              <div class="text-3xl font-bold text-indigo-600 mb-2">400%</div>
+              <div class="text-sm text-slate-600 dark:text-slate-400">Capacity increase possible in 6 months with hybrid teams</div>
+            </div>
+          </div>
+
+          <div class="flex flex-col sm:flex-row gap-4">
+            <a href="/login">
+              <Button
+                size="lg"
+                class="bg-indigo-600 hover:bg-indigo-700 text-white px-10 py-6 text-lg group shadow-lg"
+              >
+                Start free trial
+                <ArrowRight class="ml-2 h-5 w-5 group-hover:translate-x-1 transition" />
+              </Button>
+            </a>
+            <a href="/pricing">
+              <Button
+                size="lg"
+                variant="outline"
+                class="px-10 py-6 text-lg border-slate-300 dark:border-slate-700"
+              >
+                View pricing
+              </Button>
+            </a>
+          </div>
+        </div>
+      </section>
+
+      {/* Problem Statement */}
+      <section class="py-20 px-4 sm:px-6 lg:px-8">
+        <div class="max-w-5xl mx-auto">
+          <h2 class="text-4xl font-bold text-slate-900 dark:text-white mb-6">
+            The startup scaling challenge
+          </h2>
+          <p class="text-xl text-slate-600 dark:text-slate-400 mb-12">
+            High-growth startups need to double or triple headcount quickly, but traditional recruiting processes can't keep up with the pace.
+          </p>
+
+          <div class="grid md:grid-cols-2 gap-6">
+            <div class="bg-slate-50 dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-xl p-6">
+              <div class="w-12 h-12 bg-red-100 dark:bg-red-900/20 rounded-lg flex items-center justify-center mb-4">
+                <Zap class="w-6 h-6 text-red-600 dark:text-red-400" />
+              </div>
+              <h3 class="text-xl font-semibold text-slate-900 dark:text-white mb-3">
+                Speed vs. quality dilemma
+              </h3>
+              <p class="text-slate-600 dark:text-slate-400">
+                Need to hire 10-50 people per quarter, but can't afford bad hires. Average time-to-hire is 45-60 days for engineering roles—too slow when product roadmaps depend on new headcount.
+              </p>
+            </div>
+
+            <div class="bg-slate-50 dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-xl p-6">
+              <div class="w-12 h-12 bg-red-100 dark:bg-red-900/20 rounded-lg flex items-center justify-center mb-4">
+                <Heart class="w-6 h-6 text-red-600 dark:text-red-400" />
+              </div>
+              <h3 class="text-xl font-semibold text-slate-900 dark:text-white mb-3">
+                Culture dilution risk
+              </h3>
+              <p class="text-slate-600 dark:text-slate-400">
+                Rapid hiring can dilute culture and values. Without structured culture-fit assessments, startups risk hiring talented people who don't align with mission, vision, and working style.
+              </p>
+            </div>
+
+            <div class="bg-slate-50 dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-xl p-6">
+              <div class="w-12 h-12 bg-red-100 dark:bg-red-900/20 rounded-lg flex items-center justify-center mb-4">
+                <Users class="w-6 h-6 text-red-600 dark:text-red-400" />
+              </div>
+              <h3 class="text-xl font-semibold text-slate-900 dark:text-white mb-3">
+                Hiring team capacity limits
+              </h3>
+              <p class="text-slate-600 dark:text-slate-400">
+                Small recruiting teams (1-3 people) trying to fill 20-50 roles. Everyone's involved in hiring, but without clear processes, collaboration becomes chaotic and inefficient.
+              </p>
+            </div>
+
+            <div class="bg-slate-50 dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-xl p-6">
+              <div class="w-12 h-12 bg-red-100 dark:bg-red-900/20 rounded-lg flex items-center justify-center mb-4">
+                <BarChart3 class="w-6 h-6 text-red-600 dark:text-red-400" />
+              </div>
+              <h3 class="text-xl font-semibold text-slate-900 dark:text-white mb-3">
+                No data to optimize
+              </h3>
+              <p class="text-slate-600 dark:text-slate-400">
+                No visibility into hiring metrics. Can't answer questions like: Which sources bring the best candidates? Where do candidates drop off? How long does each stage actually take?
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* How Jatura Solves It */}
+      <section class="py-20 px-4 sm:px-6 lg:px-8 bg-indigo-50 dark:bg-indigo-950/10">
+        <div class="max-w-5xl mx-auto">
+          <h2 class="text-4xl font-bold text-slate-900 dark:text-white mb-4 text-center">
+            How Jatura accelerates startup hiring
+          </h2>
+          <p class="text-xl text-slate-600 dark:text-slate-400 text-center mb-12">
+            Built for speed, designed for quality, optimized for collaboration.
+          </p>
+
+          <div class="space-y-8">
+            <div class="bg-white dark:bg-slate-900 border border-indigo-200 dark:border-indigo-900/30 rounded-2xl p-8">
+              <div class="flex items-start gap-6">
+                <div class="w-14 h-14 bg-indigo-100 dark:bg-indigo-900/30 rounded-xl flex items-center justify-center flex-shrink-0">
+                  <Rocket class="w-7 h-7 text-indigo-600" />
+                </div>
+                <div>
+                  <h3 class="text-2xl font-bold text-slate-900 dark:text-white mb-3">
+                    Rapid hiring workflows
+                  </h3>
+                  <p class="text-lg text-slate-600 dark:text-slate-400 mb-4">
+                    Pre-built workflows optimized for startup speed. Fast-track qualified candidates through streamlined pipelines. Automated scheduling, reminders, and status updates eliminate bottlenecks and keep momentum going.
+                  </p>
+                  <ul class="space-y-2">
+                    <li class="flex items-start gap-2">
+                      <CheckCircle class="w-5 h-5 text-indigo-600 flex-shrink-0 mt-0.5" />
+                      <span class="text-slate-600 dark:text-slate-400">Optimized for 25-35 day time-to-hire (vs 45-60 industry avg)</span>
+                    </li>
+                    <li class="flex items-start gap-2">
+                      <CheckCircle class="w-5 h-5 text-indigo-600 flex-shrink-0 mt-0.5" />
+                      <span class="text-slate-600 dark:text-slate-400">Self-service interview scheduling to eliminate coordinator bottlenecks</span>
+                    </li>
+                    <li class="flex items-start gap-2">
+                      <CheckCircle class="w-5 h-5 text-indigo-600 flex-shrink-0 mt-0.5" />
+                      <span class="text-slate-600 dark:text-slate-400">Automated workflows for feedback collection and next steps</span>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            <div class="bg-white dark:bg-slate-900 border border-indigo-200 dark:border-indigo-900/30 rounded-2xl p-8">
+              <div class="flex items-start gap-6">
+                <div class="w-14 h-14 bg-indigo-100 dark:bg-indigo-900/30 rounded-xl flex items-center justify-center flex-shrink-0">
+                  <Users class="w-7 h-7 text-indigo-600" />
+                </div>
+                <div>
+                  <h3 class="text-2xl font-bold text-slate-900 dark:text-white mb-3">
+                    Collaborative hiring tools
+                  </h3>
+                  <p class="text-lg text-slate-600 dark:text-slate-400 mb-4">
+                    Involve your entire team without losing control. Structured scorecards, interview kits, and feedback forms ensure everyone evaluates candidates consistently. Centralized communication keeps all stakeholders aligned.
+                  </p>
+                  <ul class="space-y-2">
+                    <li class="flex items-start gap-2">
+                      <CheckCircle class="w-5 h-5 text-indigo-600 flex-shrink-0 mt-0.5" />
+                      <span class="text-slate-600 dark:text-slate-400">Structured interview kits and scorecards</span>
+                    </li>
+                    <li class="flex items-start gap-2">
+                      <CheckCircle class="w-5 h-5 text-indigo-600 flex-shrink-0 mt-0.5" />
+                      <span class="text-slate-600 dark:text-slate-400">Real-time feedback collection from all interviewers</span>
+                    </li>
+                    <li class="flex items-start gap-2">
+                      <CheckCircle class="w-5 h-5 text-indigo-600 flex-shrink-0 mt-0.5" />
+                      <span class="text-slate-600 dark:text-slate-400">Slack/Teams integrations for seamless collaboration</span>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            <div class="bg-white dark:bg-slate-900 border border-indigo-200 dark:border-indigo-900/30 rounded-2xl p-8">
+              <div class="flex items-start gap-6">
+                <div class="w-14 h-14 bg-indigo-100 dark:bg-indigo-900/30 rounded-xl flex items-center justify-center flex-shrink-0">
+                  <Heart class="w-7 h-7 text-indigo-600" />
+                </div>
+                <div>
+                  <h3 class="text-2xl font-bold text-slate-900 dark:text-white mb-3">
+                    Culture-fit assessments
+                  </h3>
+                  <p class="text-lg text-slate-600 dark:text-slate-400 mb-4">
+                    Define your values and culture criteria. Create custom culture-fit questions and scorecards. Evaluate candidates on both skills and alignment with your mission, vision, and working style.
+                  </p>
+                  <ul class="space-y-2">
+                    <li class="flex items-start gap-2">
+                      <CheckCircle class="w-5 h-5 text-indigo-600 flex-shrink-0 mt-0.5" />
+                      <span class="text-slate-600 dark:text-slate-400">Custom culture-fit questions and evaluation criteria</span>
+                    </li>
+                    <li class="flex items-start gap-2">
+                      <CheckCircle class="w-5 h-5 text-indigo-600 flex-shrink-0 mt-0.5" />
+                      <span class="text-slate-600 dark:text-slate-400">Values-based scoring in interview scorecards</span>
+                    </li>
+                    <li class="flex items-start gap-2">
+                      <CheckCircle class="w-5 h-5 text-indigo-600 flex-shrink-0 mt-0.5" />
+                      <span class="text-slate-600 dark:text-slate-400">Track culture alignment alongside technical skills</span>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            <div class="bg-white dark:bg-slate-900 border border-indigo-200 dark:border-indigo-900/30 rounded-2xl p-8">
+              <div class="flex items-start gap-6">
+                <div class="w-14 h-14 bg-indigo-100 dark:bg-indigo-900/30 rounded-xl flex items-center justify-center flex-shrink-0">
+                  <BarChart3 class="w-7 h-7 text-indigo-600" />
+                </div>
+                <div>
+                  <h3 class="text-2xl font-bold text-slate-900 dark:text-white mb-3">
+                    Hiring velocity metrics
+                  </h3>
+                  <p class="text-lg text-slate-600 dark:text-slate-400 mb-4">
+                    Track time-to-hire, pipeline velocity, source effectiveness, and conversion rates in real-time. Identify bottlenecks, optimize your process, and make data-driven hiring decisions as you scale.
+                  </p>
+                  <ul class="space-y-2">
+                    <li class="flex items-start gap-2">
+                      <CheckCircle class="w-5 h-5 text-indigo-600 flex-shrink-0 mt-0.5" />
+                      <span class="text-slate-600 dark:text-slate-400">Real-time dashboards: time-to-hire, pipeline velocity, offer acceptance rate</span>
+                    </li>
+                    <li class="flex items-start gap-2">
+                      <CheckCircle class="w-5 h-5 text-indigo-600 flex-shrink-0 mt-0.5" />
+                      <span class="text-slate-600 dark:text-slate-400">Source-of-hire analytics to optimize channel spend</span>
+                    </li>
+                    <li class="flex items-start gap-2">
+                      <CheckCircle class="w-5 h-5 text-indigo-600 flex-shrink-0 mt-0.5" />
+                      <span class="text-slate-600 dark:text-slate-400">Stage-by-stage conversion rate tracking</span>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            <div class="bg-white dark:bg-slate-900 border border-indigo-200 dark:border-indigo-900/30 rounded-2xl p-8">
+              <div class="flex items-start gap-6">
+                <div class="w-14 h-14 bg-indigo-100 dark:bg-indigo-900/30 rounded-xl flex items-center justify-center flex-shrink-0">
+                  <Target class="w-7 h-7 text-indigo-600" />
+                </div>
+                <div>
+                  <h3 class="text-2xl font-bold text-slate-900 dark:text-white mb-3">
+                    Scalable from day one
+                  </h3>
+                  <p class="text-lg text-slate-600 dark:text-slate-400 mb-4">
+                    Start with simple workflows when you're 10 people, scale to sophisticated pipelines as you hit 100+. No migration needed—Jatura grows with you. Add custom stages, workflows, and integrations as your needs evolve.
+                  </p>
+                  <ul class="space-y-2">
+                    <li class="flex items-start gap-2">
+                      <CheckCircle class="w-5 h-5 text-indigo-600 flex-shrink-0 mt-0.5" />
+                      <span class="text-slate-600 dark:text-slate-400">Simple setup for early-stage, powerful features when you scale</span>
+                    </li>
+                    <li class="flex items-start gap-2">
+                      <CheckCircle class="w-5 h-5 text-indigo-600 flex-shrink-0 mt-0.5" />
+                      <span class="text-slate-600 dark:text-slate-400">Unlimited users—no per-seat fees as team grows</span>
+                    </li>
+                    <li class="flex items-start gap-2">
+                      <CheckCircle class="w-5 h-5 text-indigo-600 flex-shrink-0 mt-0.5" />
+                      <span class="text-slate-600 dark:text-slate-400">API and integrations for custom workflows</span>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* How It Works */}
+      <section class="py-20 px-4 sm:px-6 lg:px-8">
+        <div class="max-w-5xl mx-auto">
+          <h2 class="text-4xl font-bold text-slate-900 dark:text-white mb-12 text-center">
+            How it works
+          </h2>
+
+          <div class="space-y-8">
+            <div class="flex gap-6">
+              <div class="flex-shrink-0">
+                <div class="w-12 h-12 bg-indigo-600 rounded-full flex items-center justify-center text-white font-bold text-lg">
+                  1
+                </div>
+              </div>
+              <div>
+                <h3 class="text-xl font-bold text-slate-900 dark:text-white mb-2">
+                  Define roles and culture criteria
+                </h3>
+                <p class="text-slate-600 dark:text-slate-400">
+                  Create job descriptions with clear requirements. Define culture-fit criteria aligned with your values. Set up interview kits with role-specific questions and culture assessment scorecards.
+                </p>
+              </div>
+            </div>
+
+            <div class="flex gap-6">
+              <div class="flex-shrink-0">
+                <div class="w-12 h-12 bg-indigo-600 rounded-full flex items-center justify-center text-white font-bold text-lg">
+                  2
+                </div>
+              </div>
+              <div>
+                <h3 class="text-xl font-bold text-slate-900 dark:text-white mb-2">
+                  Post jobs and source talent quickly
+                </h3>
+                <p class="text-slate-600 dark:text-slate-400">
+                  Post to 150+ job boards with one click. Leverage your team's networks for referrals. Use AI-powered sourcing to find passive candidates on LinkedIn, GitHub, and niche platforms.
+                </p>
+              </div>
+            </div>
+
+            <div class="flex gap-6">
+              <div class="flex-shrink-0">
+                <div class="w-12 h-12 bg-indigo-600 rounded-full flex items-center justify-center text-white font-bold text-lg">
+                  3
+                </div>
+              </div>
+              <div>
+                <h3 class="text-xl font-bold text-slate-900 dark:text-white mb-2">
+                  Collaborate with your team
+                </h3>
+                <p class="text-slate-600 dark:text-slate-400">
+                  Assign interviewers, schedule interviews with self-service links, and collect structured feedback using scorecards. All stakeholders see real-time updates and can leave comments.
+                </p>
+              </div>
+            </div>
+
+            <div class="flex gap-6">
+              <div class="flex-shrink-0">
+                <div class="w-12 h-12 bg-indigo-600 rounded-full flex items-center justify-center text-white font-bold text-lg">
+                  4
+                </div>
+              </div>
+              <div>
+                <h3 class="text-xl font-bold text-slate-900 dark:text-white mb-2">
+                  Make fast, data-driven decisions
+                </h3>
+                <p class="text-slate-600 dark:text-slate-400">
+                  Review candidate scorecards with skills and culture-fit ratings. Discuss as a team using centralized comments. Make offers quickly to candidates who excel on both dimensions.
+                </p>
+              </div>
+            </div>
+
+            <div class="flex gap-6">
+              <div class="flex-shrink-0">
+                <div class="w-12 h-12 bg-indigo-600 rounded-full flex items-center justify-center text-white font-bold text-lg">
+                  5
+                </div>
+              </div>
+              <div>
+                <h3 class="text-xl font-bold text-slate-900 dark:text-white mb-2">
+                  Track metrics and optimize continuously
+                </h3>
+                <p class="text-slate-600 dark:text-slate-400">
+                  Monitor hiring velocity dashboards. Identify bottlenecks (e.g., scheduling delays, slow feedback). Optimize sourcing channels based on ROI. Scale what works, cut what doesn't.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Ideal For */}
+      <section class="py-20 px-4 sm:px-6 lg:px-8 bg-slate-50 dark:bg-slate-900/50">
+        <div class="max-w-5xl mx-auto">
+          <h2 class="text-4xl font-bold text-slate-900 dark:text-white mb-12 text-center">
+            Perfect for
+          </h2>
+
+          <div class="grid md:grid-cols-2 gap-6">
+            <div class="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-xl p-6">
+              <h3 class="text-xl font-semibold text-slate-900 dark:text-white mb-3">
+                Seed to Series A Startups
+              </h3>
+              <p class="text-slate-600 dark:text-slate-400">
+                Growing from 5-50 employees. Need to hire fast while building culture. Limited recruiting resources but aggressive headcount goals.
+              </p>
+            </div>
+
+            <div class="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-xl p-6">
+              <h3 class="text-xl font-semibold text-slate-900 dark:text-white mb-3">
+                Series B/C Scaling Companies
+              </h3>
+              <p class="text-slate-600 dark:text-slate-400">
+                50-200 employees, hiring 10-30 people per quarter. Scaling recruiting team alongside product and revenue growth.
+              </p>
+            </div>
+
+            <div class="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-xl p-6">
+              <h3 class="text-xl font-semibold text-slate-900 dark:text-white mb-3">
+                Tech Startups (All Verticals)
+              </h3>
+              <p class="text-slate-600 dark:text-slate-400">
+                SaaS, fintech, healthtech, edtech. Hiring engineers, product, sales, and operations teams rapidly. Need strong technical assessment integration.
+              </p>
+            </div>
+
+            <div class="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-xl p-6">
+              <h3 class="text-xl font-semibold text-slate-900 dark:text-white mb-3">
+                Remote-First Startups
+              </h3>
+              <p class="text-slate-600 dark:text-slate-400">
+                Distributed teams hiring globally. Need asynchronous collaboration tools, timezone-aware scheduling, and unified visibility across locations.
+              </p>
+            </div>
+
+            <div class="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-xl p-6">
+              <h3 class="text-xl font-semibold text-slate-900 dark:text-white mb-3">
+                YC/Accelerator-Backed Companies
+              </h3>
+              <p class="text-slate-600 dark:text-slate-400">
+                Post-accelerator growth phase. Raised funding and need to scale team quickly to hit milestones. Culture and velocity equally important.
+              </p>
+            </div>
+
+            <div class="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-xl p-6">
+              <h3 class="text-xl font-semibold text-slate-900 dark:text-white mb-3">
+                Product-Led Growth Companies
+              </h3>
+              <p class="text-slate-600 dark:text-slate-400">
+                Hiring product, engineering, and growth teams. Data-driven culture requires hiring metrics and continuous optimization.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* CTA Section */}
+      <section class="py-28 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-indigo-600 to-indigo-700">
+        <div class="max-w-4xl mx-auto text-center">
+          <h2 class="text-4xl sm:text-5xl font-bold text-white mb-6">
+            Ready to scale your startup team?
+          </h2>
+          <p class="text-xl text-indigo-50 mb-10">
+            Join hundreds of high-growth startups hiring faster, smarter, and more collaboratively with Jatura.
+          </p>
+          <div class="flex flex-col sm:flex-row gap-4 justify-center">
+            <a href="/login">
+              <Button
+                size="lg"
+                class="bg-white text-indigo-600 hover:bg-indigo-50 px-10 py-6 text-lg"
+              >
+                Start free trial
+                <ArrowRight class="ml-2 h-5 w-5" />
+              </Button>
+            </a>
+            <a href="/pricing">
+              <Button
+                size="lg"
+                variant="outline"
+                class="px-10 py-6 text-lg border-white text-white hover:bg-indigo-600"
+              >
+                View pricing
+              </Button>
+            </a>
+          </div>
+        </div>
+      </section>
+
+</MarketingLayout>

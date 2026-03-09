@@ -1,0 +1,686 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: 'Plus Jakarta Sans Fallback';
+  src: local('Arial');
+  size-adjust: 100%;
+  ascent-override: 95%;
+  descent-override: 25%;
+  line-gap-override: 0%;
+}
+
+:root {
+  /* Backgrounds - Clean white with subtle grays */
+  --background: hsl(0, 0%, 100%);
+  --surface: hsl(0, 0%, 98%);
+  --surface-hover: hsl(0, 0%, 96%);
+  --elevated: hsl(0, 0%, 100%);
+
+  /* Foreground - Neutral hierarchy (WCAG AA compliant) */
+  --foreground: hsl(240, 6%, 10%);
+  --foreground-secondary: hsl(240, 4%, 46%);
+  --foreground-tertiary: hsl(240, 5%, 65%);
+
+  /* Legacy foreground (for compatibility) */
+  --muted: hsl(240, 5%, 96%);
+  --muted-foreground: hsl(240, 4%, 46%);
+
+  /* Popover & Cards */
+  --popover: hsl(0, 0%, 100%);
+  --popover-foreground: hsl(240, 6%, 10%);
+  --card: hsl(0, 0%, 100%);
+  --card-foreground: hsl(240, 6%, 10%);
+
+  /* Borders - Subtle grays */
+  --border: hsl(240, 6%, 90%);
+  --border-focus: hsl(240, 6%, 78%);
+  --input: hsl(240, 6%, 90%);
+
+  /* Primary Actions - Violet accent system */
+  --primary: hsl(262, 83%, 58%);
+  --primary-foreground: hsl(0, 0%, 100%);
+  --primary-hover: hsl(262, 83%, 52%);
+
+  /* Secondary */
+  --secondary: hsl(240, 5%, 96%);
+  --secondary-foreground: hsl(240, 6%, 10%);
+
+  /* Accent - Used for select hover states - subtle gray in light mode for visibility */
+  --accent: hsl(240, 5%, 94%);
+  --accent-foreground: hsl(240, 6%, 10%);
+  --accent-hover: hsl(262, 83%, 52%);
+  --accent-light: hsl(262, 76%, 71%);
+  --accent-muted: hsla(262, 83%, 58%, 0.15);
+
+  /* Muted status colors with low saturation */
+  --success: hsl(142, 71%, 45%);
+  --success-foreground: hsl(0, 0%, 100%);
+  --success-muted: hsla(142, 71%, 45%, 0.15);
+  --success-text: hsl(142, 60%, 35%);
+  --success-border: hsla(142, 71%, 45%, 0.25);
+  --destructive: hsl(0, 72%, 51%);
+  --destructive-foreground: hsl(0, 0%, 100%);
+  --destructive-muted: hsla(0, 72%, 51%, 0.12);
+  --destructive-text: hsl(0, 65%, 45%);
+  --destructive-border: hsla(0, 72%, 51%, 0.25);
+  --warning: hsl(38, 92%, 50%);
+  --warning-foreground: hsl(240, 6%, 10%);
+  --warning-muted: hsla(38, 92%, 50%, 0.12);
+  --warning-text: hsl(38, 80%, 38%);
+  --warning-border: hsla(38, 92%, 50%, 0.25);
+  --info: hsl(221, 83%, 53%);
+  --info-foreground: hsl(0, 0%, 100%);
+  --info-muted: hsla(221, 83%, 53%, 0.12);
+  --info-text: hsl(221, 70%, 45%);
+  --info-border: hsla(221, 83%, 53%, 0.25);
+
+  /* Focus ring - Violet */
+  --ring: hsl(262, 83%, 58%);
+
+  /* Border radius - Consistent 12px */
+  --radius: 0.75rem;
+
+  /* Chart colors - Violet monochromatic */
+  --chart-1: hsl(262, 83%, 58%);
+  --chart-2: hsl(262, 70%, 70%);
+  --chart-3: hsl(262, 60%, 80%);
+  --chart-4: hsl(262, 50%, 45%);
+  --chart-5: hsl(262, 40%, 35%);
+}
+
+.dark {
+  /* Backgrounds - Material Design dark gray (#121212) with elevation system */
+  --background: hsl(0, 0%, 7%);
+  --surface: hsl(0, 0%, 10%);
+  --surface-hover: hsl(0, 0%, 13%);
+  --elevated: hsl(0, 0%, 15%);
+
+  /* Foreground - Material Design opacity hierarchy (no pure white) */
+  --foreground: hsla(0, 0%, 100%, 0.87);
+  --foreground-secondary: hsla(0, 0%, 100%, 0.6);
+  --foreground-tertiary: hsla(0, 0%, 100%, 0.5);
+
+  /* Legacy foreground (for compatibility) */
+  --muted: hsl(0, 0%, 15%);
+  --muted-foreground: hsla(0, 0%, 100%, 0.6);
+
+  /* Popover & Cards - elevated surfaces are lighter */
+  --popover: hsl(0, 0%, 12%);
+  --popover-foreground: hsla(0, 0%, 100%, 0.87);
+  --card: hsl(0, 0%, 10%);
+  --card-foreground: hsla(0, 0%, 100%, 0.87);
+
+  /* Borders - very subtle, prefer spacing over borders */
+  --border: hsla(0, 0%, 100%, 0.06);
+  --border-focus: hsla(0, 0%, 100%, 0.12);
+  --input: hsla(0, 0%, 100%, 0.06);
+
+  /* Primary Actions - Desaturated violet (Material 200-level) */
+  --primary: hsl(262, 60%, 68%);
+  --primary-foreground: hsl(0, 0%, 7%);
+  --primary-hover: hsl(262, 65%, 74%);
+
+  /* Secondary */
+  --secondary: hsl(0, 0%, 15%);
+  --secondary-foreground: hsla(0, 0%, 100%, 0.87);
+
+  /* Accent - Desaturated violet for dark mode */
+  --accent: hsl(262, 55%, 72%);
+  --accent-foreground: hsl(0, 0%, 7%);
+  --accent-hover: hsl(262, 60%, 78%);
+  --accent-light: hsl(262, 50%, 78%);
+  --accent-muted: hsla(262, 55%, 72%, 0.15);
+
+  /* Muted status colors - Material Design desaturated pastels */
+  --success: hsl(142, 40%, 62%);
+  --success-foreground: hsl(0, 0%, 7%);
+  --success-muted: hsla(142, 40%, 62%, 0.12);
+  --success-text: hsl(142, 40%, 68%);
+  --success-border: hsla(142, 40%, 62%, 0.25);
+  --destructive: hsl(0, 55%, 72%);
+  --destructive-foreground: hsl(0, 0%, 7%);
+  --destructive-muted: hsla(0, 55%, 72%, 0.12);
+  --destructive-text: hsl(0, 55%, 75%);
+  --destructive-border: hsla(0, 55%, 72%, 0.25);
+  --warning: hsl(38, 55%, 65%);
+  --warning-foreground: hsl(0, 0%, 7%);
+  --warning-muted: hsla(38, 50%, 65%, 0.12);
+  --warning-text: hsl(38, 55%, 70%);
+  --warning-border: hsla(38, 50%, 65%, 0.25);
+  --info: hsl(221, 50%, 68%);
+  --info-foreground: hsl(0, 0%, 7%);
+  --info-muted: hsla(221, 50%, 68%, 0.12);
+  --info-text: hsl(221, 50%, 72%);
+  --info-border: hsla(221, 50%, 68%, 0.25);
+
+  /* Focus ring - Desaturated violet */
+  --ring: hsl(262, 55%, 72%);
+
+  /* Border radius - Consistent 12px */
+  --radius: 0.75rem;
+
+  /* Chart colors - Desaturated violet palette */
+  --chart-1: hsl(262, 55%, 72%);
+  --chart-2: hsl(262, 45%, 78%);
+  --chart-3: hsl(262, 40%, 84%);
+  --chart-4: hsl(262, 50%, 58%);
+  --chart-5: hsl(262, 40%, 48%);
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    font-family: 'Plus Jakarta Sans', 'Plus Jakarta Sans Fallback', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    @apply antialiased bg-background text-foreground;
+    font-feature-settings: "rlig" 1, "calt" 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  /* Premium Typography - Plus Jakarta Sans with tight tracking */
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Plus Jakarta Sans', 'Plus Jakarta Sans Fallback', system-ui, sans-serif;
+    font-weight: 600;
+    letter-spacing: -0.02em;
+    line-height: 1.2;
+  }
+
+  /* Display Typography - Hero sections */
+  .text-display-xl {
+    font-size: clamp(3rem, 6vw, 4.5rem);
+    font-weight: 700;
+    letter-spacing: -0.04em;
+    line-height: 1.05;
+  }
+
+  .text-display-lg {
+    font-size: clamp(2.5rem, 5vw, 3.5rem);
+    font-weight: 700;
+    letter-spacing: -0.03em;
+    line-height: 1.1;
+  }
+
+  .text-display-md {
+    font-size: clamp(2rem, 4vw, 2.5rem);
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    line-height: 1.15;
+  }
+
+  /* Headings - Page sections */
+  .text-heading-xl {
+    font-size: 2rem;
+    font-weight: 600;
+    letter-spacing: -0.02em;
+    line-height: 1.2;
+  }
+
+  .text-heading-lg {
+    font-size: 1.5rem;
+    font-weight: 600;
+    letter-spacing: -0.01em;
+    line-height: 1.3;
+  }
+
+  .text-heading-md {
+    font-size: 1.25rem;
+    font-weight: 600;
+    letter-spacing: -0.01em;
+    line-height: 1.4;
+  }
+
+  .text-heading-sm {
+    font-size: 1.125rem;
+    font-weight: 600;
+    line-height: 1.4;
+  }
+
+  /* Job Title Typography - Premium emphasis */
+  .text-job-title {
+    font-size: 1.25rem;
+    font-weight: 600;
+    letter-spacing: -0.02em;
+    line-height: 1.3;
+    color: var(--foreground);
+  }
+
+  /* Body Text */
+  .text-body-lg {
+    font-size: 1.125rem;
+    font-weight: 400;
+    line-height: 1.6;
+    color: var(--foreground);
+  }
+
+  .text-body {
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: var(--foreground);
+  }
+
+  .text-body-sm {
+    font-size: 0.875rem;
+    font-weight: 400;
+    line-height: 1.4;
+    color: var(--foreground-secondary);
+  }
+
+  /* Supporting Text */
+  .text-caption {
+    font-size: 0.75rem;
+    font-weight: 400;
+    line-height: 1.3;
+    color: var(--foreground-tertiary);
+  }
+
+  /* Micro-labels - Uppercase with tracking */
+  .text-overline,
+  .text-micro-label {
+    font-size: 0.6875rem;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    line-height: 1.2;
+    text-transform: uppercase;
+    color: var(--foreground-secondary);
+  }
+
+  /* Secondary/Metadata text - Muted (#71717a equivalent) */
+  .text-metadata {
+    font-size: 0.875rem;
+    font-weight: 400;
+    line-height: 1.4;
+    color: var(--foreground-tertiary);
+  }
+
+  /* Smooth transitions */
+  a, button {
+    transition: all 200ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  /* Animations */
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(10px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes textRotate {
+    0%, 33% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    36%, 100% {
+      opacity: 0;
+      transform: translateY(-20px);
+    }
+  }
+}
+
+/* Micro-interactions & Custom Components - Tailwind Layer */
+@layer components {
+  /* Animation utilities */
+  .animate-fade-in {
+    animation: fadeIn 1s ease-out;
+  }
+
+  .animate-text-rotate {
+    animation: textRotate 9s ease-in-out infinite;
+  }
+
+  .animate-text-rotate-delay-1 {
+    animation: textRotate 9s ease-in-out infinite 3s;
+  }
+
+  .animate-text-rotate-delay-2 {
+    animation: textRotate 9s ease-in-out infinite 6s;
+  }
+
+  /* Spacing System - 8px Grid (Intercom/Ashby Standard) */
+  .space-system {
+    /* Use Tailwind's default spacing which follows 4px increments */
+    /* But standardize to 8px multiples for major sections */
+  }
+
+  /* Micro-interactions - Ashby/Dropbox inspired */
+  .hover-lift {
+    transition: transform 200ms cubic-bezier(0.4, 0, 0.2, 1),
+                box-shadow 200ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .hover-lift:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1),
+                0 8px 10px -6px rgba(0, 0, 0, 0.1);
+  }
+
+  .hover-scale {
+    transition: transform 200ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .hover-scale:hover {
+    transform: scale(1.02);
+  }
+
+  .active-scale:active {
+    transform: scale(0.98);
+  }
+
+  /* Button micro-interactions */
+  .btn-hover-lift {
+    transition: all 200ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .btn-hover-lift:hover:not(:disabled) {
+    transform: translateY(-1px) scale(1.02);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  }
+
+  .btn-hover-lift:active:not(:disabled) {
+    transform: translateY(0) scale(0.98);
+  }
+
+  /* Card hover effects */
+  .card-interactive {
+    transition: all 300ms cubic-bezier(0.4, 0, 0.2, 1);
+    cursor: pointer;
+  }
+
+  .card-interactive:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1),
+                0 10px 10px -5px rgba(0, 0, 0, 0.04);
+  }
+
+  .dark .card-interactive:hover {
+    background-color: var(--elevated);
+    box-shadow: none;
+  }
+
+  /* Focus states - Accessible */
+  .focus-ring {
+    outline: 2px solid transparent;
+    outline-offset: 2px;
+  }
+
+  .focus-ring:focus-visible {
+    outline: 2px solid var(--ring);
+    outline-offset: 2px;
+  }
+
+  /* ===== PREMIUM COMPONENT STYLES ===== */
+
+  /* Muted Status Badges - Softer, desaturated backgrounds */
+  .badge-success-muted {
+    background-color: var(--success-muted);
+    color: var(--success-text);
+    border: 1px solid var(--success-border);
+  }
+
+  .badge-warning-muted {
+    background-color: var(--warning-muted);
+    color: var(--warning-text);
+    border: 1px solid var(--warning-border);
+  }
+
+  .badge-danger-muted {
+    background-color: var(--destructive-muted);
+    color: var(--destructive-text);
+    border: 1px solid var(--destructive-border);
+  }
+
+  .badge-info-muted {
+    background-color: var(--info-muted);
+    color: var(--info-text);
+    border: 1px solid var(--info-border);
+  }
+
+  .badge-accent-muted {
+    background-color: var(--accent-muted);
+    color: var(--accent);
+    border: 1px solid hsla(262, 83%, 58%, 0.25);
+  }
+
+  .badge-neutral-muted {
+    background-color: hsl(var(--muted));
+    color: hsl(var(--muted-foreground));
+    border: 1px solid hsl(var(--border));
+  }
+
+  /* Premium Button Styles - 40px height, 12px radius */
+  .btn-primary {
+    height: 40px;
+    padding: 0 16px;
+    border-radius: 12px;
+    background-color: var(--primary);
+    color: var(--primary-foreground);
+    font-weight: 500;
+    font-size: 0.875rem;
+    transition: all 200ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .btn-primary:hover:not(:disabled) {
+    background-color: var(--primary-hover);
+  }
+
+  .btn-secondary {
+    height: 40px;
+    padding: 0 16px;
+    border-radius: 12px;
+    background-color: transparent;
+    border: 1px solid var(--border);
+    color: var(--foreground);
+    font-weight: 500;
+    font-size: 0.875rem;
+    transition: all 200ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .btn-secondary:hover:not(:disabled) {
+    background-color: var(--surface-hover);
+    border-color: var(--border-focus);
+  }
+
+  .btn-ghost {
+    height: 40px;
+    padding: 0 16px;
+    border-radius: 12px;
+    background-color: transparent;
+    color: var(--foreground);
+    font-weight: 500;
+    font-size: 0.875rem;
+    transition: all 200ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .btn-ghost:hover:not(:disabled) {
+    background-color: var(--surface-hover);
+  }
+
+  /* Premium Card Styles - Subtle elevation */
+  .card-elevated {
+    background-color: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04);
+    transition: all 200ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .dark .card-elevated {
+    background-color: var(--surface);
+    box-shadow: none;
+  }
+
+  .card-elevated:hover {
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  }
+
+  .dark .card-elevated:hover {
+    background-color: var(--surface-hover);
+    box-shadow: none;
+  }
+
+  /* Table Row Hover States */
+  .table-row-hover {
+    transition: background-color 150ms ease;
+  }
+
+  .table-row-hover:hover {
+    background-color: var(--surface-hover);
+  }
+
+  /* Progress Ring Alternative for Match % */
+  .progress-ring {
+    transform: rotate(-90deg);
+  }
+
+  .progress-ring-circle {
+    transition: stroke-dashoffset 300ms ease;
+    stroke-linecap: round;
+  }
+
+  /* Warning Banner - Subtle amber tint */
+  .warning-banner-subtle {
+    background-color: var(--warning-muted);
+    color: var(--warning-text);
+    border: 1px solid hsla(38, 55%, 65%, 0.15);
+    border-radius: 12px;
+  }
+
+  /* AI/Accent Badge */
+  .badge-ai {
+    background-color: var(--accent-muted);
+    color: var(--accent);
+    font-weight: 500;
+  }
+
+  /* Pipeline Tab Gradient - Violet progression */
+  .pipeline-tab-active {
+    background: linear-gradient(135deg, var(--accent) 0%, var(--accent-light) 100%);
+    color: var(--accent-foreground);
+  }
+
+  /* Avatar with gradient backgrounds based on initials */
+  .avatar-gradient-1 { background: linear-gradient(135deg, hsl(262, 83%, 58%) 0%, hsl(262, 70%, 70%) 100%); }
+  .avatar-gradient-2 { background: linear-gradient(135deg, hsl(280, 70%, 55%) 0%, hsl(280, 60%, 70%) 100%); }
+  .avatar-gradient-3 { background: linear-gradient(135deg, hsl(250, 70%, 55%) 0%, hsl(250, 60%, 70%) 100%); }
+  .avatar-gradient-4 { background: linear-gradient(135deg, hsl(270, 70%, 55%) 0%, hsl(270, 60%, 70%) 100%); }
+  .avatar-gradient-5 { background: linear-gradient(135deg, hsl(290, 70%, 55%) 0%, hsl(290, 60%, 70%) 100%); }
+
+  .no-scrollbar::-webkit-scrollbar { display: none; }
+  .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+
+  .content-visibility-auto {
+    content-visibility: auto;
+    contain-intrinsic-size: auto 500px;
+  }
+
+  /* Public application form - premium focus states */
+  .application-form input:focus,
+  .application-form textarea:focus,
+  .application-form select:focus,
+  .application-form [role="combobox"]:focus {
+    border-color: hsl(262, 83%, 58%) !important;
+    box-shadow: 0 0 0 3px rgba(139, 92, 246, 0.1), 0 1px 3px rgba(0, 0, 0, 0.06) !important;
+    outline: none !important;
+  }
+
+  /* AI Shimmer skeleton loader - sweeping highlight */
+  @keyframes ai-shimmer {
+    0% { background-position: -200% 0; }
+    100% { background-position: 200% 0; }
+  }
+  .ai-shimmer {
+    background: linear-gradient(
+      90deg,
+      hsl(var(--muted)) 0%,
+      hsl(240, 5%, 22%) 40%,
+      hsl(262, 30%, 28%) 50%,
+      hsl(240, 5%, 22%) 60%,
+      hsl(var(--muted)) 100%
+    );
+    background-size: 200% 100%;
+    animation: ai-shimmer 2s ease-in-out infinite;
+    border-radius: 8px;
+  }
+  :root .ai-shimmer {
+    background: linear-gradient(
+      90deg,
+      hsl(0, 0%, 93%) 0%,
+      hsl(0, 0%, 97%) 40%,
+      hsl(262, 40%, 96%) 50%,
+      hsl(0, 0%, 97%) 60%,
+      hsl(0, 0%, 93%) 100%
+    );
+    background-size: 200% 100%;
+    animation: ai-shimmer 2s ease-in-out infinite;
+  }
+
+  /* AI Glow - slow animated gradient border */
+  @keyframes ai-glow-rotate {
+    0% { --glow-angle: 0deg; }
+    100% { --glow-angle: 360deg; }
+  }
+  @property --glow-angle {
+    syntax: '<angle>';
+    initial-value: 0deg;
+    inherits: false;
+  }
+  .ai-glow-border {
+    position: relative;
+    border: 1px solid transparent;
+    background-clip: padding-box;
+  }
+  .ai-glow-border::before {
+    content: '';
+    position: absolute;
+    inset: -1px;
+    border-radius: inherit;
+    padding: 1px;
+    background: conic-gradient(
+      from var(--glow-angle),
+      hsl(262, 83%, 58%) 0%,
+      hsl(280, 60%, 55%) 25%,
+      hsl(240, 60%, 60%) 50%,
+      hsl(262, 70%, 50%) 75%,
+      hsl(262, 83%, 58%) 100%
+    );
+    -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+    animation: ai-glow-rotate 4s linear infinite;
+    opacity: 0.6;
+    pointer-events: none;
+  }
+
+  /* Interactive card hover - subtle elevation */
+  .card-hover-lift {
+    transition: background-color 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
+  }
+  .card-hover-lift:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  }
+  .dark .card-hover-lift:hover {
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  }
+
+  /* Advance success micro-animation */
+  @keyframes advance-success {
+    0% { transform: scale(1); opacity: 1; }
+    40% { transform: scale(0.98); opacity: 0.9; }
+    70% { transform: scale(1.01); opacity: 1; }
+    100% { transform: scale(1); opacity: 1; }
+  }
+  .advance-success-animate {
+    animation: advance-success 0.4s ease-out;
+  }
+}

@@ -1,0 +1,19 @@
+---
+export const prerender = true;
+import MarketingLayout from '@/layouts/MarketingLayout.astro';
+import APIDocsPage from '@/components/islands/APIDocsPage';
+
+const schemaOrg = [
+  {
+    "@type": "TechArticle",
+    "name": "Jatura API Documentation",
+    "url": "https://jatura.com/api-docs",
+    "description": "REST API reference for Jatura ATS — authentication, endpoints, webhooks, and rate limits",
+    "about": { "@type": "SoftwareApplication", "name": "Jatura ATS" }
+  }
+];
+---
+
+<MarketingLayout title="API Documentation | Jatura Developer Platform" description="Jatura REST API documentation. Authenticate with API keys, manage jobs and candidates programmatically, configure webhooks, and automate recruiting workflows. Rate limits and code examples included." {schemaOrg}>
+  <APIDocsPage client:load />
+</MarketingLayout>

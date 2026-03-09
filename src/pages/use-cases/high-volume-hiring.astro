@@ -1,0 +1,508 @@
+---
+export const prerender = true;
+import MarketingLayout from '@/layouts/MarketingLayout.astro';
+import { ArrowRight, Users, CheckCircle, Zap, Clock, TrendingDown, BarChart3, Sparkles, Filter, MessageSquare, Target } from 'lucide-react';
+import { Button } from '@/components/ui/button';
+import { Badge } from '@/components/ui/badge';
+
+const title = "High Volume Hiring Solution | Jatura ATS";
+const description = "Scale high-volume hiring without scaling your team. Jatura's AI screening, automated outreach, and workflow automation process thousands of applications daily — built for speed at scale.";
+
+const schemaOrg = [
+  {
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://jatura.com" },
+      { "@type": "ListItem", "position": 2, "name": "Use Cases", "item": "https://jatura.com/use-cases" },
+      { "@type": "ListItem", "position": 3, "name": "High-Volume Hiring", "item": "https://jatura.com/use-cases/high-volume-hiring" }
+    ]
+  },
+  {
+    "@type": "WebPage",
+    "name": "High Volume Hiring Solution | Jatura ATS",
+    "description": "Scale high-volume hiring without scaling your team. Jatura's AI screening, automated outreach, and workflow automation process thousands of applications daily — built for speed at scale.",
+    "url": "https://jatura.com/use-cases/high-volume-hiring"
+  }
+];
+---
+
+<MarketingLayout {title} {description} {schemaOrg}>
+
+      {/* Hero Section */}
+      <section class="pt-24 pb-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-emerald-50 to-white dark:from-emerald-950/20 dark:to-slate-950">
+        <div class="max-w-5xl mx-auto">
+          <a href="/use-cases">
+            <Button variant="ghost" class="mb-6 -ml-4">
+              ← Back to all use cases
+            </Button>
+          </a>
+          
+          <Badge
+            variant="secondary"
+            class="mb-6 px-5 py-2 text-sm font-medium bg-emerald-100 dark:bg-emerald-900/30 text-emerald-900 dark:text-emerald-100"
+          >
+            <Users class="w-4 h-4 mr-2" />
+            High Volume Hiring
+          </Badge>
+          
+          <h1 class="text-5xl sm:text-6xl font-bold text-slate-900 dark:text-white mb-6 leading-tight">
+            Hire faster at scale<br />without cutting corners
+          </h1>
+          
+          <p class="text-xl sm:text-2xl text-slate-600 dark:text-slate-400 mb-8 leading-relaxed">
+            Stop drowning in applications. Jatura's AI-powered screening and automated workflows help you process 10x more candidates while maintaining quality and delivering an exceptional candidate experience.
+          </p>
+
+          <div class="grid md:grid-cols-3 gap-6 mb-10">
+            <div class="bg-white dark:bg-slate-900 border border-emerald-200 dark:border-emerald-900/30 rounded-xl p-6">
+              <div class="text-3xl font-bold text-emerald-600 mb-2">75%</div>
+              <div class="text-sm text-slate-600 dark:text-slate-400">Reduction in time-to-hire with AI screening</div>
+            </div>
+            <div class="bg-white dark:bg-slate-900 border border-emerald-200 dark:border-emerald-900/30 rounded-xl p-6">
+              <div class="text-3xl font-bold text-emerald-600 mb-2">67%</div>
+              <div class="text-sm text-slate-600 dark:text-slate-400">Less time screening each candidate</div>
+            </div>
+            <div class="bg-white dark:bg-slate-900 border border-emerald-200 dark:border-emerald-900/30 rounded-xl p-6">
+              <div class="text-3xl font-bold text-emerald-600 mb-2">50%</div>
+              <div class="text-sm text-slate-600 dark:text-slate-400">Lower cost-per-hire with automation</div>
+            </div>
+          </div>
+
+          <div class="flex flex-col sm:flex-row gap-4">
+            <a href="/login">
+              <Button
+                size="lg"
+                class="bg-emerald-600 hover:bg-emerald-700 text-white px-10 py-6 text-lg group shadow-lg"
+              >
+                Start free trial
+                <ArrowRight class="ml-2 h-5 w-5 group-hover:translate-x-1 transition" />
+              </Button>
+            </a>
+            <a href="/pricing">
+              <Button
+                size="lg"
+                variant="outline"
+                class="px-10 py-6 text-lg border-slate-300 dark:border-slate-700"
+              >
+                View pricing
+              </Button>
+            </a>
+          </div>
+        </div>
+      </section>
+
+      {/* Problem Statement */}
+      <section class="py-20 px-4 sm:px-6 lg:px-8">
+        <div class="max-w-5xl mx-auto">
+          <h2 class="text-4xl font-bold text-slate-900 dark:text-white mb-6">
+            The high-volume hiring challenge
+          </h2>
+          <p class="text-xl text-slate-600 dark:text-slate-400 mb-12">
+            You're not alone. 65% of businesses have high-volume recruiting needs, but only 45% believe their current strategy is effective.
+          </p>
+
+          <div class="grid md:grid-cols-2 gap-6">
+            <div class="bg-slate-50 dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-xl p-6">
+              <div class="w-12 h-12 bg-red-100 dark:bg-red-900/20 rounded-lg flex items-center justify-center mb-4">
+                <Clock class="w-6 h-6 text-red-600 dark:text-red-400" />
+              </div>
+              <h3 class="text-xl font-semibold text-slate-900 dark:text-white mb-3">
+                Volume overload
+              </h3>
+              <p class="text-slate-600 dark:text-slate-400">
+                A single job post generates 250+ applications. Recruiters spend 30-40 hours/week on admin work instead of connecting with candidates. 75% of resumes are unqualified.
+              </p>
+            </div>
+
+            <div class="bg-slate-50 dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-xl p-6">
+              <div class="w-12 h-12 bg-red-100 dark:bg-red-900/20 rounded-lg flex items-center justify-center mb-4">
+                <TrendingDown class="w-6 h-6 text-red-600 dark:text-red-400" />
+              </div>
+              <h3 class="text-xl font-semibold text-slate-900 dark:text-white mb-3">
+                Speed vs. quality trade-off
+              </h3>
+              <p class="text-slate-600 dark:text-slate-400">
+                Average time-to-fill is 36-44 days, but top candidates stay on market for only 10 days. 60% of job seekers abandon long application processes.
+              </p>
+            </div>
+
+            <div class="bg-slate-50 dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-xl p-6">
+              <div class="w-12 h-12 bg-red-100 dark:bg-red-900/20 rounded-lg flex items-center justify-center mb-4">
+                <Target class="w-6 h-6 text-red-600 dark:text-red-400" />
+              </div>
+              <h3 class="text-xl font-semibold text-slate-900 dark:text-white mb-3">
+                Missing hiring goals
+              </h3>
+              <p class="text-slate-600 dark:text-slate-400">
+                In 2024, talent acquisition teams achieved just 47.9% of their hiring goals—the lowest rate in 4 years. 27% of TA leaders say teams struggle with unmanageable workloads.
+              </p>
+            </div>
+
+            <div class="bg-slate-50 dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-xl p-6">
+              <div class="w-12 h-12 bg-red-100 dark:bg-red-900/20 rounded-lg flex items-center justify-center mb-4">
+                <MessageSquare class="w-6 h-6 text-red-600 dark:text-red-400" />
+              </div>
+              <h3 class="text-xl font-semibold text-slate-900 dark:text-white mb-3">
+                Poor candidate experience
+              </h3>
+              <p class="text-slate-600 dark:text-slate-400">
+                Ghosting is a major issue—candidates not showing up. 78% expect clear timelines, but most high-volume processes lack transparency and timely communication.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* How Jatura Solves It */}
+      <section class="py-20 px-4 sm:px-6 lg:px-8 bg-emerald-50 dark:bg-emerald-950/10">
+        <div class="max-w-5xl mx-auto">
+          <h2 class="text-4xl font-bold text-slate-900 dark:text-white mb-4 text-center">
+            How Jatura transforms high-volume hiring
+          </h2>
+          <p class="text-xl text-slate-600 dark:text-slate-400 text-center mb-12">
+            Automate the early funnel, personalize the final stages, and never sacrifice quality for speed.
+          </p>
+
+          <div class="space-y-8">
+            <div class="bg-white dark:bg-slate-900 border border-emerald-200 dark:border-emerald-900/30 rounded-2xl p-8">
+              <div class="flex items-start gap-6">
+                <div class="w-14 h-14 bg-emerald-100 dark:bg-emerald-900/30 rounded-xl flex items-center justify-center flex-shrink-0">
+                  <Sparkles class="w-7 h-7 text-emerald-600" />
+                </div>
+                <div>
+                  <h3 class="text-2xl font-bold text-slate-900 dark:text-white mb-3">
+                    AI-powered screening & ranking
+                  </h3>
+                  <p class="text-lg text-slate-600 dark:text-slate-400 mb-4">
+                    Our GPT-4o powered AI automatically screens resumes, scores candidates based on job requirements, and ranks them by fit. Filter out 75% of unqualified applicants instantly.
+                  </p>
+                  <ul class="space-y-2">
+                    <li class="flex items-start gap-2">
+                      <CheckCircle class="w-5 h-5 text-emerald-600 flex-shrink-0 mt-0.5" />
+                      <span class="text-slate-600 dark:text-slate-400">Resume parsing with 95%+ accuracy</span>
+                    </li>
+                    <li class="flex items-start gap-2">
+                      <CheckCircle class="w-5 h-5 text-emerald-600 flex-shrink-0 mt-0.5" />
+                      <span class="text-slate-600 dark:text-slate-400">Skills matching and competency scoring</span>
+                    </li>
+                    <li class="flex items-start gap-2">
+                      <CheckCircle class="w-5 h-5 text-emerald-600 flex-shrink-0 mt-0.5" />
+                      <span class="text-slate-600 dark:text-slate-400">Intelligent candidate ranking</span>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            <div class="bg-white dark:bg-slate-900 border border-emerald-200 dark:border-emerald-900/30 rounded-2xl p-8">
+              <div class="flex items-start gap-6">
+                <div class="w-14 h-14 bg-emerald-100 dark:bg-emerald-900/30 rounded-xl flex items-center justify-center flex-shrink-0">
+                  <Zap class="w-7 h-7 text-emerald-600" />
+                </div>
+                <div>
+                  <h3 class="text-2xl font-bold text-slate-900 dark:text-white mb-3">
+                    Automated workflows & bulk actions
+                  </h3>
+                  <p class="text-lg text-slate-600 dark:text-slate-400 mb-4">
+                    Move multiple candidates through stages simultaneously. Send bulk communications. Trigger automated status updates. Save 30+ hours per week on administrative tasks.
+                  </p>
+                  <ul class="space-y-2">
+                    <li class="flex items-start gap-2">
+                      <CheckCircle class="w-5 h-5 text-emerald-600 flex-shrink-0 mt-0.5" />
+                      <span class="text-slate-600 dark:text-slate-400">Bulk candidate stage advancement</span>
+                    </li>
+                    <li class="flex items-start gap-2">
+                      <CheckCircle class="w-5 h-5 text-emerald-600 flex-shrink-0 mt-0.5" />
+                      <span class="text-slate-600 dark:text-slate-400">Automated email sequences and reminders</span>
+                    </li>
+                    <li class="flex items-start gap-2">
+                      <CheckCircle class="w-5 h-5 text-emerald-600 flex-shrink-0 mt-0.5" />
+                      <span class="text-slate-600 dark:text-slate-400">Customizable workflow templates</span>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            <div class="bg-white dark:bg-slate-900 border border-emerald-200 dark:border-emerald-900/30 rounded-2xl p-8">
+              <div class="flex items-start gap-6">
+                <div class="w-14 h-14 bg-emerald-100 dark:bg-emerald-900/30 rounded-xl flex items-center justify-center flex-shrink-0">
+                  <Filter class="w-7 h-7 text-emerald-600" />
+                </div>
+                <div>
+                  <h3 class="text-2xl font-bold text-slate-900 dark:text-white mb-3">
+                    Smart pre-screening & knockout questions
+                  </h3>
+                  <p class="text-lg text-slate-600 dark:text-slate-400 mb-4">
+                    Automatically filter candidates based on must-have criteria before they ever reach your inbox. Create custom screening questions that disqualify non-fits instantly.
+                  </p>
+                  <ul class="space-y-2">
+                    <li class="flex items-start gap-2">
+                      <CheckCircle class="w-5 h-5 text-emerald-600 flex-shrink-0 mt-0.5" />
+                      <span class="text-slate-600 dark:text-slate-400">Customizable knockout criteria</span>
+                    </li>
+                    <li class="flex items-start gap-2">
+                      <CheckCircle class="w-5 h-5 text-emerald-600 flex-shrink-0 mt-0.5" />
+                      <span class="text-slate-600 dark:text-slate-400">Required qualifications validation</span>
+                    </li>
+                    <li class="flex items-start gap-2">
+                      <CheckCircle class="w-5 h-5 text-emerald-600 flex-shrink-0 mt-0.5" />
+                      <span class="text-slate-600 dark:text-slate-400">Auto-disqualification with respectful notifications</span>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            <div class="bg-white dark:bg-slate-900 border border-emerald-200 dark:border-emerald-900/30 rounded-2xl p-8">
+              <div class="flex items-start gap-6">
+                <div class="w-14 h-14 bg-emerald-100 dark:bg-emerald-900/30 rounded-xl flex items-center justify-center flex-shrink-0">
+                  <MessageSquare class="w-7 h-7 text-emerald-600" />
+                </div>
+                <div>
+                  <h3 class="text-2xl font-bold text-slate-900 dark:text-white mb-3">
+                    Mobile-first candidate experience
+                  </h3>
+                  <p class="text-lg text-slate-600 dark:text-slate-400 mb-4">
+                    46% of candidates apply from mobile devices. Our mobile-optimized applications take under 5 minutes to complete, reducing drop-offs by 60% and keeping top talent engaged.
+                  </p>
+                  <ul class="space-y-2">
+                    <li class="flex items-start gap-2">
+                      <CheckCircle class="w-5 h-5 text-emerald-600 flex-shrink-0 mt-0.5" />
+                      <span class="text-slate-600 dark:text-slate-400">Quick-apply with resume parsing</span>
+                    </li>
+                    <li class="flex items-start gap-2">
+                      <CheckCircle class="w-5 h-5 text-emerald-600 flex-shrink-0 mt-0.5" />
+                      <span class="text-slate-600 dark:text-slate-400">Mobile-responsive application forms</span>
+                    </li>
+                    <li class="flex items-start gap-2">
+                      <CheckCircle class="w-5 h-5 text-emerald-600 flex-shrink-0 mt-0.5" />
+                      <span class="text-slate-600 dark:text-slate-400">Real-time status updates via SMS and email</span>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            <div class="bg-white dark:bg-slate-900 border border-emerald-200 dark:border-emerald-900/30 rounded-2xl p-8">
+              <div class="flex items-start gap-6">
+                <div class="w-14 h-14 bg-emerald-100 dark:bg-emerald-900/30 rounded-xl flex items-center justify-center flex-shrink-0">
+                  <BarChart3 class="w-7 h-7 text-emerald-600" />
+                </div>
+                <div>
+                  <h3 class="text-2xl font-bold text-slate-900 dark:text-white mb-3">
+                    Real-time pipeline analytics
+                  </h3>
+                  <p class="text-lg text-slate-600 dark:text-slate-400 mb-4">
+                    Track time-to-fill, cost-per-hire, source effectiveness, and bottlenecks in real-time. Make data-driven decisions to continuously optimize your high-volume hiring strategy.
+                  </p>
+                  <ul class="space-y-2">
+                    <li class="flex items-start gap-2">
+                      <CheckCircle class="w-5 h-5 text-emerald-600 flex-shrink-0 mt-0.5" />
+                      <span class="text-slate-600 dark:text-slate-400">Visual funnel analytics and conversion rates</span>
+                    </li>
+                    <li class="flex items-start gap-2">
+                      <CheckCircle class="w-5 h-5 text-emerald-600 flex-shrink-0 mt-0.5" />
+                      <span class="text-slate-600 dark:text-slate-400">Source-of-hire ROI tracking</span>
+                    </li>
+                    <li class="flex items-start gap-2">
+                      <CheckCircle class="w-5 h-5 text-emerald-600 flex-shrink-0 mt-0.5" />
+                      <span class="text-slate-600 dark:text-slate-400">Recruiter productivity dashboards</span>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* How It Works */}
+      <section class="py-20 px-4 sm:px-6 lg:px-8">
+        <div class="max-w-5xl mx-auto">
+          <h2 class="text-4xl font-bold text-slate-900 dark:text-white mb-12 text-center">
+            How it works
+          </h2>
+
+          <div class="space-y-8">
+            <div class="flex gap-6">
+              <div class="flex-shrink-0">
+                <div class="w-12 h-12 bg-emerald-600 rounded-full flex items-center justify-center text-white font-bold text-lg">
+                  1
+                </div>
+              </div>
+              <div>
+                <h3 class="text-xl font-bold text-slate-900 dark:text-white mb-2">
+                  Post your job to 150+ boards instantly
+                </h3>
+                <p class="text-slate-600 dark:text-slate-400">
+                  Create your job posting once in Jatura. We automatically distribute it to Indeed, LinkedIn, Glassdoor, and 150+ job boards with one click. Set up screening questions and knockout criteria.
+                </p>
+              </div>
+            </div>
+
+            <div class="flex gap-6">
+              <div class="flex-shrink-0">
+                <div class="w-12 h-12 bg-emerald-600 rounded-full flex items-center justify-center text-white font-bold text-lg">
+                  2
+                </div>
+              </div>
+              <div>
+                <h3 class="text-xl font-bold text-slate-900 dark:text-white mb-2">
+                  AI screens and ranks applicants automatically
+                </h3>
+                <p class="text-slate-600 dark:text-slate-400">
+                  As applications come in, our AI instantly parses resumes, scores candidates based on job requirements, and ranks them by fit. Unqualified candidates are automatically filtered out with respectful notifications.
+                </p>
+              </div>
+            </div>
+
+            <div class="flex gap-6">
+              <div class="flex-shrink-0">
+                <div class="w-12 h-12 bg-emerald-600 rounded-full flex items-center justify-center text-white font-bold text-lg">
+                  3
+                </div>
+              </div>
+              <div>
+                <h3 class="text-xl font-bold text-slate-900 dark:text-white mb-2">
+                  Focus on top candidates only
+                </h3>
+                <p class="text-slate-600 dark:text-slate-400">
+                  Your team only sees pre-screened, qualified candidates ranked by fit score. Review profiles, schedule interviews with self-service calendar links, and collaborate with hiring managers—all in one platform.
+                </p>
+              </div>
+            </div>
+
+            <div class="flex gap-6">
+              <div class="flex-shrink-0">
+                <div class="w-12 h-12 bg-emerald-600 rounded-full flex items-center justify-center text-white font-bold text-lg">
+                  4
+                </div>
+              </div>
+              <div>
+                <h3 class="text-xl font-bold text-slate-900 dark:text-white mb-2">
+                  Move qualified candidates through your pipeline fast
+                </h3>
+                <p class="text-slate-600 dark:text-slate-400">
+                  Use bulk actions to advance multiple candidates simultaneously. Automated workflows send interview invites, collect feedback, and keep everyone updated. Candidates receive real-time status updates via SMS and email.
+                </p>
+              </div>
+            </div>
+
+            <div class="flex gap-6">
+              <div class="flex-shrink-0">
+                <div class="w-12 h-12 bg-emerald-600 rounded-full flex items-center justify-center text-white font-bold text-lg">
+                  5
+                </div>
+              </div>
+              <div>
+                <h3 class="text-xl font-bold text-slate-900 dark:text-white mb-2">
+                  Make offers and track performance
+                </h3>
+                <p class="text-slate-600 dark:text-slate-400">
+                  Send offer letters directly from Jatura. Monitor acceptance rates, time-to-start, and quality-of-hire metrics. Use insights to continuously optimize your high-volume hiring strategy.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Ideal For */}
+      <section class="py-20 px-4 sm:px-6 lg:px-8 bg-slate-50 dark:bg-slate-900/50">
+        <div class="max-w-5xl mx-auto">
+          <h2 class="text-4xl font-bold text-slate-900 dark:text-white mb-12 text-center">
+            Perfect for
+          </h2>
+
+          <div class="grid md:grid-cols-2 gap-6">
+            <div class="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-xl p-6">
+              <h3 class="text-xl font-semibold text-slate-900 dark:text-white mb-3">
+                Retail & E-commerce
+              </h3>
+              <p class="text-slate-600 dark:text-slate-400">
+                Seasonal hiring spikes, store openings, high turnover roles. Hire dozens to hundreds of associates, sales staff, and warehouse workers quickly.
+              </p>
+            </div>
+
+            <div class="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-xl p-6">
+              <h3 class="text-xl font-semibold text-slate-900 dark:text-white mb-3">
+                Hospitality & Food Service
+              </h3>
+              <p class="text-slate-600 dark:text-slate-400">
+                Servers, bartenders, kitchen staff, hotel personnel. Process hundreds of applications for frontline roles with fast time-to-hire requirements.
+              </p>
+            </div>
+
+            <div class="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-xl p-6">
+              <h3 class="text-xl font-semibold text-slate-900 dark:text-white mb-3">
+                Healthcare Organizations
+              </h3>
+              <p class="text-slate-600 dark:text-slate-400">
+                Nurses, medical assistants, administrative staff. Manage credential verification and compliance while hiring at scale for multiple locations.
+              </p>
+            </div>
+
+            <div class="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-xl p-6">
+              <h3 class="text-xl font-semibold text-slate-900 dark:text-white mb-3">
+                Staffing Agencies
+              </h3>
+              <p class="text-slate-600 dark:text-slate-400">
+                Build talent pools for multiple clients. Manage thousands of candidates across various industries and skill levels with organized pipelines.
+              </p>
+            </div>
+
+            <div class="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-xl p-6">
+              <h3 class="text-xl font-semibold text-slate-900 dark:text-white mb-3">
+                Tech Companies (Rapid Growth)
+              </h3>
+              <p class="text-slate-600 dark:text-slate-400">
+                Scale engineering, sales, and customer success teams quickly. Hire 50-200+ people per quarter while maintaining quality and culture fit.
+              </p>
+            </div>
+
+            <div class="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-xl p-6">
+              <h3 class="text-xl font-semibold text-slate-900 dark:text-white mb-3">
+                Call Centers & Customer Support
+              </h3>
+              <p class="text-slate-600 dark:text-slate-400">
+                Mass hiring for customer service representatives, support agents, and call center operations. Quick assessments and onboarding.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* CTA Section */}
+      <section class="py-28 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-emerald-600 to-emerald-700">
+        <div class="max-w-4xl mx-auto text-center">
+          <h2 class="text-4xl sm:text-5xl font-bold text-white mb-6">
+            Ready to 10x your hiring capacity?
+          </h2>
+          <p class="text-xl text-emerald-50 mb-10">
+            Join teams processing thousands of applications per month with Jatura's AI-powered high-volume hiring solution.
+          </p>
+          <div class="flex flex-col sm:flex-row gap-4 justify-center">
+            <a href="/login">
+              <Button
+                size="lg"
+                class="bg-white text-emerald-600 hover:bg-emerald-50 px-10 py-6 text-lg"
+              >
+                Start free trial
+                <ArrowRight class="ml-2 h-5 w-5" />
+              </Button>
+            </a>
+            <a href="/pricing">
+              <Button
+                size="lg"
+                variant="outline"
+                class="px-10 py-6 text-lg border-white text-white hover:bg-emerald-600"
+              >
+                View pricing
+              </Button>
+            </a>
+          </div>
+        </div>
+      </section>
+
+</MarketingLayout>

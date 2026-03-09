@@ -1,0 +1,235 @@
+---
+export const prerender = true;
+import MarketingLayout from '@/layouts/MarketingLayout.astro';
+import { Button } from '@/components/ui/button';
+import { Badge } from '@/components/ui/badge';
+import {
+  ArrowRight, Users, Globe, Building2, Target, Briefcase,
+  TrendingUp, Zap, Award, Clock, Smartphone,
+} from 'lucide-react';
+
+const schemaOrg = [
+  {
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://jatura.com" },
+      { "@type": "ListItem", "position": 2, "name": "Use Cases", "item": "https://jatura.com/use-cases" }
+    ]
+  },
+  { "@type": "CollectionPage", "name": "Jatura ATS Use Cases", "url": "https://jatura.com/use-cases" }
+];
+
+const useCases = [
+  {
+    icon: Users,
+    title: "High Volume Hiring",
+    description: "Jatura helps you hire faster without cutting corners. With automated workflows, candidate-friendly applications, and smart filtering, your team can focus on the right candidates\u2014not wrestling with spreadsheets.",
+    benefits: ["Process 10x more applications", "Automated screening & ranking", "Bulk communication tools", "Pipeline analytics"],
+    link: "/use-cases/high-volume-hiring",
+  },
+  {
+    icon: Globe,
+    title: "Global Hiring",
+    description: "Whether you\u2019re scaling across countries, balancing local compliance with global goals, or just trying to keep everyone on the same page\u2014Jatura helps you hire with confidence, clarity, and control.",
+    benefits: ["Multi-language career sites", "Regional compliance support", "Timezone-aware scheduling", "Centralized reporting"],
+    link: "/use-cases/global-hiring",
+  },
+  {
+    icon: Smartphone,
+    title: "Text to Apply",
+    description: "Meet candidates where they are\u2014on their phones. Text-to-apply makes it frictionless for job seekers to apply in minutes, not days. Perfect for retail, hospitality, and field-based hiring.",
+    benefits: ["98% SMS open rate vs 20% email", "QR codes for instant applications", "Automated SMS screening", "Two-way text communication"],
+    link: "/use-cases/text-to-apply",
+  },
+  {
+    icon: Building2,
+    title: "Hiring Across Multiple Brands",
+    description: "Whether you\u2019re managing a portfolio of brands or integrating acquired companies, Jatura makes it easy to recruit under multiple identities while keeping everything connected, compliant, and easy to manage.",
+    benefits: ["Separate career sites per brand", "Custom workflows by brand", "Unified talent pool", "Consolidated analytics"],
+    link: "/use-cases/hiring-across-multiple-brands",
+  },
+  {
+    icon: Target,
+    title: "Niche & Hard-to-Fill Roles",
+    description: "Jatura helps you find\u2014and win\u2014the candidates others can\u2019t. When you\u2019re hiring for specialist roles, volume tactics won\u2019t cut it. You need a way to identify the right people, build long-term relationships, and deliver an experience that keeps them engaged.",
+    benefits: ["Advanced talent sourcing", "Relationship nurturing", "Specialist screening tools", "Passive candidate engagement"],
+    link: "/use-cases/niche-roles",
+  },
+  {
+    icon: Briefcase,
+    title: "Contingent Workers & Contractors",
+    description: "Whether it\u2019s compliance management, contractor classification, or building on-demand talent pools, Jatura helps you simplify the complex and keep every hiring stream moving.",
+    benefits: ["Separate contractor pipelines", "Compliance tracking", "On-demand talent pools", "Contract management"],
+    link: "/use-cases/contingent-workers",
+  },
+  {
+    icon: TrendingUp,
+    title: "High-Growth Startups",
+    description: "Scale your team fast without sacrificing quality. Jatura gives high-growth startups the tools to build great teams while maintaining a stellar candidate experience.",
+    benefits: ["Rapid scaling tools", "Collaborative hiring", "Hiring velocity metrics", "Culture-fit assessments"],
+    link: "/use-cases/high-growth-startups",
+  },
+];
+---
+
+<MarketingLayout
+  title="Use Cases | Jatura - ATS Solutions for Every Hiring Challenge"
+  description="Explore Jatura ATS use cases: high-volume hiring, startup recruiting, global hiring, niche roles, contingent workers, multi-brand hiring, and text-to-apply campaigns."
+  {schemaOrg}
+>
+  <!-- Hero Section -->
+  <section class="pt-24 pb-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-slate-50 to-white dark:from-slate-900/50 dark:to-slate-950">
+    <div class="max-w-7xl mx-auto text-center">
+      <Badge
+        variant="secondary"
+        class="mb-6 px-5 py-2 text-sm font-medium bg-slate-100 dark:bg-slate-800 text-slate-900 dark:text-slate-100"
+      >
+        <Zap className="w-4 h-4 mr-2" />
+        Use Cases
+      </Badge>
+      <h1 class="text-5xl sm:text-6xl lg:text-7xl font-bold text-slate-900 dark:text-white mb-6 leading-tight">
+        Solve the hiring challenges<br />that matter to you
+      </h1>
+      <p class="text-xl sm:text-2xl text-slate-600 dark:text-slate-400 max-w-4xl mx-auto mb-12 leading-relaxed">
+        From high-volume hiring to strategic talent planning, see how teams like yours run better recruitment with Jatura.
+      </p>
+      <div class="flex flex-col sm:flex-row gap-4 justify-center">
+        <a href="/login">
+          <Button
+            size="lg"
+            class="bg-slate-900 dark:bg-white text-white dark:text-slate-900 hover:bg-slate-800 dark:hover:bg-slate-100 px-10 py-6 text-lg group shadow-lg"
+          >
+            Start free trial
+            <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition" />
+          </Button>
+        </a>
+        <a href="/pricing">
+          <Button
+            size="lg"
+            variant="outline"
+            class="px-10 py-6 text-lg border-slate-300 dark:border-slate-700"
+          >
+            View pricing
+          </Button>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Use Cases Grid -->
+  <section class="py-28 px-4 sm:px-6 lg:px-8">
+    <div class="max-w-7xl mx-auto">
+      <div class="grid lg:grid-cols-2 gap-8">
+        {useCases.map((useCase) => {
+          const Icon = useCase.icon;
+          return (
+            <div class="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-2xl p-10 hover:shadow-xl transition">
+              <div class="w-16 h-16 bg-slate-100 dark:bg-slate-800 rounded-2xl flex items-center justify-center mb-6">
+                <Icon className="w-8 h-8 text-slate-900 dark:text-white" />
+              </div>
+              <h3 class="text-2xl font-bold text-slate-900 dark:text-white mb-4">
+                {useCase.title}
+              </h3>
+              <p class="text-lg text-slate-600 dark:text-slate-400 mb-6">
+                {useCase.description}
+              </p>
+              <div class="space-y-3 mb-8">
+                {useCase.benefits.map((benefit) => (
+                  <div class="flex items-center gap-3">
+                    <div class="w-1.5 h-1.5 rounded-full bg-emerald-600"></div>
+                    <span class="text-slate-600 dark:text-slate-400">{benefit}</span>
+                  </div>
+                ))}
+              </div>
+              <a href={useCase.link}>
+                <Button variant="outline" class="w-full group">
+                  Learn more
+                  <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition" />
+                </Button>
+              </a>
+            </div>
+          );
+        })}
+      </div>
+    </div>
+  </section>
+
+  <!-- Why It Matters -->
+  <section class="py-20 px-4 sm:px-6 lg:px-8 bg-slate-50 dark:bg-slate-900/50">
+    <div class="max-w-4xl mx-auto text-center">
+      <h2 class="text-4xl sm:text-5xl font-bold text-slate-900 dark:text-white mb-8">
+        Every hiring challenge is unique
+      </h2>
+      <p class="text-xl text-slate-600 dark:text-slate-400 mb-12">
+        That&apos;s why Jatura is built to be flexible. Whether you&apos;re hiring 5 people or 500, across one office or 50 countries, Jatura adapts to your needs.
+      </p>
+      <div class="grid md:grid-cols-3 gap-8">
+        <div class="text-center">
+          <div class="w-16 h-16 bg-slate-900 dark:bg-white rounded-2xl flex items-center justify-center mx-auto mb-4">
+            <Clock className="w-8 h-8 text-white dark:text-slate-900" />
+          </div>
+          <h4 class="text-lg font-semibold text-slate-900 dark:text-white mb-2">
+            Save Time
+          </h4>
+          <p class="text-slate-600 dark:text-slate-400">
+            Automate repetitive tasks and focus on building relationships
+          </p>
+        </div>
+        <div class="text-center">
+          <div class="w-16 h-16 bg-slate-900 dark:bg-white rounded-2xl flex items-center justify-center mx-auto mb-4">
+            <Award className="w-8 h-8 text-white dark:text-slate-900" />
+          </div>
+          <h4 class="text-lg font-semibold text-slate-900 dark:text-white mb-2">
+            Hire Better
+          </h4>
+          <p class="text-slate-600 dark:text-slate-400">
+            Make data-driven decisions with AI-powered insights
+          </p>
+        </div>
+        <div class="text-center">
+          <div class="w-16 h-16 bg-slate-900 dark:bg-white rounded-2xl flex items-center justify-center mx-auto mb-4">
+            <TrendingUp className="w-8 h-8 text-white dark:text-slate-900" />
+          </div>
+          <h4 class="text-lg font-semibold text-slate-900 dark:text-white mb-2">
+            Scale Faster
+          </h4>
+          <p class="text-slate-600 dark:text-slate-400">
+            Grow your team without adding complexity or overhead
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <section class="py-28 px-4 sm:px-6 lg:px-8 bg-slate-900 dark:bg-white">
+    <div class="max-w-4xl mx-auto text-center">
+      <h2 class="text-4xl sm:text-5xl font-bold text-white dark:text-slate-900 mb-6">
+        Ready to solve your hiring challenges?
+      </h2>
+      <p class="text-xl text-slate-300 dark:text-slate-600 mb-10">
+        See how Jatura can transform your recruiting process.
+      </p>
+      <div class="flex flex-col sm:flex-row gap-4 justify-center">
+        <a href="/login">
+          <Button
+            size="lg"
+            class="bg-white dark:bg-slate-900 text-slate-900 dark:text-white hover:bg-slate-100 dark:hover:bg-slate-800 px-10 py-6 text-lg"
+          >
+            Start free trial
+            <ArrowRight className="ml-2 h-5 w-5" />
+          </Button>
+        </a>
+        <a href="/pricing">
+          <Button
+            size="lg"
+            variant="outline"
+            class="px-10 py-6 text-lg border-slate-700 dark:border-slate-300 text-white dark:text-slate-900 hover:bg-slate-800 dark:hover:bg-slate-100"
+          >
+            View pricing
+          </Button>
+        </a>
+      </div>
+    </div>
+  </section>
+</MarketingLayout>

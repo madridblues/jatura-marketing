@@ -1,0 +1,511 @@
+---
+export const prerender = true;
+import MarketingLayout from '@/layouts/MarketingLayout.astro';
+import { ArrowRight, Briefcase, CheckCircle, Shield, FileCheck, Users, Database, Scale, Clock } from 'lucide-react';
+import { Button } from '@/components/ui/button';
+import { Badge } from '@/components/ui/badge';
+
+const title = "Contingent Workers & Contractors | Jatura ATS";
+const description = "Manage contingent, contract, and gig worker hiring with Jatura. Track W2 and 1099 candidates in unified pipelines, automate offers, and maintain compliance across all worker types.";
+
+const schemaOrg = [
+  {
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://jatura.com" },
+      { "@type": "ListItem", "position": 2, "name": "Use Cases", "item": "https://jatura.com/use-cases" },
+      { "@type": "ListItem", "position": 3, "name": "Contingent Workers", "item": "https://jatura.com/use-cases/contingent-workers" }
+    ]
+  },
+  {
+    "@type": "WebPage",
+    "name": "Contingent Workers & Contractors | Jatura ATS",
+    "description": "Manage contingent, contract, and gig worker hiring with Jatura. Track W2 and 1099 candidates in unified pipelines, automate offers, and maintain compliance across all worker types.",
+    "url": "https://jatura.com/use-cases/contingent-workers"
+  }
+];
+---
+
+<MarketingLayout {title} {description} {schemaOrg}>
+
+      {/* Hero Section */}
+      <section class="pt-24 pb-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-rose-50 to-white dark:from-rose-950/20 dark:to-slate-950">
+        <div class="max-w-5xl mx-auto">
+          <a href="/use-cases">
+            <Button variant="ghost" class="mb-6 -ml-4">
+              ← Back to all use cases
+            </Button>
+          </a>
+          
+          <Badge
+            variant="secondary"
+            class="mb-6 px-5 py-2 text-sm font-medium bg-rose-100 dark:bg-rose-900/30 text-rose-900 dark:text-rose-100"
+          >
+            <Briefcase class="w-4 h-4 mr-2" />
+            Contingent Workers & Contractors
+          </Badge>
+          
+          <h1 class="text-5xl sm:text-6xl font-bold text-slate-900 dark:text-white mb-6 leading-tight">
+            Manage contractors<br />with confidence
+          </h1>
+          
+          <p class="text-xl sm:text-2xl text-slate-600 dark:text-slate-400 mb-8 leading-relaxed">
+            Whether it's compliance management, contractor classification, or building on-demand talent pools, Jatura helps you simplify the complex and keep every hiring stream moving.
+          </p>
+
+          <div class="grid md:grid-cols-3 gap-6 mb-10">
+            <div class="bg-white dark:bg-slate-900 border border-rose-200 dark:border-rose-900/30 rounded-xl p-6">
+              <div class="text-3xl font-bold text-rose-600 mb-2">27%</div>
+              <div class="text-sm text-slate-600 dark:text-slate-400">Of U.S. workforce is now contingent (growing to 50% by 2030)</div>
+            </div>
+            <div class="bg-white dark:bg-slate-900 border border-rose-200 dark:border-rose-900/30 rounded-xl p-6">
+              <div class="text-3xl font-bold text-rose-600 mb-2">$25k</div>
+              <div class="text-sm text-slate-600 dark:text-slate-400">Potential fine per misclassification violation</div>
+            </div>
+            <div class="bg-white dark:bg-slate-900 border border-rose-200 dark:border-rose-900/30 rounded-xl p-6">
+              <div class="text-3xl font-bold text-rose-600 mb-2">200+</div>
+              <div class="text-sm text-slate-600 dark:text-slate-400">Classification tests across U.S. jurisdictions</div>
+            </div>
+          </div>
+
+          <div class="flex flex-col sm:flex-row gap-4">
+            <a href="/login">
+              <Button
+                size="lg"
+                class="bg-rose-600 hover:bg-rose-700 text-white px-10 py-6 text-lg group shadow-lg"
+              >
+                Start free trial
+                <ArrowRight class="ml-2 h-5 w-5 group-hover:translate-x-1 transition" />
+              </Button>
+            </a>
+            <a href="/pricing">
+              <Button
+                size="lg"
+                variant="outline"
+                class="px-10 py-6 text-lg border-slate-300 dark:border-slate-700"
+              >
+                View pricing
+              </Button>
+            </a>
+          </div>
+        </div>
+      </section>
+
+      {/* Problem Statement */}
+      <section class="py-20 px-4 sm:px-6 lg:px-8">
+        <div class="max-w-5xl mx-auto">
+          <h2 class="text-4xl font-bold text-slate-900 dark:text-white mb-6">
+            The contingent workforce challenge
+          </h2>
+          <p class="text-xl text-slate-600 dark:text-slate-400 mb-12">
+            Managing contractors, freelancers, and gig workers brings unique compliance, classification, and operational complexities.
+          </p>
+
+          <div class="grid md:grid-cols-2 gap-6">
+            <div class="bg-slate-50 dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-xl p-6">
+              <div class="w-12 h-12 bg-red-100 dark:bg-red-900/20 rounded-lg flex items-center justify-center mb-4">
+                <Scale class="w-6 h-6 text-red-600 dark:text-red-400" />
+              </div>
+              <h3 class="text-xl font-semibold text-slate-900 dark:text-white mb-3">
+                Misclassification risks
+              </h3>
+              <p class="text-slate-600 dark:text-slate-400 mb-3">
+                200+ classification tests across federal, state, and local jurisdictions. DOL six-factor test, California ABC test, state-specific rules. One mistake can cost $25,000+ per violation plus back wages.
+              </p>
+              <p class="text-sm italic text-slate-500 dark:text-slate-500">
+                "78% of companies face compliance challenges due to shifting employment laws" — ILO 2024
+              </p>
+            </div>
+
+            <div class="bg-slate-50 dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-xl p-6">
+              <div class="w-12 h-12 bg-red-100 dark:bg-red-900/20 rounded-lg flex items-center justify-center mb-4">
+                <Shield class="w-6 h-6 text-red-600 dark:text-red-400" />
+              </div>
+              <h3 class="text-xl font-semibold text-slate-900 dark:text-white mb-3">
+                Regulatory complexity
+              </h3>
+              <p class="text-slate-600 dark:text-slate-400">
+                IRS audits, DOL enforcement, state-specific minimum wage laws, pay transparency requirements, benefits eligibility, and workers' comp claims. Compliance requirements vary by jurisdiction and change frequently.
+              </p>
+            </div>
+
+            <div class="bg-slate-50 dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-xl p-6">
+              <div class="w-12 h-12 bg-red-100 dark:bg-red-900/20 rounded-lg flex items-center justify-center mb-4">
+                <Database class="w-6 h-6 text-red-600 dark:text-red-400" />
+              </div>
+              <h3 class="text-xl font-semibold text-slate-900 dark:text-white mb-3">
+                Fragmented management
+              </h3>
+              <p class="text-slate-600 dark:text-slate-400">
+                Contractors managed in spreadsheets or separate systems from full-time employees. No unified view of total workforce. Difficult to track contract status, renewals, and performance across projects.
+              </p>
+            </div>
+
+            <div class="bg-slate-50 dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-xl p-6">
+              <div class="w-12 h-12 bg-red-100 dark:bg-red-900/20 rounded-lg flex items-center justify-center mb-4">
+                <Clock class="w-6 h-6 text-red-600 dark:text-red-400" />
+              </div>
+              <h3 class="text-xl font-semibold text-slate-900 dark:text-white mb-3">
+                Slow contractor onboarding
+              </h3>
+              <p class="text-slate-600 dark:text-slate-400">
+                Need to move fast for project-based work, but contractor onboarding involves contracts, compliance checks, background verification, and system access—often taking weeks instead of days.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* How Jatura Solves It */}
+      <section class="py-20 px-4 sm:px-6 lg:px-8 bg-rose-50 dark:bg-rose-950/10">
+        <div class="max-w-5xl mx-auto">
+          <h2 class="text-4xl font-bold text-slate-900 dark:text-white mb-4 text-center">
+            How Jatura simplifies contingent workforce management
+          </h2>
+          <p class="text-xl text-slate-600 dark:text-slate-400 text-center mb-12">
+            Stay compliant, move fast, and maintain complete visibility across your entire workforce.
+          </p>
+
+          <div class="space-y-8">
+            <div class="bg-white dark:bg-slate-900 border border-rose-200 dark:border-rose-900/30 rounded-2xl p-8">
+              <div class="flex items-start gap-6">
+                <div class="w-14 h-14 bg-rose-100 dark:bg-rose-900/30 rounded-xl flex items-center justify-center flex-shrink-0">
+                  <FileCheck class="w-7 h-7 text-rose-600" />
+                </div>
+                <div>
+                  <h3 class="text-2xl font-bold text-slate-900 dark:text-white mb-3">
+                    Classification compliance tracking
+                  </h3>
+                  <p class="text-lg text-slate-600 dark:text-slate-400 mb-4">
+                    Automatically track worker classification status using DOL six-factor test and state-specific criteria (ABC test for CA, MA, NJ, etc.). Document economic independence, control factors, and maintain audit-ready classification records.
+                  </p>
+                  <ul class="space-y-2">
+                    <li class="flex items-start gap-2">
+                      <CheckCircle class="w-5 h-5 text-rose-600 flex-shrink-0 mt-0.5" />
+                      <span class="text-slate-600 dark:text-slate-400">Multi-factor classification assessment templates</span>
+                    </li>
+                    <li class="flex items-start gap-2">
+                      <CheckCircle class="w-5 h-5 text-rose-600 flex-shrink-0 mt-0.5" />
+                      <span class="text-slate-600 dark:text-slate-400">State-by-state compliance tracking</span>
+                    </li>
+                    <li class="flex items-start gap-2">
+                      <CheckCircle class="w-5 h-5 text-rose-600 flex-shrink-0 mt-0.5" />
+                      <span class="text-slate-600 dark:text-slate-400">Audit trail documentation</span>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            <div class="bg-white dark:bg-slate-900 border border-rose-200 dark:border-rose-900/30 rounded-2xl p-8">
+              <div class="flex items-start gap-6">
+                <div class="w-14 h-14 bg-rose-100 dark:bg-rose-900/30 rounded-xl flex items-center justify-center flex-shrink-0">
+                  <Briefcase class="w-7 h-7 text-rose-600" />
+                </div>
+                <div>
+                  <h3 class="text-2xl font-bold text-slate-900 dark:text-white mb-3">
+                    Separate contractor pipelines
+                  </h3>
+                  <p class="text-lg text-slate-600 dark:text-slate-400 mb-4">
+                    Create dedicated pipelines for contractors, freelancers, temps, and gig workers with unique workflows, contract templates, and compliance requirements. Keep contractor and FTE hiring streams organized and compliant.
+                  </p>
+                  <ul class="space-y-2">
+                    <li class="flex items-start gap-2">
+                      <CheckCircle class="w-5 h-5 text-rose-600 flex-shrink-0 mt-0.5" />
+                      <span class="text-slate-600 dark:text-slate-400">Contract-specific hiring workflows</span>
+                    </li>
+                    <li class="flex items-start gap-2">
+                      <CheckCircle class="w-5 h-5 text-rose-600 flex-shrink-0 mt-0.5" />
+                      <span class="text-slate-600 dark:text-slate-400">Custom pipeline stages for contract roles</span>
+                    </li>
+                    <li class="flex items-start gap-2">
+                      <CheckCircle class="w-5 h-5 text-rose-600 flex-shrink-0 mt-0.5" />
+                      <span class="text-slate-600 dark:text-slate-400">Automated contract document generation</span>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            <div class="bg-white dark:bg-slate-900 border border-rose-200 dark:border-rose-900/30 rounded-2xl p-8">
+              <div class="flex items-start gap-6">
+                <div class="w-14 h-14 bg-rose-100 dark:bg-rose-900/30 rounded-xl flex items-center justify-center flex-shrink-0">
+                  <Database class="w-7 h-7 text-rose-600" />
+                </div>
+                <div>
+                  <h3 class="text-2xl font-bold text-slate-900 dark:text-white mb-3">
+                    On-demand talent pools
+                  </h3>
+                  <p class="text-lg text-slate-600 dark:text-slate-400 mb-4">
+                    Build and maintain databases of pre-vetted contractors for quick deployment. Tag by skills, availability, past performance, and project preferences. Source instantly when needs arise instead of starting from scratch.
+                  </p>
+                  <ul class="space-y-2">
+                    <li class="flex items-start gap-2">
+                      <CheckCircle class="w-5 h-5 text-rose-600 flex-shrink-0 mt-0.5" />
+                      <span class="text-slate-600 dark:text-slate-400">Searchable contractor talent databases</span>
+                    </li>
+                    <li class="flex items-start gap-2">
+                      <CheckCircle class="w-5 h-5 text-rose-600 flex-shrink-0 mt-0.5" />
+                      <span class="text-slate-600 dark:text-slate-400">Skills-based filtering and matching</span>
+                    </li>
+                    <li class="flex items-start gap-2">
+                      <CheckCircle class="w-5 h-5 text-rose-600 flex-shrink-0 mt-0.5" />
+                      <span class="text-slate-600 dark:text-slate-400">Performance ratings and notes from past projects</span>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            <div class="bg-white dark:bg-slate-900 border border-rose-200 dark:border-rose-900/30 rounded-2xl p-8">
+              <div class="flex items-start gap-6">
+                <div class="w-14 h-14 bg-rose-100 dark:bg-rose-900/30 rounded-xl flex items-center justify-center flex-shrink-0">
+                  <Shield class="w-7 h-7 text-rose-600" />
+                </div>
+                <div>
+                  <h3 class="text-2xl font-bold text-slate-900 dark:text-white mb-3">
+                    Contract lifecycle management
+                  </h3>
+                  <p class="text-lg text-slate-600 dark:text-slate-400 mb-4">
+                    Track contract start and end dates, renewal schedules, rate changes, and compliance milestones. Automated alerts for contract expirations, renewals, and compliance reviews. Maintain complete history per contractor.
+                  </p>
+                  <ul class="space-y-2">
+                    <li class="flex items-start gap-2">
+                      <CheckCircle class="w-5 h-5 text-rose-600 flex-shrink-0 mt-0.5" />
+                      <span class="text-slate-600 dark:text-slate-400">Contract expiration and renewal tracking</span>
+                    </li>
+                    <li class="flex items-start gap-2">
+                      <CheckCircle class="w-5 h-5 text-rose-600 flex-shrink-0 mt-0.5" />
+                      <span class="text-slate-600 dark:text-slate-400">Automated renewal reminders</span>
+                    </li>
+                    <li class="flex items-start gap-2">
+                      <CheckCircle class="w-5 h-5 text-rose-600 flex-shrink-0 mt-0.5" />
+                      <span class="text-slate-600 dark:text-slate-400">Contractor performance history and notes</span>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            <div class="bg-white dark:bg-slate-900 border border-rose-200 dark:border-rose-900/30 rounded-2xl p-8">
+              <div class="flex items-start gap-6">
+                <div class="w-14 h-14 bg-rose-100 dark:bg-rose-900/30 rounded-xl flex items-center justify-center flex-shrink-0">
+                  <Users class="w-7 h-7 text-rose-600" />
+                </div>
+                <div>
+                  <h3 class="text-2xl font-bold text-slate-900 dark:text-white mb-3">
+                    Unified workforce visibility
+                  </h3>
+                  <p class="text-lg text-slate-600 dark:text-slate-400 mb-4">
+                    View your entire workforce—employees and contractors—in one system. Track total headcount, contractor spend, project allocations, and compliance status across the organization. Compare contractor vs. FTE costs and performance.
+                  </p>
+                  <ul class="space-y-2">
+                    <li class="flex items-start gap-2">
+                      <CheckCircle class="w-5 h-5 text-rose-600 flex-shrink-0 mt-0.5" />
+                      <span class="text-slate-600 dark:text-slate-400">Combined FTE and contractor dashboards</span>
+                    </li>
+                    <li class="flex items-start gap-2">
+                      <CheckCircle class="w-5 h-5 text-rose-600 flex-shrink-0 mt-0.5" />
+                      <span class="text-slate-600 dark:text-slate-400">Contractor spend analytics</span>
+                    </li>
+                    <li class="flex items-start gap-2">
+                      <CheckCircle class="w-5 h-5 text-rose-600 flex-shrink-0 mt-0.5" />
+                      <span class="text-slate-600 dark:text-slate-400">Compliance status reporting</span>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* How It Works */}
+      <section class="py-20 px-4 sm:px-6 lg:px-8">
+        <div class="max-w-5xl mx-auto">
+          <h2 class="text-4xl font-bold text-slate-900 dark:text-white mb-12 text-center">
+            How it works
+          </h2>
+
+          <div class="space-y-8">
+            <div class="flex gap-6">
+              <div class="flex-shrink-0">
+                <div class="w-12 h-12 bg-rose-600 rounded-full flex items-center justify-center text-white font-bold text-lg">
+                  1
+                </div>
+              </div>
+              <div>
+                <h3 class="text-xl font-bold text-slate-900 dark:text-white mb-2">
+                  Set up contractor workflows
+                </h3>
+                <p class="text-slate-600 dark:text-slate-400">
+                  Create dedicated pipelines for contractors with unique stages, contract templates, and compliance checkpoints. Configure classification criteria based on DOL and state-specific tests.
+                </p>
+              </div>
+            </div>
+
+            <div class="flex gap-6">
+              <div class="flex-shrink-0">
+                <div class="w-12 h-12 bg-rose-600 rounded-full flex items-center justify-center text-white font-bold text-lg">
+                  2
+                </div>
+              </div>
+              <div>
+                <h3 class="text-xl font-bold text-slate-900 dark:text-white mb-2">
+                  Post contract roles and source talent
+                </h3>
+                <p class="text-slate-600 dark:text-slate-400">
+                  Create contract job postings. Source from on-demand talent pools, freelance platforms, or post to job boards. Applications flow into your contractor pipeline automatically.
+                </p>
+              </div>
+            </div>
+
+            <div class="flex gap-6">
+              <div class="flex-shrink-0">
+                <div class="w-12 h-12 bg-rose-600 rounded-full flex items-center justify-center text-white font-bold text-lg">
+                  3
+                </div>
+              </div>
+              <div>
+                <h3 class="text-xl font-bold text-slate-900 dark:text-white mb-2">
+                  Verify classification and generate contracts
+                </h3>
+                <p class="text-slate-600 dark:text-slate-400">
+                  Assess worker classification using multi-factor compliance templates. Document economic independence and control factors. Generate compliant contractor agreements with correct terms, rates, and scope.
+                </p>
+              </div>
+            </div>
+
+            <div class="flex gap-6">
+              <div class="flex-shrink-0">
+                <div class="w-12 h-12 bg-rose-600 rounded-full flex items-center justify-center text-white font-bold text-lg">
+                  4
+                </div>
+              </div>
+              <div>
+                <h3 class="text-xl font-bold text-slate-900 dark:text-white mb-2">
+                  Onboard and track lifecycle
+                </h3>
+                <p class="text-slate-600 dark:text-slate-400">
+                  Fast-track contractor onboarding with automated workflows. Track contract start/end dates, renewal schedules, and performance. Set automated reminders for expirations and compliance reviews.
+                </p>
+              </div>
+            </div>
+
+            <div class="flex gap-6">
+              <div class="flex-shrink-0">
+                <div class="w-12 h-12 bg-rose-600 rounded-full flex items-center justify-center text-white font-bold text-lg">
+                  5
+                </div>
+              </div>
+              <div>
+                <h3 class="text-xl font-bold text-slate-900 dark:text-white mb-2">
+                  Build talent pools for future needs
+                </h3>
+                <p class="text-slate-600 dark:text-slate-400">
+                  Add high-performing contractors to talent pools. Tag by skills, availability, and project preferences. When new contract needs arise, search your pre-vetted database and deploy talent instantly.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Ideal For */}
+      <section class="py-20 px-4 sm:px-6 lg:px-8 bg-slate-50 dark:bg-slate-900/50">
+        <div class="max-w-5xl mx-auto">
+          <h2 class="text-4xl font-bold text-slate-900 dark:text-white mb-12 text-center">
+            Perfect for
+          </h2>
+
+          <div class="grid md:grid-cols-2 gap-6">
+            <div class="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-xl p-6">
+              <h3 class="text-xl font-semibold text-slate-900 dark:text-white mb-3">
+                Project-Based Organizations
+              </h3>
+              <p class="text-slate-600 dark:text-slate-400">
+                Agencies, consulting firms, creative studios. Hire contractors for specific projects with defined scopes and timelines.
+              </p>
+            </div>
+
+            <div class="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-xl p-6">
+              <h3 class="text-xl font-semibold text-slate-900 dark:text-white mb-3">
+                Tech Companies (Blended Workforce)
+              </h3>
+              <p class="text-slate-600 dark:text-slate-400">
+                Startups and scale-ups using contractors for specialized skills, capacity overflow, or project-based work alongside full-time teams.
+              </p>
+            </div>
+
+            <div class="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-xl p-6">
+              <h3 class="text-xl font-semibold text-slate-900 dark:text-white mb-3">
+                Staffing Agencies
+              </h3>
+              <p class="text-slate-600 dark:text-slate-400">
+                Manage large contractor pools for multiple clients. Track compliance, contract lifecycles, and client assignments at scale.
+              </p>
+            </div>
+
+            <div class="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-xl p-6">
+              <h3 class="text-xl font-semibold text-slate-900 dark:text-white mb-3">
+                Seasonal & Event Businesses
+              </h3>
+              <p class="text-slate-600 dark:text-slate-400">
+                Retail, hospitality, events. Hire temporary workers for peak seasons or specific events with fast onboarding and offboarding.
+              </p>
+            </div>
+
+            <div class="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-xl p-6">
+              <h3 class="text-xl font-semibold text-slate-900 dark:text-white mb-3">
+                Gig Economy Platforms
+              </h3>
+              <p class="text-slate-600 dark:text-slate-400">
+                Manage independent contractors, gig workers, and 1099 workers with robust classification tracking and compliance documentation.
+              </p>
+            </div>
+
+            <div class="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-xl p-6">
+              <h3 class="text-xl font-semibold text-slate-900 dark:text-white mb-3">
+                Enterprise (Contingent Workforce Programs)
+              </h3>
+              <p class="text-slate-600 dark:text-slate-400">
+                Large organizations with 100+ contractors across departments. Need vendor management, compliance oversight, and unified reporting.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* CTA Section */}
+      <section class="py-28 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-rose-600 to-rose-700">
+        <div class="max-w-4xl mx-auto text-center">
+          <h2 class="text-4xl sm:text-5xl font-bold text-white mb-6">
+            Ready to manage contractors with confidence?
+          </h2>
+          <p class="text-xl text-rose-50 mb-10">
+            Join companies managing thousands of contractors with compliant workflows, unified visibility, and on-demand talent pools.
+          </p>
+          <div class="flex flex-col sm:flex-row gap-4 justify-center">
+            <a href="/login">
+              <Button
+                size="lg"
+                class="bg-white text-rose-600 hover:bg-rose-50 px-10 py-6 text-lg"
+              >
+                Start free trial
+                <ArrowRight class="ml-2 h-5 w-5" />
+              </Button>
+            </a>
+            <a href="/pricing">
+              <Button
+                size="lg"
+                variant="outline"
+                class="px-10 py-6 text-lg border-white text-white hover:bg-rose-600"
+              >
+                View pricing
+              </Button>
+            </a>
+          </div>
+        </div>
+      </section>
+
+</MarketingLayout>

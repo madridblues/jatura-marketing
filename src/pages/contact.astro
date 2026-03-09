@@ -1,0 +1,13 @@
+---
+export const prerender = true;
+import MarketingLayout from '@/layouts/MarketingLayout.astro';
+import ContactPage from '@/components/islands/ContactPage';
+
+const title = "Contact Us | Jatura ATS";
+const description = "Get in touch with the Jatura team. Contact us for sales inquiries, technical support, or general questions about our AI-powered applicant tracking system.";
+const schemaOrg = [{ "@type": "ContactPage", "name": "Contact Jatura", "url": "https://jatura.com/contact" }];
+---
+
+<MarketingLayout {title} {description} {schemaOrg}>
+  <ContactPage client:load />
+</MarketingLayout>

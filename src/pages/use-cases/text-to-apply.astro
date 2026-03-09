@@ -1,0 +1,532 @@
+---
+export const prerender = true;
+import MarketingLayout from '@/layouts/MarketingLayout.astro';
+import { ArrowRight, Smartphone, CheckCircle, Zap, MessageSquare, Clock, TrendingUp, Users, Target, QrCode } from 'lucide-react';
+import { Button } from '@/components/ui/button';
+import { Badge } from '@/components/ui/badge';
+
+const title = "Text-to-Apply Solution | Jatura ATS - SMS Recruiting";
+const description = "Launch Text-to-Apply campaigns with Jatura. Candidates text a keyword to apply instantly — no resume required. Perfect for high-volume, hourly, and frontline worker hiring.";
+
+const schemaOrg = [
+  {
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://jatura.com" },
+      { "@type": "ListItem", "position": 2, "name": "Use Cases", "item": "https://jatura.com/use-cases" },
+      { "@type": "ListItem", "position": 3, "name": "Text to Apply", "item": "https://jatura.com/use-cases/text-to-apply" }
+    ]
+  },
+  {
+    "@type": "WebPage",
+    "name": "Text-to-Apply Solution | Jatura ATS",
+    "description": "Launch Text-to-Apply campaigns with Jatura. Candidates text a keyword to apply instantly — no resume required. Perfect for high-volume, hourly, and frontline worker hiring.",
+    "url": "https://jatura.com/use-cases/text-to-apply"
+  }
+];
+---
+
+<MarketingLayout {title} {description} {schemaOrg}>
+
+      {/* Hero Section */}
+      <section class="pt-24 pb-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-green-50 to-white dark:from-green-950/20 dark:to-slate-950">
+        <div class="max-w-5xl mx-auto">
+          <a href="/use-cases">
+            <Button variant="ghost" class="mb-6 -ml-4">
+              ← Back to all use cases
+            </Button>
+          </a>
+          
+          <Badge
+            variant="secondary"
+            class="mb-6 px-5 py-2 text-sm font-medium bg-green-100 dark:bg-green-900/30 text-green-900 dark:text-green-100"
+          >
+            <Smartphone class="w-4 h-4 mr-2" />
+            Text to Apply
+          </Badge>
+          
+          <h1 class="text-5xl sm:text-6xl font-bold text-slate-900 dark:text-white mb-6 leading-tight">
+            Turn 98% open rates<br />into quality hires
+          </h1>
+          
+          <p class="text-xl sm:text-2xl text-slate-600 dark:text-slate-400 mb-8 leading-relaxed">
+            Meet candidates where they are—on their phones. Text-to-apply makes it frictionless for job seekers to apply in minutes, not days. Perfect for retail, hospitality, and field-based hiring.
+          </p>
+
+          <div class="grid md:grid-cols-3 gap-6 mb-10">
+            <div class="bg-white dark:bg-slate-900 border border-green-200 dark:border-green-900/30 rounded-xl p-6">
+              <div class="text-3xl font-bold text-green-600 mb-2">98%</div>
+              <div class="text-sm text-slate-600 dark:text-slate-400">SMS open rate vs. 20% for email</div>
+            </div>
+            <div class="bg-white dark:bg-slate-900 border border-green-200 dark:border-green-900/30 rounded-xl p-6">
+              <div class="text-3xl font-bold text-green-600 mb-2">45%</div>
+              <div class="text-sm text-slate-600 dark:text-slate-400">SMS response rate vs. 6% for email</div>
+            </div>
+            <div class="bg-white dark:bg-slate-900 border border-green-200 dark:border-green-900/30 rounded-xl p-6">
+              <div class="text-3xl font-bold text-green-600 mb-2">3 min</div>
+              <div class="text-sm text-slate-600 dark:text-slate-400">Average time to read SMS messages</div>
+            </div>
+          </div>
+
+          <div class="flex flex-col sm:flex-row gap-4">
+            <a href="/login">
+              <Button
+                size="lg"
+                class="bg-green-600 hover:bg-green-700 text-white px-10 py-6 text-lg group shadow-lg"
+              >
+                Start free trial
+                <ArrowRight class="ml-2 h-5 w-5 group-hover:translate-x-1 transition" />
+              </Button>
+            </a>
+            <a href="/pricing">
+              <Button
+                size="lg"
+                variant="outline"
+                class="px-10 py-6 text-lg border-slate-300 dark:border-slate-700"
+              >
+                View pricing
+              </Button>
+            </a>
+          </div>
+        </div>
+      </section>
+
+      {/* Problem Statement */}
+      <section class="py-20 px-4 sm:px-6 lg:px-8">
+        <div class="max-w-5xl mx-auto">
+          <h2 class="text-4xl font-bold text-slate-900 dark:text-white mb-6">
+            The traditional application problem
+          </h2>
+          <p class="text-xl text-slate-600 dark:text-slate-400 mb-12">
+            84% of Gen Z and 73% of Millennials prefer texting, but most ATS systems force them into lengthy online applications.
+          </p>
+
+          <div class="grid md:grid-cols-2 gap-6">
+            <div class="bg-slate-50 dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-xl p-6">
+              <div class="w-12 h-12 bg-red-100 dark:bg-red-900/20 rounded-lg flex items-center justify-center mb-4">
+                <Clock class="w-6 h-6 text-red-600 dark:text-red-400" />
+              </div>
+              <h3 class="text-xl font-semibold text-slate-900 dark:text-white mb-3">
+                Lengthy application drop-offs
+              </h3>
+              <p class="text-slate-600 dark:text-slate-400">
+                60% of job seekers abandon long application processes. Traditional forms require 15-30 minutes on desktop. Mobile candidates especially frustrated by complex multi-page applications.
+              </p>
+            </div>
+
+            <div class="bg-slate-50 dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-xl p-6">
+              <div class="w-12 h-12 bg-red-100 dark:bg-red-900/20 rounded-lg flex items-center justify-center mb-4">
+                <TrendingUp class="w-6 h-6 text-red-600 dark:text-red-400" />
+              </div>
+              <h3 class="text-xl font-semibold text-slate-900 dark:text-white mb-3">
+                Email isn't where candidates are
+              </h3>
+              <p class="text-slate-600 dark:text-slate-400">
+                Only 20% of emails are opened by job seekers. Response rates are 6% at best. Candidates apply to 12 jobs at once—speed and convenience win.
+              </p>
+            </div>
+
+            <div class="bg-slate-50 dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-xl p-6">
+              <div class="w-12 h-12 bg-red-100 dark:bg-red-900/20 rounded-lg flex items-center justify-center mb-4">
+                <Users class="w-6 h-6 text-red-600 dark:text-red-400" />
+              </div>
+              <h3 class="text-xl font-semibold text-slate-900 dark:text-white mb-3">
+                Missing mobile-first candidates
+              </h3>
+              <p class="text-slate-600 dark:text-slate-400">
+                75% prefer text over phone calls. Field workers, retail staff, hospitality teams don't sit at computers all day. You're losing talent to competitors with easier application methods.
+              </p>
+            </div>
+
+            <div class="bg-slate-50 dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-xl p-6">
+              <div class="w-12 h-12 bg-red-100 dark:bg-red-900/20 rounded-lg flex items-center justify-center mb-4">
+                <MessageSquare class="w-6 h-6 text-red-600 dark:text-red-400" />
+              </div>
+              <h3 class="text-xl font-semibold text-slate-900 dark:text-white mb-3">
+                Slow, impersonal communication
+              </h3>
+              <p class="text-slate-600 dark:text-slate-400">
+                Email back-and-forth for scheduling takes days. Candidates ghost because they accepted other offers. No real-time engagement means losing top talent.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* How Jatura Solves It */}
+      <section class="py-20 px-4 sm:px-6 lg:px-8 bg-green-50 dark:bg-green-950/10">
+        <div class="max-w-5xl mx-auto">
+          <h2 class="text-4xl font-bold text-slate-900 dark:text-white mb-4 text-center">
+            How Jatura's text-to-apply works
+          </h2>
+          <p class="text-xl text-slate-600 dark:text-slate-400 text-center mb-12">
+            Instant applications. Automated screening. Real-time engagement. All via SMS.
+          </p>
+
+          <div class="space-y-8">
+            <div class="bg-white dark:bg-slate-900 border border-green-200 dark:border-green-900/30 rounded-2xl p-8">
+              <div class="flex items-start gap-6">
+                <div class="w-14 h-14 bg-green-100 dark:bg-green-900/30 rounded-xl flex items-center justify-center flex-shrink-0">
+                  <Smartphone class="w-7 h-7 text-green-600" />
+                </div>
+                <div>
+                  <h3 class="text-2xl font-bold text-slate-900 dark:text-white mb-3">
+                    Text a keyword to apply instantly
+                  </h3>
+                  <p class="text-lg text-slate-600 dark:text-slate-400 mb-4">
+                    Candidates text "JOBS" or a custom keyword to your dedicated number. They receive an instant link to a mobile-optimized micro-application that takes under 3 minutes to complete. No account creation, no complex forms.
+                  </p>
+                  <ul class="space-y-2">
+                    <li class="flex items-start gap-2">
+                      <CheckCircle class="w-5 h-5 text-green-600 flex-shrink-0 mt-0.5" />
+                      <span class="text-slate-600 dark:text-slate-400">Dedicated SMS number for your company</span>
+                    </li>
+                    <li class="flex items-start gap-2">
+                      <CheckCircle class="w-5 h-5 text-green-600 flex-shrink-0 mt-0.5" />
+                      <span class="text-slate-600 dark:text-slate-400">Customizable keywords per job or campaign</span>
+                    </li>
+                    <li class="flex items-start gap-2">
+                      <CheckCircle class="w-5 h-5 text-green-600 flex-shrink-0 mt-0.5" />
+                      <span class="text-slate-600 dark:text-slate-400">Instant auto-reply with application link</span>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            <div class="bg-white dark:bg-slate-900 border border-green-200 dark:border-green-900/30 rounded-2xl p-8">
+              <div class="flex items-start gap-6">
+                <div class="w-14 h-14 bg-green-100 dark:bg-green-900/30 rounded-xl flex items-center justify-center flex-shrink-0">
+                  <QrCode class="w-7 h-7 text-green-600" />
+                </div>
+                <div>
+                  <h3 class="text-2xl font-bold text-slate-900 dark:text-white mb-3">
+                    QR codes on signage & materials
+                  </h3>
+                  <p class="text-lg text-slate-600 dark:text-slate-400 mb-4">
+                    Post QR codes on "Now Hiring" signs, flyers, store windows, or tables. Candidates scan with their phone camera and instantly land on your mobile application page—no typing needed.
+                  </p>
+                  <ul class="space-y-2">
+                    <li class="flex items-start gap-2">
+                      <CheckCircle class="w-5 h-5 text-green-600 flex-shrink-0 mt-0.5" />
+                      <span class="text-slate-600 dark:text-slate-400">Generate job-specific QR codes</span>
+                    </li>
+                    <li class="flex items-start gap-2">
+                      <CheckCircle class="w-5 h-5 text-green-600 flex-shrink-0 mt-0.5" />
+                      <span class="text-slate-600 dark:text-slate-400">Track applications by QR code source</span>
+                    </li>
+                    <li class="flex items-start gap-2">
+                      <CheckCircle class="w-5 h-5 text-green-600 flex-shrink-0 mt-0.5" />
+                      <span class="text-slate-600 dark:text-slate-400">Perfect for in-store and event recruiting</span>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            <div class="bg-white dark:bg-slate-900 border border-green-200 dark:border-green-900/30 rounded-2xl p-8">
+              <div class="flex items-start gap-6">
+                <div class="w-14 h-14 bg-green-100 dark:bg-green-900/30 rounded-xl flex items-center justify-center flex-shrink-0">
+                  <Zap class="w-7 h-7 text-green-600" />
+                </div>
+                <div>
+                  <h3 class="text-2xl font-bold text-slate-900 dark:text-white mb-3">
+                    Automated SMS pre-screening
+                  </h3>
+                  <p class="text-lg text-slate-600 dark:text-slate-400 mb-4">
+                    Ask qualifying questions via text before candidates fill out the full application. Filter by availability, location, experience, certifications—all through conversational SMS. Auto-disqualify non-fits with respectful messages.
+                  </p>
+                  <ul class="space-y-2">
+                    <li class="flex items-start gap-2">
+                      <CheckCircle class="w-5 h-5 text-green-600 flex-shrink-0 mt-0.5" />
+                      <span class="text-slate-600 dark:text-slate-400">Conversational screening questions via SMS</span>
+                    </li>
+                    <li class="flex items-start gap-2">
+                      <CheckCircle class="w-5 h-5 text-green-600 flex-shrink-0 mt-0.5" />
+                      <span class="text-slate-600 dark:text-slate-400">Knockout criteria automation</span>
+                    </li>
+                    <li class="flex items-start gap-2">
+                      <CheckCircle class="w-5 h-5 text-green-600 flex-shrink-0 mt-0.5" />
+                      <span class="text-slate-600 dark:text-slate-400">Qualification before application submission</span>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            <div class="bg-white dark:bg-slate-900 border border-green-200 dark:border-green-900/30 rounded-2xl p-8">
+              <div class="flex items-start gap-6">
+                <div class="w-14 h-14 bg-green-100 dark:bg-green-900/30 rounded-xl flex items-center justify-center flex-shrink-0">
+                  <MessageSquare class="w-7 h-7 text-green-600" />
+                </div>
+                <div>
+                  <h3 class="text-2xl font-bold text-slate-900 dark:text-white mb-3">
+                    Two-way SMS communication
+                  </h3>
+                  <p class="text-lg text-slate-600 dark:text-slate-400 mb-4">
+                    Keep candidates engaged with real-time SMS updates. Send interview invites, reminders, status updates, and answer questions—all via text. Personal, conversational, and instant.
+                  </p>
+                  <ul class="space-y-2">
+                    <li class="flex items-start gap-2">
+                      <CheckCircle class="w-5 h-5 text-green-600 flex-shrink-0 mt-0.5" />
+                      <span class="text-slate-600 dark:text-slate-400">Real-time candidate conversations</span>
+                    </li>
+                    <li class="flex items-start gap-2">
+                      <CheckCircle class="w-5 h-5 text-green-600 flex-shrink-0 mt-0.5" />
+                      <span class="text-slate-600 dark:text-slate-400">Automated status update workflows</span>
+                    </li>
+                    <li class="flex items-start gap-2">
+                      <CheckCircle class="w-5 h-5 text-green-600 flex-shrink-0 mt-0.5" />
+                      <span class="text-slate-600 dark:text-slate-400">Interview reminders reduce no-shows</span>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            <div class="bg-white dark:bg-slate-900 border border-green-200 dark:border-green-900/30 rounded-2xl p-8">
+              <div class="flex items-start gap-6">
+                <div class="w-14 h-14 bg-green-100 dark:bg-green-900/30 rounded-xl flex items-center justify-center flex-shrink-0">
+                  <Target class="w-7 h-7 text-green-600" />
+                </div>
+                <div>
+                  <h3 class="text-2xl font-bold text-slate-900 dark:text-white mb-3">
+                    Broadcast job openings to talent pools
+                  </h3>
+                  <p class="text-lg text-slate-600 dark:text-slate-400 mb-4">
+                    Send mass texts to previous applicants, past candidates, or opted-in talent communities. Announce new openings, seasonal hiring, or urgent roles. Re-engage passive candidates with one click.
+                  </p>
+                  <ul class="space-y-2">
+                    <li class="flex items-start gap-2">
+                      <CheckCircle class="w-5 h-5 text-green-600 flex-shrink-0 mt-0.5" />
+                      <span class="text-slate-600 dark:text-slate-400">Segment talent pools for targeted messaging</span>
+                    </li>
+                    <li class="flex items-start gap-2">
+                      <CheckCircle class="w-5 h-5 text-green-600 flex-shrink-0 mt-0.5" />
+                      <span class="text-slate-600 dark:text-slate-400">Personalized bulk SMS campaigns</span>
+                    </li>
+                    <li class="flex items-start gap-2">
+                      <CheckCircle class="w-5 h-5 text-green-600 flex-shrink-0 mt-0.5" />
+                      <span class="text-slate-600 dark:text-slate-400">Opt-in/opt-out management for compliance</span>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* How It Works */}
+      <section class="py-20 px-4 sm:px-6 lg:px-8">
+        <div class="max-w-5xl mx-auto">
+          <h2 class="text-4xl font-bold text-slate-900 dark:text-white mb-12 text-center">
+            How it works
+          </h2>
+
+          <div class="space-y-8">
+            <div class="flex gap-6">
+              <div class="flex-shrink-0">
+                <div class="w-12 h-12 bg-green-600 rounded-full flex items-center justify-center text-white font-bold text-lg">
+                  1
+                </div>
+              </div>
+              <div>
+                <h3 class="text-xl font-bold text-slate-900 dark:text-white mb-2">
+                  Set up your SMS recruiting number
+                </h3>
+                <p class="text-slate-600 dark:text-slate-400">
+                  Get a dedicated SMS number for your company. Configure custom keywords (e.g., "RETAIL" for retail jobs, "SERVER" for hospitality). Generate QR codes for physical signage.
+                </p>
+              </div>
+            </div>
+
+            <div class="flex gap-6">
+              <div class="flex-shrink-0">
+                <div class="w-12 h-12 bg-green-600 rounded-full flex items-center justify-center text-white font-bold text-lg">
+                  2
+                </div>
+              </div>
+              <div>
+                <h3 class="text-xl font-bold text-slate-900 dark:text-white mb-2">
+                  Candidate texts to apply
+                </h3>
+                <p class="text-slate-600 dark:text-slate-400">
+                  Job seeker sees your "Now Hiring" sign with SMS number, scans QR code, or receives text from your bulk campaign. They text the keyword and immediately receive a mobile-optimized application link.
+                </p>
+              </div>
+            </div>
+
+            <div class="flex gap-6">
+              <div class="flex-shrink-0">
+                <div class="w-12 h-12 bg-green-600 rounded-full flex items-center justify-center text-white font-bold text-lg">
+                  3
+                </div>
+              </div>
+              <div>
+                <h3 class="text-xl font-bold text-slate-900 dark:text-white mb-2">
+                  Automated screening via SMS
+                </h3>
+                <p class="text-slate-600 dark:text-slate-400">
+                  Before the full application, Jatura sends qualifying questions via text. Candidates answer in real-time. Jatura auto-filters based on your criteria (location, availability, experience, etc.).
+                </p>
+              </div>
+            </div>
+
+            <div class="flex gap-6">
+              <div class="flex-shrink-0">
+                <div class="w-12 h-12 bg-green-600 rounded-full flex items-center justify-center text-white font-bold text-lg">
+                  4
+                </div>
+              </div>
+              <div>
+                <h3 class="text-xl font-bold text-slate-900 dark:text-white mb-2">
+                  Complete micro-application on mobile
+                </h3>
+                <p class="text-slate-600 dark:text-slate-400">
+                  Qualified candidates complete a streamlined mobile application in under 3 minutes. Resume upload optional (can use LinkedIn or manual entry). Application automatically syncs to your ATS pipeline.
+                </p>
+              </div>
+            </div>
+
+            <div class="flex gap-6">
+              <div class="flex-shrink-0">
+                <div class="w-12 h-12 bg-green-600 rounded-full flex items-center justify-center text-white font-bold text-lg">
+                  5
+                </div>
+              </div>
+              <div>
+                <h3 class="text-xl font-bold text-slate-900 dark:text-white mb-2">
+                  Engage and hire via SMS
+                </h3>
+                <p class="text-slate-600 dark:text-slate-400">
+                  Send interview invites, reminders, and status updates via text. Candidates confirm attendance with a simple reply. Automated reminder texts reduce no-shows by up to 40%.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Ideal For */}
+      <section class="py-20 px-4 sm:px-6 lg:px-8 bg-slate-50 dark:bg-slate-900/50">
+        <div class="max-w-5xl mx-auto">
+          <h2 class="text-4xl font-bold text-slate-900 dark:text-white mb-12 text-center">
+            Perfect for
+          </h2>
+
+          <div class="grid md:grid-cols-2 gap-6">
+            <div class="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-xl p-6">
+              <h3 class="text-xl font-semibold text-slate-900 dark:text-white mb-3">
+                Retail & E-commerce
+              </h3>
+              <p class="text-slate-600 dark:text-slate-400">
+                Hire store associates, cashiers, warehouse workers, and seasonal staff. QR codes on store windows, text-to-apply for instant applications.
+              </p>
+            </div>
+
+            <div class="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-xl p-6">
+              <h3 class="text-xl font-semibold text-slate-900 dark:text-white mb-3">
+                Hospitality & Food Service
+              </h3>
+              <p class="text-slate-600 dark:text-slate-400">
+                Servers, bartenders, kitchen staff, hotel personnel. Put QR codes on tables, menus, or receipts. Text-to-apply gets candidates in fast.
+              </p>
+            </div>
+
+            <div class="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-xl p-6">
+              <h3 class="text-xl font-semibold text-slate-900 dark:text-white mb-3">
+                Field-Based & Blue-Collar Roles
+              </h3>
+              <p class="text-slate-600 dark:text-slate-400">
+                Construction, landscaping, skilled trades, delivery drivers. These workers don't sit at computers—text-to-apply meets them where they are.
+              </p>
+            </div>
+
+            <div class="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-xl p-6">
+              <h3 class="text-xl font-semibold text-slate-900 dark:text-white mb-3">
+                Staffing Agencies
+              </h3>
+              <p class="text-slate-600 dark:text-slate-400">
+                Build candidate pools quickly for multiple clients. Text campaigns re-engage passive candidates for urgent placements. High-volume SMS recruiting at scale.
+              </p>
+            </div>
+
+            <div class="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-xl p-6">
+              <h3 class="text-xl font-semibold text-slate-900 dark:text-white mb-3">
+                Healthcare (Non-Clinical Roles)
+              </h3>
+              <p class="text-slate-600 dark:text-slate-400">
+                Medical assistants, receptionists, administrative staff. Fast hiring for roles that don't require complex credentialing.
+              </p>
+            </div>
+
+            <div class="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-xl p-6">
+              <h3 class="text-xl font-semibold text-slate-900 dark:text-white mb-3">
+                Event Staffing
+              </h3>
+              <p class="text-slate-600 dark:text-slate-400">
+                Hire event coordinators, temporary workers, brand ambassadors. Text campaigns for urgent hiring needs. Fast onboarding for short-term roles.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Stats Section */}
+      <section class="py-20 px-4 sm:px-6 lg:px-8 bg-green-50 dark:bg-green-950/10">
+        <div class="max-w-5xl mx-auto">
+          <h2 class="text-4xl font-bold text-slate-900 dark:text-white mb-12 text-center">
+            Why SMS recruiting works
+          </h2>
+
+          <div class="grid md:grid-cols-3 gap-8">
+            <div class="text-center">
+              <div class="text-5xl font-bold text-green-600 mb-3">5B</div>
+              <p class="text-slate-600 dark:text-slate-400">People globally send text messages</p>
+            </div>
+            <div class="text-center">
+              <div class="text-5xl font-bold text-green-600 mb-3">344</div>
+              <p class="text-slate-600 dark:text-slate-400">Times per day Americans check phones</p>
+            </div>
+            <div class="text-center">
+              <div class="text-5xl font-bold text-green-600 mb-3">200%</div>
+              <p class="text-slate-600 dark:text-slate-400">Higher response rate than email</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* CTA Section */}
+      <section class="py-28 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-green-600 to-green-700">
+        <div class="max-w-4xl mx-auto text-center">
+          <h2 class="text-4xl sm:text-5xl font-bold text-white mb-6">
+            Ready to revolutionize your hiring?
+          </h2>
+          <p class="text-xl text-green-50 mb-10">
+            Join companies using SMS to hire faster, engage better, and win top talent in competitive markets.
+          </p>
+          <div class="flex flex-col sm:flex-row gap-4 justify-center">
+            <a href="/login">
+              <Button
+                size="lg"
+                class="bg-white text-green-600 hover:bg-green-50 px-10 py-6 text-lg"
+              >
+                Start free trial
+                <ArrowRight class="ml-2 h-5 w-5" />
+              </Button>
+            </a>
+            <a href="/pricing">
+              <Button
+                size="lg"
+                variant="outline"
+                class="px-10 py-6 text-lg border-white text-white hover:bg-green-600"
+              >
+                View pricing
+              </Button>
+            </a>
+          </div>
+        </div>
+      </section>
+
+</MarketingLayout>

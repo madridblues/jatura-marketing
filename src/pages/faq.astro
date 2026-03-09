@@ -1,0 +1,25 @@
+---
+export const prerender = true;
+import MarketingLayout from '@/layouts/MarketingLayout.astro';
+import FAQPage from '@/components/islands/FAQPage';
+
+const schemaOrg = [
+  {
+    "@type": "FAQPage",
+    "mainEntity": [
+      { "@type": "Question", "name": "What is Jatura ATS?", "acceptedAnswer": { "@type": "Answer", "text": "Jatura is an all-in-one AI-native applicant tracking system (ATS) designed for modern hiring teams. It combines ATS, candidate CRM, scheduling, omni-channel messaging, analytics, and employer branding in a single platform." } },
+      { "@type": "Question", "name": "Who is Jatura ATS for?", "acceptedAnswer": { "@type": "Answer", "text": "Jatura is built for ambitious startups, scale-ups, and mid-market companies with 1 to 500+ employees. It's ideal for in-house recruiting teams who need a powerful, easy-to-use ATS without enterprise complexity." } },
+      { "@type": "Question", "name": "How much does Jatura cost?", "acceptedAnswer": { "@type": "Answer", "text": "Jatura offers a free Launch plan with up to 3 active jobs. Paid plans start at $49/month (Plus), $129/month (Pro), and $299/month (Enterprise). Annual billing saves 20%." } },
+      { "@type": "Question", "name": "Do you offer a free trial?", "acceptedAnswer": { "@type": "Answer", "text": "Jatura's Launch plan is permanently free — no trial period, no credit card required. You can start using Jatura immediately and upgrade when you're ready." } },
+      { "@type": "Question", "name": "Is Jatura GDPR compliant?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. Jatura is fully GDPR compliant. Data is stored in EU-based servers, candidate consent is managed automatically, and you can process data deletion requests from your dashboard." } },
+      { "@type": "Question", "name": "What AI features does Jatura include?", "acceptedAnswer": { "@type": "Answer", "text": "Jatura includes AI resume screening, AI job description generation, AI candidate scoring, AI interview question generation, and AI-powered personalized outreach — all included in paid plans." } },
+      { "@type": "Question", "name": "Can I import data from my existing ATS?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. Jatura supports data migration from major ATS platforms including Greenhouse, Lever, Workable, BambooHR, and JazzHR. Our team provides free migration assistance on Pro and Enterprise plans." } },
+      { "@type": "Question", "name": "Does Jatura integrate with other tools?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. Jatura integrates with 100+ tools including LinkedIn, Indeed, Google Calendar, Outlook, Slack, Zapier, and major HRIS platforms. An open REST API is available for custom integrations." } }
+    ]
+  }
+];
+---
+
+<MarketingLayout title="Frequently Asked Questions | Jatura ATS" description="Answers to 40+ common questions about Jatura ATS: free plan details, pricing tiers, AI features, GDPR compliance, integrations, implementation, and data migration. Search all FAQs." {schemaOrg}>
+  <FAQPage client:load />
+</MarketingLayout>

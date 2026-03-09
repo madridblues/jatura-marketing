@@ -1,0 +1,671 @@
+---
+export const prerender = true;
+import MarketingLayout from '@/layouts/MarketingLayout.astro';
+import { ArrowRight, CheckCircle, XCircle, MinusCircle, DollarSign, Users, Zap, TrendingUp, Scale, Building2 } from 'lucide-react';
+import { Button } from '@/components/ui/button';
+import { Badge } from '@/components/ui/badge';
+
+const title = "Jatura vs SmartRecruiters - Honest ATS Comparison 2025";
+const description = "Jatura vs SmartRecruiters: 2025 feature and pricing comparison for mid-market hiring teams. Compare AI screening, candidate experience, integrations, and total cost of ownership.";
+
+const schemaOrg = [
+  {
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://jatura.com" },
+      { "@type": "ListItem", "position": 2, "name": "Compare ATS", "item": "https://jatura.com/compare" },
+      { "@type": "ListItem", "position": 3, "name": "Jatura vs SmartRecruiters", "item": "https://jatura.com/compare/smartrecruiters" }
+    ]
+  },
+  {
+    "@type": "WebPage",
+    "name": "Jatura vs SmartRecruiters - ATS Comparison 2025",
+    "description": "Detailed feature, pricing, and AI capability comparison between Jatura and SmartRecruiters",
+    "url": "https://jatura.com/compare/smartrecruiters",
+    "about": [
+      { "@type": "SoftwareApplication", "name": "Jatura", "applicationCategory": "BusinessApplication" },
+      { "@type": "SoftwareApplication", "name": "SmartRecruiters", "applicationCategory": "BusinessApplication" }
+    ]
+  }
+];
+---
+
+<MarketingLayout {title} {description} {schemaOrg}>
+
+      {/* Hero Section */}
+      <section class="pt-24 pb-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-slate-50 to-white dark:from-slate-900/50 dark:to-slate-950">
+        <div class="max-w-5xl mx-auto">
+          <a href="/compare">
+            <Button variant="ghost" class="mb-6 -ml-4">
+              ← Back to all comparisons
+            </Button>
+          </a>
+          
+          <Badge
+            variant="secondary"
+            class="mb-6 px-5 py-2 text-sm font-medium bg-slate-100 dark:bg-slate-800 text-slate-900 dark:text-slate-100"
+          >
+            <Scale class="w-4 h-4 mr-2" />
+            Honest Comparison
+          </Badge>
+          
+          <h1 class="text-5xl sm:text-6xl font-bold text-slate-900 dark:text-white mb-6 leading-tight">
+            Jatura vs SmartRecruiters
+          </h1>
+          
+          <p class="text-xl sm:text-2xl text-slate-600 dark:text-slate-400 mb-8 leading-relaxed">
+            SmartRecruiters is an enterprise talent acquisition suite with powerful AI and 350+ integrations. Jatura delivers similar AI capabilities and collaboration tools at 88-97% lower cost—without the setup complexity or enterprise price tag.
+          </p>
+
+          <div class="bg-slate-100 dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-2xl p-8 mb-8">
+            <h3 class="text-lg font-semibold text-slate-900 dark:text-white mb-4">
+              TL;DR
+            </h3>
+            <div class="space-y-3 text-slate-600 dark:text-slate-400">
+              <p>
+                <strong class="text-slate-900 dark:text-white">SmartRecruiters</strong> is an enterprise-grade talent acquisition platform (not just an ATS) used by Amazon, Visa, IBM, and LinkedIn. Powerful AI (Winston), 350+ integrations, global compliance. Perfect for mid-market to enterprise (500+ employees). Starting at $10,000+/year with "steep learning curve" during setup.
+              </p>
+              <p>
+                <strong class="text-slate-900 dark:text-white">Jatura</strong> brings enterprise-grade AI capabilities (GPT-4o powered), modern collaboration tools, and scalable infrastructure to small and mid-sized teams at $99-$299/month ($1,188-$3,588/year)—88-97% less than SmartRecruiters. No steep learning curve, no overkill features, no enterprise sales process.
+              </p>
+            </div>
+          </div>
+
+          <div class="flex flex-col sm:flex-row gap-4">
+            <a href="/login">
+              <Button
+                size="lg"
+                class="bg-slate-900 dark:bg-white text-white dark:text-slate-900 hover:bg-slate-800 dark:hover:bg-slate-100 px-10 py-6 text-lg group shadow-lg"
+              >
+                Try Jatura free
+                <ArrowRight class="ml-2 h-5 w-5 group-hover:translate-x-1 transition" />
+              </Button>
+            </a>
+            <a href="/pricing">
+              <Button
+                size="lg"
+                variant="outline"
+                class="px-10 py-6 text-lg border-slate-300 dark:border-slate-700"
+              >
+                View pricing
+              </Button>
+            </a>
+          </div>
+        </div>
+      </section>
+
+      {/* What SmartRecruiters Does Well */}
+      <section class="py-20 px-4 sm:px-6 lg:px-8">
+        <div class="max-w-5xl mx-auto">
+          <div class="flex items-center gap-3 mb-8">
+            <TrendingUp class="w-8 h-8 text-emerald-600" />
+            <h2 class="text-4xl font-bold text-slate-900 dark:text-white">
+              What SmartRecruiters does well
+            </h2>
+          </div>
+          
+          <p class="text-lg text-slate-600 dark:text-slate-400 mb-8">
+            SmartRecruiters serves enterprise clients like Amazon, Visa, IBM, and LinkedIn. Here's where they excel:
+          </p>
+
+          <div class="grid md:grid-cols-2 gap-6">
+            <div class="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-xl p-6">
+              <h3 class="text-xl font-semibold text-slate-900 dark:text-white mb-3">
+                Powerful AI (Winston)
+              </h3>
+              <p class="text-slate-600 dark:text-slate-400">
+                Winston AI modules deliver "surprisingly good accuracy" for candidate matching (Winston Match), automated screening (Winston Screen), and chat assistant for candidate engagement. Industry-leading AI capabilities.
+              </p>
+            </div>
+
+            <div class="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-xl p-6">
+              <h3 class="text-xl font-semibold text-slate-900 dark:text-white mb-3">
+                Extensive integrations (350+)
+              </h3>
+              <p class="text-slate-600 dark:text-slate-400">
+                Open Marketplace with 350+ pre-built connections to HRIS (Workday, DocuSign, HackerRank, Slack). API-friendly with comprehensive documentation for custom integrations.
+              </p>
+            </div>
+
+            <div class="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-xl p-6">
+              <h3 class="text-xl font-semibold text-slate-900 dark:text-white mb-3">
+                Modern, intuitive UI
+              </h3>
+              <p class="text-slate-600 dark:text-slate-400">
+                Clean, social media-like interface. Mobile-first design. Strong collaboration tools for hiring managers, recruiters, and stakeholders with real-time communication.
+              </p>
+            </div>
+
+            <div class="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-xl p-6">
+              <h3 class="text-xl font-semibold text-slate-900 dark:text-white mb-3">
+                Enterprise scalability
+              </h3>
+              <p class="text-slate-600 dark:text-slate-400">
+                Designed for mid-market to enterprise (500+ employees). Handles high-volume hiring well. Built-in global compliance support for distributed teams.
+              </p>
+            </div>
+
+            <div class="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-xl p-6">
+              <h3 class="text-xl font-semibold text-slate-900 dark:text-white mb-3">
+                Talent acquisition suite
+              </h3>
+              <p class="text-slate-600 dark:text-slate-400">
+                Not just an ATS—full talent acquisition suite with recruitment marketing, onboarding, analytics (powered by Visier), and CRM capabilities. Comprehensive platform for end-to-end recruiting.
+              </p>
+            </div>
+
+            <div class="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-xl p-6">
+              <h3 class="text-xl font-semibold text-slate-900 dark:text-white mb-3">
+                Data-driven insights
+              </h3>
+              <p class="text-slate-600 dark:text-slate-400">
+                Strong analytics for tracking recruitment metrics, time-to-hire, and hiring effectiveness. Skills taxonomy with 14,000+ skills and 3,000 occupations in multiple languages.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Where SmartRecruiters Falls Short */}
+      <section class="py-20 px-4 sm:px-6 lg:px-8 bg-slate-50 dark:bg-slate-900/50">
+        <div class="max-w-5xl mx-auto">
+          <div class="flex items-center gap-3 mb-8">
+            <XCircle class="w-8 h-8 text-red-600" />
+            <h2 class="text-4xl font-bold text-slate-900 dark:text-white">
+              Where SmartRecruiters falls short
+            </h2>
+          </div>
+          
+          <p class="text-lg text-slate-600 dark:text-slate-400 mb-8">
+            Based on real customer reviews, here are the common challenges with SmartRecruiters:
+          </p>
+
+          <div class="space-y-6">
+            <div class="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-xl p-6">
+              <div class="flex items-start gap-4">
+                <Zap class="w-6 h-6 text-red-600 flex-shrink-0 mt-1" />
+                <div>
+                  <h3 class="text-xl font-semibold text-slate-900 dark:text-white mb-2">
+                    "Steep learning curve" during setup
+                  </h3>
+                  <p class="text-slate-600 dark:text-slate-400 mb-3">
+                    "Power comes at the cost of an initial setup learning curve." More intensive setup than simpler ATS solutions. Some users report the UI "takes time to get used to."
+                  </p>
+                  <p class="text-sm italic text-slate-500 dark:text-slate-500">
+                    "Initial setup complexity...steep learning curve" — Customer reviews
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div class="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-xl p-6">
+              <div class="flex items-start gap-4">
+                <DollarSign class="w-6 h-6 text-red-600 flex-shrink-0 mt-1" />
+                <div>
+                  <h3 class="text-xl font-semibold text-slate-900 dark:text-white mb-2">
+                    Expensive for smaller teams
+                  </h3>
+                  <p class="text-slate-600 dark:text-slate-400 mb-3">
+                    Starting at $10,000+/year including fees. Estimated $6-10 per employee per month (PEPM). "Overkill for startups/under 500 employees." "Cost is a bit high for smaller agency/team."
+                  </p>
+                  <p class="text-sm italic text-slate-500 dark:text-slate-500">
+                    "Not for small teams...too expensive" — Review
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div class="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-xl p-6">
+              <div class="flex items-start gap-4">
+                <MinusCircle class="w-6 h-6 text-red-600 flex-shrink-0 mt-1" />
+                <div>
+                  <h3 class="text-xl font-semibold text-slate-900 dark:text-white mb-2">
+                    Limited onboarding capabilities
+                  </h3>
+                  <p class="text-slate-600 dark:text-slate-400 mb-3">
+                    Onboarding features are basic (task completion and document signing). Requires HRIS integration for robust onboarding workflows.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div class="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-xl p-6">
+              <div class="flex items-start gap-4">
+                <Building2 class="w-6 h-6 text-red-600 flex-shrink-0 mt-1" />
+                <div>
+                  <h3 class="text-xl font-semibold text-slate-900 dark:text-white mb-2">
+                    No native video interviewing
+                  </h3>
+                  <p class="text-slate-600 dark:text-slate-400 mb-3">
+                    Must integrate third-party tools for video interviews. Users seeking all-in-one solutions may find this a drawback.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div class="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-xl p-6">
+              <div class="flex items-start gap-4">
+                <Users class="w-6 h-6 text-red-600 flex-shrink-0 mt-1" />
+                <div>
+                  <h3 class="text-xl font-semibold text-slate-900 dark:text-white mb-2">
+                    Interview scheduling issues
+                  </h3>
+                  <p class="text-slate-600 dark:text-slate-400 mb-3">
+                    Users report "lack of basic scheduling functionalities" requiring manual adjustments. Integration limitations with calendar systems.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div class="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-xl p-6">
+              <div class="flex items-start gap-4">
+                <Zap class="w-6 h-6 text-red-600 flex-shrink-0 mt-1" />
+                <div>
+                  <h3 class="text-xl font-semibold text-slate-900 dark:text-white mb-2">
+                    Inconsistent support for smaller customers
+                  </h3>
+                  <p class="text-slate-600 dark:text-slate-400 mb-3">
+                    Lower-tier pricing plans may receive less responsive support vs. enterprise clients. Email-only support for some tiers. "Impossible to contact support" noted in Trustpilot reviews.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* How Jatura is Different */}
+      <section class="py-20 px-4 sm:px-6 lg:px-8">
+        <div class="max-w-5xl mx-auto">
+          <div class="flex items-center gap-3 mb-8">
+            <CheckCircle class="w-8 h-8 text-emerald-600" />
+            <h2 class="text-4xl font-bold text-slate-900 dark:text-white">
+              How Jatura is different
+            </h2>
+          </div>
+
+          <p class="text-lg text-slate-600 dark:text-slate-400 mb-8">
+            We built Jatura to deliver enterprise-grade AI and collaboration at SMB pricing—no steep learning curve, no $10K+ contracts, no feature overkill.
+          </p>
+
+          <div class="grid md:grid-cols-2 gap-6 mb-12">
+            <div class="bg-emerald-50 dark:bg-emerald-950/20 border border-emerald-200 dark:border-emerald-900 rounded-xl p-6">
+              <h3 class="text-xl font-semibold text-slate-900 dark:text-white mb-3">
+                Enterprise AI at SMB pricing
+              </h3>
+              <p class="text-slate-600 dark:text-slate-400">
+                GPT-4o-powered AI screening, intelligent matching, job description generation, AI Copilot—comparable to Winston AI at 88-97% lower cost. $99-$299/month vs. $10,000+/year.
+              </p>
+            </div>
+
+            <div class="bg-emerald-50 dark:bg-emerald-950/20 border border-emerald-200 dark:border-emerald-900 rounded-xl p-6">
+              <h3 class="text-xl font-semibold text-slate-900 dark:text-white mb-3">
+                No steep learning curve
+              </h3>
+              <p class="text-slate-600 dark:text-slate-400">
+                Quick setup, intuitive interface, minimal training required. Get productive immediately—no intensive setup or configuration complexity.
+              </p>
+            </div>
+
+            <div class="bg-emerald-50 dark:bg-emerald-950/20 border border-emerald-200 dark:border-emerald-900 rounded-xl p-6">
+              <h3 class="text-xl font-semibold text-slate-900 dark:text-white mb-3">
+                Video interviewing included
+              </h3>
+              <p class="text-slate-600 dark:text-slate-400">
+                Native video interviewing built-in—no third-party integrations required. True all-in-one solution at no extra cost.
+              </p>
+            </div>
+
+            <div class="bg-emerald-50 dark:bg-emerald-950/20 border border-emerald-200 dark:border-emerald-900 rounded-xl p-6">
+              <h3 class="text-xl font-semibold text-slate-900 dark:text-white mb-3">
+                Advanced interview scheduling
+              </h3>
+              <p class="text-slate-600 dark:text-slate-400">
+                Sophisticated scheduling with conflict detection, buffer time management, focus time protection—no "lack of basic scheduling functionalities."
+              </p>
+            </div>
+
+            <div class="bg-emerald-50 dark:bg-emerald-950/20 border border-emerald-200 dark:border-emerald-900 rounded-xl p-6">
+              <h3 class="text-xl font-semibold text-slate-900 dark:text-white mb-3">
+                Right-sized for SMBs
+              </h3>
+              <p class="text-slate-600 dark:text-slate-400">
+                Not "overkill for small teams"—built for 10-500 employees with features that matter. No enterprise complexity, no unused modules, no wasted budget.
+              </p>
+            </div>
+
+            <div class="bg-emerald-50 dark:bg-emerald-950/20 border border-emerald-200 dark:border-emerald-900 rounded-xl p-6">
+              <h3 class="text-xl font-semibold text-slate-900 dark:text-white mb-3">
+                Responsive support for everyone
+              </h3>
+              <p class="text-slate-600 dark:text-slate-400">
+                No tier-based support discrimination. Every customer gets responsive, helpful support—not just enterprise accounts paying $50K+.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Feature Comparison Table */}
+      <section class="py-20 px-4 sm:px-6 lg:px-8 bg-slate-50 dark:bg-slate-900/50">
+        <div class="max-w-6xl mx-auto">
+          <h2 class="text-4xl font-bold text-slate-900 dark:text-white mb-4 text-center">
+            Side-by-side feature comparison
+          </h2>
+          <p class="text-xl text-slate-600 dark:text-slate-400 text-center mb-12">
+            Based on publicly available information and user reviews
+          </p>
+
+          <div class="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-2xl overflow-hidden">
+            <div class="overflow-x-auto">
+              <table class="w-full">
+                <thead>
+                  <tr class="bg-slate-100 dark:bg-slate-800">
+                    <th class="text-left p-6 text-slate-900 dark:text-white font-semibold">Feature</th>
+                    <th class="text-center p-6 text-slate-900 dark:text-white font-semibold">Jatura</th>
+                    <th class="text-center p-6 text-slate-900 dark:text-white font-semibold">SmartRecruiters</th>
+                  </tr>
+                </thead>
+                <tbody class="divide-y divide-slate-200 dark:divide-slate-800">
+                  <tr>
+                    <td class="p-6 text-slate-900 dark:text-white font-medium">Starting price (annual)</td>
+                    <td class="p-6 text-center text-slate-600 dark:text-slate-400">$99/month ($1,188/year)</td>
+                    <td class="p-6 text-center text-slate-600 dark:text-slate-400">$10,000+/year</td>
+                  </tr>
+                  <tr>
+                    <td class="p-6 text-slate-900 dark:text-white font-medium">Setup complexity</td>
+                    <td class="p-6 text-center text-emerald-600 font-medium">Simple, quick setup</td>
+                    <td class="p-6 text-center text-slate-600 dark:text-slate-400">Steep learning curve</td>
+                  </tr>
+                  <tr>
+                    <td class="p-6 text-slate-900 dark:text-white font-medium">Best for team size</td>
+                    <td class="p-6 text-center text-emerald-600 font-medium">10-500 employees</td>
+                    <td class="p-6 text-center text-slate-600 dark:text-slate-400">500+ employees</td>
+                  </tr>
+                  <tr>
+                    <td class="p-6 text-slate-900 dark:text-white font-medium">AI capabilities</td>
+                    <td class="p-6 text-center text-emerald-600 font-medium">Advanced (GPT-4o)</td>
+                    <td class="p-6 text-center text-slate-600 dark:text-slate-400">Winston AI</td>
+                  </tr>
+                  <tr>
+                    <td class="p-6 text-slate-900 dark:text-white font-medium">Video interviewing</td>
+                    <td class="p-6 text-center text-emerald-600 font-medium">Native, included</td>
+                    <td class="p-6 text-center"><XCircle class="w-5 h-5 text-red-600 mx-auto" /></td>
+                  </tr>
+                  <tr>
+                    <td class="p-6 text-slate-900 dark:text-white font-medium">Interview scheduling</td>
+                    <td class="p-6 text-center text-emerald-600 font-medium">Advanced with conflict detection</td>
+                    <td class="p-6 text-center text-slate-600 dark:text-slate-400">Basic, requires manual work</td>
+                  </tr>
+                  <tr>
+                    <td class="p-6 text-slate-900 dark:text-white font-medium">Integrations</td>
+                    <td class="p-6 text-center text-slate-600 dark:text-slate-400">50+ (growing)</td>
+                    <td class="p-6 text-center text-slate-600 dark:text-slate-400">350+</td>
+                  </tr>
+                  <tr>
+                    <td class="p-6 text-slate-900 dark:text-white font-medium">Modern UI</td>
+                    <td class="p-6 text-center"><CheckCircle class="w-5 h-5 text-emerald-600 mx-auto" /></td>
+                    <td class="p-6 text-center"><CheckCircle class="w-5 h-5 text-emerald-600 mx-auto" /></td>
+                  </tr>
+                  <tr>
+                    <td class="p-6 text-slate-900 dark:text-white font-medium">Collaboration tools</td>
+                    <td class="p-6 text-center"><CheckCircle class="w-5 h-5 text-emerald-600 mx-auto" /></td>
+                    <td class="p-6 text-center"><CheckCircle class="w-5 h-5 text-emerald-600 mx-auto" /></td>
+                  </tr>
+                  <tr>
+                    <td class="p-6 text-slate-900 dark:text-white font-medium">Mobile app</td>
+                    <td class="p-6 text-center"><CheckCircle class="w-5 h-5 text-emerald-600 mx-auto" /></td>
+                    <td class="p-6 text-center"><CheckCircle class="w-5 h-5 text-emerald-600 mx-auto" /></td>
+                  </tr>
+                  <tr>
+                    <td class="p-6 text-slate-900 dark:text-white font-medium">Analytics & reporting</td>
+                    <td class="p-6 text-center text-emerald-600 font-medium">Advanced</td>
+                    <td class="p-6 text-center text-slate-600 dark:text-slate-400">Advanced (Visier)</td>
+                  </tr>
+                  <tr>
+                    <td class="p-6 text-slate-900 dark:text-white font-medium">Job posting</td>
+                    <td class="p-6 text-center"><CheckCircle class="w-5 h-5 text-emerald-600 mx-auto" /></td>
+                    <td class="p-6 text-center"><CheckCircle class="w-5 h-5 text-emerald-600 mx-auto" /></td>
+                  </tr>
+                  <tr>
+                    <td class="p-6 text-slate-900 dark:text-white font-medium">Career page builder</td>
+                    <td class="p-6 text-center"><CheckCircle class="w-5 h-5 text-emerald-600 mx-auto" /></td>
+                    <td class="p-6 text-center"><CheckCircle class="w-5 h-5 text-emerald-600 mx-auto" /></td>
+                  </tr>
+                  <tr>
+                    <td class="p-6 text-slate-900 dark:text-white font-medium">Onboarding</td>
+                    <td class="p-6 text-center text-emerald-600 font-medium">Comprehensive</td>
+                    <td class="p-6 text-center text-slate-600 dark:text-slate-400">Basic</td>
+                  </tr>
+                  <tr>
+                    <td class="p-6 text-slate-900 dark:text-white font-medium">Global compliance</td>
+                    <td class="p-6 text-center"><CheckCircle class="w-5 h-5 text-emerald-600 mx-auto" /></td>
+                    <td class="p-6 text-center"><CheckCircle class="w-5 h-5 text-emerald-600 mx-auto" /></td>
+                  </tr>
+                  <tr>
+                    <td class="p-6 text-slate-900 dark:text-white font-medium">Customer support</td>
+                    <td class="p-6 text-center text-emerald-600 font-medium">Responsive for all customers</td>
+                    <td class="p-6 text-center text-slate-600 dark:text-slate-400">Tier-based</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Pricing Comparison */}
+      <section class="py-20 px-4 sm:px-6 lg:px-8">
+        <div class="max-w-5xl mx-auto">
+          <h2 class="text-4xl font-bold text-slate-900 dark:text-white mb-12 text-center">
+            Pricing comparison
+          </h2>
+
+          <div class="grid md:grid-cols-2 gap-8 mb-12">
+            {/* Jatura Pricing */}
+            <div class="bg-emerald-50 dark:bg-emerald-950/20 border-2 border-emerald-200 dark:border-emerald-900 rounded-2xl p-8">
+              <div class="text-sm font-semibold text-emerald-600 mb-2">JATURA</div>
+              <div class="text-4xl font-bold text-slate-900 dark:text-white mb-2">
+                $99-$299<span class="text-xl text-slate-600 dark:text-slate-400">/mo</span>
+              </div>
+              <p class="text-slate-600 dark:text-slate-400 mb-6">
+                Flat rate pricing, enterprise features included
+              </p>
+              <ul class="space-y-3">
+                <li class="flex items-start gap-2">
+                  <CheckCircle class="w-5 h-5 text-emerald-600 flex-shrink-0 mt-0.5" />
+                  <span class="text-slate-600 dark:text-slate-400">
+                    <strong class="text-slate-900 dark:text-white">Free ($0/mo):</strong> Up to 3 active jobs, unlimited applications
+                  </span>
+                </li>
+                <li class="flex items-start gap-2">
+                  <CheckCircle class="w-5 h-5 text-emerald-600 flex-shrink-0 mt-0.5" />
+                  <span class="text-slate-600 dark:text-slate-400">
+                    <strong class="text-slate-900 dark:text-white">Pro ($199/mo):</strong> Unlimited jobs, advanced analytics
+                  </span>
+                </li>
+                <li class="flex items-start gap-2">
+                  <CheckCircle class="w-5 h-5 text-emerald-600 flex-shrink-0 mt-0.5" />
+                  <span class="text-slate-600 dark:text-slate-400">
+                    <strong class="text-slate-900 dark:text-white">Enterprise ($299/mo):</strong> Custom integrations, SSO, SLA
+                  </span>
+                </li>
+                <li class="flex items-start gap-2">
+                  <CheckCircle class="w-5 h-5 text-emerald-600 flex-shrink-0 mt-0.5" />
+                  <span class="text-slate-600 dark:text-slate-400">All features included, quick setup</span>
+                </li>
+              </ul>
+            </div>
+
+            {/* SmartRecruiters Pricing */}
+            <div class="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-2xl p-8">
+              <div class="text-sm font-semibold text-slate-600 dark:text-slate-400 mb-2">SMARTRECRUITERS</div>
+              <div class="text-4xl font-bold text-slate-900 dark:text-white mb-2">
+                $10,000+<span class="text-xl text-slate-600 dark:text-slate-400">/year</span>
+              </div>
+              <p class="text-slate-600 dark:text-slate-400 mb-6">
+                Custom quote-based pricing, complex setup
+              </p>
+              <ul class="space-y-3">
+                <li class="flex items-start gap-2">
+                  <MinusCircle class="w-5 h-5 text-slate-400 flex-shrink-0 mt-0.5" />
+                  <span class="text-slate-600 dark:text-slate-400">
+                    Estimated $6-10 per employee per month (PEPM)
+                  </span>
+                </li>
+                <li class="flex items-start gap-2">
+                  <MinusCircle class="w-5 h-5 text-slate-400 flex-shrink-0 mt-0.5" />
+                  <span class="text-slate-600 dark:text-slate-400">
+                    Average $10,000+ annually including fees
+                  </span>
+                </li>
+                <li class="flex items-start gap-2">
+                  <MinusCircle class="w-5 h-5 text-slate-400 flex-shrink-0 mt-0.5" />
+                  <span class="text-slate-600 dark:text-slate-400">
+                    Contact sales for custom quote
+                  </span>
+                </li>
+                <li class="flex items-start gap-2">
+                  <MinusCircle class="w-5 h-5 text-slate-400 flex-shrink-0 mt-0.5" />
+                  <span class="text-slate-600 dark:text-slate-400">Steep learning curve during setup</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="bg-slate-100 dark:bg-slate-800 rounded-xl p-6 text-center">
+            <p class="text-lg text-slate-700 dark:text-slate-300">
+              <strong>Jatura costs 88-97% less than SmartRecruiters</strong> with comparable AI capabilities and no enterprise setup complexity.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* Who Should Choose Which */}
+      <section class="py-20 px-4 sm:px-6 lg:px-8 bg-slate-50 dark:bg-slate-900/50">
+        <div class="max-w-5xl mx-auto">
+          <h2 class="text-4xl font-bold text-slate-900 dark:text-white mb-12 text-center">
+            Which should you choose?
+          </h2>
+
+          <div class="grid md:grid-cols-2 gap-8">
+            {/* Choose SmartRecruiters */}
+            <div class="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-2xl p-8">
+              <h3 class="text-2xl font-bold text-slate-900 dark:text-white mb-6">
+                Choose SmartRecruiters if:
+              </h3>
+              <ul class="space-y-4">
+                <li class="flex items-start gap-3">
+                  <CheckCircle class="w-5 h-5 text-slate-400 flex-shrink-0 mt-0.5" />
+                  <span class="text-slate-600 dark:text-slate-400">
+                    You're a <strong class="text-slate-900 dark:text-white">large enterprise (500+ employees)</strong>
+                  </span>
+                </li>
+                <li class="flex items-start gap-3">
+                  <CheckCircle class="w-5 h-5 text-slate-400 flex-shrink-0 mt-0.5" />
+                  <span class="text-slate-600 dark:text-slate-400">
+                    You need <strong class="text-slate-900 dark:text-white">350+ pre-built integrations</strong>
+                  </span>
+                </li>
+                <li class="flex items-start gap-3">
+                  <CheckCircle class="w-5 h-5 text-slate-400 flex-shrink-0 mt-0.5" />
+                  <span class="text-slate-600 dark:text-slate-400">
+                    You have <strong class="text-slate-900 dark:text-white">$10,000+ budget</strong> and dedicated implementation team
+                  </span>
+                </li>
+                <li class="flex items-start gap-3">
+                  <CheckCircle class="w-5 h-5 text-slate-400 flex-shrink-0 mt-0.5" />
+                  <span class="text-slate-600 dark:text-slate-400">
+                    You're comfortable with <strong class="text-slate-900 dark:text-white">steep learning curve</strong> and complex setup
+                  </span>
+                </li>
+                <li class="flex items-start gap-3">
+                  <CheckCircle class="w-5 h-5 text-slate-400 flex-shrink-0 mt-0.5" />
+                  <span class="text-slate-600 dark:text-slate-400">
+                    You need a full <strong class="text-slate-900 dark:text-white">talent acquisition suite</strong> (not just ATS)
+                  </span>
+                </li>
+              </ul>
+            </div>
+
+            {/* Choose Jatura */}
+            <div class="bg-emerald-50 dark:bg-emerald-950/20 border-2 border-emerald-200 dark:border-emerald-900 rounded-2xl p-8">
+              <h3 class="text-2xl font-bold text-slate-900 dark:text-white mb-6">
+                Choose Jatura if:
+              </h3>
+              <ul class="space-y-4">
+                <li class="flex items-start gap-3">
+                  <CheckCircle class="w-5 h-5 text-emerald-600 flex-shrink-0 mt-0.5" />
+                  <span class="text-slate-600 dark:text-slate-400">
+                    You want <strong class="text-slate-900 dark:text-white">enterprise AI at SMB pricing</strong> ($99-$299/month)
+                  </span>
+                </li>
+                <li class="flex items-start gap-3">
+                  <CheckCircle class="w-5 h-5 text-emerald-600 flex-shrink-0 mt-0.5" />
+                  <span class="text-slate-600 dark:text-slate-400">
+                    You need <strong class="text-slate-900 dark:text-white">quick setup with no learning curve</strong>
+                  </span>
+                </li>
+                <li class="flex items-start gap-3">
+                  <CheckCircle class="w-5 h-5 text-emerald-600 flex-shrink-0 mt-0.5" />
+                  <span class="text-slate-600 dark:text-slate-400">
+                    <strong class="text-slate-900 dark:text-white">Native video interviewing</strong> is a must-have
+                  </span>
+                </li>
+                <li class="flex items-start gap-3">
+                  <CheckCircle class="w-5 h-5 text-emerald-600 flex-shrink-0 mt-0.5" />
+                  <span class="text-slate-600 dark:text-slate-400">
+                    You're a <strong class="text-slate-900 dark:text-white">small-to-mid-sized team</strong> (10-500 employees)
+                  </span>
+                </li>
+                <li class="flex items-start gap-3">
+                  <CheckCircle class="w-5 h-5 text-emerald-600 flex-shrink-0 mt-0.5" />
+                  <span class="text-slate-600 dark:text-slate-400">
+                    You want <strong class="text-slate-900 dark:text-white">responsive support for everyone</strong>—not just enterprise tier
+                  </span>
+                </li>
+                <li class="flex items-start gap-3">
+                  <CheckCircle class="w-5 h-5 text-emerald-600 flex-shrink-0 mt-0.5" />
+                  <span class="text-slate-600 dark:text-slate-400">
+                    You value <strong class="text-slate-900 dark:text-white">simplicity over feature overkill</strong>
+                  </span>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* CTA Section */}
+      <section class="py-28 px-4 sm:px-6 lg:px-8 bg-slate-900 dark:bg-white">
+        <div class="max-w-4xl mx-auto text-center">
+          <h2 class="text-4xl sm:text-5xl font-bold text-white dark:text-slate-900 mb-6">
+            Ready to try Jatura?
+          </h2>
+          <p class="text-xl text-slate-300 dark:text-slate-600 mb-10">
+            Start your free 14-day trial. No credit card required. Setup takes 5 minutes.
+          </p>
+          <div class="flex flex-col sm:flex-row gap-4 justify-center">
+            <a href="/login">
+              <Button
+                size="lg"
+                class="bg-white dark:bg-slate-900 text-slate-900 dark:text-white hover:bg-slate-100 dark:hover:bg-slate-800 px-10 py-6 text-lg"
+              >
+                Start free trial
+                <ArrowRight class="ml-2 h-5 w-5" />
+              </Button>
+            </a>
+            <a href="/pricing">
+              <Button
+                size="lg"
+                variant="outline"
+                class="px-10 py-6 text-lg border-slate-700 dark:border-slate-300 text-white dark:text-slate-900 hover:bg-slate-800 dark:hover:bg-slate-100"
+              >
+                View pricing
+              </Button>
+            </a>
+          </div>
+        </div>
+      </section>
+
+</MarketingLayout>

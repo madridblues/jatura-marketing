@@ -1,0 +1,102 @@
+---
+export const prerender = true;
+import MarketingLayout from '@/layouts/MarketingLayout.astro';
+import { ArrowLeft } from 'lucide-react';
+
+const schemaOrg = [{ "@type": "WebPage", "name": "Terms of Service", "url": "https://jatura.com/terms" }];
+---
+
+<MarketingLayout title="Terms of Service | Jatura" description="Read the terms of service for Jatura ATS. Understand how our platform operates and the rules governing its use." {schemaOrg}>
+  <article class="py-20 px-4 sm:px-6 lg:px-8">
+    <div class="max-w-4xl mx-auto">
+      <a
+        href="/"
+        class="inline-flex items-center gap-2 text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white mb-8 group"
+      >
+        <ArrowLeft class="w-4 h-4 group-hover:-translate-x-1 transition" />
+        Back to home
+      </a>
+
+      <h1 class="text-4xl sm:text-5xl md:text-6xl font-bold text-slate-900 dark:text-white mb-6 leading-tight">
+        Terms of Service
+      </h1>
+
+      <p class="text-xl text-slate-600 dark:text-slate-400 mb-4">
+        Last updated: November 2025
+      </p>
+
+      <div class="prose prose-slate dark:prose-invert max-w-none prose-headings:text-slate-900 dark:prose-headings:text-white prose-p:text-slate-600 dark:prose-p:text-slate-400">
+        <section class="mb-8">
+          <h2 class="text-2xl font-semibold text-slate-900 dark:text-white mb-4">1. Acceptance of Terms</h2>
+          <p class="text-slate-600 dark:text-slate-400 leading-relaxed">
+            By accessing and using Jatura ATS ("the Service"), you agree to be bound by these Terms of Service. If you do not agree to these terms, please do not use the Service.
+          </p>
+        </section>
+
+        <section class="mb-8">
+          <h2 class="text-2xl font-semibold text-slate-900 dark:text-white mb-4">2. Description of Service</h2>
+          <p class="text-slate-600 dark:text-slate-400 leading-relaxed">
+            Jatura ATS is a cloud-based applicant tracking system that provides hiring and recruitment management tools. The Service includes features for job posting, candidate management, interview scheduling, and team collaboration.
+          </p>
+        </section>
+
+        <section class="mb-8">
+          <h2 class="text-2xl font-semibold text-slate-900 dark:text-white mb-4">3. User Accounts</h2>
+          <p class="text-slate-600 dark:text-slate-400 leading-relaxed">
+            You must create an account to use the Service. You are responsible for maintaining the confidentiality of your account credentials and for all activities that occur under your account. You agree to notify us immediately of any unauthorized use of your account.
+          </p>
+        </section>
+
+        <section class="mb-8">
+          <h2 class="text-2xl font-semibold text-slate-900 dark:text-white mb-4">4. Acceptable Use</h2>
+          <p class="text-slate-600 dark:text-slate-400 leading-relaxed">
+            You agree to use the Service only for lawful purposes and in accordance with these Terms. You agree not to use the Service in any way that could damage, disable, or impair the Service or interfere with any other party's use of the Service.
+          </p>
+        </section>
+
+        <section class="mb-8">
+          <h2 class="text-2xl font-semibold text-slate-900 dark:text-white mb-4">5. Data and Privacy</h2>
+          <p class="text-slate-600 dark:text-slate-400 leading-relaxed">
+            Your use of the Service is also governed by our Privacy Policy. You retain ownership of all data you submit to the Service. We process your data only as necessary to provide the Service and as described in our Privacy Policy.
+          </p>
+        </section>
+
+        <section class="mb-8">
+          <h2 class="text-2xl font-semibold text-slate-900 dark:text-white mb-4">6. Intellectual Property</h2>
+          <p class="text-slate-600 dark:text-slate-400 leading-relaxed">
+            The Service and its original content, features, and functionality are owned by Jatura and are protected by international copyright, trademark, and other intellectual property laws.
+          </p>
+        </section>
+
+        <section class="mb-8">
+          <h2 class="text-2xl font-semibold text-slate-900 dark:text-white mb-4">7. Limitation of Liability</h2>
+          <p class="text-slate-600 dark:text-slate-400 leading-relaxed">
+            In no event shall Jatura be liable for any indirect, incidental, special, consequential, or punitive damages, including without limitation, loss of profits, data, use, or goodwill, arising from your use of the Service.
+          </p>
+        </section>
+
+        <section class="mb-8">
+          <h2 class="text-2xl font-semibold text-slate-900 dark:text-white mb-4">8. Termination</h2>
+          <p class="text-slate-600 dark:text-slate-400 leading-relaxed">
+            We may terminate or suspend your account and bar access to the Service immediately, without prior notice or liability, under our sole discretion, for any reason, including but not limited to a breach of the Terms.
+          </p>
+        </section>
+
+        <section class="mb-8">
+          <h2 class="text-2xl font-semibold text-slate-900 dark:text-white mb-4">9. Changes to Terms</h2>
+          <p class="text-slate-600 dark:text-slate-400 leading-relaxed">
+            We reserve the right to modify or replace these Terms at any time. If a revision is material, we will provide at least 30 days' notice prior to any new terms taking effect.
+          </p>
+        </section>
+
+        <section class="mb-8">
+          <h2 class="text-2xl font-semibold text-slate-900 dark:text-white mb-4">10. Contact Us</h2>
+          <p class="text-slate-600 dark:text-slate-400 leading-relaxed">
+            If you have any questions about these Terms, please contact us at{" "}
+            <a href="mailto:legal@jatura.com" class="text-blue-600 dark:text-blue-400 hover:underline">legal@jatura.com</a>.
+          </p>
+        </section>
+      </div>
+    </div>
+  </article>
+</MarketingLayout>

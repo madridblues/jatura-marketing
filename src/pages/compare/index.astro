@@ -1,0 +1,277 @@
+---
+export const prerender = true;
+import MarketingLayout from '@/layouts/MarketingLayout.astro';
+import { Button } from '@/components/ui/button';
+import { Badge } from '@/components/ui/badge';
+import {
+  ArrowRight, CheckCircle, Scale, TrendingUp, Users, Zap,
+} from 'lucide-react';
+
+const schemaOrg = [
+  {
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://jatura.com" },
+      { "@type": "ListItem", "position": 2, "name": "Compare ATS", "item": "https://jatura.com/compare" }
+    ]
+  },
+  {
+    "@type": "CollectionPage",
+    "name": "Jatura ATS Comparisons",
+    "description": "Detailed comparisons of Jatura vs leading ATS platforms",
+    "url": "https://jatura.com/compare"
+  }
+];
+
+const comparisons = [
+  {
+    name: "Greenhouse",
+    description: "Jatura is the Greenhouse alternative for teams that need enterprise-level functionality without the enterprise price tag or complexity.",
+    advantages: ["Built-in AI features included", "Transparent, predictable pricing", "Faster implementation"],
+    link: "/compare/greenhouse"
+  },
+  {
+    name: "Lever",
+    description: "Jatura is the Lever alternative for teams that value modern UX, powerful reporting, and AI-powered automation.",
+    advantages: ["Superior candidate experience", "Native AI Copilot included", "Better value for money"],
+    link: "/compare/lever"
+  },
+  {
+    name: "Workable",
+    description: "Jatura is the Workable alternative for teams that believe a strong employer brand and candidate experience drive better hires.",
+    advantages: ["Advanced employer branding", "Talent CRM built-in", "More customization options"],
+    link: "/compare/workable"
+  },
+  {
+    name: "BambooHR",
+    description: "Jatura is the BambooHR alternative for teams that need dedicated recruiting features, not just an HR system add-on.",
+    advantages: ["Purpose-built for recruiting", "Advanced pipeline management", "Sophisticated analytics"],
+    link: "/compare/bamboohr"
+  },
+  {
+    name: "JazzHR",
+    description: "Jatura is the JazzHR alternative for teams outgrowing basic ATS features and ready for AI-powered recruiting.",
+    advantages: ["AI-powered screening & matching", "Enterprise-grade security", "Modern, intuitive interface"],
+    link: "/compare/jazzhr"
+  },
+  {
+    name: "SmartRecruiters",
+    description: "Jatura is the SmartRecruiters alternative for teams that want enterprise features without the enterprise complexity or cost.",
+    advantages: ["Simpler, faster setup", "Transparent pricing", "AI features included"],
+    link: "/compare/smartrecruiters"
+  }
+];
+---
+
+<MarketingLayout
+  title="Compare ATS Systems | Jatura - Find Your Best Match"
+  description="Compare Jatura against leading ATS platforms: Greenhouse, Lever, Workable, BambooHR, JazzHR, and SmartRecruiters. Honest feature, pricing, and AI capability comparisons for 2025."
+  canonicalUrl="https://jatura.com/compare"
+  {schemaOrg}
+>
+  <!-- Hero Section -->
+  <section class="pt-24 pb-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-slate-50 to-white dark:from-slate-900/50 dark:to-slate-950">
+    <div class="max-w-7xl mx-auto text-center">
+      <Badge
+        variant="secondary"
+        class="mb-6 px-5 py-2 text-sm font-medium bg-slate-100 dark:bg-slate-800 text-slate-900 dark:text-slate-100"
+      >
+        <Scale className="w-4 h-4 mr-2" />
+        Honest Comparisons
+      </Badge>
+      <h1 class="text-5xl sm:text-6xl lg:text-7xl font-bold text-slate-900 dark:text-white mb-6 leading-tight">
+        Compare the best<br />applicant tracking systems
+      </h1>
+      <p class="text-xl sm:text-2xl text-slate-600 dark:text-slate-400 max-w-4xl mx-auto mb-12 leading-relaxed">
+        Find out how Jatura stacks up&#8212;side-by-side&#8212;with other ATS platforms. Real comparisons based on features, pricing, and customer feedback.
+      </p>
+      <div class="flex flex-col sm:flex-row gap-4 justify-center">
+        <a href="/login">
+          <Button
+            size="lg"
+            class="bg-slate-900 dark:bg-white text-white dark:text-slate-900 hover:bg-slate-800 dark:hover:bg-slate-100 px-10 py-6 text-lg group shadow-lg"
+          >
+            Start free trial
+            <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition" />
+          </Button>
+        </a>
+        <a href="/pricing">
+          <Button
+            size="lg"
+            variant="outline"
+            class="px-10 py-6 text-lg border-slate-300 dark:border-slate-700"
+          >
+            View pricing
+          </Button>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Intro Section -->
+  <section class="py-20 px-4 sm:px-6 lg:px-8">
+    <div class="max-w-4xl mx-auto">
+      <h2 class="text-3xl sm:text-4xl font-bold text-slate-900 dark:text-white mb-6">
+        Choosing the right ATS isn&apos;t easy
+      </h2>
+      <div class="space-y-4 text-lg text-slate-600 dark:text-slate-400">
+        <p>
+          If you&apos;re here, it&apos;s because you&apos;re exploring better ways to manage hiring at scale. You might be feeling friction with tools that are either too complex or too basic. Or you&apos;re spending too much time on admin and not enough on strategy.
+        </p>
+        <p>
+          This page brings together real-world comparisons&#8212;based on public data, customer feedback, and feature analysis&#8212;to help you make the most informed choice.
+        </p>
+        <p>
+          We&apos;re not here to trash the competition. We&apos;ll give them credit where it&apos;s due. But we&apos;ll also be honest about the challenges teams face when scaling with them&#8212;and how Jatura is different.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Comparisons Grid -->
+  <section class="py-20 px-4 sm:px-6 lg:px-8 bg-slate-50 dark:bg-slate-900/50">
+    <div class="max-w-7xl mx-auto">
+      <h2 class="text-4xl sm:text-5xl font-bold text-slate-900 dark:text-white mb-4 text-center">
+        Compare Jatura vs...
+      </h2>
+      <p class="text-xl text-slate-600 dark:text-slate-400 text-center mb-16">
+        Each comparison includes strengths, weaknesses, and side-by-side features
+      </p>
+
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        {comparisons.map((comp) => (
+          <div class="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-2xl p-8 hover:shadow-lg transition">
+            <div class="mb-6">
+              <h3 class="text-2xl font-bold text-slate-900 dark:text-white mb-3">
+                Jatura vs {comp.name}
+              </h3>
+              <p class="text-slate-600 dark:text-slate-400">
+                {comp.description}
+              </p>
+            </div>
+            <div class="space-y-3 mb-8">
+              {comp.advantages.map((adv) => (
+                <div class="flex items-start gap-2">
+                  <CheckCircle className="w-5 h-5 text-emerald-600 flex-shrink-0 mt-0.5" />
+                  <span class="text-sm text-slate-600 dark:text-slate-400">{adv}</span>
+                </div>
+              ))}
+            </div>
+            <a href={comp.link}>
+              <Button variant="outline" class="w-full">
+                View full comparison
+                <ArrowRight className="ml-2 h-4 w-4" />
+              </Button>
+            </a>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- What's Included -->
+  <section class="py-20 px-4 sm:px-6 lg:px-8">
+    <div class="max-w-5xl mx-auto">
+      <h2 class="text-3xl sm:text-4xl font-bold text-slate-900 dark:text-white mb-12 text-center">
+        Each comparison page includes:
+      </h2>
+      <div class="grid md:grid-cols-2 gap-8">
+        <div class="flex gap-4">
+          <div class="flex-shrink-0">
+            <div class="w-12 h-12 bg-slate-100 dark:bg-slate-800 rounded-xl flex items-center justify-center">
+              <TrendingUp className="w-6 h-6 text-slate-900 dark:text-white" />
+            </div>
+          </div>
+          <div>
+            <h3 class="text-xl font-semibold text-slate-900 dark:text-white mb-2">
+              Strengths of the competitor
+            </h3>
+            <p class="text-slate-600 dark:text-slate-400">
+              Where they excel and what makes them a solid choice for certain teams.
+            </p>
+          </div>
+        </div>
+
+        <div class="flex gap-4">
+          <div class="flex-shrink-0">
+            <div class="w-12 h-12 bg-slate-100 dark:bg-slate-800 rounded-xl flex items-center justify-center">
+              <Zap className="w-6 h-6 text-slate-900 dark:text-white" />
+            </div>
+          </div>
+          <div>
+            <h3 class="text-xl font-semibold text-slate-900 dark:text-white mb-2">
+              Where they fall short
+            </h3>
+            <p class="text-slate-600 dark:text-slate-400">
+              Common pain points and limitations teams face when scaling.
+            </p>
+          </div>
+        </div>
+
+        <div class="flex gap-4">
+          <div class="flex-shrink-0">
+            <div class="w-12 h-12 bg-slate-100 dark:bg-slate-800 rounded-xl flex items-center justify-center">
+              <CheckCircle className="w-6 h-6 text-slate-900 dark:text-white" />
+            </div>
+          </div>
+          <div>
+            <h3 class="text-xl font-semibold text-slate-900 dark:text-white mb-2">
+              How Jatura is different
+            </h3>
+            <p class="text-slate-600 dark:text-slate-400">
+              Our approach to solving the same problems with better UX and value.
+            </p>
+          </div>
+        </div>
+
+        <div class="flex gap-4">
+          <div class="flex-shrink-0">
+            <div class="w-12 h-12 bg-slate-100 dark:bg-slate-800 rounded-xl flex items-center justify-center">
+              <Users className="w-6 h-6 text-slate-900 dark:text-white" />
+            </div>
+          </div>
+          <div>
+            <h3 class="text-xl font-semibold text-slate-900 dark:text-white mb-2">
+              Side-by-side feature comparison
+            </h3>
+            <p class="text-slate-600 dark:text-slate-400">
+              Detailed comparison tables showing what&apos;s included and what&apos;s not.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <section class="py-28 px-4 sm:px-6 lg:px-8 bg-slate-900 dark:bg-white">
+    <div class="max-w-4xl mx-auto text-center">
+      <h2 class="text-4xl sm:text-5xl font-bold text-white dark:text-slate-900 mb-6">
+        Ready to see Jatura in action?
+      </h2>
+      <p class="text-xl text-slate-300 dark:text-slate-600 mb-10">
+        Start your free trial and experience the difference yourself.
+      </p>
+      <div class="flex flex-col sm:flex-row gap-4 justify-center">
+        <a href="/login">
+          <Button
+            size="lg"
+            class="bg-white dark:bg-slate-900 text-slate-900 dark:text-white hover:bg-slate-100 dark:hover:bg-slate-800 px-10 py-6 text-lg"
+          >
+            Start free trial
+            <ArrowRight className="ml-2 h-5 w-5" />
+          </Button>
+        </a>
+        <a href="/pricing">
+          <Button
+            size="lg"
+            variant="outline"
+            class="px-10 py-6 text-lg border-slate-700 dark:border-slate-300 text-white dark:text-slate-900 hover:bg-slate-800 dark:hover:bg-slate-100"
+          >
+            View pricing
+          </Button>
+        </a>
+      </div>
+    </div>
+  </section>
+</MarketingLayout>

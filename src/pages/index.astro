@@ -1,0 +1,418 @@
+---
+export const prerender = true;
+import MarketingLayout from '@/layouts/MarketingLayout.astro';
+import { Button } from '@/components/ui/button';
+import { Badge } from '@/components/ui/badge';
+import { Card, CardContent } from '@/components/ui/card';
+import LandingPlatformTabs from '@/components/islands/LandingPlatformTabs';
+import {
+  ArrowRight, Sparkles, Check, Star, Building2, Brain,
+  Workflow, MessageSquare, BarChart3, Users, Calendar,
+  Shield, Zap, Clock, TrendingUp, Award, Target, Globe,
+  FileCheck, Layers, Mail, Phone, Bell, Lock, CheckCircle2
+} from 'lucide-react';
+
+const title = "What an ATS should be. | Jatura - All-in-One Recruiting Platform";
+const description = "The all-in-one recruiting platform that evolves at the speed of AI. Empowering ambitious teams from Startups to Mid-Market companies. ATS, Scheduling, Analytics, and AI embedded in every layer.";
+const schemaOrg = [
+  {
+    "@type": "WebPage",
+    "@id": "https://jatura.com/#webpage",
+    "name": "Jatura — All-in-One Recruiting Platform",
+    "url": "https://jatura.com",
+    "isPartOf": { "@id": "https://jatura.com/#website" },
+    "about": { "@id": "https://jatura.com/#organization" },
+    "description": "The all-in-one recruiting platform that evolves at the speed of AI"
+  },
+  {
+    "@type": "SoftwareApplication",
+    "@id": "https://jatura.com/#software",
+    "name": "Jatura ATS",
+    "applicationCategory": "BusinessApplication",
+    "operatingSystem": "Web",
+    "description": "All-in-one recruiting platform with AI embedded in every layer. ATS, scheduling, analytics, omni-channel messaging, and employer branding in one product.",
+    "offers": [
+      { "@type": "Offer", "name": "Launch", "price": "0", "priceCurrency": "USD", "description": "Free plan — up to 3 active jobs" },
+      { "@type": "Offer", "name": "Plus", "price": "49", "priceCurrency": "USD", "priceSpecification": { "@type": "UnitPriceSpecification", "billingDuration": "P1M" } },
+      { "@type": "Offer", "name": "Pro", "price": "129", "priceCurrency": "USD", "priceSpecification": { "@type": "UnitPriceSpecification", "billingDuration": "P1M" } }
+    ],
+    "aggregateRating": { "@type": "AggregateRating", "ratingValue": "4.9", "ratingCount": "247", "bestRating": "5" },
+    "featureList": ["AI Resume Screening", "Kanban Pipeline", "Omni-Channel Messaging", "Interview Scheduling", "Workflow Automation", "Career Site Builder", "Analytics Dashboard", "100+ Integrations"]
+  }
+];
+
+const _data1 = ["TechCorp", "StartupXYZ", "InnovateCo", "GrowthCo", "ScaleCo", "BuildCo"];
+
+const _data2 = [
+          { quote: "Jatura is easily the best ATS I've used in my 10+ years of recruiting. Loving the power of the system and the customization. I feel like it's sparked a renewed passion for me when it comes to the abilities of an ATS. Happy we made the switch.", author: "Sarah Chen", role: "Senior Recruiter" },
+          { quote: "The biggest reason I recommend Jatura is because of how much you can automate activities within different stages. When you first set up a new vacancy, you can set up all the different things that you want to be automated between each step of the process. It saves you countless hours of admin time.", author: "Michael Rodriguez", role: "VP of People" },
+          { quote: "We just switched from our legacy ATS. Long story short - Jatura is amazing. They are taking an end-to-end approach to recruiting that is startup-friendly. They combine the functionality of sourcing, outreach, applicant tracking, analytics, scheduling automation and more. Best of all they have a strong & responsive support team.", author: "Emily Taylor", role: "Recruiting Manager" },
+          { quote: "I am really impressed so far! It was tricky to get other hiring managers using other ATS's and they seem to be enjoying Jatura for collaboration.", author: "David Kim", role: "Head of Talent" },
+          { quote: "I know this sounds weird, but I'm super excited to start using Jatura. Finally a proper ATS that doesn't cost an arm and a leg!", author: "Jessica Martinez", role: "People Operations" },
+          { quote: "The AI screening feature alone has saved us 20+ hours per week. We're moving faster than ever and hiring better candidates.", author: "Alex Thompson", role: "Talent Acquisition Lead" },
+        ];
+
+const _data3 = [
+                "Be easy to get started with, powerful when you're ready",
+                "Enable structured hiring end-to-end",
+                "Automate with a human touch",
+                "Provide instant visibility and reduce clicks",
+                "Enable custom reporting to unlock real insights",
+                "Offer one integrated system for your entire hiring process",
+              ];
+
+const _data4 = [
+                "Improved candidate experience",
+                "More accurate and fair candidate assessments",
+                "Hiring team productivity",
+                "Continuous improvement through data feedback loops",
+                "Visibility for the entire hiring team",
+                "Stronger, more diverse candidate pipelines",
+              ];
+---
+
+<MarketingLayout {title} {description} canonicalUrl="https://jatura.com/" {schemaOrg}>
+  <!-- Announcement Banner -->
+  <div class="border-b border-slate-800">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3">
+      <a href="/blog">
+        <div class="flex items-center justify-center gap-2 text-sm text-slate-400 hover:text-white transition cursor-pointer">
+          <Sparkles class="h-4 w-4" />
+          <span>Our new AI Blog Automation is now live</span>
+          <ArrowRight class="h-3 w-3" />
+        </div>
+      </a>
+    </div>
+  </div>
+
+  <!-- Hero Section -->
+  <section class="pt-20 sm:pt-28 pb-12 px-4 sm:px-6 lg:px-8">
+    <div class="max-w-7xl mx-auto">
+      <div class="max-w-4xl mx-auto text-center mb-16">
+        <h1 class="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-bold mb-8 leading-tight tracking-tight" data-testid="heading-hero">
+          What an ATS<br />should be.
+        </h1>
+        <p class="text-xl sm:text-2xl text-slate-400 mb-10 leading-relaxed max-w-3xl mx-auto">
+          The <span class="text-white font-semibold">all-in-one</span> recruiting platform{" "}
+          <span class="text-white font-semibold">that evolves at the speed of AI. ✨</span>{" "}
+          Empowering ambitious teams from Startups to Mid-Market.
+        </p>
+        <div class="flex flex-col sm:flex-row gap-4 justify-center">
+          <a href="/signup">
+            <Button
+              size="lg"
+              class="bg-white text-black hover:bg-slate-100 px-8 font-semibold"
+              data-testid="button-get-started"
+            >
+              Start Free
+              <ArrowRight class="ml-2 h-5 w-5" />
+            </Button>
+          </a>
+          <a href="/pricing">
+            <Button
+              size="lg"
+              variant="outline"
+              class="px-8 border-slate-700 text-white hover:bg-slate-900 font-semibold"
+              data-testid="button-pricing"
+            >
+              View Pricing
+            </Button>
+          </a>
+        </div>
+        <p class="text-sm text-slate-500 mt-4">
+          Free up to 3 active jobs &bull; No credit card required
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Trust Layer -->
+  <section class="py-12 px-4 sm:px-6 lg:px-8 border-y border-slate-800">
+    <div class="max-w-7xl mx-auto">
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+        <div>
+          <div class="flex items-center justify-center gap-2 mb-2">
+            <Shield class="h-5 w-5 text-green-500" />
+            <div class="text-2xl font-bold text-white">SOC 2</div>
+          </div>
+          <div class="text-sm text-slate-400">Certified</div>
+        </div>
+        <div>
+          <div class="flex items-center justify-center gap-2 mb-2">
+            <Lock class="h-5 w-5 text-blue-500" />
+            <div class="text-2xl font-bold text-white">GDPR</div>
+          </div>
+          <div class="text-sm text-slate-400">Compliant</div>
+        </div>
+        <div>
+          <div class="flex items-center justify-center gap-2 mb-2">
+            <Star class="h-5 w-5 text-yellow-500" />
+            <div class="text-2xl font-bold text-white">4.9/5</div>
+          </div>
+          <div class="text-sm text-slate-400">User Rating</div>
+        </div>
+        <div>
+          <div class="flex items-center justify-center gap-2 mb-2">
+            <Users class="h-5 w-5 text-blue-500" />
+            <div class="text-2xl font-bold text-white">500+</div>
+          </div>
+          <div class="text-sm text-slate-400">Companies</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Logo Cloud -->
+  <section class="py-16 px-4 sm:px-6 lg:px-8 border-b border-slate-800">
+    <div class="max-w-7xl mx-auto">
+      <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-8 items-center opacity-60">
+        {_data1.map((company, i) => (
+          <div class="flex justify-center">
+            <div class="text-xl font-bold text-slate-600">{company}</div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Platform Tabs (Interactive Island) -->
+  <section class="py-20 px-4 sm:px-6 lg:px-8 border-b border-slate-800">
+    <div class="max-w-7xl mx-auto">
+      <div class="flex items-center justify-center gap-8 mb-12">
+        <div class="flex items-center gap-2 text-slate-500">
+          <div class="h-px w-16 bg-slate-800"></div>
+          <span class="text-sm">Jatura All-in-one</span>
+        </div>
+      </div>
+
+      <LandingPlatformTabs client:load />
+
+      <div class="text-center mb-12 mt-12">
+        <a href="/platform">
+          <Button variant="outline" class="border-slate-700 text-white hover:bg-slate-900">
+            Learn more about the platform
+            <ArrowRight class="ml-2 h-4 w-4" />
+          </Button>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Product Tour - Company Size Segmentation -->
+  <section class="py-24 px-4 sm:px-6 lg:px-8 border-b border-slate-800">
+    <div class="max-w-7xl mx-auto">
+      <div class="text-center mb-16">
+        <h2 class="text-4xl sm:text-5xl font-bold mb-6">
+          Products designed to help you excel at hiring,<br />
+          no matter your company stage
+        </h2>
+      </div>
+
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <Card class="bg-slate-950 border-slate-800 hover:border-slate-700 transition cursor-pointer group">
+          <CardContent class="p-8">
+            <div class="w-14 h-14 bg-gradient-to-br from-blue-500 to-blue-600 rounded-xl flex items-center justify-center mb-6">
+              <Zap class="h-7 w-7 text-white" />
+            </div>
+            <div class="mb-2">
+              <div class="text-sm text-slate-500 mb-1">Jatura All-in-one</div>
+              <h3 class="text-2xl font-bold text-white mb-1">For Startups</h3>
+              <div class="text-sm text-slate-400">1-50 employees</div>
+            </div>
+            <p class="text-slate-400 leading-relaxed mb-6">
+              Get a head start on recruiting with an all-in-one product that is easy to use and will scale with you.
+            </p>
+            <a href="/use-cases/high-growth-startups">
+              <div class="flex items-center text-blue-400 group-hover:gap-2 gap-1 transition-all">
+                <span class="text-sm font-medium">Learn more</span>
+                <ArrowRight class="h-4 w-4" />
+              </div>
+            </a>
+          </CardContent>
+        </Card>
+
+        <Card class="bg-slate-950 border-slate-800 hover:border-slate-700 transition cursor-pointer group">
+          <CardContent class="p-8">
+            <div class="w-14 h-14 bg-gradient-to-br from-emerald-500 to-emerald-600 rounded-xl flex items-center justify-center mb-6">
+              <TrendingUp class="h-7 w-7 text-white" />
+            </div>
+            <div class="mb-2">
+              <div class="text-sm text-slate-500 mb-1">Jatura All-in-one</div>
+              <h3 class="text-2xl font-bold text-white mb-1">For Growth</h3>
+              <div class="text-sm text-slate-400">51-500 employees</div>
+            </div>
+            <p class="text-slate-400 leading-relaxed mb-6">
+              A powerful all-in-one recruiting product that will help your scaling organization excel at hiring.
+            </p>
+            <a href="/use-cases/high-volume-hiring">
+              <div class="flex items-center text-emerald-400 group-hover:gap-2 gap-1 transition-all">
+                <span class="text-sm font-medium">Learn more</span>
+                <ArrowRight class="h-4 w-4" />
+              </div>
+            </a>
+          </CardContent>
+        </Card>
+
+        <Card class="bg-slate-950 border-slate-800 hover:border-slate-700 transition cursor-pointer group">
+          <CardContent class="p-8">
+            <div class="w-14 h-14 bg-gradient-to-br from-violet-500 to-violet-600 rounded-xl flex items-center justify-center mb-6">
+              <BarChart3 class="h-7 w-7 text-white" />
+            </div>
+            <div class="mb-2">
+              <div class="text-sm text-slate-500 mb-1">Jatura Analytics</div>
+              <h3 class="text-2xl font-bold text-white mb-1">For your existing ATS</h3>
+              <div class="text-sm text-slate-400">Any size</div>
+            </div>
+            <p class="text-slate-400 leading-relaxed mb-6">
+              Advanced recruiting analytics that work on top of your existing recruiting tools.
+            </p>
+            <a href="/pricing">
+              <div class="flex items-center text-violet-400 group-hover:gap-2 gap-1 transition-all">
+                <span class="text-sm font-medium">Learn more</span>
+                <ArrowRight class="h-4 w-4" />
+              </div>
+            </a>
+          </CardContent>
+        </Card>
+      </div>
+    </div>
+  </section>
+
+  <!-- Customer Testimonials -->
+  <section class="py-24 px-4 sm:px-6 lg:px-8 border-b border-slate-800">
+    <div class="max-w-7xl mx-auto">
+      <div class="text-center mb-16">
+        <h2 class="text-4xl sm:text-5xl font-bold mb-6">Hear from our customers</h2>
+      </div>
+
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+        {_data2.map((testimonial, idx) => (
+          <Card class="bg-slate-950 border-slate-800">
+            <CardContent class="p-6">
+              <div class="flex gap-1 mb-4">
+                {[...Array(5)].map((_, i) => (
+                  <Star class="w-4 h-4 fill-blue-500 text-blue-500" />
+                ))}
+              </div>
+              <blockquote class="text-slate-300 leading-relaxed mb-6">
+                &ldquo;{testimonial.quote}&rdquo;
+              </blockquote>
+              <div>
+                <div class="font-semibold text-white">{testimonial.author}</div>
+                <div class="text-sm text-slate-500">{testimonial.role}</div>
+              </div>
+            </CardContent>
+          </Card>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Why Jatura - Philosophy Section -->
+  <section class="py-24 px-4 sm:px-6 lg:px-8 border-b border-slate-800">
+    <div class="max-w-7xl mx-auto">
+      <div class="text-center mb-16">
+        <h2 class="text-4xl sm:text-5xl font-bold mb-6">Why Jatura?</h2>
+        <h3 class="text-2xl text-slate-400 max-w-3xl mx-auto">How Jatura enables hiring excellence</h3>
+      </div>
+
+      <div class="max-w-5xl mx-auto">
+        <p class="text-xl text-slate-400 leading-relaxed mb-12 text-center">
+          Hiring has changed and so should your tools. Companies that excel at hiring have a strategic advantage.
+          Our approach to building Jatura centers around ambitious teams that question the status quo:
+        </p>
+
+        <div class="grid md:grid-cols-2 gap-12 mb-16">
+          <div>
+            <h4 class="text-2xl font-bold mb-6 text-white">We&apos;ve designed Jatura to:</h4>
+            <ul class="space-y-4">
+              {_data3.map((item) => (
+                <li class="flex items-start gap-3">
+                  <Check class="w-5 h-5 text-blue-500 flex-shrink-0 mt-1" />
+                  <span class="text-slate-300 leading-relaxed">{item}</span>
+                </li>
+              ))}
+            </ul>
+          </div>
+          <div>
+            <h4 class="text-2xl font-bold mb-6 text-white">To help you achieve:</h4>
+            <ul class="space-y-4">
+              {_data4.map((item) => (
+                <li class="flex items-start gap-3">
+                  <Check class="w-5 h-5 text-emerald-500 flex-shrink-0 mt-1" />
+                  <span class="text-slate-300 leading-relaxed">{item}</span>
+                </li>
+              ))}
+            </ul>
+          </div>
+        </div>
+
+        <div class="text-center">
+          <a href="/pricing">
+            <Button variant="outline" class="border-slate-700 text-white hover:bg-slate-900">
+              Start Your Journey
+              <ArrowRight class="ml-2 h-4 w-4" />
+            </Button>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Final CTA -->
+  <section class="py-32 px-4 sm:px-6 lg:px-8">
+    <div class="max-w-4xl mx-auto text-center">
+      <h2 class="text-4xl sm:text-5xl md:text-6xl font-bold mb-6">
+        Hiring excellence is one<br />conversation away.
+      </h2>
+      <p class="text-xl text-slate-400 mb-12 max-w-2xl mx-auto leading-relaxed">
+        Connect with our team and learn how Jatura can help your team grow faster and better.
+      </p>
+      <div class="flex flex-col sm:flex-row gap-4 justify-center">
+        <a href="/signup">
+          <Button size="lg" class="bg-white text-black hover:bg-slate-100 px-8 font-semibold">
+            Start Free
+            <ArrowRight class="ml-2 h-5 w-5" />
+          </Button>
+        </a>
+        <a href="/pricing">
+          <Button size="lg" variant="outline" class="px-8 border-slate-700 text-white hover:bg-slate-900 font-semibold">
+            View Pricing
+          </Button>
+        </a>
+      </div>
+
+      <div class="mt-12 flex flex-col sm:flex-row items-center justify-center gap-6 text-sm text-slate-500">
+        <div class="flex items-center gap-2">
+          <Check class="w-4 h-4 text-green-500" />
+          <span>Free up to 3 jobs</span>
+        </div>
+        <div class="flex items-center gap-2">
+          <Check class="w-4 h-4 text-green-500" />
+          <span>No credit card required</span>
+        </div>
+        <div class="flex items-center gap-2">
+          <Check class="w-4 h-4 text-green-500" />
+          <span>Setup in 5 minutes</span>
+        </div>
+      </div>
+
+      <div class="mt-12 flex items-center justify-center gap-4">
+        <div class="flex items-center gap-2 px-4 py-2 bg-slate-900 rounded-lg border border-slate-800">
+          <Award class="h-5 w-5 text-blue-500" />
+          <div class="text-left">
+            <div class="text-xs text-slate-500">Rated 4.9/5 on</div>
+            <div class="text-sm font-semibold text-white">G2</div>
+          </div>
+        </div>
+        <div class="flex items-center gap-2 px-4 py-2 bg-slate-900 rounded-lg border border-slate-800">
+          <Shield class="h-5 w-5 text-green-500" />
+          <div class="text-left">
+            <div class="text-xs text-slate-500">SOC 2</div>
+            <div class="text-sm font-semibold text-white">Compliant</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</MarketingLayout>

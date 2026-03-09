@@ -1,0 +1,384 @@
+---
+export const prerender = true;
+import MarketingLayout from '@/layouts/MarketingLayout.astro';
+import { Globe, Palette, Smartphone, Zap, ArrowRight, CheckCircle, Star, TrendingUp, Users, Heart, Share2, BarChart3 } from 'lucide-react';
+import { Button } from '@/components/ui/button';
+import { Badge } from '@/components/ui/badge';
+
+const title = "Career Site Builder | Jatura - Beautiful Branded Career Pages";
+const description = "Launch a branded career site in minutes with Jatura. Custom domain, automated job board syndication, mobile-optimized application flow, and SEO-optimized job listings — included in every plan.";
+
+const schemaOrg = [
+  {
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://jatura.com" },
+      { "@type": "ListItem", "position": 2, "name": "Features", "item": "https://jatura.com/features" },
+      { "@type": "ListItem", "position": 3, "name": "Career Site Builder", "item": "https://jatura.com/features/career-site" }
+    ]
+  },
+  {
+    "@type": "SoftwareApplication",
+    "name": "Jatura ATS",
+    "@id": "https://jatura.com/#software",
+    "applicationCategory": "BusinessApplication",
+    "operatingSystem": "Web",
+    "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD", "description": "Free plan available" },
+    "featureList": ["Custom Career Site", "Custom Domain Support", "Job Board Syndication", "Mobile-Optimized Apply", "SEO Job Listings", "Branded Candidate Experience", "Application Forms"],
+    "aggregateRating": { "@type": "AggregateRating", "ratingValue": "4.9", "ratingCount": "247", "bestRating": "5" }
+  }
+];
+---
+
+<MarketingLayout {title} {description} {schemaOrg}>
+
+      {/* Hero Section */}
+      <section class="pt-24 pb-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-slate-50 to-white dark:from-slate-900/50 dark:to-slate-950">
+        <div class="max-w-7xl mx-auto">
+          <div class="text-center mb-16">
+            <Badge
+              variant="secondary"
+              class="mb-6 px-5 py-2 text-sm font-medium bg-slate-100 dark:bg-slate-800 text-slate-900 dark:text-slate-100"
+            >
+              <Globe class="w-4 h-4 mr-2" />
+              Career Site Builder
+            </Badge>
+            <h1 class="text-5xl sm:text-6xl lg:text-7xl font-bold text-slate-900 dark:text-white mb-6 leading-tight">
+              Career pages that<br />candidates can't resist
+            </h1>
+            <p class="text-xl sm:text-2xl text-slate-600 dark:text-slate-400 max-w-4xl mx-auto mb-12 leading-relaxed">
+              Create beautiful, mobile-optimized career pages that showcase your culture, tell your story, and turn visitors into applicants. No coding required.
+            </p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+              <a href="/login">
+                <Button
+                  size="lg"
+                  class="bg-slate-900 dark:bg-white text-white dark:text-slate-900 hover:bg-slate-800 dark:hover:bg-slate-100 px-10 py-6 text-lg group shadow-lg"
+                >
+                  Start free trial
+                  <ArrowRight class="ml-2 h-5 w-5 group-hover:translate-x-1 transition" />
+                </Button>
+              </a>
+              <a href="/pricing">
+                <Button
+                  size="lg"
+                  variant="outline"
+                  class="px-10 py-6 text-lg border-slate-300 dark:border-slate-700"
+                >
+                  View pricing
+                </Button>
+              </a>
+            </div>
+          </div>
+
+          {/* Stats */}
+          <div class="grid md:grid-cols-3 gap-8 mt-20">
+            <div class="text-center">
+              <div class="text-4xl font-bold text-slate-900 dark:text-white mb-2">3x</div>
+              <p class="text-slate-600 dark:text-slate-400">
+                More qualified applications
+              </p>
+            </div>
+            <div class="text-center">
+              <div class="text-4xl font-bold text-slate-900 dark:text-white mb-2">65%</div>
+              <p class="text-slate-600 dark:text-slate-400">
+                Lower cost-per-hire
+              </p>
+            </div>
+            <div class="text-center">
+              <div class="text-4xl font-bold text-slate-900 dark:text-white mb-2">2.4x</div>
+              <p class="text-slate-600 dark:text-slate-400">
+                Higher conversion rate
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Features */}
+      <section class="py-28 px-4 sm:px-6 lg:px-8">
+        <div class="max-w-7xl mx-auto">
+          <div class="text-center mb-20">
+            <h2 class="text-4xl sm:text-5xl font-bold text-slate-900 dark:text-white mb-6">
+              Everything you need for an exceptional career site
+            </h2>
+            <p class="text-xl text-slate-600 dark:text-slate-400 max-w-3xl mx-auto">
+              No designers or developers needed
+            </p>
+          </div>
+
+          <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div class="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-2xl p-8">
+              <div class="w-14 h-14 bg-slate-100 dark:bg-slate-800 rounded-xl flex items-center justify-center mb-6">
+                <Palette class="w-7 h-7 text-slate-900 dark:text-white" />
+              </div>
+              <h3 class="text-xl font-semibold text-slate-900 dark:text-white mb-4">
+                Fully Customizable Design
+              </h3>
+              <p class="text-slate-600 dark:text-slate-400">
+                Match your brand perfectly with custom colors, fonts, logos, and layouts. Drag-and-drop builder makes it easy.
+              </p>
+            </div>
+
+            <div class="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-2xl p-8">
+              <div class="w-14 h-14 bg-slate-100 dark:bg-slate-800 rounded-xl flex items-center justify-center mb-6">
+                <Smartphone class="w-7 h-7 text-slate-900 dark:text-white" />
+              </div>
+              <h3 class="text-xl font-semibold text-slate-900 dark:text-white mb-4">
+                Mobile-First & Responsive
+              </h3>
+              <p class="text-slate-600 dark:text-slate-400">
+                70% of job seekers browse on mobile. Your career pages look perfect on every device automatically.
+              </p>
+            </div>
+
+            <div class="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-2xl p-8">
+              <div class="w-14 h-14 bg-slate-100 dark:bg-slate-800 rounded-xl flex items-center justify-center mb-6">
+                <Users class="w-7 h-7 text-slate-900 dark:text-white" />
+              </div>
+              <h3 class="text-xl font-semibold text-slate-900 dark:text-white mb-4">
+                Employee Stories & Testimonials
+              </h3>
+              <p class="text-slate-600 dark:text-slate-400">
+                Showcase real employees with photos, videos, and quotes. Give candidates an authentic look inside your company.
+              </p>
+            </div>
+
+            <div class="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-2xl p-8">
+              <div class="w-14 h-14 bg-slate-100 dark:bg-slate-800 rounded-xl flex items-center justify-center mb-6">
+                <Share2 class="w-7 h-7 text-slate-900 dark:text-white" />
+              </div>
+              <h3 class="text-xl font-semibold text-slate-900 dark:text-white mb-4">
+                Social Sharing
+              </h3>
+              <p class="text-slate-600 dark:text-slate-400">
+                Make it easy for employees and candidates to share job openings on social media with one click.
+              </p>
+            </div>
+
+            <div class="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-2xl p-8">
+              <div class="w-14 h-14 bg-slate-100 dark:bg-slate-800 rounded-xl flex items-center justify-center mb-6">
+                <Zap class="w-7 h-7 text-slate-900 dark:text-white" />
+              </div>
+              <h3 class="text-xl font-semibold text-slate-900 dark:text-white mb-4">
+                One-Click Application
+              </h3>
+              <p class="text-slate-600 dark:text-slate-400">
+                Frictionless mobile-optimized application forms. Candidates can apply in under 2 minutes.
+              </p>
+            </div>
+
+            <div class="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-2xl p-8">
+              <div class="w-14 h-14 bg-slate-100 dark:bg-slate-800 rounded-xl flex items-center justify-center mb-6">
+                <BarChart3 class="w-7 h-7 text-slate-900 dark:text-white" />
+              </div>
+              <h3 class="text-xl font-semibold text-slate-900 dark:text-white mb-4">
+                Analytics & Insights
+              </h3>
+              <p class="text-slate-600 dark:text-slate-400">
+                Track page views, application rates, and traffic sources. Know what's working and optimize for better results.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* How It Works */}
+      <section class="py-28 px-4 sm:px-6 lg:px-8 bg-slate-50 dark:bg-slate-900/50">
+        <div class="max-w-7xl mx-auto">
+          <div class="text-center mb-20">
+            <h2 class="text-4xl sm:text-5xl font-bold text-slate-900 dark:text-white mb-6">
+              Launch your career site in minutes
+            </h2>
+          </div>
+
+          <div class="grid lg:grid-cols-3 gap-12">
+            <div>
+              <div class="w-12 h-12 bg-slate-900 dark:bg-white text-white dark:text-slate-900 rounded-full flex items-center justify-center font-bold text-lg mb-6">
+                1
+              </div>
+              <h3 class="text-2xl font-semibold text-slate-900 dark:text-white mb-4">
+                Customize Your Design
+              </h3>
+              <p class="text-lg text-slate-600 dark:text-slate-400 mb-6">
+                Choose colors, upload your logo, and add your company information. Our drag-and-drop builder makes it simple.
+              </p>
+              <div class="space-y-3">
+                <div class="flex items-start gap-3">
+                  <CheckCircle class="w-5 h-5 text-emerald-600 flex-shrink-0 mt-0.5" />
+                  <span class="text-slate-600 dark:text-slate-400">Brand colors & fonts</span>
+                </div>
+                <div class="flex items-start gap-3">
+                  <CheckCircle class="w-5 h-5 text-emerald-600 flex-shrink-0 mt-0.5" />
+                  <span class="text-slate-600 dark:text-slate-400">Custom layouts</span>
+                </div>
+                <div class="flex items-start gap-3">
+                  <CheckCircle class="w-5 h-5 text-emerald-600 flex-shrink-0 mt-0.5" />
+                  <span class="text-slate-600 dark:text-slate-400">Photo & video galleries</span>
+                </div>
+              </div>
+            </div>
+
+            <div>
+              <div class="w-12 h-12 bg-slate-900 dark:bg-white text-white dark:text-slate-900 rounded-full flex items-center justify-center font-bold text-lg mb-6">
+                2
+              </div>
+              <h3 class="text-2xl font-semibold text-slate-900 dark:text-white mb-4">
+                Add Your Content
+              </h3>
+              <p class="text-lg text-slate-600 dark:text-slate-400 mb-6">
+                Showcase your culture with employee stories, benefits, office photos, and your mission. AI can help write copy.
+              </p>
+              <div class="space-y-3">
+                <div class="flex items-start gap-3">
+                  <CheckCircle class="w-5 h-5 text-emerald-600 flex-shrink-0 mt-0.5" />
+                  <span class="text-slate-600 dark:text-slate-400">About your company</span>
+                </div>
+                <div class="flex items-start gap-3">
+                  <CheckCircle class="w-5 h-5 text-emerald-600 flex-shrink-0 mt-0.5" />
+                  <span class="text-slate-600 dark:text-slate-400">Benefits & perks</span>
+                </div>
+                <div class="flex items-start gap-3">
+                  <CheckCircle class="w-5 h-5 text-emerald-600 flex-shrink-0 mt-0.5" />
+                  <span class="text-slate-600 dark:text-slate-400">Team testimonials</span>
+                </div>
+              </div>
+            </div>
+
+            <div>
+              <div class="w-12 h-12 bg-slate-900 dark:bg-white text-white dark:text-slate-900 rounded-full flex items-center justify-center font-bold text-lg mb-6">
+                3
+              </div>
+              <h3 class="text-2xl font-semibold text-slate-900 dark:text-white mb-4">
+                Publish & Promote
+              </h3>
+              <p class="text-lg text-slate-600 dark:text-slate-400 mb-6">
+                Your career site goes live instantly. Share it on social media, add it to your website, and start attracting talent.
+              </p>
+              <div class="space-y-3">
+                <div class="flex items-start gap-3">
+                  <CheckCircle class="w-5 h-5 text-emerald-600 flex-shrink-0 mt-0.5" />
+                  <span class="text-slate-600 dark:text-slate-400">Custom domain support</span>
+                </div>
+                <div class="flex items-start gap-3">
+                  <CheckCircle class="w-5 h-5 text-emerald-600 flex-shrink-0 mt-0.5" />
+                  <span class="text-slate-600 dark:text-slate-400">SEO optimized</span>
+                </div>
+                <div class="flex items-start gap-3">
+                  <CheckCircle class="w-5 h-5 text-emerald-600 flex-shrink-0 mt-0.5" />
+                  <span class="text-slate-600 dark:text-slate-400">Social sharing enabled</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Why It Matters */}
+      <section class="py-28 px-4 sm:px-6 lg:px-8">
+        <div class="max-w-7xl mx-auto">
+          <div class="grid lg:grid-cols-2 gap-16 items-center">
+            <div>
+              <h2 class="text-4xl sm:text-5xl font-bold text-slate-900 dark:text-white mb-8">
+                Why your career site matters
+              </h2>
+              <div class="space-y-6 text-lg text-slate-600 dark:text-slate-400">
+                <p>
+                  Your career site is often the{" "}
+                  <strong class="text-slate-900 dark:text-white">
+                    first impression candidates have of your company
+                  </strong>
+                  . A professional, engaging career page builds trust and excitement.
+                </p>
+                <p>
+                  Candidates research companies before applying. They want to know your mission, see real employees, understand your culture, and learn about benefits.{" "}
+                  <strong class="text-slate-900 dark:text-white">
+                    If your career page doesn't answer these questions, they'll go elsewhere.
+                  </strong>
+                </p>
+                <p>
+                  Companies with compelling career sites see 3x more applications, higher candidate quality, and better retention — because candidates know what they're signing up for.
+                </p>
+              </div>
+            </div>
+
+            <div class="space-y-6">
+              <div class="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-2xl p-8">
+                <div class="flex items-center gap-3 mb-4">
+                  <div class="w-10 h-10 bg-emerald-100 dark:bg-emerald-900/30 rounded-lg flex items-center justify-center">
+                    <Star class="w-6 h-6 text-emerald-600" />
+                  </div>
+                  <h4 class="text-xl font-semibold text-slate-900 dark:text-white">
+                    First Impressions Matter
+                  </h4>
+                </div>
+                <p class="text-slate-600 dark:text-slate-400">
+                  75% of candidates research a company before applying. Your career site is your chance to make them fall in love with your mission.
+                </p>
+              </div>
+
+              <div class="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-2xl p-8">
+                <div class="flex items-center gap-3 mb-4">
+                  <div class="w-10 h-10 bg-emerald-100 dark:bg-emerald-900/30 rounded-lg flex items-center justify-center">
+                    <TrendingUp class="w-6 h-6 text-emerald-600" />
+                  </div>
+                  <h4 class="text-xl font-semibold text-slate-900 dark:text-white">
+                    Higher Quality Applicants
+                  </h4>
+                </div>
+                <p class="text-slate-600 dark:text-slate-400">
+                  When candidates understand your culture upfront, you attract people who are genuinely aligned with your values and mission.
+                </p>
+              </div>
+
+              <div class="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-2xl p-8">
+                <div class="flex items-center gap-3 mb-4">
+                  <div class="w-10 h-10 bg-emerald-100 dark:bg-emerald-900/30 rounded-lg flex items-center justify-center">
+                    <Heart class="w-6 h-6 text-emerald-600" />
+                  </div>
+                  <h4 class="text-xl font-semibold text-slate-900 dark:text-white">
+                    Better Retention
+                  </h4>
+                </div>
+                <p class="text-slate-600 dark:text-slate-400">
+                  Transparency builds trust. Candidates who know what to expect before day one are more likely to stay long-term.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* CTA Section */}
+      <section class="py-28 px-4 sm:px-6 lg:px-8 bg-slate-900 dark:bg-white">
+        <div class="max-w-4xl mx-auto text-center">
+          <h2 class="text-4xl sm:text-5xl font-bold text-white dark:text-slate-900 mb-6">
+            Ready to build your career site?
+          </h2>
+          <p class="text-xl text-slate-300 dark:text-slate-600 mb-10">
+            Create a beautiful career page that attracts top talent in minutes.
+          </p>
+          <div class="flex flex-col sm:flex-row gap-4 justify-center">
+            <a href="/login">
+              <Button
+                size="lg"
+                class="bg-white dark:bg-slate-900 text-slate-900 dark:text-white hover:bg-slate-100 dark:hover:bg-slate-800 px-10 py-6 text-lg"
+              >
+                Start free trial
+                <ArrowRight class="ml-2 h-5 w-5" />
+              </Button>
+            </a>
+            <a href="/pricing">
+              <Button
+                size="lg"
+                variant="outline"
+                class="px-10 py-6 text-lg border-slate-700 dark:border-slate-300 text-white dark:text-slate-900 hover:bg-slate-800 dark:hover:bg-slate-100"
+              >
+                View pricing
+              </Button>
+            </a>
+          </div>
+        </div>
+      </section>
+
+</MarketingLayout>

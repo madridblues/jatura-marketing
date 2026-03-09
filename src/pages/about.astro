@@ -1,0 +1,170 @@
+---
+export const prerender = true;
+import MarketingLayout from '@/layouts/MarketingLayout.astro';
+import { Button } from '@/components/ui/button';
+import { ArrowRight, Sparkles, Heart, Users, Zap, Target, TrendingUp } from 'lucide-react';
+
+const title = "About Jatura - Built by People Who've Been in Your Shoes";
+const description = "Jatura is the AI-native ATS built by hiring experts for modern teams. Born from Purplerain, a global SaaS studio with 15+ years of experience building world-class products. Learn our story.";
+
+const schemaOrg = [
+  {
+    "@type": "AboutPage",
+    "name": "About Jatura",
+    "url": "https://jatura.com/about",
+    "description": "Jatura is the AI-native ATS built by hiring experts. Learn about our story, mission, and the team behind the platform."
+  }
+];
+
+const _data1 = [
+          { Icon: Zap, text: "Creating jobs in minutes, not hours" },
+          { Icon: TrendingUp, text: "Automating repetitive tasks, not adding more" },
+          { Icon: Users, text: "Communicating with candidates like people, not tickets" },
+          { Icon: Heart, text: "Keeping everything transparent, organized, and beautifully simple" }
+        ];
+---
+
+<MarketingLayout {title} {description} {schemaOrg}>
+  <!-- Hero Section -->
+  <section class="pt-24 sm:pt-32 pb-16 px-4 sm:px-6 lg:px-8">
+    <div class="max-w-4xl mx-auto">
+      <div class="text-center mb-16">
+        <h1 class="text-5xl sm:text-6xl lg:text-7xl font-bold text-slate-900 dark:text-white mb-6 leading-tight">
+          About <span class="inline-block">Jatura</span>
+        </h1>
+        <p class="text-2xl sm:text-3xl text-slate-600 dark:text-slate-400 leading-relaxed">
+          We didn&apos;t plan to build another ATS.<br />
+          <span class="text-slate-900 dark:text-white font-medium">We had to.</span>
+        </p>
+      </div>
+
+      <div class="prose prose-lg max-w-none mb-20">
+        <p class="text-xl text-slate-600 dark:text-slate-400 leading-relaxed">
+          For over ten years, we&apos;ve been the people doing the hiring. Founders, recruiters, operators, product builders.
+          We&apos;ve used every platform you can name.
+          Some were bloated and corporate. Others were so minimal they forgot the human side of hiring.
+          Every one left us with the same frustration: <span class="text-slate-900 dark:text-white font-medium">it shouldn&apos;t be this hard to hire great people.</span>
+        </p>
+        <p class="text-xl text-slate-600 dark:text-slate-400 leading-relaxed mt-6">
+          So we decided to start over.
+          Not to reinvent recruiting, but to reimagine the tools behind it.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Born from Experience -->
+  <section class="py-20 px-4 sm:px-6 lg:px-8 bg-slate-50 dark:bg-slate-950 border-y border-slate-200 dark:border-slate-800">
+    <div class="max-w-4xl mx-auto">
+      <div class="flex items-center gap-3 mb-8">
+        <Sparkles class="w-6 h-6 text-blue-500" />
+        <h2 class="text-3xl sm:text-4xl font-bold text-slate-900 dark:text-white">
+          Born from experience. Built for simplicity.
+        </h2>
+      </div>
+      <div class="space-y-6">
+        <p class="text-lg text-slate-600 dark:text-slate-400 leading-relaxed">
+          Jatura comes from the makers of <span class="text-slate-900 dark:text-white font-medium">Purplerain</span>, a global SaaS studio that&apos;s been building world-class products since 2010.
+          Our team has designed and launched software trusted by hundreds of businesses. Products known for clean design, fast workflows, and quiet power.
+        </p>
+        <p class="text-lg text-slate-600 dark:text-slate-400 leading-relaxed">
+          When we turned that same mindset toward hiring, the outcome was inevitable.
+          A platform that removes noise, automates what slows you down, and lets humans do what they do best: connect.
+        </p>
+        <div class="bg-white dark:bg-slate-900 rounded-2xl p-8 border border-slate-200 dark:border-slate-800 mt-8">
+          <p class="text-xl font-medium text-slate-900 dark:text-white">That&apos;s how Jatura was born.</p>
+          <p class="text-lg text-slate-600 dark:text-slate-400 mt-3">A clean, modern, AI-powered ATS for teams that care about both speed and experience.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- The Pain We Solved -->
+  <section class="py-24 px-4 sm:px-6 lg:px-8">
+    <div class="max-w-4xl mx-auto">
+      <div class="flex items-center gap-3 mb-8">
+        <Target class="w-6 h-6 text-blue-500" />
+        <h2 class="text-3xl sm:text-4xl font-bold text-slate-900 dark:text-white">The pain we set out to solve</h2>
+      </div>
+      <p class="text-lg text-slate-600 dark:text-slate-400 leading-relaxed mb-8">
+        We know what it feels like to spend hours writing job descriptions, sifting through resumes, sending endless follow-ups, and losing track of good candidates.
+        We&apos;ve lived the hiring chaos and we knew software could do better.
+      </p>
+      <p class="text-lg text-slate-900 dark:text-white font-medium mb-6">So we focused on the details that matter:</p>
+      <div class="grid sm:grid-cols-2 gap-6 mb-8">
+        {_data1.map((item) => (
+          <div class="flex items-start gap-4 bg-slate-50 dark:bg-slate-900 rounded-lg p-6 border border-slate-200 dark:border-slate-800">
+            <div class="flex-shrink-0">
+              {(() => { const DynIcon = item.Icon; return <DynIcon class="w-5 h-5 text-blue-500" />; })()}
+            </div>
+            <p class="text-slate-700 dark:text-slate-300">{item.text}</p>
+          </div>
+        ))}
+      </div>
+      <p class="text-lg text-slate-600 dark:text-slate-400 leading-relaxed">
+        Jatura doesn&apos;t just track applicants. It streamlines every step of hiring.
+      </p>
+    </div>
+  </section>
+
+  <!-- Mission & Philosophy -->
+  <section class="py-20 px-4 sm:px-6 lg:px-8 bg-slate-50 dark:bg-slate-950 border-y border-slate-200 dark:border-slate-800">
+    <div class="max-w-4xl mx-auto">
+      <div class="grid md:grid-cols-2 gap-12">
+        <div>
+          <h3 class="text-2xl font-bold text-slate-900 dark:text-white mb-4">Our mission</h3>
+          <p class="text-lg text-slate-600 dark:text-slate-400 leading-relaxed mb-4">
+            To build the future of hiring. Clean, simple, functional, and human.
+          </p>
+          <div class="space-y-3 text-slate-600 dark:text-slate-400">
+            <p class="text-base">We believe every great product starts with empathy. Our goal is to build tools that solve real problems without adding new ones.</p>
+            <p class="text-base">We&apos;re offering a generous free plan because we believe good software should empower growth, not gatekeep it.</p>
+          </div>
+        </div>
+        <div>
+          <h3 class="text-2xl font-bold text-slate-900 dark:text-white mb-4">Our philosophy</h3>
+          <p class="text-lg text-slate-900 dark:text-white font-medium mb-4">Product-first. Customer-centric. Relentlessly improving.</p>
+          <div class="space-y-3 text-slate-600 dark:text-slate-400">
+            <p class="text-base">We obsess over small details because they become big differences. We listen before we build.</p>
+            <p class="text-base">We believe design should feel invisible. Not in your way, but quietly guiding you forward.</p>
+            <p class="text-base">Every pixel, every automation, every message inside Jatura exists to make hiring faster, clearer, and more enjoyable for both teams and candidates.</p>
+          </div>
+        </div>
+      </div>
+      <div class="mt-12 bg-gradient-to-br from-blue-50 to-slate-50 dark:from-blue-950/20 dark:to-slate-900 rounded-2xl p-8 border border-slate-200 dark:border-slate-800">
+        <p class="text-lg text-slate-900 dark:text-white font-medium mb-3">Jatura is designed for the future of work.</p>
+        <p class="text-slate-600 dark:text-slate-400">AI-powered, automation-ready, globally scalable. Yet deeply human at its core.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Looking Ahead -->
+  <section class="py-24 px-4 sm:px-6 lg:px-8">
+    <div class="max-w-4xl mx-auto">
+      <h2 class="text-3xl sm:text-4xl font-bold text-slate-900 dark:text-white mb-8">Looking ahead</h2>
+      <div class="space-y-6">
+        <p class="text-lg text-slate-600 dark:text-slate-400 leading-relaxed">
+          We&apos;re just getting started. Jatura is evolving fast, powered by real feedback, real customers, and real ambition.
+          Our vision is to create a holistic hiring platform that adapts as teams grow and technology evolves. One that feels futuristic, yet deeply familiar.
+        </p>
+        <p class="text-xl text-slate-900 dark:text-white font-medium">
+          Because the future of hiring shouldn&apos;t feel complicated. It should feel effortless.
+        </p>
+      </div>
+      <div class="mt-16 text-center">
+        <p class="text-2xl text-slate-600 dark:text-slate-400 mb-3 leading-relaxed">
+          Jatura. Built by people who&apos;ve been in your shoes,
+        </p>
+        <p class="text-2xl text-slate-900 dark:text-white font-medium mb-12">
+          for teams who want to hire better, together.
+        </p>
+        <a href="/signup">
+          <Button size="lg" class="bg-slate-900 dark:bg-white text-white dark:text-slate-900 hover:bg-slate-800 dark:hover:bg-slate-100 px-8 group">
+            Start hiring better today
+            <ArrowRight class="ml-2 h-4 w-4 group-hover:translate-x-1 transition" />
+          </Button>
+        </a>
+      </div>
+    </div>
+  </section>
+</MarketingLayout>

@@ -1,0 +1,421 @@
+---
+export const prerender = true;
+import MarketingLayout from '@/layouts/MarketingLayout.astro';
+import { Users, Target, MessageSquare, TrendingUp, ArrowRight, CheckCircle, Zap, Heart, Clock, BarChart3, Mail, Tag } from 'lucide-react';
+import { Button } from '@/components/ui/button';
+import { Badge } from '@/components/ui/badge';
+
+const title = "Candidate Relationship Management (CRM) | Jatura - Build Your Talent Network";
+const description = "Build and maintain your talent pipeline with Jatura CRM. Nurture passive candidates with drip campaigns, track relationship history, and automatically re-engage warm talent when new roles open.";
+
+const schemaOrg = [
+  {
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://jatura.com" },
+      { "@type": "ListItem", "position": 2, "name": "Features", "item": "https://jatura.com/features" },
+      { "@type": "ListItem", "position": 3, "name": "Candidate CRM", "item": "https://jatura.com/features/candidate-relationship-management" }
+    ]
+  },
+  {
+    "@type": "SoftwareApplication",
+    "name": "Jatura ATS",
+    "@id": "https://jatura.com/#software",
+    "applicationCategory": "BusinessApplication",
+    "operatingSystem": "Web",
+    "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD", "description": "Free plan available" },
+    "featureList": ["Talent Pipeline Management", "Drip Campaign Sequences", "Candidate Tagging", "Relationship Timeline", "Passive Candidate Nurturing", "Re-Engagement Campaigns", "Chrome Sourcing Extension"],
+    "aggregateRating": { "@type": "AggregateRating", "ratingValue": "4.9", "ratingCount": "247", "bestRating": "5" }
+  }
+];
+---
+
+<MarketingLayout {title} {description} {schemaOrg}>
+
+      {/* Hero Section */}
+      <section class="pt-24 pb-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-slate-50 to-white dark:from-slate-900/50 dark:to-slate-950">
+        <div class="max-w-7xl mx-auto">
+          <div class="text-center mb-16">
+            <Badge
+              variant="secondary"
+              class="mb-6 px-5 py-2 text-sm font-medium bg-slate-100 dark:bg-slate-800 text-slate-900 dark:text-slate-100"
+            >
+              <Users class="w-4 h-4 mr-2" />
+              Candidate Relationship Management
+            </Badge>
+            <h1 class="text-5xl sm:text-6xl lg:text-7xl font-bold text-slate-900 dark:text-white mb-6 leading-tight">
+              Build relationships today,<br />hire tomorrow
+            </h1>
+            <p class="text-xl sm:text-2xl text-slate-600 dark:text-slate-400 max-w-4xl mx-auto mb-12 leading-relaxed">
+              Don't let great candidates slip away. Build talent pools, nurture relationships with automated campaigns, and be ready when the perfect role opens up.
+            </p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+              <a href="/login">
+                <Button
+                  size="lg"
+                  class="bg-slate-900 dark:bg-white text-white dark:text-slate-900 hover:bg-slate-800 dark:hover:bg-slate-100 px-10 py-6 text-lg group shadow-lg"
+                >
+                  Start free trial
+                  <ArrowRight class="ml-2 h-5 w-5 group-hover:translate-x-1 transition" />
+                </Button>
+              </a>
+              <a href="/pricing">
+                <Button
+                  size="lg"
+                  variant="outline"
+                  class="px-10 py-6 text-lg border-slate-300 dark:border-slate-700"
+                >
+                  View pricing
+                </Button>
+              </a>
+            </div>
+          </div>
+
+          {/* Stats */}
+          <div class="grid md:grid-cols-3 gap-8 mt-20">
+            <div class="text-center">
+              <div class="text-4xl font-bold text-slate-900 dark:text-white mb-2">5x</div>
+              <p class="text-slate-600 dark:text-slate-400">
+                Faster time-to-fill
+              </p>
+            </div>
+            <div class="text-center">
+              <div class="text-4xl font-bold text-slate-900 dark:text-white mb-2">70%</div>
+              <p class="text-slate-600 dark:text-slate-400">
+                Reduction in agency fees
+              </p>
+            </div>
+            <div class="text-center">
+              <div class="text-4xl font-bold text-slate-900 dark:text-white mb-2">3x</div>
+              <p class="text-slate-600 dark:text-slate-400">
+                More passive candidate engagement
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Features */}
+      <section class="py-28 px-4 sm:px-6 lg:px-8">
+        <div class="max-w-7xl mx-auto">
+          <div class="text-center mb-20">
+            <h2 class="text-4xl sm:text-5xl font-bold text-slate-900 dark:text-white mb-6">
+              Turn passive candidates into future hires
+            </h2>
+            <p class="text-xl text-slate-600 dark:text-slate-400 max-w-3xl mx-auto">
+              Build and nurture a pipeline of qualified talent
+            </p>
+          </div>
+
+          <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div class="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-2xl p-8">
+              <div class="w-14 h-14 bg-slate-100 dark:bg-slate-800 rounded-xl flex items-center justify-center mb-6">
+                <Users class="w-7 h-7 text-slate-900 dark:text-white" />
+              </div>
+              <h3 class="text-xl font-semibold text-slate-900 dark:text-white mb-4">
+                Build Talent Pools
+              </h3>
+              <p class="text-slate-600 dark:text-slate-400">
+                Organize candidates by skills, experience, and interests. Create custom pools for different roles, departments, or future opportunities.
+              </p>
+            </div>
+
+            <div class="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-2xl p-8">
+              <div class="w-14 h-14 bg-slate-100 dark:bg-slate-800 rounded-xl flex items-center justify-center mb-6">
+                <Tag class="w-7 h-7 text-slate-900 dark:text-white" />
+              </div>
+              <h3 class="text-xl font-semibold text-slate-900 dark:text-white mb-4">
+                AI-Powered Tagging
+              </h3>
+              <p class="text-slate-600 dark:text-slate-400">
+                AI automatically tags candidates based on skills, experience, and qualifications. Find the right people instantly when a role opens.
+              </p>
+            </div>
+
+            <div class="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-2xl p-8">
+              <div class="w-14 h-14 bg-slate-100 dark:bg-slate-800 rounded-xl flex items-center justify-center mb-6">
+                <Mail class="w-7 h-7 text-slate-900 dark:text-white" />
+              </div>
+              <h3 class="text-xl font-semibold text-slate-900 dark:text-white mb-4">
+                Automated Nurture Campaigns
+              </h3>
+              <p class="text-slate-600 dark:text-slate-400">
+                Keep candidates engaged with automated email campaigns. Share company news, new openings, and culture content on autopilot.
+              </p>
+            </div>
+
+            <div class="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-2xl p-8">
+              <div class="w-14 h-14 bg-slate-100 dark:bg-slate-800 rounded-xl flex items-center justify-center mb-6">
+                <Target class="w-7 h-7 text-slate-900 dark:text-white" />
+              </div>
+              <h3 class="text-xl font-semibold text-slate-900 dark:text-white mb-4">
+                Smart Matching
+              </h3>
+              <p class="text-slate-600 dark:text-slate-400">
+                When a new job opens, AI instantly suggests candidates from your talent pools who match the requirements. No manual searching needed.
+              </p>
+            </div>
+
+            <div class="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-2xl p-8">
+              <div class="w-14 h-14 bg-slate-100 dark:bg-slate-800 rounded-xl flex items-center justify-center mb-6">
+                <MessageSquare class="w-7 h-7 text-slate-900 dark:text-white" />
+              </div>
+              <h3 class="text-xl font-semibold text-slate-900 dark:text-white mb-4">
+                Personalized Outreach
+              </h3>
+              <p class="text-slate-600 dark:text-slate-400">
+                Send personalized messages to candidates in bulk. AI drafts messages that reference their background and relevant opportunities.
+              </p>
+            </div>
+
+            <div class="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-2xl p-8">
+              <div class="w-14 h-14 bg-slate-100 dark:bg-slate-800 rounded-xl flex items-center justify-center mb-6">
+                <BarChart3 class="w-7 h-7 text-slate-900 dark:text-white" />
+              </div>
+              <h3 class="text-xl font-semibold text-slate-900 dark:text-white mb-4">
+                Engagement Analytics
+              </h3>
+              <p class="text-slate-600 dark:text-slate-400">
+                Track email opens, clicks, and responses. See which candidates are most engaged and likely to respond to new opportunities.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* How It Works */}
+      <section class="py-28 px-4 sm:px-6 lg:px-8 bg-slate-50 dark:bg-slate-900/50">
+        <div class="max-w-7xl mx-auto">
+          <div class="text-center mb-20">
+            <h2 class="text-4xl sm:text-5xl font-bold text-slate-900 dark:text-white mb-6">
+              How Talent CRM works
+            </h2>
+          </div>
+
+          <div class="grid lg:grid-cols-4 gap-8">
+            <div class="text-center">
+              <div class="w-16 h-16 bg-slate-900 dark:bg-white rounded-2xl flex items-center justify-center mx-auto mb-6">
+                <span class="text-2xl font-bold text-white dark:text-slate-900">1</span>
+              </div>
+              <h3 class="text-xl font-semibold text-slate-900 dark:text-white mb-3">
+                Capture Candidates
+              </h3>
+              <p class="text-slate-600 dark:text-slate-400">
+                Add candidates from applications, referrals, LinkedIn, or career site interest forms. Everyone goes into your talent database.
+              </p>
+            </div>
+
+            <div class="text-center">
+              <div class="w-16 h-16 bg-slate-900 dark:bg-white rounded-2xl flex items-center justify-center mx-auto mb-6">
+                <span class="text-2xl font-bold text-white dark:text-slate-900">2</span>
+              </div>
+              <h3 class="text-xl font-semibold text-slate-900 dark:text-white mb-3">
+                Organize Talent Pools
+              </h3>
+              <p class="text-slate-600 dark:text-slate-400">
+                AI tags candidates by skills and experience. Create custom pools for different roles, seniority levels, or locations.
+              </p>
+            </div>
+
+            <div class="text-center">
+              <div class="w-16 h-16 bg-slate-900 dark:bg-white rounded-2xl flex items-center justify-center mx-auto mb-6">
+                <span class="text-2xl font-bold text-white dark:text-slate-900">3</span>
+              </div>
+              <h3 class="text-xl font-semibold text-slate-900 dark:text-white mb-3">
+                Nurture Relationships
+              </h3>
+              <p class="text-slate-600 dark:text-slate-400">
+                Automated campaigns share company updates and new openings. Keep candidates warm without manual work.
+              </p>
+            </div>
+
+            <div class="text-center">
+              <div class="w-16 h-16 bg-slate-900 dark:bg-white rounded-2xl flex items-center justify-center mx-auto mb-6">
+                <span class="text-2xl font-bold text-white dark:text-slate-900">4</span>
+              </div>
+              <h3 class="text-xl font-semibold text-slate-900 dark:text-white mb-3">
+                Fill Roles Faster
+              </h3>
+              <p class="text-slate-600 dark:text-slate-400">
+                When a role opens, AI suggests pre-qualified candidates from your pools. Reach out immediately and hire faster.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Why It Matters */}
+      <section class="py-28 px-4 sm:px-6 lg:px-8">
+        <div class="max-w-7xl mx-auto">
+          <div class="grid lg:grid-cols-2 gap-16 items-center">
+            <div>
+              <h2 class="text-4xl sm:text-5xl font-bold text-slate-900 dark:text-white mb-8">
+                Why candidate relationship management matters
+              </h2>
+              <div class="space-y-6 text-lg text-slate-600 dark:text-slate-400">
+                <p>
+                  The best candidates aren't actively looking. They're{" "}
+                  <strong class="text-slate-900 dark:text-white">
+                    passive — happy in their current roles
+                  </strong>{" "}
+                  but open to the right opportunity.
+                </p>
+                <p>
+                  Talent CRM lets you build relationships with passive candidates over time. When the perfect role opens up, you have a warm pipeline ready to go instead of starting from scratch.
+                </p>
+                <p>
+                  <strong class="text-slate-900 dark:text-white">
+                    Companies with talent pools fill roles 5x faster
+                  </strong>{" "}
+                  and spend 70% less on recruiting agencies. You're always one step ahead.
+                </p>
+              </div>
+            </div>
+
+            <div class="space-y-6">
+              <div class="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-2xl p-8">
+                <div class="flex items-center gap-3 mb-4">
+                  <div class="w-10 h-10 bg-emerald-100 dark:bg-emerald-900/30 rounded-lg flex items-center justify-center">
+                    <Clock class="w-6 h-6 text-emerald-600" />
+                  </div>
+                  <h4 class="text-xl font-semibold text-slate-900 dark:text-white">
+                    5x Faster Hiring
+                  </h4>
+                </div>
+                <p class="text-slate-600 dark:text-slate-400">
+                  Skip the job posting phase. Reach out to pre-qualified candidates from your talent pool on day one.
+                </p>
+              </div>
+
+              <div class="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-2xl p-8">
+                <div class="flex items-center gap-3 mb-4">
+                  <div class="w-10 h-10 bg-emerald-100 dark:bg-emerald-900/30 rounded-lg flex items-center justify-center">
+                    <TrendingUp class="w-6 h-6 text-emerald-600" />
+                  </div>
+                  <h4 class="text-xl font-semibold text-slate-900 dark:text-white">
+                    70% Cost Reduction
+                  </h4>
+                </div>
+                <p class="text-slate-600 dark:text-slate-400">
+                  Less reliance on expensive job boards and recruiting agencies. Build your own pipeline of qualified talent.
+                </p>
+              </div>
+
+              <div class="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-2xl p-8">
+                <div class="flex items-center gap-3 mb-4">
+                  <div class="w-10 h-10 bg-emerald-100 dark:bg-emerald-900/30 rounded-lg flex items-center justify-center">
+                    <Heart class="w-6 h-6 text-emerald-600" />
+                  </div>
+                  <h4 class="text-xl font-semibold text-slate-900 dark:text-white">
+                    Better Culture Fit
+                  </h4>
+                </div>
+                <p class="text-slate-600 dark:text-slate-400">
+                  Candidates you've nurtured over time understand your company. They join because they believe in your mission.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Use Cases */}
+      <section class="py-28 px-4 sm:px-6 lg:px-8 bg-slate-50 dark:bg-slate-900/50">
+        <div class="max-w-7xl mx-auto">
+          <div class="text-center mb-20">
+            <h2 class="text-4xl sm:text-5xl font-bold text-slate-900 dark:text-white mb-6">
+              Perfect for every hiring scenario
+            </h2>
+          </div>
+
+          <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div class="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-2xl p-8">
+              <h3 class="text-xl font-semibold text-slate-900 dark:text-white mb-4">
+                Hard-to-Fill Roles
+              </h3>
+              <p class="text-slate-600 dark:text-slate-400">
+                Build talent pools for specialized skills. Nurture relationships so you have candidates ready when you need them.
+              </p>
+            </div>
+
+            <div class="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-2xl p-8">
+              <h3 class="text-xl font-semibold text-slate-900 dark:text-white mb-4">
+                Seasonal Hiring
+              </h3>
+              <p class="text-slate-600 dark:text-slate-400">
+                Keep previous seasonal workers engaged year-round. Bring them back when the season starts without starting from scratch.
+              </p>
+            </div>
+
+            <div class="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-2xl p-8">
+              <h3 class="text-xl font-semibold text-slate-900 dark:text-white mb-4">
+                High-Growth Companies
+              </h3>
+              <p class="text-slate-600 dark:text-slate-400">
+                Scaling fast? Build talent pools ahead of hiring needs. Be ready to hire the moment you get budget approval.
+              </p>
+            </div>
+
+            <div class="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-2xl p-8">
+              <h3 class="text-xl font-semibold text-slate-900 dark:text-white mb-4">
+                Passive Candidate Sourcing
+              </h3>
+              <p class="text-slate-600 dark:text-slate-400">
+                Add interesting candidates from LinkedIn. Nurture them with content until they're ready to make a move.
+              </p>
+            </div>
+
+            <div class="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-2xl p-8">
+              <h3 class="text-xl font-semibold text-slate-900 dark:text-white mb-4">
+                Internal Mobility
+              </h3>
+              <p class="text-slate-600 dark:text-slate-400">
+                Keep track of employees interested in different roles. Fill positions internally before posting externally.
+              </p>
+            </div>
+
+            <div class="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-2xl p-8">
+              <h3 class="text-xl font-semibold text-slate-900 dark:text-white mb-4">
+                Future Pipeline Building
+              </h3>
+              <p class="text-slate-600 dark:text-slate-400">
+                Meet great candidates who aren't ready now? Add them to a pool and stay in touch until the timing is right.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* CTA Section */}
+      <section class="py-28 px-4 sm:px-6 lg:px-8 bg-slate-900 dark:bg-white">
+        <div class="max-w-4xl mx-auto text-center">
+          <h2 class="text-4xl sm:text-5xl font-bold text-white dark:text-slate-900 mb-6">
+            Ready to build your talent network?
+          </h2>
+          <p class="text-xl text-slate-300 dark:text-slate-600 mb-10">
+            Start nurturing relationships with great candidates today.
+          </p>
+          <div class="flex flex-col sm:flex-row gap-4 justify-center">
+            <a href="/login">
+              <Button
+                size="lg"
+                class="bg-white dark:bg-slate-900 text-slate-900 dark:text-white hover:bg-slate-100 dark:hover:bg-slate-800 px-10 py-6 text-lg"
+              >
+                Start free trial
+                <ArrowRight class="ml-2 h-5 w-5" />
+              </Button>
+            </a>
+            <a href="/pricing">
+              <Button
+                size="lg"
+                variant="outline"
+                class="px-10 py-6 text-lg border-slate-700 dark:border-slate-300 text-white dark:text-slate-900 hover:bg-slate-800 dark:hover:bg-slate-100"
+              >
+                View pricing
+              </Button>
+            </a>
+          </div>
+        </div>
+      </section>
+
+</MarketingLayout>

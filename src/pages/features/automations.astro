@@ -1,0 +1,504 @@
+---
+export const prerender = true;
+import MarketingLayout from '@/layouts/MarketingLayout.astro';
+import { ArrowRight, Zap, Clock, Mail, Calendar, Users, CheckCircle, Settings, Target, Brain, Shield, FileText, MessageSquare, TrendingUp, Workflow, BellRing } from 'lucide-react';
+import { Button } from '@/components/ui/button';
+import { Badge } from '@/components/ui/badge';
+import { Card, CardContent } from '@/components/ui/card';
+
+const title = "Recruiting Workflow Automation | AI-Powered ATS Automation | Jatura";
+const description = "Automate repetitive recruiting tasks with Jatura's workflow automation. Trigger-based actions, AI-powered screening, automated communications, and smart scheduling to hire faster with less manual work.";
+
+const schemaOrg = [
+  {
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://jatura.com" },
+      { "@type": "ListItem", "position": 2, "name": "Features", "item": "https://jatura.com/features" },
+      { "@type": "ListItem", "position": 3, "name": "Workflow Automation", "item": "https://jatura.com/features/automations" }
+    ]
+  },
+  {
+    "@type": "SoftwareApplication",
+    "name": "Jatura ATS",
+    "@id": "https://jatura.com/#software",
+    "applicationCategory": "BusinessApplication",
+    "operatingSystem": "Web",
+    "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD", "description": "Free plan available" },
+    "featureList": ["Trigger-Based Automations", "Automated Email Sequences", "Auto-Scheduling", "Stage-Based Actions", "AI Screening Rules", "Candidate Disposition Automation", "Bulk Actions"],
+    "aggregateRating": { "@type": "AggregateRating", "ratingValue": "4.9", "ratingCount": "247", "bestRating": "5" }
+  }
+];
+
+const _data1 = [
+                    { name: "Resume Screening", trigger: "New Application", status: "Active", count: "247 today" },
+                    { name: "Interview Scheduling", trigger: "Stage: Interview", status: "Active", count: "18 scheduled" },
+                    { name: "Follow-up Emails", trigger: "3 Days No Response", status: "Active", count: "32 sent" },
+                    { name: "Offer Approvals", trigger: "Hiring Manager Approval", status: "Active", count: "5 pending" }
+                  ];
+
+const _data2 = [
+              {
+                icon: Brain,
+                title: "AI Resume Screening",
+                description: "Automatically screen and rank candidates based on skills, experience, and job requirements. Surface the best matches 40% faster than manual review.",
+                features: ["Smart candidate ranking", "Skills extraction", "Auto-rejection emails"]
+              },
+              {
+                icon: Workflow,
+                title: "Stage-Based Triggers",
+                description: "Execute actions automatically when candidates move through your pipeline. Set up triggers for any stage transition to keep hiring moving.",
+                features: ["Pipeline automation", "Conditional logic", "Multi-step workflows"]
+              },
+              {
+                icon: Mail,
+                title: "Automated Communications",
+                description: "Send personalized emails, SMS, and in-app messages at the right time. Schedule follow-ups, reminders, and status updates automatically.",
+                features: ["Email sequences", "Smart timing", "Template library"]
+              },
+              {
+                icon: Calendar,
+                title: "Smart Scheduling",
+                description: "Eliminate scheduling back-and-forth with automated interview booking. AI finds optimal times, sends invites, and manages cancellations.",
+                features: ["Self-scheduling links", "Panel coordination", "Auto-reminders"]
+              },
+              {
+                icon: Settings,
+                title: "Approval Workflows",
+                description: "Route hiring decisions through multi-stakeholder approval chains automatically. Track status and ensure compliance with structured processes.",
+                features: ["Multi-level approvals", "Conditional routing", "Audit trails"]
+              },
+              {
+                icon: FileText,
+                title: "Document Generation",
+                description: "Auto-generate offer letters, interview guides, and onboarding documents from templates. Trigger e-signature requests automatically.",
+                features: ["Template-based docs", "E-signature triggers", "Document tracking"]
+              },
+              {
+                icon: Users,
+                title: "Team Notifications",
+                description: "Keep hiring teams in sync with automated Slack, Teams, and email alerts. Notify the right people at the right time about every update.",
+                features: ["Slack/Teams integration", "Custom alert rules", "Real-time updates"]
+              },
+              {
+                icon: Target,
+                title: "Task Automation",
+                description: "Create and assign tasks automatically based on pipeline events. Ensure nothing falls through the cracks with systematic follow-ups.",
+                features: ["Auto task creation", "Due date tracking", "Escalation rules"]
+              },
+              {
+                icon: TrendingUp,
+                title: "Candidate Nurturing",
+                description: "Build long-term relationships with automated drip campaigns. Re-engage passive candidates and keep talent pools warm for future roles.",
+                features: ["Drip campaigns", "Re-engagement flows", "Pool management"]
+              }
+            ];
+
+const _data3 = [
+              {
+                title: "New Application Workflow",
+                trigger: "Candidate submits application",
+                actions: [
+                  "AI screens resume for qualifications",
+                  "Send confirmation email to candidate",
+                  "Notify recruiter via Slack",
+                  "Auto-advance qualified candidates to next stage",
+                  "Auto-reject unqualified with personalized email"
+                ]
+              },
+              {
+                title: "Interview Scheduling",
+                trigger: "Candidate moves to Interview stage",
+                actions: [
+                  "Check interviewer availability",
+                  "Send self-scheduling link to candidate",
+                  "Book calendar events automatically",
+                  "Send prep materials to candidate",
+                  "Send reminders 24 hours before interview"
+                ]
+              },
+              {
+                title: "Offer Approval Chain",
+                trigger: "Recruiter initiates offer",
+                actions: [
+                  "Route to hiring manager for approval",
+                  "Check budget and headcount availability",
+                  "Escalate to finance if over threshold",
+                  "Generate offer letter from template",
+                  "Send DocuSign for e-signature"
+                ]
+              },
+              {
+                title: "Candidate Hired Workflow",
+                trigger: "Offer accepted",
+                actions: [
+                  "Create employee profile in HRIS",
+                  "Trigger IT provisioning (email, accounts)",
+                  "Send welcome email with onboarding checklist",
+                  "Schedule Day 1 orientation",
+                  "Notify hiring team and department"
+                ]
+              },
+              {
+                title: "Nurture Campaign",
+                trigger: "Candidate added to talent pool",
+                actions: [
+                  "Send initial welcome email",
+                  "Schedule follow-up email in 30 days",
+                  "Send company updates quarterly",
+                  "Re-engage when relevant jobs posted",
+                  "Track engagement and update scores"
+                ]
+              },
+              {
+                title: "Interview No-Show Recovery",
+                trigger: "Candidate misses interview",
+                actions: [
+                  "Send automated check-in message",
+                  "Offer to reschedule with new link",
+                  "Notify recruiter of no-show",
+                  "Mark candidate timeline event",
+                  "Follow up in 48 hours if no response"
+                ]
+              }
+            ];
+
+const _data4 = [
+              {
+                step: "1",
+                title: "Choose a Trigger",
+                description: "Select what starts the automation: new application, stage change, time-based event, or custom criteria. Pick from 50+ pre-built triggers.",
+                icon: Zap
+              },
+              {
+                step: "2",
+                title: "Define Actions",
+                description: "Add actions that execute automatically when triggered: send emails, create tasks, update fields, notify teams, or route for approvals.",
+                icon: Settings
+              },
+              {
+                step: "3",
+                title: "Activate & Monitor",
+                description: "Turn on your automation and watch it work. Track performance with real-time analytics and refine based on results.",
+                icon: TrendingUp
+              }
+            ];
+
+const _data5 = [
+              {
+                icon: Clock,
+                title: "Save 60% of Your Time",
+                description: "Eliminate hours of manual work each week. Recruiters spend time on strategic tasks, not administrative busywork."
+              },
+              {
+                icon: Zap,
+                title: "40% Faster Hiring",
+                description: "Automation accelerates every stage of the hiring process, from screening to offer acceptance, reducing time-to-hire significantly."
+              },
+              {
+                icon: Shield,
+                title: "Zero Human Error",
+                description: "Automated workflows execute perfectly every time. No missed follow-ups, forgotten tasks, or compliance mistakes."
+              },
+              {
+                icon: MessageSquare,
+                title: "Better Candidate Experience",
+                description: "Candidates get instant responses, timely updates, and consistent communication throughout the hiring journey."
+              },
+              {
+                icon: Settings,
+                title: "No-Code Setup",
+                description: "Visual workflow builder requires zero technical skills. Recruiters can create and modify automations independently."
+              },
+              {
+                icon: BellRing,
+                title: "Always-On Engagement",
+                description: "Automations work 24/7, engaging candidates, routing approvals, and progressing pipelines even when you're offline."
+              }
+            ];
+---
+
+<MarketingLayout {title} {description} {schemaOrg}>
+
+      {/* Hero Section */}
+      <section class="pt-20 pb-16 px-4 sm:px-6 lg:px-8 bg-black border-b border-slate-800">
+        <div class="max-w-7xl mx-auto">
+          <div class="grid lg:grid-cols-2 gap-12 items-center">
+            <div>
+              <Badge class="mb-4">
+                <Zap class="h-3 w-3 mr-1" />
+                Workflow Automation
+              </Badge>
+              <h1 class="text-4xl sm:text-5xl lg:text-6xl font-bold text-slate-900 dark:text-white mb-6 leading-tight">
+                Automate Recruiting. Focus on People.
+              </h1>
+              <p class="text-xl text-slate-600 dark:text-slate-400 mb-8 leading-relaxed">
+                Eliminate repetitive tasks with intelligent automation. From resume screening to interview scheduling, let AI handle the busywork while you build relationships with top talent.
+              </p>
+              <div class="flex flex-col sm:flex-row gap-4">
+                <a href="/signup">
+                  <Button size="lg" class="w-full sm:w-auto" data-testid="button-get-started">
+                    Start Free - Up to 3 active jobs
+                    <ArrowRight class="ml-2 h-5 w-5" />
+                  </Button>
+                </a>
+                <a href="/pricing">
+                  <Button size="lg" variant="outline" class="w-full sm:w-auto" data-testid="button-see-pricing">
+                    See Pricing
+                  </Button>
+                </a>
+              </div>
+              <div class="mt-8 flex items-center gap-6">
+                <div class="flex items-center gap-2">
+                  <CheckCircle class="h-5 w-5 text-green-600" />
+                  <span class="text-sm text-slate-600 dark:text-slate-400">60% time saved</span>
+                </div>
+                <div class="flex items-center gap-2">
+                  <CheckCircle class="h-5 w-5 text-green-600" />
+                  <span class="text-sm text-slate-600 dark:text-slate-400">Zero-code setup</span>
+                </div>
+              </div>
+            </div>
+            <div class="relative">
+              <div class="bg-white dark:bg-slate-800 rounded-2xl p-6 shadow-2xl border border-slate-200 dark:border-slate-700">
+                <div class="flex items-center justify-between mb-6">
+                  <h3 class="text-lg font-semibold text-slate-900 dark:text-white">Active Automations</h3>
+                  <Badge variant="secondary">12 Running</Badge>
+                </div>
+                <div class="space-y-4">
+                  {_data1.map((automation, idx) => (
+                    <div class="bg-slate-50 dark:bg-slate-900 rounded-lg p-4 flex items-center gap-4">
+                      <div class="w-10 h-10 bg-gradient-to-br from-emerald-500 to-green-600 rounded-lg flex items-center justify-center flex-shrink-0">
+                        <Zap class="h-5 w-5 text-white" />
+                      </div>
+                      <div class="flex-1 min-w-0">
+                        <div class="font-semibold text-slate-900 dark:text-white text-sm">{automation.name}</div>
+                        <div class="text-xs text-slate-600 dark:text-slate-400">
+                          Trigger: {automation.trigger}
+                        </div>
+                      </div>
+                      <div class="text-right">
+                        <div class="text-xs font-medium text-green-600">{automation.status}</div>
+                        <div class="text-xs text-slate-600 dark:text-slate-400">{automation.count}</div>
+                      </div>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Stats Section */}
+      <section class="py-16 px-4 sm:px-6 lg:px-8 border-b border-slate-200 dark:border-slate-800">
+        <div class="max-w-7xl mx-auto">
+          <div class="grid md:grid-cols-4 gap-8 text-center">
+            <div>
+              <div class="text-4xl font-bold text-emerald-600 mb-2">60%</div>
+              <div class="text-slate-600 dark:text-slate-400">Time Saved</div>
+            </div>
+            <div>
+              <div class="text-4xl font-bold text-green-600 mb-2">40%</div>
+              <div class="text-slate-600 dark:text-slate-400">Faster Screening</div>
+            </div>
+            <div>
+              <div class="text-4xl font-bold text-blue-600 mb-2">100+</div>
+              <div class="text-slate-600 dark:text-slate-400">Automation Templates</div>
+            </div>
+            <div>
+              <div class="text-4xl font-bold text-blue-600 mb-2">24/7</div>
+              <div class="text-slate-600 dark:text-slate-400">Always Working</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Key Features */}
+      <section class="py-20 px-4 sm:px-6 lg:px-8">
+        <div class="max-w-7xl mx-auto">
+          <div class="text-center mb-16">
+            <h2 class="text-3xl sm:text-4xl font-bold text-slate-900 dark:text-white mb-4">
+              Intelligent Automation for Every Task
+            </h2>
+            <p class="text-xl text-slate-600 dark:text-slate-400 max-w-3xl mx-auto">
+              From screening to onboarding, automate repetitive work with smart triggers and AI-powered actions
+            </p>
+          </div>
+
+          <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {_data2.map((feature, idx) => (
+              <Card class="hover:shadow-lg transition">
+                <CardContent class="p-6">
+                  <div class="w-12 h-12 bg-emerald-100 dark:bg-emerald-950 rounded-lg flex items-center justify-center mb-4">
+                    {(() => { const DynIcon = feature.icon; return <DynIcon class="h-6 w-6 text-emerald-600 dark:text-emerald-400" />; })()}
+                  </div>
+                  <h3 class="text-xl font-semibold text-slate-900 dark:text-white mb-3">
+                    {feature.title}
+                  </h3>
+                  <p class="text-slate-600 dark:text-slate-400 mb-4 leading-relaxed">
+                    {feature.description}
+                  </p>
+                  <ul class="space-y-2">
+                    {feature.features.map((item, i) => (
+                      <li class="flex items-center gap-2 text-sm text-slate-600 dark:text-slate-400">
+                        <CheckCircle class="h-4 w-4 text-green-600 flex-shrink-0" />
+                        {item}
+                      </li>
+                    ))}
+                  </ul>
+                </CardContent>
+              </Card>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Common Automation Workflows */}
+      <section class="py-20 px-4 sm:px-6 lg:px-8 bg-slate-50 dark:bg-slate-900">
+        <div class="max-w-7xl mx-auto">
+          <div class="text-center mb-16">
+            <h2 class="text-3xl sm:text-4xl font-bold text-slate-900 dark:text-white mb-4">
+              100+ Pre-Built Automation Templates
+            </h2>
+            <p class="text-xl text-slate-600 dark:text-slate-400 max-w-3xl mx-auto">
+              Start automating in minutes with ready-to-use workflows for common recruiting scenarios
+            </p>
+          </div>
+
+          <div class="grid md:grid-cols-2 gap-8">
+            {_data3.map((workflow, idx) => (
+              <Card class="hover:shadow-xl transition">
+                <CardContent class="p-8">
+                  <div class="flex items-start gap-4 mb-6">
+                    <div class="w-12 h-12 bg-gradient-to-br from-emerald-500 to-green-600 rounded-lg flex items-center justify-center flex-shrink-0">
+                      <Workflow class="h-6 w-6 text-white" />
+                    </div>
+                    <div>
+                      <h3 class="text-xl font-semibold text-slate-900 dark:text-white mb-2">
+                        {workflow.title}
+                      </h3>
+                      <div class="flex items-center gap-2 text-sm text-slate-600 dark:text-slate-400">
+                        <Zap class="h-4 w-4 text-emerald-600" />
+                        <span>Trigger: {workflow.trigger}</span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="space-y-3">
+                    {workflow.actions.map((action, i) => (
+                      <div class="flex items-start gap-3">
+                        <div class="w-6 h-6 bg-emerald-100 dark:bg-emerald-950 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
+                          <span class="text-xs font-semibold text-emerald-600 dark:text-emerald-400">{i + 1}</span>
+                        </div>
+                        <p class="text-sm text-slate-600 dark:text-slate-400 leading-relaxed">{action}</p>
+                      </div>
+                    ))}
+                  </div>
+                </CardContent>
+              </Card>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* How It Works */}
+      <section class="py-20 px-4 sm:px-6 lg:px-8">
+        <div class="max-w-7xl mx-auto">
+          <div class="text-center mb-16">
+            <h2 class="text-3xl sm:text-4xl font-bold text-slate-900 dark:text-white mb-4">
+              Build Automations in 3 Simple Steps
+            </h2>
+            <p class="text-xl text-slate-600 dark:text-slate-400 max-w-3xl mx-auto">
+              No coding required. Visual workflow builder makes automation accessible to everyone.
+            </p>
+          </div>
+
+          <div class="grid md:grid-cols-3 gap-8">
+            {_data4.map((step, idx) => (
+              <div class="relative">
+                <div class="bg-white dark:bg-slate-800 rounded-xl p-8 shadow-lg h-full border border-slate-200 dark:border-slate-700">
+                  <div class="flex items-center gap-4 mb-4">
+                    <div class="w-12 h-12 bg-gradient-to-br from-emerald-500 to-green-600 rounded-full flex items-center justify-center text-white font-bold text-xl">
+                      {step.step}
+                    </div>
+                    {(() => { const DynIcon = step.icon; return <DynIcon class="h-8 w-8 text-emerald-600 dark:text-emerald-400" />; })()}
+                  </div>
+                  <h3 class="text-xl font-semibold text-slate-900 dark:text-white mb-3">
+                    {step.title}
+                  </h3>
+                  <p class="text-slate-600 dark:text-slate-400 leading-relaxed">
+                    {step.description}
+                  </p>
+                </div>
+                {idx < 2 && (
+                  <div class="hidden md:block absolute top-1/2 right-0 transform translate-x-1/2 -translate-y-1/2">
+                    <ArrowRight class="h-6 w-6 text-slate-400" />
+                  </div>
+                )}
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Benefits Section */}
+      <section class="py-20 px-4 sm:px-6 lg:px-8 bg-slate-50 dark:bg-slate-900">
+        <div class="max-w-7xl mx-auto">
+          <div class="text-center mb-16">
+            <h2 class="text-3xl sm:text-4xl font-bold text-slate-900 dark:text-white mb-4">
+              Why Teams Choose Jatura Automation
+            </h2>
+          </div>
+
+          <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {_data5.map((benefit, idx) => (
+              <div class="bg-white dark:bg-slate-800 rounded-xl p-6 shadow-lg border border-slate-200 dark:border-slate-700">
+                {(() => { const DynIcon = benefit.icon; return <DynIcon class="h-10 w-10 text-emerald-600 dark:text-emerald-400 mb-4" />; })()}
+                <h3 class="text-xl font-semibold text-slate-900 dark:text-white mb-2">
+                  {benefit.title}
+                </h3>
+                <p class="text-slate-600 dark:text-slate-400 leading-relaxed">
+                  {benefit.description}
+                </p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* CTA Section */}
+      <section class="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-emerald-600 to-green-700">
+        <div class="max-w-4xl mx-auto text-center">
+          <h2 class="text-3xl sm:text-4xl md:text-5xl font-bold text-white mb-6">
+            Automate Your Recruiting. Start Today.
+          </h2>
+          <p class="text-xl text-emerald-100 mb-8 max-w-2xl mx-auto">
+            Join hundreds of companies saving 60% of their time with intelligent automation. No credit card required.
+          </p>
+          <div class="flex flex-col sm:flex-row gap-4 justify-center">
+            <a href="/signup">
+              <Button size="lg" class="bg-white text-emerald-600 hover:bg-emerald-50 w-full sm:w-auto">
+                Start Free - Up to 3 active jobs
+                <ArrowRight class="ml-2 h-5 w-5" />
+              </Button>
+            </a>
+            <a href="/pricing">
+              <Button size="lg" variant="outline" class="border-white text-white hover:bg-white/10 w-full sm:w-auto">
+                View Pricing
+              </Button>
+            </a>
+          </div>
+          <div class="mt-8 flex items-center justify-center gap-6 text-emerald-100 text-sm">
+            <div class="flex items-center gap-2">
+              <CheckCircle class="h-5 w-5" />
+              <span>100+ automation templates</span>
+            </div>
+            <div class="flex items-center gap-2">
+              <CheckCircle class="h-5 w-5" />
+              <span>No coding required</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+</MarketingLayout>

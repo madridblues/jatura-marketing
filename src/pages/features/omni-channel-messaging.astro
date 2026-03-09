@@ -1,0 +1,693 @@
+---
+export const prerender = true;
+import MarketingLayout from '@/layouts/MarketingLayout.astro';
+import { ArrowRight, Mail, MessageSquare, Phone, Bell, Users, CheckCircle, Zap, Clock, Shield, BarChart3, Globe, Smartphone, Inbox, Calendar, Star } from 'lucide-react';
+import { Button } from '@/components/ui/button';
+import { Badge } from '@/components/ui/badge';
+import { Card, CardContent } from '@/components/ui/card';
+
+const title = "Omni-Channel Messaging for Recruiting | Email, SMS & In-App Chat | Jatura";
+const description = "Engage candidates across email, SMS, and in-app messaging with Jatura's omni-channel communication platform. Automated templates, two-way conversations, and real-time notifications for faster hiring.";
+
+const schemaOrg = [
+  {
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://jatura.com" },
+      { "@type": "ListItem", "position": 2, "name": "Features", "item": "https://jatura.com/features" },
+      { "@type": "ListItem", "position": 3, "name": "Omni-Channel Messaging", "item": "https://jatura.com/features/omni-channel-messaging" }
+    ]
+  },
+  {
+    "@type": "SoftwareApplication",
+    "name": "Jatura ATS",
+    "@id": "https://jatura.com/#software",
+    "applicationCategory": "BusinessApplication",
+    "operatingSystem": "Web",
+    "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD", "description": "Free plan available" },
+    "featureList": ["Email Outreach", "SMS Texting", "Two-Way Messaging", "Message Templates", "Automated Follow-Ups", "Bulk Messaging", "WhatsApp Integration", "Real-Time Notifications"],
+    "aggregateRating": { "@type": "AggregateRating", "ratingValue": "4.9", "ratingCount": "247", "bestRating": "5" }
+  }
+];
+
+const _data1 = [
+                    { icon: Mail, label: "Email", messages: "24 sent today", color: "blue" },
+                    { icon: Phone, label: "SMS", messages: "12 sent today", color: "green" },
+                    { icon: MessageSquare, label: "In-App", messages: "8 unread", color: "blue" }
+                  ];
+
+const _data2 = [
+              {
+                icon: Mail,
+                title: "Email Messaging",
+                description: "Professional email campaigns with customizable templates, merge tags, and automated follow-ups. Track opens, clicks, and engagement.",
+                features: ["Templated emails", "Personalization", "Tracking & analytics"]
+              },
+              {
+                icon: Phone,
+                title: "SMS Communication",
+                description: "Reach candidates instantly with text messaging. Two-way conversations, automated reminders, and TCPA-compliant consent management.",
+                features: ["Two-way texting", "Auto opt-in/out", "Bulk campaigns"]
+              },
+              {
+                icon: MessageSquare,
+                title: "In-App Chat",
+                description: "Real-time messaging within the candidate portal. Instant notifications, file sharing, and conversation history for seamless communication.",
+                features: ["Real-time chat", "File attachments", "Message history"]
+              },
+              {
+                icon: Inbox,
+                title: "Unified Inbox",
+                description: "All conversations in one place. Email, SMS, and in-app messages consolidated for complete visibility and faster response times.",
+                features: ["Single dashboard", "Conversation threading", "Team collaboration"]
+              },
+              {
+                icon: Zap,
+                title: "Automated Sequences",
+                description: "Set up drip campaigns and automated workflows. Nurture candidates with scheduled messages triggered by pipeline stage changes.",
+                features: ["Drip campaigns", "Stage triggers", "Smart scheduling"]
+              },
+              {
+                icon: Bell,
+                title: "Real-Time Notifications",
+                description: "Never miss a message. Instant Slack and email alerts when candidates respond, with customizable notification preferences.",
+                features: ["Slack integration", "Email alerts", "Mobile push"]
+              },
+              {
+                icon: Users,
+                title: "Team Collaboration",
+                description: "Entire hiring team stays in sync. Shared inbox, internal notes, and visibility into all candidate communications.",
+                features: ["Shared inbox", "Internal notes", "Permission controls"]
+              },
+              {
+                icon: Shield,
+                title: "Compliance Built-In",
+                description: "GDPR, CCPA, and TCPA compliant. Automated consent tracking, opt-out management, and audit logs for all communications.",
+                features: ["Consent management", "Audit logs", "Data privacy"]
+              },
+              {
+                icon: BarChart3,
+                title: "Engagement Analytics",
+                description: "Track message performance across channels. Measure open rates, response times, and conversion metrics to optimize outreach.",
+                features: ["Channel analytics", "Response tracking", "ROI metrics"]
+              }
+            ];
+
+const _data3 = [
+                  "Switch between channels seamlessly",
+                  "Thread conversations by candidate",
+                  "Team collaboration with shared access",
+                  "Real-time sync across all devices"
+                ];
+
+const _data4 = [
+                  { channel: 'email', from: 'Sarah Chen', message: 'Thank you for considering my application...', time: '2m ago', unread: true },
+                  { channel: 'sms', from: 'Michael Ross', message: 'Confirmed for tomorrow at 2 PM', time: '15m ago', unread: true },
+                  { channel: 'chat', from: 'Emma Wilson', message: 'Quick question about the role...', time: '1h ago', unread: false },
+                  { channel: 'email', from: 'David Kim', message: 'I\'d love to schedule a call to discuss...', time: '3h ago', unread: false }
+                ];
+
+const _data5 = [
+                  "Two-way SMS conversations",
+                  "Bulk text campaigns for high-volume hiring",
+                  "Automated interview reminders",
+                  "TCPA-compliant opt-in/opt-out"
+                ];
+
+const _data6 = [
+                  "Stage-triggered messaging",
+                  "Time-delayed follow-ups",
+                  "A/B test different templates",
+                  "Automatic opt-out on reply"
+                ];
+
+const _data7 = [
+                  { step: 1, trigger: 'Application received', action: 'Send confirmation email', delay: 'Immediate', status: 'sent' },
+                  { step: 2, trigger: 'Day 1', action: 'SMS: Next steps overview', delay: '+1 day', status: 'sent' },
+                  { step: 3, trigger: 'Day 3', action: 'Email: Company culture video', delay: '+3 days', status: 'scheduled' },
+                  { step: 4, trigger: 'Day 7', action: 'SMS: Interview availability check', delay: '+7 days', status: 'scheduled' }
+                ];
+
+const _data8 = [
+              {
+                step: "1",
+                title: "Choose Your Channel",
+                description: "Select email, SMS, or in-app chat based on candidate preferences and urgency. Switch seamlessly between channels in one conversation.",
+                icon: Globe
+              },
+              {
+                step: "2",
+                title: "Personalize & Automate",
+                description: "Use templates with merge tags for personalization at scale. Set up automated sequences triggered by candidate actions or pipeline stages.",
+                icon: Zap
+              },
+              {
+                step: "3",
+                title: "Track & Optimize",
+                description: "Monitor engagement across all channels. Analyze response rates, time-to-reply, and conversion metrics to refine your outreach strategy.",
+                icon: BarChart3
+              }
+            ];
+
+const _data9 = [
+              {
+                title: "High-Volume Hiring",
+                description: "Engage hundreds of candidates simultaneously with automated SMS campaigns and email sequences. Perfect for retail, hospitality, and seasonal hiring.",
+                icon: Users,
+                metrics: ["500+ candidates/week", "3-hour response time", "80% engagement rate"]
+              },
+              {
+                title: "Tech Recruiting",
+                description: "Reach passive candidates with personalized outreach across LinkedIn, email, and SMS. Follow up automatically without losing momentum.",
+                icon: Smartphone,
+                metrics: ["Multi-channel sourcing", "Automated follow-ups", "Developer-friendly"]
+              },
+              {
+                title: "Interview Coordination",
+                description: "Send interview invites, reminders, and confirmations via candidate's preferred channel. Reduce no-shows with automated SMS reminders.",
+                icon: Calendar,
+                metrics: ["90% show-up rate", "Automated reminders", "Calendar sync"]
+              },
+              {
+                title: "Candidate Nurturing",
+                description: "Build relationships with talent pools through long-term email drip campaigns and periodic check-ins via SMS for warm leads.",
+                icon: Star,
+                metrics: ["6-month nurture cycles", "Re-engagement campaigns", "Pipeline building"]
+              }
+            ];
+
+const _data10 = [
+              {
+                icon: Clock,
+                title: "Save 60% Time",
+                description: "Automated templates and sequences reduce manual messaging by over half, letting recruiters focus on relationships."
+              },
+              {
+                icon: Zap,
+                title: "3X Faster Responses",
+                description: "SMS and in-app chat deliver instant notifications, driving response rates 3X higher than email alone."
+              },
+              {
+                icon: CheckCircle,
+                title: "95% SMS Open Rate",
+                description: "Text messages are read within 3 minutes on average, ensuring your message reaches candidates immediately."
+              },
+              {
+                icon: Users,
+                title: "Unified Team Inbox",
+                description: "No more forwarded emails or lost messages. Everyone sees the full conversation history in one place."
+              },
+              {
+                icon: Shield,
+                title: "Always Compliant",
+                description: "Built-in GDPR, CCPA, and TCPA compliance with automated consent tracking and audit trails."
+              },
+              {
+                icon: BarChart3,
+                title: "Data-Driven Insights",
+                description: "Track which channels perform best for your hiring needs and optimize your outreach strategy with real metrics."
+              }
+            ];
+---
+
+<MarketingLayout {title} {description} {schemaOrg}>
+
+      {/* Hero Section */}
+      <section class="pt-20 pb-16 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-blue-50 to-white dark:from-slate-900 dark:to-slate-950">
+        <div class="max-w-7xl mx-auto">
+          <div class="grid lg:grid-cols-2 gap-12 items-center">
+            <div>
+              <Badge class="mb-4">
+                <MessageSquare class="h-3 w-3 mr-1" />
+                Omni-Channel Communication
+              </Badge>
+              <h1 class="text-4xl sm:text-5xl lg:text-6xl font-bold text-slate-900 dark:text-white mb-6 leading-tight">
+                Meet Candidates Where They Are
+              </h1>
+              <p class="text-xl text-slate-600 dark:text-slate-400 mb-8 leading-relaxed">
+                Engage top talent across email, SMS, and in-app chat with intelligent, automated messaging that drives faster responses and better hiring outcomes.
+              </p>
+              <div class="flex flex-col sm:flex-row gap-4">
+                <a href="/signup">
+                  <Button size="lg" class="w-full sm:w-auto" data-testid="button-get-started">
+                    Start Free
+                    <ArrowRight class="ml-2 h-5 w-5" />
+                  </Button>
+                </a>
+                <a href="/pricing">
+                  <Button size="lg" variant="outline" class="w-full sm:w-auto" data-testid="button-see-pricing">
+                    See Pricing
+                  </Button>
+                </a>
+              </div>
+              <div class="mt-8 flex items-center gap-6">
+                <div class="flex items-center gap-2">
+                  <CheckCircle class="h-5 w-5 text-green-600" />
+                  <span class="text-sm text-slate-600 dark:text-slate-400">Free up to 3 jobs</span>
+                </div>
+                <div class="flex items-center gap-2">
+                  <CheckCircle class="h-5 w-5 text-green-600" />
+                  <span class="text-sm text-slate-600 dark:text-slate-400">No credit card required</span>
+                </div>
+              </div>
+            </div>
+            <div class="relative">
+              <div class="bg-gradient-to-br from-blue-600 to-blue-700 rounded-2xl p-8 shadow-2xl">
+                <div class="space-y-4">
+                  {_data1.map((channel, idx) => (
+                    <div class="bg-white dark:bg-slate-800 rounded-lg p-4 flex items-center gap-4 shadow-lg">
+                      <div class={`w-12 h-12 bg-${channel.color}-100 dark:bg-${channel.color}-950 rounded-lg flex items-center justify-center`}>
+                        {(() => { const DynIcon = channel.icon; return <DynIcon class={`h-6 w-6 text-${channel.color}-600 dark:text-${channel.color}-400`} />; })()}
+                      </div>
+                      <div class="flex-1">
+                        <div class="font-semibold text-slate-900 dark:text-white">{channel.label}</div>
+                        <div class="text-sm text-slate-600 dark:text-slate-400">{channel.messages}</div>
+                      </div>
+                      <Zap class="h-5 w-5 text-yellow-500" />
+                    </div>
+                  ))}
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Stats Section */}
+      <section class="py-16 px-4 sm:px-6 lg:px-8 border-b border-slate-200 dark:border-slate-800">
+        <div class="max-w-7xl mx-auto">
+          <div class="grid md:grid-cols-4 gap-8 text-center">
+            <div>
+              <div class="text-4xl font-bold text-blue-600 mb-2">3X</div>
+              <div class="text-slate-600 dark:text-slate-400">Faster Response Rate</div>
+            </div>
+            <div>
+              <div class="text-4xl font-bold text-green-600 mb-2">95%</div>
+              <div class="text-slate-600 dark:text-slate-400">SMS Open Rate</div>
+            </div>
+            <div>
+              <div class="text-4xl font-bold text-green-600 mb-2">60%</div>
+              <div class="text-slate-600 dark:text-slate-400">Time Saved</div>
+            </div>
+            <div>
+              <div class="text-4xl font-bold text-orange-600 mb-2">24/7</div>
+              <div class="text-slate-600 dark:text-slate-400">Automated Engagement</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Key Features */}
+      <section class="py-20 px-4 sm:px-6 lg:px-8">
+        <div class="max-w-7xl mx-auto">
+          <div class="text-center mb-16">
+            <h2 class="text-3xl sm:text-4xl font-bold text-slate-900 dark:text-white mb-4">
+              One Platform, Every Channel
+            </h2>
+            <p class="text-xl text-slate-600 dark:text-slate-400 max-w-3xl mx-auto">
+              Streamline candidate communication with intelligent messaging across all channels from a single unified inbox.
+            </p>
+          </div>
+
+          <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {_data2.map((feature, idx) => (
+              <Card class="hover:shadow-lg transition">
+                <CardContent class="p-6">
+                  <div class="w-12 h-12 bg-blue-100 dark:bg-blue-950 rounded-lg flex items-center justify-center mb-4">
+                    {(() => { const DynIcon = feature.icon; return <DynIcon class="h-6 w-6 text-blue-600 dark:text-blue-400" />; })()}
+                  </div>
+                  <h3 class="text-xl font-semibold text-slate-900 dark:text-white mb-3">
+                    {feature.title}
+                  </h3>
+                  <p class="text-slate-600 dark:text-slate-400 mb-4 leading-relaxed">
+                    {feature.description}
+                  </p>
+                  <ul class="space-y-2">
+                    {feature.features.map((item, i) => (
+                      <li class="flex items-center gap-2 text-sm text-slate-600 dark:text-slate-400">
+                        <CheckCircle class="h-4 w-4 text-green-600 flex-shrink-0" />
+                        {item}
+                      </li>
+                    ))}
+                  </ul>
+                </CardContent>
+              </Card>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Unified Inbox Visual */}
+      <section class="py-20 px-4 sm:px-6 lg:px-8 bg-black border-y border-slate-800">
+        <div class="max-w-7xl mx-auto">
+          <div class="grid lg:grid-cols-2 gap-12 items-center">
+            <div>
+              <Badge class="mb-4 bg-blue-950 text-blue-400 border-blue-900">
+                <Inbox class="h-3 w-3 mr-1" />
+                Unified Inbox
+              </Badge>
+              <h2 class="text-3xl sm:text-4xl font-bold text-white mb-4">
+                All conversations in one place
+              </h2>
+              <p class="text-xl text-slate-400 mb-6 leading-relaxed">
+                Email, SMS, and in-app messages consolidated into a single unified inbox. See the complete conversation history across all channels without switching tools.
+              </p>
+              <ul class="space-y-3">
+                {_data3.map((item, idx) => (
+                  <li class="flex items-start gap-3">
+                    <CheckCircle class="h-5 w-5 text-green-500 flex-shrink-0 mt-0.5" />
+                    <span class="text-slate-300">{item}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+            <div class="bg-gradient-to-br from-slate-950 to-black rounded-2xl p-6 border border-slate-800">
+              <div class="flex items-center justify-between mb-4 pb-3 border-b border-slate-800">
+                <div class="flex items-center gap-3">
+                  <div class="text-sm font-semibold text-white">Inbox</div>
+                  <Badge variant="secondary" class="bg-blue-950 text-blue-400 border-0">
+                    24 unread
+                  </Badge>
+                </div>
+                <div class="flex gap-2">
+                  <div class="w-8 h-8 bg-slate-800 rounded flex items-center justify-center">
+                    <Mail class="h-4 w-4 text-slate-400" />
+                  </div>
+                  <div class="w-8 h-8 bg-slate-800 rounded flex items-center justify-center">
+                    <Phone class="h-4 w-4 text-slate-400" />
+                  </div>
+                  <div class="w-8 h-8 bg-slate-800 rounded flex items-center justify-center">
+                    <MessageSquare class="h-4 w-4 text-slate-400" />
+                  </div>
+                </div>
+              </div>
+              <div class="space-y-2">
+                {_data4.map((msg, idx) => (
+                  <div class={`flex items-start gap-3 p-3 rounded-lg ${msg.unread ? 'bg-blue-950/30 border border-blue-900/30' : 'bg-slate-900'}`}>
+                    <div class="w-10 h-10 bg-blue-600 rounded-full flex items-center justify-center text-white text-sm font-semibold flex-shrink-0">
+                      {msg.from.split(' ').map(n => n[0]).join('')}
+                    </div>
+                    <div class="flex-1 min-w-0">
+                      <div class="flex items-center justify-between mb-1">
+                        <div class="flex items-center gap-2">
+                          <span class="text-sm font-medium text-white">{msg.from}</span>
+                          {msg.channel === 'email' && <Mail class="h-3 w-3 text-slate-500" />}
+                          {msg.channel === 'sms' && <Phone class="h-3 w-3 text-green-500" />}
+                          {msg.channel === 'chat' && <MessageSquare class="h-3 w-3 text-blue-500" />}
+                        </div>
+                        <span class="text-xs text-slate-500">{msg.time}</span>
+                      </div>
+                      <p class="text-xs text-slate-400 truncate">{msg.message}</p>
+                    </div>
+                    {msg.unread && <div class="w-2 h-2 bg-blue-500 rounded-full flex-shrink-0 mt-2" />}
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* SMS Conversation Visual */}
+      <section class="py-20 px-4 sm:px-6 lg:px-8 border-b border-slate-800">
+        <div class="max-w-7xl mx-auto">
+          <div class="grid lg:grid-cols-2 gap-12 items-center">
+            <div class="order-2 lg:order-1">
+              <div class="bg-gradient-to-br from-slate-950 to-black rounded-2xl p-6 border border-slate-800 max-w-md mx-auto">
+                <div class="flex items-center gap-3 mb-4 pb-3 border-b border-slate-800">
+                  <div class="w-10 h-10 bg-gradient-to-br from-green-500 to-emerald-500 rounded-full flex items-center justify-center">
+                    <Phone class="h-5 w-5 text-white" />
+                  </div>
+                  <div>
+                    <div class="text-sm font-semibold text-white">Sarah Chen</div>
+                    <div class="text-xs text-slate-400">+1 (555) 123-4567</div>
+                  </div>
+                </div>
+                <div class="space-y-3 mb-4">
+                  <div class="flex justify-start">
+                    <div class="bg-slate-800 rounded-2xl rounded-tl-sm px-4 py-2 max-w-[80%]">
+                      <p class="text-sm text-white">Hi Sarah! We'd love to schedule your technical interview. Are you available this week?</p>
+                      <p class="text-xs text-slate-500 mt-1">10:23 AM</p>
+                    </div>
+                  </div>
+                  <div class="flex justify-end">
+                    <div class="bg-green-600 rounded-2xl rounded-tr-sm px-4 py-2 max-w-[80%]">
+                      <p class="text-sm text-white">Yes! I'm available Thursday or Friday afternoon</p>
+                      <p class="text-xs text-green-200 mt-1">10:25 AM</p>
+                    </div>
+                  </div>
+                  <div class="flex justify-start">
+                    <div class="bg-slate-800 rounded-2xl rounded-tl-sm px-4 py-2 max-w-[80%]">
+                      <p class="text-sm text-white">Perfect! I'll send you a calendar invite for Thursday at 2 PM. Looking forward to it!</p>
+                      <p class="text-xs text-slate-500 mt-1">10:27 AM</p>
+                    </div>
+                  </div>
+                  <div class="flex justify-end">
+                    <div class="bg-green-600 rounded-2xl rounded-tr-sm px-4 py-2 max-w-[80%]">
+                      <p class="text-sm text-white">Great, thank you! 🎉</p>
+                      <p class="text-xs text-green-200 mt-1">10:28 AM</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="flex items-center gap-2 p-3 bg-slate-900 rounded-lg">
+                  <input 
+                    type="text" 
+                    placeholder="Type a message..." 
+                    class="flex-1 bg-transparent border-0 text-sm text-white placeholder-slate-500 focus:outline-none"
+                    disabled
+                  />
+                  <div class="w-8 h-8 bg-green-600 rounded-full flex items-center justify-center">
+                    <ArrowRight class="h-4 w-4 text-white" />
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="order-1 lg:order-2">
+              <Badge class="mb-4 bg-green-950 text-green-400 border-green-900">
+                <Phone class="h-3 w-3 mr-1" />
+                SMS Messaging
+              </Badge>
+              <h2 class="text-3xl sm:text-4xl font-bold text-white mb-4">
+                Text candidates instantly
+              </h2>
+              <p class="text-xl text-slate-400 mb-6 leading-relaxed">
+                95% of text messages are read within 3 minutes. Reach candidates where they already are and get responses 3X faster than email.
+              </p>
+              <ul class="space-y-3">
+                {_data5.map((item, idx) => (
+                  <li class="flex items-start gap-3">
+                    <CheckCircle class="h-5 w-5 text-green-500 flex-shrink-0 mt-0.5" />
+                    <span class="text-slate-300">{item}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Automated Sequences Visual */}
+      <section class="py-20 px-4 sm:px-6 lg:px-8 bg-black border-b border-slate-800">
+        <div class="max-w-7xl mx-auto">
+          <div class="grid lg:grid-cols-2 gap-12 items-center">
+            <div>
+              <Badge class="mb-4 bg-blue-950 text-blue-400 border-blue-900">
+                <Zap class="h-3 w-3 mr-1" />
+                Automated Sequences
+              </Badge>
+              <h2 class="text-3xl sm:text-4xl font-bold text-white mb-4">
+                Set it and forget it
+              </h2>
+              <p class="text-xl text-slate-400 mb-6 leading-relaxed">
+                Create drip campaigns that run automatically based on candidate actions and pipeline stages. Nurture talent pools without lifting a finger.
+              </p>
+              <ul class="space-y-3">
+                {_data6.map((item, idx) => (
+                  <li class="flex items-start gap-3">
+                    <CheckCircle class="h-5 w-5 text-blue-500 flex-shrink-0 mt-0.5" />
+                    <span class="text-slate-300">{item}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+            <div class="bg-gradient-to-br from-slate-950 to-black rounded-2xl p-6 border border-slate-800">
+              <div class="flex items-center justify-between mb-4 pb-3 border-b border-slate-800">
+                <div class="text-sm font-semibold text-white">Welcome Sequence</div>
+                <Badge variant="secondary" class="bg-green-950 text-green-400 border-0">
+                  Active
+                </Badge>
+              </div>
+              <div class="space-y-3">
+                {_data7.map((item, idx) => (
+                  <div class="relative">
+                    <div class={`flex items-start gap-3 p-4 rounded-lg ${item.status === 'sent' ? 'bg-slate-900' : 'bg-slate-900/50'}`}>
+                      <div class="flex-shrink-0">
+                        <div class={`w-8 h-8 rounded-full flex items-center justify-center ${item.status === 'sent' ? 'bg-green-600' : 'bg-slate-700'}`}>
+                          {item.status === 'sent' ? (
+                            <CheckCircle class="h-4 w-4 text-white" />
+                          ) : (
+                            <Clock class="h-4 w-4 text-slate-400" />
+                          )}
+                        </div>
+                      </div>
+                      <div class="flex-1">
+                        <div class="flex items-center justify-between mb-1">
+                          <span class="text-xs font-semibold text-slate-400">Step {item.step}</span>
+                          <span class="text-xs text-slate-500">{item.delay}</span>
+                        </div>
+                        <div class="text-sm font-medium text-white mb-1">{item.action}</div>
+                        <div class="text-xs text-slate-500">{item.trigger}</div>
+                      </div>
+                    </div>
+                    {idx < 3 && (
+                      <div class="absolute left-[15px] top-[48px] w-0.5 h-3 bg-slate-800"></div>
+                    )}
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* How It Works */}
+      <section class="py-20 px-4 sm:px-6 lg:px-8 bg-slate-900 border-b border-slate-800">
+        <div class="max-w-7xl mx-auto">
+          <div class="text-center mb-16">
+            <h2 class="text-3xl sm:text-4xl font-bold text-slate-900 dark:text-white mb-4">
+              How Omni-Channel Messaging Works
+            </h2>
+            <p class="text-xl text-slate-600 dark:text-slate-400 max-w-3xl mx-auto">
+              Simple, powerful communication that adapts to your workflow
+            </p>
+          </div>
+
+          <div class="grid md:grid-cols-3 gap-8">
+            {_data8.map((step, idx) => (
+              <div class="relative">
+                <div class="bg-white dark:bg-slate-800 rounded-xl p-8 shadow-lg h-full">
+                  <div class="flex items-center gap-4 mb-4">
+                    <div class="w-12 h-12 bg-blue-600 rounded-full flex items-center justify-center text-white font-bold text-xl">
+                      {step.step}
+                    </div>
+                    {(() => { const DynIcon = step.icon; return <DynIcon class="h-8 w-8 text-blue-600 dark:text-blue-400" />; })()}
+                  </div>
+                  <h3 class="text-xl font-semibold text-slate-900 dark:text-white mb-3">
+                    {step.title}
+                  </h3>
+                  <p class="text-slate-600 dark:text-slate-400 leading-relaxed">
+                    {step.description}
+                  </p>
+                </div>
+                {idx < 2 && (
+                  <div class="hidden md:block absolute top-1/2 right-0 transform translate-x-1/2 -translate-y-1/2">
+                    <ArrowRight class="h-6 w-6 text-slate-400" />
+                  </div>
+                )}
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Use Cases */}
+      <section class="py-20 px-4 sm:px-6 lg:px-8">
+        <div class="max-w-7xl mx-auto">
+          <div class="text-center mb-16">
+            <h2 class="text-3xl sm:text-4xl font-bold text-slate-900 dark:text-white mb-4">
+              Built for Every Hiring Scenario
+            </h2>
+          </div>
+
+          <div class="grid md:grid-cols-2 gap-8">
+            {_data9.map((useCase, idx) => (
+              <Card class="hover:shadow-xl transition">
+                <CardContent class="p-8">
+                  <div class="flex items-start gap-4 mb-4">
+                    <div class="w-14 h-14 bg-blue-600 rounded-xl flex items-center justify-center flex-shrink-0">
+                      {(() => { const DynIcon = useCase.icon; return <DynIcon class="h-7 w-7 text-white" />; })()}
+                    </div>
+                    <div>
+                      <h3 class="text-2xl font-semibold text-slate-900 dark:text-white mb-2">
+                        {useCase.title}
+                      </h3>
+                    </div>
+                  </div>
+                  <p class="text-slate-600 dark:text-slate-400 mb-6 leading-relaxed">
+                    {useCase.description}
+                  </p>
+                  <div class="flex flex-wrap gap-2">
+                    {useCase.metrics.map((metric, i) => (
+                      <Badge variant="secondary">
+                        {metric}
+                      </Badge>
+                    ))}
+                  </div>
+                </CardContent>
+              </Card>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Benefits Section */}
+      <section class="py-20 px-4 sm:px-6 lg:px-8 bg-slate-50 dark:bg-slate-900">
+        <div class="max-w-7xl mx-auto">
+          <div class="text-center mb-16">
+            <h2 class="text-3xl sm:text-4xl font-bold text-slate-900 dark:text-white mb-4">
+              Why Teams Choose Jatura
+            </h2>
+          </div>
+
+          <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {_data10.map((benefit, idx) => (
+              <div class="bg-white dark:bg-slate-800 rounded-xl p-6 shadow-lg">
+                {(() => { const DynIcon = benefit.icon; return <DynIcon class="h-10 w-10 text-blue-600 dark:text-blue-400 mb-4" />; })()}
+                <h3 class="text-xl font-semibold text-slate-900 dark:text-white mb-2">
+                  {benefit.title}
+                </h3>
+                <p class="text-slate-600 dark:text-slate-400 leading-relaxed">
+                  {benefit.description}
+                </p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* CTA Section */}
+      <section class="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-blue-600 to-blue-700">
+        <div class="max-w-4xl mx-auto text-center">
+          <h2 class="text-3xl sm:text-4xl md:text-5xl font-bold text-white mb-6">
+            Ready to Transform Your Candidate Communication?
+          </h2>
+          <p class="text-xl text-blue-100 mb-8 max-w-2xl mx-auto">
+            Join hundreds of companies using Jatura's omni-channel messaging to hire faster and build stronger candidate relationships.
+          </p>
+          <div class="flex flex-col sm:flex-row gap-4 justify-center">
+            <a href="/signup">
+              <Button size="lg" class="bg-white text-blue-600 hover:bg-blue-50 w-full sm:w-auto">
+                Start Free
+                <ArrowRight class="ml-2 h-5 w-5" />
+              </Button>
+            </a>
+            <a href="/pricing">
+              <Button size="lg" variant="outline" class="border-white text-white hover:bg-white/10 w-full sm:w-auto">
+                View Pricing
+              </Button>
+            </a>
+          </div>
+          <div class="mt-8 flex items-center justify-center gap-6 text-blue-100 text-sm">
+            <div class="flex items-center gap-2">
+              <CheckCircle class="h-5 w-5" />
+              <span>Free up to 3 jobs</span>
+            </div>
+            <div class="flex items-center gap-2">
+              <CheckCircle class="h-5 w-5" />
+              <span>No credit card required</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+</MarketingLayout>

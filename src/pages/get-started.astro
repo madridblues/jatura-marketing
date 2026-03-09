@@ -1,0 +1,24 @@
+---
+export const prerender = true;
+import MarketingLayout from '@/layouts/MarketingLayout.astro';
+import GetStartedPage from '@/components/islands/GetStartedPage';
+
+const schemaOrg = [
+  {
+    "@type": "HowTo",
+    "name": "How to Get Started with Jatura ATS",
+    "description": "Step-by-step guide to setting up Jatura for your hiring team",
+    "step": [
+      { "@type": "HowToStep", "name": "Create your account", "text": "Sign up for Jatura free. No credit card required. Your account is active immediately." },
+      { "@type": "HowToStep", "name": "Post your first job", "text": "Create a job posting with AI-assisted job description generation. Publish to your career site and 100+ job boards in one click." },
+      { "@type": "HowToStep", "name": "Set up your pipeline", "text": "Customize your Kanban hiring stages to match your recruiting workflow — from application through offer." },
+      { "@type": "HowToStep", "name": "Enable AI screening", "text": "Configure AI resume screening rules to automatically score and rank incoming applications against your requirements." },
+      { "@type": "HowToStep", "name": "Invite your team", "text": "Add hiring managers and interviewers to collaborate on candidate evaluation within the platform." }
+    ]
+  }
+];
+---
+
+<MarketingLayout title="Get Started with Jatura ATS" description="Get started with Jatura in minutes. Watch step-by-step video tutorials covering job creation, candidate pipeline setup, AI screening, interview scheduling, and team collaboration." {schemaOrg}>
+  <GetStartedPage client:load />
+</MarketingLayout>

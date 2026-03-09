@@ -1,0 +1,707 @@
+---
+export const prerender = true;
+import MarketingLayout from '@/layouts/MarketingLayout.astro';
+import { ArrowRight, CheckCircle, XCircle, MinusCircle, DollarSign, Users, Zap, TrendingUp, Scale, Building2 } from 'lucide-react';
+import { Button } from '@/components/ui/button';
+import { Badge } from '@/components/ui/badge';
+
+const title = "Jatura vs BambooHR - Honest ATS Comparison 2025";
+const description = "Jatura vs BambooHR: detailed 2025 comparison of features, pricing, and AI capabilities. See why ambitious recruiting teams choose Jatura's dedicated ATS over BambooHR's HR-bundled recruiting tools.";
+
+const schemaOrg = [
+  {
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://jatura.com" },
+      { "@type": "ListItem", "position": 2, "name": "Compare ATS", "item": "https://jatura.com/compare" },
+      { "@type": "ListItem", "position": 3, "name": "Jatura vs BambooHR", "item": "https://jatura.com/compare/bamboohr" }
+    ]
+  },
+  {
+    "@type": "WebPage",
+    "name": "Jatura vs BambooHR - ATS Comparison 2025",
+    "description": "Detailed feature, pricing, and AI capability comparison between Jatura and BambooHR",
+    "url": "https://jatura.com/compare/bamboohr",
+    "about": [
+      { "@type": "SoftwareApplication", "name": "Jatura", "applicationCategory": "BusinessApplication" },
+      { "@type": "SoftwareApplication", "name": "BambooHR", "applicationCategory": "BusinessApplication" }
+    ]
+  }
+];
+---
+
+<MarketingLayout {title} {description} {schemaOrg}>
+
+      {/* Hero Section */}
+      <section class="pt-24 pb-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-slate-50 to-white dark:from-slate-900/50 dark:to-slate-950">
+        <div class="max-w-5xl mx-auto">
+          <a href="/compare">
+            <Button variant="ghost" class="mb-6 -ml-4">
+              ← Back to all comparisons
+            </Button>
+          </a>
+          
+          <Badge
+            variant="secondary"
+            class="mb-6 px-5 py-2 text-sm font-medium bg-slate-100 dark:bg-slate-800 text-slate-900 dark:text-slate-100"
+          >
+            <Scale class="w-4 h-4 mr-2" />
+            Honest Comparison
+          </Badge>
+          
+          <h1 class="text-5xl sm:text-6xl font-bold text-slate-900 dark:text-white mb-6 leading-tight">
+            Jatura vs BambooHR
+          </h1>
+          
+          <p class="text-xl sm:text-2xl text-slate-600 dark:text-slate-400 mb-8 leading-relaxed">
+            BambooHR is an excellent HRIS platform with a "worryingly basic" ATS add-on. Jatura is a purpose-built recruiting platform with enterprise-grade ATS features—no HRIS bundling required.
+          </p>
+
+          <div class="bg-slate-100 dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-2xl p-8 mb-8">
+            <h3 class="text-lg font-semibold text-slate-900 dark:text-white mb-4">
+              TL;DR
+            </h3>
+            <div class="space-y-3 text-slate-600 dark:text-slate-400">
+              <p>
+                <strong class="text-slate-900 dark:text-white">BambooHR</strong> is a best-in-class HRIS for small businesses. Its ATS module is "worryingly basic" (customer reviews): no interview scheduling, no scorecards, no pre-screening questions, weak analytics. Only suitable for very low hiring volume (1 position at a time). Costs $250/month for ≤25 employees, then $10-22 per employee/month.
+              </p>
+              <p>
+                <strong class="text-slate-900 dark:text-white">Jatura</strong> is a dedicated recruiting platform with full ATS features: advanced interview scheduling, AI screening, custom scorecards, talent pools, powerful analytics—everything BambooHR's ATS lacks. Purpose-built for recruiting at any scale, from 1 to 100+ open positions. $99-$299/month flat rate.
+              </p>
+            </div>
+          </div>
+
+          <div class="flex flex-col sm:flex-row gap-4">
+            <a href="/login">
+              <Button
+                size="lg"
+                class="bg-slate-900 dark:bg-white text-white dark:text-slate-900 hover:bg-slate-800 dark:hover:bg-slate-100 px-10 py-6 text-lg group shadow-lg"
+              >
+                Try Jatura free
+                <ArrowRight class="ml-2 h-5 w-5 group-hover:translate-x-1 transition" />
+              </Button>
+            </a>
+            <a href="/pricing">
+              <Button
+                size="lg"
+                variant="outline"
+                class="px-10 py-6 text-lg border-slate-300 dark:border-slate-700"
+              >
+                View pricing
+              </Button>
+            </a>
+          </div>
+        </div>
+      </section>
+
+      {/* What BambooHR Does Well */}
+      <section class="py-20 px-4 sm:px-6 lg:px-8">
+        <div class="max-w-5xl mx-auto">
+          <div class="flex items-center gap-3 mb-8">
+            <TrendingUp class="w-8 h-8 text-emerald-600" />
+            <h2 class="text-4xl font-bold text-slate-900 dark:text-white">
+              What BambooHR does well
+            </h2>
+          </div>
+          
+          <p class="text-lg text-slate-600 dark:text-slate-400 mb-8">
+            BambooHR is a leading HRIS platform trusted by thousands of small businesses. Here's where they excel:
+          </p>
+
+          <div class="grid md:grid-cols-2 gap-6">
+            <div class="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-xl p-6">
+              <h3 class="text-xl font-semibold text-slate-900 dark:text-white mb-3">
+                Excellent HRIS platform
+              </h3>
+              <p class="text-slate-600 dark:text-slate-400">
+                Best-in-class human resources information system. Employee records, time-off tracking, performance reviews, onboarding, payroll integration—all seamlessly integrated.
+              </p>
+            </div>
+
+            <div class="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-xl p-6">
+              <h3 class="text-xl font-semibold text-slate-900 dark:text-white mb-3">
+                Seamless HRIS-ATS integration
+              </h3>
+              <p class="text-slate-600 dark:text-slate-400">
+                Hired candidates flow automatically from ATS to HRIS with one click—no duplicate data entry. All employee data in one unified system.
+              </p>
+            </div>
+
+            <div class="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-xl p-6">
+              <h3 class="text-xl font-semibold text-slate-900 dark:text-white mb-3">
+                User-friendly interface
+              </h3>
+              <p class="text-slate-600 dark:text-slate-400">
+                Intuitive dashboard, clean design, minimal learning curve. Both admins and candidates find it easy to navigate.
+              </p>
+            </div>
+
+            <div class="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-xl p-6">
+              <h3 class="text-xl font-semibold text-slate-900 dark:text-white mb-3">
+                Excellent customer support
+              </h3>
+              <p class="text-slate-600 dark:text-slate-400">
+                35-second average hold time, responsive phone/email/chat support. "Great for small-to-midsize businesses" consistently praised in reviews.
+              </p>
+            </div>
+
+            <div class="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-xl p-6">
+              <h3 class="text-xl font-semibold text-slate-900 dark:text-white mb-3">
+                Good for low-volume hiring
+              </h3>
+              <p class="text-slate-600 dark:text-slate-400">
+                If you only have 1 open position at a time and need basic job posting/candidate tracking, BambooHR's ATS covers the essentials.
+              </p>
+            </div>
+
+            <div class="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-xl p-6">
+              <h3 class="text-xl font-semibold text-slate-900 dark:text-white mb-3">
+                All-in-one HR platform
+              </h3>
+              <p class="text-slate-600 dark:text-slate-400">
+                One system for HR, recruiting, payroll, performance management, and benefits administration—attractive for small teams.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Where BambooHR Falls Short */}
+      <section class="py-20 px-4 sm:px-6 lg:px-8 bg-slate-50 dark:bg-slate-900/50">
+        <div class="max-w-5xl mx-auto">
+          <div class="flex items-center gap-3 mb-8">
+            <XCircle class="w-8 h-8 text-red-600" />
+            <h2 class="text-4xl font-bold text-slate-900 dark:text-white">
+              Where BambooHR's ATS falls short
+            </h2>
+          </div>
+          
+          <p class="text-lg text-slate-600 dark:text-slate-400 mb-8">
+            Based on real customer reviews, BambooHR's ATS is described as "worryingly basic." Here's what's missing:
+          </p>
+
+          <div class="space-y-6">
+            <div class="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-xl p-6">
+              <div class="flex items-start gap-4">
+                <Zap class="w-6 h-6 text-red-600 flex-shrink-0 mt-1" />
+                <div>
+                  <h3 class="text-xl font-semibold text-slate-900 dark:text-white mb-2">
+                    "Worryingly basic" ATS features
+                  </h3>
+                  <p class="text-slate-600 dark:text-slate-400 mb-3">
+                    Customer reviews consistently describe BambooHR's ATS as "worryingly basic." Missing critical recruiting features that most modern ATS platforms include:
+                  </p>
+                  <ul class="space-y-2 text-slate-600 dark:text-slate-400">
+                    <li class="flex items-start gap-2">
+                      <XCircle class="w-4 h-4 text-red-600 flex-shrink-0 mt-1" />
+                      <span>No native interview scheduling</span>
+                    </li>
+                    <li class="flex items-start gap-2">
+                      <XCircle class="w-4 h-4 text-red-600 flex-shrink-0 mt-1" />
+                      <span>No pre-screening questions</span>
+                    </li>
+                    <li class="flex items-start gap-2">
+                      <XCircle class="w-4 h-4 text-red-600 flex-shrink-0 mt-1" />
+                      <span>No interview kits or scorecards</span>
+                    </li>
+                    <li class="flex items-start gap-2">
+                      <XCircle class="w-4 h-4 text-red-600 flex-shrink-0 mt-1" />
+                      <span>No video interviewing</span>
+                    </li>
+                    <li class="flex items-start gap-2">
+                      <XCircle class="w-4 h-4 text-red-600 flex-shrink-0 mt-1" />
+                      <span>No advanced sourcing tools</span>
+                    </li>
+                    <li class="flex items-start gap-2">
+                      <XCircle class="w-4 h-4 text-red-600 flex-shrink-0 mt-1" />
+                      <span>No AI resume screening or candidate matching</span>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            <div class="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-xl p-6">
+              <div class="flex items-start gap-4">
+                <Building2 class="w-6 h-6 text-red-600 flex-shrink-0 mt-1" />
+                <div>
+                  <h3 class="text-xl font-semibold text-slate-900 dark:text-white mb-2">
+                    One-size-fits-all pipeline
+                  </h3>
+                  <p class="text-slate-600 dark:text-slate-400 mb-3">
+                    Cannot customize hiring stages per role or department. Single candidate evaluation: one overall score + comment. No skill-specific ratings or structured interview evaluation.
+                  </p>
+                  <p class="text-sm italic text-slate-500 dark:text-slate-500">
+                    "Cannot customize interview pipelines per position" — Customer review
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div class="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-xl p-6">
+              <div class="flex items-start gap-4">
+                <MinusCircle class="w-6 h-6 text-red-600 flex-shrink-0 mt-1" />
+                <div>
+                  <h3 class="text-xl font-semibold text-slate-900 dark:text-white mb-2">
+                    Weak analytics and reporting
+                  </h3>
+                  <p class="text-slate-600 dark:text-slate-400 mb-3">
+                    Limited pre-built ATS reports. Cannot view time-in-stage data holistically. Lacks advanced recruitment analytics and predictive insights. "Reporting customization options are restrictive."
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div class="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-xl p-6">
+              <div class="flex items-start gap-4">
+                <Users class="w-6 h-6 text-red-600 flex-shrink-0 mt-1" />
+                <div>
+                  <h3 class="text-xl font-semibold text-slate-900 dark:text-white mb-2">
+                    Not scalable for hiring volume
+                  </h3>
+                  <p class="text-slate-600 dark:text-slate-400 mb-3">
+                    "Best for: 1 open position at a time (low hiring volume). Poor fit for: Moderate-to-high hiring volume (&gt;1 concurrent positions)." Cannot handle complex organizational recruiting needs.
+                  </p>
+                  <p class="text-sm italic text-slate-500 dark:text-slate-500">
+                    "Not scalable for high-volume hiring" — BetterBuys review
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div class="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-xl p-6">
+              <div class="flex items-start gap-4">
+                <DollarSign class="w-6 h-6 text-red-600 flex-shrink-0 mt-1" />
+                <div>
+                  <h3 class="text-xl font-semibold text-slate-900 dark:text-white mb-2">
+                    HRIS required, expensive at scale
+                  </h3>
+                  <p class="text-slate-600 dark:text-slate-400 mb-3">
+                    ATS only available bundled with HRIS. $250/month flat for ≤25 employees, then $10-22 per employee/month. Annual costs range $15,000-$120,000 depending on company size and modules. Can't buy ATS separately.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div class="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-xl p-6">
+              <div class="flex items-start gap-4">
+                <Building2 class="w-6 h-6 text-red-600 flex-shrink-0 mt-1" />
+                <div>
+                  <h3 class="text-xl font-semibold text-slate-900 dark:text-white mb-2">
+                    Mobile app issues
+                  </h3>
+                  <p class="text-slate-600 dark:text-slate-400 mb-3">
+                    Requires two separate apps (main HR + Hiring). Mobile app can be slow and unreliable with missing features available on web version.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* How Jatura is Different */}
+      <section class="py-20 px-4 sm:px-6 lg:px-8">
+        <div class="max-w-5xl mx-auto">
+          <div class="flex items-center gap-3 mb-8">
+            <CheckCircle class="w-8 h-8 text-emerald-600" />
+            <h2 class="text-4xl font-bold text-slate-900 dark:text-white">
+              How Jatura is different
+            </h2>
+          </div>
+
+          <p class="text-lg text-slate-600 dark:text-slate-400 mb-8">
+            Jatura is purpose-built for recruiting. We include all the features BambooHR's ATS lacks—no HRIS bundling required.
+          </p>
+
+          <div class="grid md:grid-cols-2 gap-6 mb-12">
+            <div class="bg-emerald-50 dark:bg-emerald-950/20 border border-emerald-200 dark:border-emerald-900 rounded-xl p-6">
+              <h3 class="text-xl font-semibold text-slate-900 dark:text-white mb-3">
+                Full ATS features included
+              </h3>
+              <p class="text-slate-600 dark:text-slate-400">
+                Advanced interview scheduling with conflict detection, custom scorecards, interview kits, pre-screening questions, video interviews, SMS messaging—everything BambooHR's "worryingly basic" ATS is missing.
+              </p>
+            </div>
+
+            <div class="bg-emerald-50 dark:bg-emerald-950/20 border border-emerald-200 dark:border-emerald-900 rounded-xl p-6">
+              <h3 class="text-xl font-semibold text-slate-900 dark:text-white mb-3">
+                Powerful AI screening
+              </h3>
+              <p class="text-slate-600 dark:text-slate-400">
+                AI resume screening, intelligent candidate matching, automated job description generation, AI Copilot—powered by GPT-4o. BambooHR has no AI recruiting features.
+              </p>
+            </div>
+
+            <div class="bg-emerald-50 dark:bg-emerald-950/20 border border-emerald-200 dark:border-emerald-900 rounded-xl p-6">
+              <h3 class="text-xl font-semibold text-slate-900 dark:text-white mb-3">
+                Advanced analytics
+              </h3>
+              <p class="text-slate-600 dark:text-slate-400">
+                Custom reports, time-in-stage tracking, source effectiveness, conversion funnels, predictive insights—comprehensive analytics BambooHR's "limited" reporting can't match.
+              </p>
+            </div>
+
+            <div class="bg-emerald-50 dark:bg-emerald-950/20 border border-emerald-200 dark:border-emerald-900 rounded-xl p-6">
+              <h3 class="text-xl font-semibold text-slate-900 dark:text-white mb-3">
+                Fully customizable pipelines
+              </h3>
+              <p class="text-slate-600 dark:text-slate-400">
+                Customize hiring stages, scorecards, and workflows per role or department. No one-size-fits-all limitations. Build complex, multi-stage processes.
+              </p>
+            </div>
+
+            <div class="bg-emerald-50 dark:bg-emerald-950/20 border border-emerald-200 dark:border-emerald-900 rounded-xl p-6">
+              <h3 class="text-xl font-semibold text-slate-900 dark:text-white mb-3">
+                Built for any hiring volume
+              </h3>
+              <p class="text-slate-600 dark:text-slate-400">
+                Handle 1 or 100+ concurrent open positions. Performance optimized for high-volume recruiting. Not limited to "1 position at a time" like BambooHR.
+              </p>
+            </div>
+
+            <div class="bg-emerald-50 dark:bg-emerald-950/20 border border-emerald-200 dark:border-emerald-900 rounded-xl p-6">
+              <h3 class="text-xl font-semibold text-slate-900 dark:text-white mb-3">
+                No HRIS required
+              </h3>
+              <p class="text-slate-600 dark:text-slate-400">
+                Get a full-featured ATS at $99-$299/month without buying an entire HRIS platform. Use the HRIS you already have or don't need one at all.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Feature Comparison Table */}
+      <section class="py-20 px-4 sm:px-6 lg:px-8 bg-slate-50 dark:bg-slate-900/50">
+        <div class="max-w-6xl mx-auto">
+          <h2 class="text-4xl font-bold text-slate-900 dark:text-white mb-4 text-center">
+            Side-by-side feature comparison
+          </h2>
+          <p class="text-xl text-slate-600 dark:text-slate-400 text-center mb-12">
+            Based on publicly available information and user reviews
+          </p>
+
+          <div class="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-2xl overflow-hidden">
+            <div class="overflow-x-auto">
+              <table class="w-full">
+                <thead>
+                  <tr class="bg-slate-100 dark:bg-slate-800">
+                    <th class="text-left p-6 text-slate-900 dark:text-white font-semibold">Feature</th>
+                    <th class="text-center p-6 text-slate-900 dark:text-white font-semibold">Jatura</th>
+                    <th class="text-center p-6 text-slate-900 dark:text-white font-semibold">BambooHR</th>
+                  </tr>
+                </thead>
+                <tbody class="divide-y divide-slate-200 dark:divide-slate-800">
+                  <tr>
+                    <td class="p-6 text-slate-900 dark:text-white font-medium">Starting price (annual)</td>
+                    <td class="p-6 text-center text-slate-600 dark:text-slate-400">$99/month ($1,188/year)</td>
+                    <td class="p-6 text-center text-slate-600 dark:text-slate-400">$250/month, then $10-22 PEPM</td>
+                  </tr>
+                  <tr>
+                    <td class="p-6 text-slate-900 dark:text-white font-medium">ATS available standalone</td>
+                    <td class="p-6 text-center"><CheckCircle class="w-5 h-5 text-emerald-600 mx-auto" /></td>
+                    <td class="p-6 text-center"><XCircle class="w-5 h-5 text-red-600 mx-auto" /></td>
+                  </tr>
+                  <tr>
+                    <td class="p-6 text-slate-900 dark:text-white font-medium">Interview scheduling</td>
+                    <td class="p-6 text-center text-emerald-600 font-medium">Advanced with conflict detection</td>
+                    <td class="p-6 text-center"><XCircle class="w-5 h-5 text-red-600 mx-auto" /></td>
+                  </tr>
+                  <tr>
+                    <td class="p-6 text-slate-900 dark:text-white font-medium">Pre-screening questions</td>
+                    <td class="p-6 text-center"><CheckCircle class="w-5 h-5 text-emerald-600 mx-auto" /></td>
+                    <td class="p-6 text-center"><XCircle class="w-5 h-5 text-red-600 mx-auto" /></td>
+                  </tr>
+                  <tr>
+                    <td class="p-6 text-slate-900 dark:text-white font-medium">Interview kits/scorecards</td>
+                    <td class="p-6 text-center text-emerald-600 font-medium">Advanced with AI generation</td>
+                    <td class="p-6 text-center"><XCircle class="w-5 h-5 text-red-600 mx-auto" /></td>
+                  </tr>
+                  <tr>
+                    <td class="p-6 text-slate-900 dark:text-white font-medium">Video interviewing</td>
+                    <td class="p-6 text-center text-emerald-600 font-medium">Included</td>
+                    <td class="p-6 text-center"><XCircle class="w-5 h-5 text-red-600 mx-auto" /></td>
+                  </tr>
+                  <tr>
+                    <td class="p-6 text-slate-900 dark:text-white font-medium">AI resume screening</td>
+                    <td class="p-6 text-center text-emerald-600 font-medium">Advanced (GPT-4o)</td>
+                    <td class="p-6 text-center"><XCircle class="w-5 h-5 text-red-600 mx-auto" /></td>
+                  </tr>
+                  <tr>
+                    <td class="p-6 text-slate-900 dark:text-white font-medium">AI candidate matching</td>
+                    <td class="p-6 text-center text-emerald-600 font-medium">Advanced</td>
+                    <td class="p-6 text-center"><XCircle class="w-5 h-5 text-red-600 mx-auto" /></td>
+                  </tr>
+                  <tr>
+                    <td class="p-6 text-slate-900 dark:text-white font-medium">AI Copilot</td>
+                    <td class="p-6 text-center text-emerald-600 font-medium">Included</td>
+                    <td class="p-6 text-center"><XCircle class="w-5 h-5 text-red-600 mx-auto" /></td>
+                  </tr>
+                  <tr>
+                    <td class="p-6 text-slate-900 dark:text-white font-medium">Pipeline customization</td>
+                    <td class="p-6 text-center text-emerald-600 font-medium">Fully customizable per role</td>
+                    <td class="p-6 text-center text-slate-600 dark:text-slate-400">One-size-fits-all</td>
+                  </tr>
+                  <tr>
+                    <td class="p-6 text-slate-900 dark:text-white font-medium">Advanced analytics</td>
+                    <td class="p-6 text-center text-emerald-600 font-medium">Unlimited custom reports</td>
+                    <td class="p-6 text-center text-slate-600 dark:text-slate-400">Limited, restrictive</td>
+                  </tr>
+                  <tr>
+                    <td class="p-6 text-slate-900 dark:text-white font-medium">Time-in-stage tracking</td>
+                    <td class="p-6 text-center"><CheckCircle class="w-5 h-5 text-emerald-600 mx-auto" /></td>
+                    <td class="p-6 text-center text-slate-600 dark:text-slate-400">Per job only</td>
+                  </tr>
+                  <tr>
+                    <td class="p-6 text-slate-900 dark:text-white font-medium">Hiring volume capacity</td>
+                    <td class="p-6 text-center text-emerald-600 font-medium">Unlimited concurrent roles</td>
+                    <td class="p-6 text-center text-slate-600 dark:text-slate-400">1 position at a time</td>
+                  </tr>
+                  <tr>
+                    <td class="p-6 text-slate-900 dark:text-white font-medium">Job posting</td>
+                    <td class="p-6 text-center"><CheckCircle class="w-5 h-5 text-emerald-600 mx-auto" /></td>
+                    <td class="p-6 text-center"><CheckCircle class="w-5 h-5 text-emerald-600 mx-auto" /></td>
+                  </tr>
+                  <tr>
+                    <td class="p-6 text-slate-900 dark:text-white font-medium">Career page builder</td>
+                    <td class="p-6 text-center"><CheckCircle class="w-5 h-5 text-emerald-600 mx-auto" /></td>
+                    <td class="p-6 text-center"><CheckCircle class="w-5 h-5 text-emerald-600 mx-auto" /></td>
+                  </tr>
+                  <tr>
+                    <td class="p-6 text-slate-900 dark:text-white font-medium">Mobile app</td>
+                    <td class="p-6 text-center text-emerald-600 font-medium">Single app, full features</td>
+                    <td class="p-6 text-center text-slate-600 dark:text-slate-400">Two apps, limited</td>
+                  </tr>
+                  <tr>
+                    <td class="p-6 text-slate-900 dark:text-white font-medium">HRIS integration</td>
+                    <td class="p-6 text-center text-slate-600 dark:text-slate-400">Via API</td>
+                    <td class="p-6 text-center text-emerald-600 font-medium">Native (same platform)</td>
+                  </tr>
+                  <tr>
+                    <td class="p-6 text-slate-900 dark:text-white font-medium">Customer support</td>
+                    <td class="p-6 text-center text-emerald-600 font-medium">Responsive, all plans</td>
+                    <td class="p-6 text-center text-slate-600 dark:text-slate-400">Excellent (35s hold time)</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Pricing Comparison */}
+      <section class="py-20 px-4 sm:px-6 lg:px-8">
+        <div class="max-w-5xl mx-auto">
+          <h2 class="text-4xl font-bold text-slate-900 dark:text-white mb-12 text-center">
+            Pricing comparison
+          </h2>
+
+          <div class="grid md:grid-cols-2 gap-8 mb-12">
+            {/* Jatura Pricing */}
+            <div class="bg-emerald-50 dark:bg-emerald-950/20 border-2 border-emerald-200 dark:border-emerald-900 rounded-2xl p-8">
+              <div class="text-sm font-semibold text-emerald-600 mb-2">JATURA</div>
+              <div class="text-4xl font-bold text-slate-900 dark:text-white mb-2">
+                $99-$299<span class="text-xl text-slate-600 dark:text-slate-400">/mo</span>
+              </div>
+              <p class="text-slate-600 dark:text-slate-400 mb-6">
+                Flat rate pricing—no employee-count multiplier, no HRIS required
+              </p>
+              <ul class="space-y-3">
+                <li class="flex items-start gap-2">
+                  <CheckCircle class="w-5 h-5 text-emerald-600 flex-shrink-0 mt-0.5" />
+                  <span class="text-slate-600 dark:text-slate-400">
+                    <strong class="text-slate-900 dark:text-white">Free ($0/mo):</strong> Up to 3 active jobs, unlimited applications
+                  </span>
+                </li>
+                <li class="flex items-start gap-2">
+                  <CheckCircle class="w-5 h-5 text-emerald-600 flex-shrink-0 mt-0.5" />
+                  <span class="text-slate-600 dark:text-slate-400">
+                    <strong class="text-slate-900 dark:text-white">Pro ($199/mo):</strong> Unlimited jobs, advanced analytics
+                  </span>
+                </li>
+                <li class="flex items-start gap-2">
+                  <CheckCircle class="w-5 h-5 text-emerald-600 flex-shrink-0 mt-0.5" />
+                  <span class="text-slate-600 dark:text-slate-400">
+                    <strong class="text-slate-900 dark:text-white">Enterprise ($299/mo):</strong> Custom integrations, SSO, SLA
+                  </span>
+                </li>
+                <li class="flex items-start gap-2">
+                  <CheckCircle class="w-5 h-5 text-emerald-600 flex-shrink-0 mt-0.5" />
+                  <span class="text-slate-600 dark:text-slate-400">All ATS features included</span>
+                </li>
+              </ul>
+            </div>
+
+            {/* BambooHR Pricing */}
+            <div class="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-2xl p-8">
+              <div class="text-sm font-semibold text-slate-600 dark:text-slate-400 mb-2">BAMBOOHR</div>
+              <div class="text-4xl font-bold text-slate-900 dark:text-white mb-2">
+                $250+<span class="text-xl text-slate-600 dark:text-slate-400">/mo</span>
+              </div>
+              <p class="text-slate-600 dark:text-slate-400 mb-6">
+                HRIS + basic ATS, employee-based pricing
+              </p>
+              <ul class="space-y-3">
+                <li class="flex items-start gap-2">
+                  <MinusCircle class="w-5 h-5 text-slate-400 flex-shrink-0 mt-0.5" />
+                  <span class="text-slate-600 dark:text-slate-400">
+                    ≤25 employees: $250/month flat rate
+                  </span>
+                </li>
+                <li class="flex items-start gap-2">
+                  <MinusCircle class="w-5 h-5 text-slate-400 flex-shrink-0 mt-0.5" />
+                  <span class="text-slate-600 dark:text-slate-400">
+                    &gt;25 employees: $10-22 per employee/month
+                  </span>
+                </li>
+                <li class="flex items-start gap-2">
+                  <MinusCircle class="w-5 h-5 text-slate-400 flex-shrink-0 mt-0.5" />
+                  <span class="text-slate-600 dark:text-slate-400">
+                    Annual range: $15,000-$120,000/year
+                  </span>
+                </li>
+                <li class="flex items-start gap-2">
+                  <MinusCircle class="w-5 h-5 text-slate-400 flex-shrink-0 mt-0.5" />
+                  <span class="text-slate-600 dark:text-slate-400">Must purchase full HRIS platform</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="bg-slate-100 dark:bg-slate-800 rounded-xl p-6 text-center">
+            <p class="text-lg text-slate-700 dark:text-slate-300">
+              <strong>Jatura costs 52-92% less than BambooHR</strong> with full ATS features (vs. "worryingly basic") and no HRIS requirement.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* Who Should Choose Which */}
+      <section class="py-20 px-4 sm:px-6 lg:px-8 bg-slate-50 dark:bg-slate-900/50">
+        <div class="max-w-5xl mx-auto">
+          <h2 class="text-4xl font-bold text-slate-900 dark:text-white mb-12 text-center">
+            Which should you choose?
+          </h2>
+
+          <div class="grid md:grid-cols-2 gap-8">
+            {/* Choose BambooHR */}
+            <div class="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-2xl p-8">
+              <h3 class="text-2xl font-bold text-slate-900 dark:text-white mb-6">
+                Choose BambooHR if:
+              </h3>
+              <ul class="space-y-4">
+                <li class="flex items-start gap-3">
+                  <CheckCircle class="w-5 h-5 text-slate-400 flex-shrink-0 mt-0.5" />
+                  <span class="text-slate-600 dark:text-slate-400">
+                    You need a <strong class="text-slate-900 dark:text-white">full HRIS platform</strong> (HR, payroll, benefits, performance)
+                  </span>
+                </li>
+                <li class="flex items-start gap-3">
+                  <CheckCircle class="w-5 h-5 text-slate-400 flex-shrink-0 mt-0.5" />
+                  <span class="text-slate-600 dark:text-slate-400">
+                    You only hire <strong class="text-slate-900 dark:text-white">1 position at a time</strong> (very low volume)
+                  </span>
+                </li>
+                <li class="flex items-start gap-3">
+                  <CheckCircle class="w-5 h-5 text-slate-400 flex-shrink-0 mt-0.5" />
+                  <span class="text-slate-600 dark:text-slate-400">
+                    You're okay with <strong class="text-slate-900 dark:text-white">"worryingly basic" ATS features</strong>
+                  </span>
+                </li>
+                <li class="flex items-start gap-3">
+                  <CheckCircle class="w-5 h-5 text-slate-400 flex-shrink-0 mt-0.5" />
+                  <span class="text-slate-600 dark:text-slate-400">
+                    You don't need <strong class="text-slate-900 dark:text-white">interview scheduling or AI screening</strong>
+                  </span>
+                </li>
+                <li class="flex items-start gap-3">
+                  <CheckCircle class="w-5 h-5 text-slate-400 flex-shrink-0 mt-0.5" />
+                  <span class="text-slate-600 dark:text-slate-400">
+                    You value <strong class="text-slate-900 dark:text-white">seamless HRIS-ATS integration</strong> over ATS power
+                  </span>
+                </li>
+              </ul>
+            </div>
+
+            {/* Choose Jatura */}
+            <div class="bg-emerald-50 dark:bg-emerald-950/20 border-2 border-emerald-200 dark:border-emerald-900 rounded-2xl p-8">
+              <h3 class="text-2xl font-bold text-slate-900 dark:text-white mb-6">
+                Choose Jatura if:
+              </h3>
+              <ul class="space-y-4">
+                <li class="flex items-start gap-3">
+                  <CheckCircle class="w-5 h-5 text-emerald-600 flex-shrink-0 mt-0.5" />
+                  <span class="text-slate-600 dark:text-slate-400">
+                    You need a <strong class="text-slate-900 dark:text-white">full-featured ATS</strong> without buying an HRIS
+                  </span>
+                </li>
+                <li class="flex items-start gap-3">
+                  <CheckCircle class="w-5 h-5 text-emerald-600 flex-shrink-0 mt-0.5" />
+                  <span class="text-slate-600 dark:text-slate-400">
+                    <strong class="text-slate-900 dark:text-white">Interview scheduling, scorecards, and AI screening</strong> are essential
+                  </span>
+                </li>
+                <li class="flex items-start gap-3">
+                  <CheckCircle class="w-5 h-5 text-emerald-600 flex-shrink-0 mt-0.5" />
+                  <span class="text-slate-600 dark:text-slate-400">
+                    You hire <strong class="text-slate-900 dark:text-white">multiple positions concurrently</strong>
+                  </span>
+                </li>
+                <li class="flex items-start gap-3">
+                  <CheckCircle class="w-5 h-5 text-emerald-600 flex-shrink-0 mt-0.5" />
+                  <span class="text-slate-600 dark:text-slate-400">
+                    You want <strong class="text-slate-900 dark:text-white">advanced analytics</strong> and customizable pipelines
+                  </span>
+                </li>
+                <li class="flex items-start gap-3">
+                  <CheckCircle class="w-5 h-5 text-emerald-600 flex-shrink-0 mt-0.5" />
+                  <span class="text-slate-600 dark:text-slate-400">
+                    You prefer <strong class="text-slate-900 dark:text-white">flat rate pricing</strong> ($99-$299/month)
+                  </span>
+                </li>
+                <li class="flex items-start gap-3">
+                  <CheckCircle class="w-5 h-5 text-emerald-600 flex-shrink-0 mt-0.5" />
+                  <span class="text-slate-600 dark:text-slate-400">
+                    You already have an HRIS or <strong class="text-slate-900 dark:text-white">don't need one</strong>
+                  </span>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* CTA Section */}
+      <section class="py-28 px-4 sm:px-6 lg:px-8 bg-slate-900 dark:bg-white">
+        <div class="max-w-4xl mx-auto text-center">
+          <h2 class="text-4xl sm:text-5xl font-bold text-white dark:text-slate-900 mb-6">
+            Ready to try Jatura?
+          </h2>
+          <p class="text-xl text-slate-300 dark:text-slate-600 mb-10">
+            Start your free 14-day trial. No credit card required. Setup takes 5 minutes.
+          </p>
+          <div class="flex flex-col sm:flex-row gap-4 justify-center">
+            <a href="/login">
+              <Button
+                size="lg"
+                class="bg-white dark:bg-slate-900 text-slate-900 dark:text-white hover:bg-slate-100 dark:hover:bg-slate-800 px-10 py-6 text-lg"
+              >
+                Start free trial
+                <ArrowRight class="ml-2 h-5 w-5" />
+              </Button>
+            </a>
+            <a href="/pricing">
+              <Button
+                size="lg"
+                variant="outline"
+                class="px-10 py-6 text-lg border-slate-700 dark:border-slate-300 text-white dark:text-slate-900 hover:bg-slate-800 dark:hover:bg-slate-100"
+              >
+                View pricing
+              </Button>
+            </a>
+          </div>
+        </div>
+      </section>
+
+</MarketingLayout>

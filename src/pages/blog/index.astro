@@ -1,0 +1,100 @@
+---
+import MarketingLayout from '@/layouts/MarketingLayout.astro';
+import { format } from 'date-fns';
+
+const API_BASE = 'https://app.jatura.com';
+let posts: any[] = [];
+try {
+  const res = await fetch(`${API_BASE}/api/blog/posts`);
+  if (res.ok) posts = await res.json();
+} catch (e) {
+  // API unavailable — show empty state
+}
+
+const title = "Blog - Modern Recruiting Insights | Jatura";
+const description = "Discover expert insights on modern recruiting, hiring best practices, and building great teams. Learn how to hire better and faster with AI-powered recruiting.";
+const schemaOrg = [
+  {
+    "@type": "Blog",
+    "name": "Jatura Recruiting Blog",
+    "description": "Expert insights on modern recruiting, hiring best practices, and building great teams with AI",
+    "url": "https://jatura.com/blog",
+    "publisher": { "@type": "Organization", "name": "Jatura", "url": "https://jatura.com" }
+  }
+];
+---
+
+<MarketingLayout {title} {description} {schemaOrg}>
+  <!-- Hero Section -->
+  <section class="py-28 px-4 sm:px-6 lg:px-8 border-b border-slate-200 dark:border-slate-800" data-testid="section-blog-hero">
+    <div class="max-w-4xl mx-auto text-center">
+      <h1 class="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-slate-900 dark:text-white mb-6 leading-tight px-4" data-testid="heading-blog-title">
+        Blog
+      </h1>
+      <p class="text-lg sm:text-xl md:text-2xl text-slate-600 dark:text-slate-400 leading-relaxed px-4" data-testid="text-blog-description">
+        Insights on modern recruiting, hiring best practices, and building great teams.
+      </p>
+    </div>
+  </section>
+
+  <!-- Blog Posts -->
+  <section class="py-20 px-4 sm:px-6 lg:px-8" data-testid="section-blog-posts">
+    <div class="max-w-5xl mx-auto">
+      {posts.length === 0 ? (
+        <div class="text-center py-16" data-testid="empty-state">
+          <div class="text-6xl mb-4">&#x1F4DD;</div>
+          <h3 class="text-xl font-semibold text-slate-900 dark:text-slate-100 mb-2">No posts yet</h3>
+          <p class="text-sm text-slate-600 dark:text-slate-400">Check back soon for insights on modern recruiting and hiring best practices!</p>
+        </div>
+      ) : (
+        <div class="space-y-16">
+          {posts.map((post: any) => (
+            <article
+              class="group border-b border-slate-200 dark:border-slate-800 pb-16 last:border-0"
+              data-testid={`post-${post.slug}`}
+            >
+              <a href={`/blog/${post.slug}`} class="block">
+                <div class="flex items-center gap-4 text-sm text-slate-500 dark:text-slate-500 mb-4" data-testid={`post-meta-${post.slug}`}>
+                  {post.publishedAt && (
+                    <div class="flex items-center gap-2">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-4 h-4"><rect width="18" height="18" x="3" y="4" rx="2" ry="2"/><line x1="16" x2="16" y1="2" y2="6"/><line x1="8" x2="8" y1="2" y2="6"/><line x1="3" x2="21" y1="10" y2="10"/></svg>
+                      <time datetime={post.publishedAt}>
+                        {format(new Date(post.publishedAt), "MMM d, yyyy")}
+                      </time>
+                    </div>
+                  )}
+                  {post.readTimeMinutes && (
+                    <div class="flex items-center gap-2">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-4 h-4"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                      <span>{post.readTimeMinutes} min read</span>
+                    </div>
+                  )}
+                  {post.contentType && (
+                    <span class="px-2 py-1 bg-slate-100 dark:bg-slate-800 rounded text-xs">
+                      {post.contentType}
+                    </span>
+                  )}
+                </div>
+
+                <h2 class="text-2xl sm:text-3xl md:text-4xl font-bold text-slate-900 dark:text-white mb-4 group-hover:text-blue-600 dark:group-hover:text-blue-400 transition leading-tight" data-testid={`post-title-${post.slug}`}>
+                  {post.title}
+                </h2>
+
+                {post.excerpt && (
+                  <p class="text-base sm:text-lg text-slate-600 dark:text-slate-400 mb-6 leading-relaxed" data-testid={`post-excerpt-${post.slug}`}>
+                    {post.excerpt}
+                  </p>
+                )}
+
+                <div class="flex items-center gap-2 text-blue-600 dark:text-blue-400 font-medium group-hover:gap-3 transition-all" data-testid={`post-link-${post.slug}`}>
+                  Read article
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-4 h-4"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+                </div>
+              </a>
+            </article>
+          ))}
+        </div>
+      )}
+    </div>
+  </section>
+</MarketingLayout>

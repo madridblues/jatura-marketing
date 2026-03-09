@@ -1,0 +1,508 @@
+---
+export const prerender = true;
+import MarketingLayout from '@/layouts/MarketingLayout.astro';
+import { ArrowRight, Target, CheckCircle, Search, UserPlus, MessageCircle, Trophy, Gem, Sparkles } from 'lucide-react';
+import { Button } from '@/components/ui/button';
+import { Badge } from '@/components/ui/badge';
+
+const title = "Niche & Hard-to-Fill Roles | Jatura ATS";
+const description = "Fill specialized, niche roles faster with Jatura. AI candidate matching, advanced Boolean search, and targeted sourcing campaigns find qualified candidates for hard-to-fill positions.";
+
+const schemaOrg = [
+  {
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://jatura.com" },
+      { "@type": "ListItem", "position": 2, "name": "Use Cases", "item": "https://jatura.com/use-cases" },
+      { "@type": "ListItem", "position": 3, "name": "Niche Roles", "item": "https://jatura.com/use-cases/niche-roles" }
+    ]
+  },
+  {
+    "@type": "WebPage",
+    "name": "Niche & Hard-to-Fill Roles | Jatura ATS",
+    "description": "Fill specialized, niche roles faster with Jatura. AI candidate matching, advanced Boolean search, and targeted sourcing campaigns find qualified candidates for hard-to-fill positions.",
+    "url": "https://jatura.com/use-cases/niche-roles"
+  }
+];
+---
+
+<MarketingLayout {title} {description} {schemaOrg}>
+
+      {/* Hero Section */}
+      <section class="pt-24 pb-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-amber-50 to-white dark:from-amber-950/20 dark:to-slate-950">
+        <div class="max-w-5xl mx-auto">
+          <a href="/use-cases">
+            <Button variant="ghost" class="mb-6 -ml-4">
+              ← Back to all use cases
+            </Button>
+          </a>
+          
+          <Badge
+            variant="secondary"
+            class="mb-6 px-5 py-2 text-sm font-medium bg-amber-100 dark:bg-amber-900/30 text-amber-900 dark:text-amber-100"
+          >
+            <Target class="w-4 h-4 mr-2" />
+            Niche & Hard-to-Fill Roles
+          </Badge>
+          
+          <h1 class="text-5xl sm:text-6xl font-bold text-slate-900 dark:text-white mb-6 leading-tight">
+            Find the candidates<br />others can't
+          </h1>
+          
+          <p class="text-xl sm:text-2xl text-slate-600 dark:text-slate-400 mb-8 leading-relaxed">
+            When you're hiring for specialist roles, volume tactics won't cut it. Jatura helps you identify the right people, build long-term relationships, and deliver an experience that keeps them engaged.
+          </p>
+
+          <div class="grid md:grid-cols-3 gap-6 mb-10">
+            <div class="bg-white dark:bg-slate-900 border border-amber-200 dark:border-amber-900/30 rounded-xl p-6">
+              <div class="text-3xl font-bold text-amber-600 mb-2">75%</div>
+              <div class="text-sm text-slate-600 dark:text-slate-400">Of hiring managers struggle to find specialized talent</div>
+            </div>
+            <div class="bg-white dark:bg-slate-900 border border-amber-200 dark:border-amber-900/30 rounded-xl p-6">
+              <div class="text-3xl font-bold text-amber-600 mb-2">36%</div>
+              <div class="text-sm text-slate-600 dark:text-slate-400">Projected growth in data scientist demand through 2030</div>
+            </div>
+            <div class="bg-white dark:bg-slate-900 border border-amber-200 dark:border-amber-900/30 rounded-xl p-6">
+              <div class="text-3xl font-bold text-amber-600 mb-2">73%</div>
+              <div class="text-sm text-slate-600 dark:text-slate-400">Of top candidates are passive, not actively searching</div>
+            </div>
+          </div>
+
+          <div class="flex flex-col sm:flex-row gap-4">
+            <a href="/login">
+              <Button
+                size="lg"
+                class="bg-amber-600 hover:bg-amber-700 text-white px-10 py-6 text-lg group shadow-lg"
+              >
+                Start free trial
+                <ArrowRight class="ml-2 h-5 w-5 group-hover:translate-x-1 transition" />
+              </Button>
+            </a>
+            <a href="/pricing">
+              <Button
+                size="lg"
+                variant="outline"
+                class="px-10 py-6 text-lg border-slate-300 dark:border-slate-700"
+              >
+                View pricing
+              </Button>
+            </a>
+          </div>
+        </div>
+      </section>
+
+      {/* Problem Statement */}
+      <section class="py-20 px-4 sm:px-6 lg:px-8">
+        <div class="max-w-5xl mx-auto">
+          <h2 class="text-4xl font-bold text-slate-900 dark:text-white mb-6">
+            The specialist hiring challenge
+          </h2>
+          <p class="text-xl text-slate-600 dark:text-slate-400 mb-12">
+            Cybersecurity experts, data scientists, skilled trades, specialized engineers—these roles consistently rank as the hardest to fill.
+          </p>
+
+          <div class="grid md:grid-cols-2 gap-6">
+            <div class="bg-slate-50 dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-xl p-6">
+              <div class="w-12 h-12 bg-red-100 dark:bg-red-900/20 rounded-lg flex items-center justify-center mb-4">
+                <Search class="w-6 h-6 text-red-600 dark:text-red-400" />
+              </div>
+              <h3 class="text-xl font-semibold text-slate-900 dark:text-white mb-3">
+                Talent scarcity
+              </h3>
+              <p class="text-slate-600 dark:text-slate-400">
+                Demand far exceeds supply. 89% of tech/IT leaders say it's challenging to find needed talent. Cybersecurity jobs grow 33% through 2030, but there aren't enough qualified candidates.
+              </p>
+            </div>
+
+            <div class="bg-slate-50 dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-xl p-6">
+              <div class="w-12 h-12 bg-red-100 dark:bg-red-900/20 rounded-lg flex items-center justify-center mb-4">
+                <UserPlus class="w-6 h-6 text-red-600 dark:text-red-400" />
+              </div>
+              <h3 class="text-xl font-semibold text-slate-900 dark:text-white mb-3">
+                Passive candidates only
+              </h3>
+              <p class="text-slate-600 dark:text-slate-400">
+                The best specialists aren't on job boards. 73% of candidates aren't actively searching. You need proactive outreach, personalized messaging, and long-term relationship building.
+              </p>
+            </div>
+
+            <div class="bg-slate-50 dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-xl p-6">
+              <div class="w-12 h-12 bg-red-100 dark:bg-red-900/20 rounded-lg flex items-center justify-center mb-4">
+                <Trophy class="w-6 h-6 text-red-600 dark:text-red-400" />
+              </div>
+              <h3 class="text-xl font-semibold text-slate-900 dark:text-white mb-3">
+                Competing with everyone
+              </h3>
+              <p class="text-slate-600 dark:text-slate-400">
+                Top specialists get bombarded with generic recruiter emails. To stand out, you need personalized outreach, compelling employer branding, and a seamless candidate experience.
+              </p>
+            </div>
+
+            <div class="bg-slate-50 dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-xl p-6">
+              <div class="w-12 h-12 bg-red-100 dark:bg-red-900/20 rounded-lg flex items-center justify-center mb-4">
+                <MessageCircle class="w-6 h-6 text-red-600 dark:text-red-400" />
+              </div>
+              <h3 class="text-xl font-semibold text-slate-900 dark:text-white mb-3">
+                Long sales cycles
+              </h3>
+              <p class="text-slate-600 dark:text-slate-400">
+                Specialist hiring takes months, not weeks. Candidates need nurturing, multiple touchpoints, and relationship building before they're ready to make a move.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* How Jatura Solves It */}
+      <section class="py-20 px-4 sm:px-6 lg:px-8 bg-amber-50 dark:bg-amber-950/10">
+        <div class="max-w-5xl mx-auto">
+          <h2 class="text-4xl font-bold text-slate-900 dark:text-white mb-4 text-center">
+            How Jatura helps you win specialist talent
+          </h2>
+          <p class="text-xl text-slate-600 dark:text-slate-400 text-center mb-12">
+            Advanced sourcing, relationship nurturing, and an experience that converts passive candidates.
+          </p>
+
+          <div class="space-y-8">
+            <div class="bg-white dark:bg-slate-900 border border-amber-200 dark:border-amber-900/30 rounded-2xl p-8">
+              <div class="flex items-start gap-6">
+                <div class="w-14 h-14 bg-amber-100 dark:bg-amber-900/30 rounded-xl flex items-center justify-center flex-shrink-0">
+                  <Sparkles class="w-7 h-7 text-amber-600" />
+                </div>
+                <div>
+                  <h3 class="text-2xl font-bold text-slate-900 dark:text-white mb-3">
+                    AI-powered multi-channel sourcing
+                  </h3>
+                  <p class="text-lg text-slate-600 dark:text-slate-400 mb-4">
+                    Don't rely on job boards alone. Jatura integrates with LinkedIn Recruiter, GitHub, Stack Overflow, Behance, and niche industry forums. AI sourcing tools scan 800M+ professional profiles to find specialists matching your exact criteria.
+                  </p>
+                  <ul class="space-y-2">
+                    <li class="flex items-start gap-2">
+                      <CheckCircle class="w-5 h-5 text-amber-600 flex-shrink-0 mt-0.5" />
+                      <span class="text-slate-600 dark:text-slate-400">Search across LinkedIn, GitHub, niche platforms simultaneously</span>
+                    </li>
+                    <li class="flex items-start gap-2">
+                      <CheckCircle class="w-5 h-5 text-amber-600 flex-shrink-0 mt-0.5" />
+                      <span class="text-slate-600 dark:text-slate-400">Boolean search with advanced filters (skills, certifications, location)</span>
+                    </li>
+                    <li class="flex items-start gap-2">
+                      <CheckCircle class="w-5 h-5 text-amber-600 flex-shrink-0 mt-0.5" />
+                      <span class="text-slate-600 dark:text-slate-400">AI candidate matching based on work samples and projects</span>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            <div class="bg-white dark:bg-slate-900 border border-amber-200 dark:border-amber-900/30 rounded-2xl p-8">
+              <div class="flex items-start gap-6">
+                <div class="w-14 h-14 bg-amber-100 dark:bg-amber-900/30 rounded-xl flex items-center justify-center flex-shrink-0">
+                  <MessageCircle class="w-7 h-7 text-amber-600" />
+                </div>
+                <div>
+                  <h3 class="text-2xl font-bold text-slate-900 dark:text-white mb-3">
+                    Personalized outreach at scale
+                  </h3>
+                  <p class="text-lg text-slate-600 dark:text-slate-400 mb-4">
+                    Stand out from generic recruiter spam. Jatura helps you craft personalized messages that reference candidates' specific work, GitHub contributions, or industry achievements. Templates with smart variables save time while maintaining authenticity.
+                  </p>
+                  <ul class="space-y-2">
+                    <li class="flex items-start gap-2">
+                      <CheckCircle class="w-5 h-5 text-amber-600 flex-shrink-0 mt-0.5" />
+                      <span class="text-slate-600 dark:text-slate-400">Email templates with personalization tokens</span>
+                    </li>
+                    <li class="flex items-start gap-2">
+                      <CheckCircle class="w-5 h-5 text-amber-600 flex-shrink-0 mt-0.5" />
+                      <span class="text-slate-600 dark:text-slate-400">LinkedIn InMail integration for direct messaging</span>
+                    </li>
+                    <li class="flex items-start gap-2">
+                      <CheckCircle class="w-5 h-5 text-amber-600 flex-shrink-0 mt-0.5" />
+                      <span class="text-slate-600 dark:text-slate-400">Track response rates and optimize messaging</span>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            <div class="bg-white dark:bg-slate-900 border border-amber-200 dark:border-amber-900/30 rounded-2xl p-8">
+              <div class="flex items-start gap-6">
+                <div class="w-14 h-14 bg-amber-100 dark:bg-amber-900/30 rounded-xl flex items-center justify-center flex-shrink-0">
+                  <Gem class="w-7 h-7 text-amber-600" />
+                </div>
+                <div>
+                  <h3 class="text-2xl font-bold text-slate-900 dark:text-white mb-3">
+                    Talent pipeline nurturing
+                  </h3>
+                  <p class="text-lg text-slate-600 dark:text-slate-400 mb-4">
+                    Build relationships over months, not days. Create talent pools for specific specialties. Send automated drip campaigns with company updates, industry insights, and relevant opportunities. Keep specialists warm until they're ready to move.
+                  </p>
+                  <ul class="space-y-2">
+                    <li class="flex items-start gap-2">
+                      <CheckCircle class="w-5 h-5 text-amber-600 flex-shrink-0 mt-0.5" />
+                      <span class="text-slate-600 dark:text-slate-400">Talent pool segmentation by specialty and engagement level</span>
+                    </li>
+                    <li class="flex items-start gap-2">
+                      <CheckCircle class="w-5 h-5 text-amber-600 flex-shrink-0 mt-0.5" />
+                      <span class="text-slate-600 dark:text-slate-400">Automated nurture campaigns with personalized content</span>
+                    </li>
+                    <li class="flex items-start gap-2">
+                      <CheckCircle class="w-5 h-5 text-amber-600 flex-shrink-0 mt-0.5" />
+                      <span class="text-slate-600 dark:text-slate-400">Engagement tracking to identify when candidates are ready</span>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            <div class="bg-white dark:bg-slate-900 border border-amber-200 dark:border-amber-900/30 rounded-2xl p-8">
+              <div class="flex items-start gap-6">
+                <div class="w-14 h-14 bg-amber-100 dark:bg-amber-900/30 rounded-xl flex items-center justify-center flex-shrink-0">
+                  <Target class="w-7 h-7 text-amber-600" />
+                </div>
+                <div>
+                  <h3 class="text-2xl font-bold text-slate-900 dark:text-white mb-3">
+                    Specialized screening & assessment
+                  </h3>
+                  <p class="text-lg text-slate-600 dark:text-slate-400 mb-4">
+                    Go beyond resume keywords. Create role-specific technical assessments, work sample tests, and portfolio reviews. Integrate with platforms like HackerRank, Codility, and TestGorilla for objective evaluation.
+                  </p>
+                  <ul class="space-y-2">
+                    <li class="flex items-start gap-2">
+                      <CheckCircle class="w-5 h-5 text-amber-600 flex-shrink-0 mt-0.5" />
+                      <span class="text-slate-600 dark:text-slate-400">Custom technical assessments per role</span>
+                    </li>
+                    <li class="flex items-start gap-2">
+                      <CheckCircle class="w-5 h-5 text-amber-600 flex-shrink-0 mt-0.5" />
+                      <span class="text-slate-600 dark:text-slate-400">Work sample evaluation and portfolio scoring</span>
+                    </li>
+                    <li class="flex items-start gap-2">
+                      <CheckCircle class="w-5 h-5 text-amber-600 flex-shrink-0 mt-0.5" />
+                      <span class="text-slate-600 dark:text-slate-400">Integration with assessment platforms</span>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            <div class="bg-white dark:bg-slate-900 border border-amber-200 dark:border-amber-900/30 rounded-2xl p-8">
+              <div class="flex items-start gap-6">
+                <div class="w-14 h-14 bg-amber-100 dark:bg-amber-900/30 rounded-xl flex items-center justify-center flex-shrink-0">
+                  <Trophy class="w-7 h-7 text-amber-600" />
+                </div>
+                <div>
+                  <h3 class="text-2xl font-bold text-slate-900 dark:text-white mb-3">
+                    White-glove candidate experience
+                  </h3>
+                  <p class="text-lg text-slate-600 dark:text-slate-400 mb-4">
+                    Specialists expect premium treatment. Offer self-scheduling for interviews, transparent timelines, dedicated recruiter contacts, and fast follow-ups. Make every interaction feel personal and valued.
+                  </p>
+                  <ul class="space-y-2">
+                    <li class="flex items-start gap-2">
+                      <CheckCircle class="w-5 h-5 text-amber-600 flex-shrink-0 mt-0.5" />
+                      <span class="text-slate-600 dark:text-slate-400">Self-service interview scheduling</span>
+                    </li>
+                    <li class="flex items-start gap-2">
+                      <CheckCircle class="w-5 h-5 text-amber-600 flex-shrink-0 mt-0.5" />
+                      <span class="text-slate-600 dark:text-slate-400">Clear timeline communication and status updates</span>
+                    </li>
+                    <li class="flex items-start gap-2">
+                      <CheckCircle class="w-5 h-5 text-amber-600 flex-shrink-0 mt-0.5" />
+                      <span class="text-slate-600 dark:text-slate-400">Personalized candidate portals with real-time progress</span>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* How It Works */}
+      <section class="py-20 px-4 sm:px-6 lg:px-8">
+        <div class="max-w-5xl mx-auto">
+          <h2 class="text-4xl font-bold text-slate-900 dark:text-white mb-12 text-center">
+            How it works
+          </h2>
+
+          <div class="space-y-8">
+            <div class="flex gap-6">
+              <div class="flex-shrink-0">
+                <div class="w-12 h-12 bg-amber-600 rounded-full flex items-center justify-center text-white font-bold text-lg">
+                  1
+                </div>
+              </div>
+              <div>
+                <h3 class="text-xl font-bold text-slate-900 dark:text-white mb-2">
+                  Define your ideal specialist profile
+                </h3>
+                <p class="text-slate-600 dark:text-slate-400">
+                  Work with hiring managers to identify must-have skills, certifications, and experience. Create detailed candidate personas. Set up Boolean searches and filters in Jatura's multi-platform sourcing tools.
+                </p>
+              </div>
+            </div>
+
+            <div class="flex gap-6">
+              <div class="flex-shrink-0">
+                <div class="w-12 h-12 bg-amber-600 rounded-full flex items-center justify-center text-white font-bold text-lg">
+                  2
+                </div>
+              </div>
+              <div>
+                <h3 class="text-xl font-bold text-slate-900 dark:text-white mb-2">
+                  Source across platforms simultaneously
+                </h3>
+                <p class="text-slate-600 dark:text-slate-400">
+                  Search LinkedIn, GitHub, Stack Overflow, and niche forums in one interface. AI scans 800M+ profiles to find specialists matching your criteria. Import candidates directly into Jatura with one click.
+                </p>
+              </div>
+            </div>
+
+            <div class="flex gap-6">
+              <div class="flex-shrink-0">
+                <div class="w-12 h-12 bg-amber-600 rounded-full flex items-center justify-center text-white font-bold text-lg">
+                  3
+                </div>
+              </div>
+              <div>
+                <h3 class="text-xl font-bold text-slate-900 dark:text-white mb-2">
+                  Launch personalized outreach campaigns
+                </h3>
+                <p class="text-slate-600 dark:text-slate-400">
+                  Send personalized messages referencing candidates' specific work and achievements. Use email, LinkedIn InMail, or multi-channel sequences. Track opens, responses, and engagement.
+                </p>
+              </div>
+            </div>
+
+            <div class="flex gap-6">
+              <div class="flex-shrink-0">
+                <div class="w-12 h-12 bg-amber-600 rounded-full flex items-center justify-center text-white font-bold text-lg">
+                  4
+                </div>
+              </div>
+              <div>
+                <h3 class="text-xl font-bold text-slate-900 dark:text-white mb-2">
+                  Nurture and build relationships
+                </h3>
+                <p class="text-slate-600 dark:text-slate-400">
+                  Add responsive candidates to talent pools. Send automated drip campaigns with company updates, industry insights, and relevant job opportunities. Track engagement to identify when they're ready to move.
+                </p>
+              </div>
+            </div>
+
+            <div class="flex gap-6">
+              <div class="flex-shrink-0">
+                <div class="w-12 h-12 bg-amber-600 rounded-full flex items-center justify-center text-white font-bold text-lg">
+                  5
+                </div>
+              </div>
+              <div>
+                <h3 class="text-xl font-bold text-slate-900 dark:text-white mb-2">
+                  Evaluate with specialized assessments
+                </h3>
+                <p class="text-slate-600 dark:text-slate-400">
+                  Send technical assessments, request work samples, review portfolios. Use structured interview kits with role-specific questions. Provide transparent feedback and maintain constant communication throughout the process.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Ideal For */}
+      <section class="py-20 px-4 sm:px-6 lg:px-8 bg-slate-50 dark:bg-slate-900/50">
+        <div class="max-w-5xl mx-auto">
+          <h2 class="text-4xl font-bold text-slate-900 dark:text-white mb-12 text-center">
+            Perfect for
+          </h2>
+
+          <div class="grid md:grid-cols-2 gap-6">
+            <div class="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-xl p-6">
+              <h3 class="text-xl font-semibold text-slate-900 dark:text-white mb-3">
+                Cybersecurity & InfoSec
+              </h3>
+              <p class="text-slate-600 dark:text-slate-400">
+                Security engineers, penetration testers, compliance specialists. Demand grows 33% through 2030 with severe talent shortages.
+              </p>
+            </div>
+
+            <div class="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-xl p-6">
+              <h3 class="text-xl font-semibold text-slate-900 dark:text-white mb-3">
+                Data Science & ML Engineering
+              </h3>
+              <p class="text-slate-600 dark:text-slate-400">
+                Data scientists, machine learning engineers, AI researchers. 36% growth projected through 2030, but candidate pool remains limited.
+              </p>
+            </div>
+
+            <div class="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-xl p-6">
+              <h3 class="text-xl font-semibold text-slate-900 dark:text-white mb-3">
+                Skilled Trades
+              </h3>
+              <p class="text-slate-600 dark:text-slate-400">
+                HVAC technicians, electricians, specialized construction workers. Severe workforce shortages with aging population and limited training pipelines.
+              </p>
+            </div>
+
+            <div class="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-xl p-6">
+              <h3 class="text-xl font-semibold text-slate-900 dark:text-white mb-3">
+                Specialized Software Engineers
+              </h3>
+              <p class="text-slate-600 dark:text-slate-400">
+                Blockchain developers, embedded systems engineers, specialized framework experts (e.g., specific ML frameworks, niche languages).
+              </p>
+            </div>
+
+            <div class="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-xl p-6">
+              <h3 class="text-xl font-semibold text-slate-900 dark:text-white mb-3">
+                Healthcare Specialists
+              </h3>
+              <p class="text-slate-600 dark:text-slate-400">
+                Specialized nurses, lab technicians, medical imaging specialists. Critical understaffing in many specialties.
+              </p>
+            </div>
+
+            <div class="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-xl p-6">
+              <h3 class="text-xl font-semibold text-slate-900 dark:text-white mb-3">
+                Executive & Leadership Roles
+              </h3>
+              <p class="text-slate-600 dark:text-slate-400">
+                C-suite, VPs, specialized directors. Limited candidate pools require executive search capabilities and relationship building.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* CTA Section */}
+      <section class="py-28 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-amber-600 to-amber-700">
+        <div class="max-w-4xl mx-auto text-center">
+          <h2 class="text-4xl sm:text-5xl font-bold text-white mb-6">
+            Ready to fill your hardest roles?
+          </h2>
+          <p class="text-xl text-amber-50 mb-10">
+            Join companies finding specialist talent with AI-powered sourcing, relationship nurturing, and world-class candidate experiences.
+          </p>
+          <div class="flex flex-col sm:flex-row gap-4 justify-center">
+            <a href="/login">
+              <Button
+                size="lg"
+                class="bg-white text-amber-600 hover:bg-amber-50 px-10 py-6 text-lg"
+              >
+                Start free trial
+                <ArrowRight class="ml-2 h-5 w-5" />
+              </Button>
+            </a>
+            <a href="/pricing">
+              <Button
+                size="lg"
+                variant="outline"
+                class="px-10 py-6 text-lg border-white text-white hover:bg-amber-600"
+              >
+                View pricing
+              </Button>
+            </a>
+          </div>
+        </div>
+      </section>
+
+</MarketingLayout>

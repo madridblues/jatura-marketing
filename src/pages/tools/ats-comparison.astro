@@ -1,0 +1,32 @@
+---
+export const prerender = true;
+import MarketingLayout from '@/layouts/MarketingLayout.astro';
+import ATSComparisonPage from '@/components/islands/ATSComparisonPage';
+
+const title = "ATS Vendor Comparison Matrix 2025 | Compare 15 Top ATS Platforms | Jatura";
+const description = "Compare 15 leading ATS platforms with our interactive comparison matrix. Filter by price, company size, features, and industry. Find the perfect applicant tracking system for your business in 2025.";
+
+const schemaOrg = [
+  {
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://jatura.com" },
+      { "@type": "ListItem", "position": 2, "name": "Free Recruiting Tools", "item": "https://jatura.com/tools" },
+      { "@type": "ListItem", "position": 3, "name": "ATS Comparison Tool", "item": "https://jatura.com/tools/ats-comparison" }
+    ]
+  },
+  {
+    "@type": "WebApplication",
+    "name": "ATS Vendor Comparison Tool",
+    "applicationCategory": "BusinessApplication",
+    "operatingSystem": "Web",
+    "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
+    "description": "Interactive comparison matrix for 15 leading ATS platforms",
+    "url": "https://jatura.com/tools/ats-comparison"
+  }
+];
+---
+
+<MarketingLayout {title} {description} {schemaOrg}>
+  <ATSComparisonPage client:load />
+</MarketingLayout>

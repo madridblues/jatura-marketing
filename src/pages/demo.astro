@@ -1,0 +1,13 @@
+---
+export const prerender = true;
+import MarketingLayout from '@/layouts/MarketingLayout.astro';
+import DemoPage from '@/components/islands/DemoPage';
+
+const title = "Interactive Demo | Jatura ATS";
+const description = "Explore Jatura's AI-powered applicant tracking system with our interactive demo. See how to manage jobs, candidates, pipelines, analytics, and more.";
+const schemaOrg = [{ "@type": "WebPage", "name": "Interactive Demo — Jatura ATS", "url": "https://jatura.com/demo", "description": "Explore Jatura's AI-powered ATS with an interactive product demo" }];
+---
+
+<MarketingLayout {title} {description} {schemaOrg}>
+  <DemoPage client:load />
+</MarketingLayout>

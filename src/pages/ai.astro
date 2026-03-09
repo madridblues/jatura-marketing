@@ -1,0 +1,303 @@
+---
+export const prerender = true;
+import MarketingLayout from '@/layouts/MarketingLayout.astro';
+import { Button } from '@/components/ui/button';
+import { Badge } from '@/components/ui/badge';
+import {
+  Sparkles, Brain, Zap, Target, TrendingUp, Shield,
+  ArrowRight, CheckCircle, Users, MessageSquare, FileText,
+  BarChart3, Clock, Lightbulb
+} from 'lucide-react';
+
+const schemaOrg = [
+  {
+    "@type": "Article",
+    "headline": "AI Features - AI-Native Hiring Platform",
+    "description": "AI-powered hiring features including intelligent candidate matching, automated screening, AI copilot, and smart insights.",
+    "author": { "@type": "Organization", "name": "Jatura" },
+    "publisher": { "@type": "Organization", "name": "Jatura", "logo": { "@type": "ImageObject", "url": "https://jatura.com/logo.png" } },
+    "datePublished": "2025-11-13"
+  },
+  {
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://jatura.com" },
+      { "@type": "ListItem", "position": 2, "name": "AI Recruiting", "item": "https://jatura.com/ai" }
+    ]
+  }
+];
+
+const coreFeatures = [
+  {
+    icon: Target,
+    title: "Intelligent Matching",
+    description: "AI-powered candidate matching analyzes resumes, skills, and experience to identify the best-fit candidates for each role. Get 100-point match scores with detailed breakdowns.",
+    items: ["100-point scoring system", "Skills analysis", "Experience matching", "Cultural fit assessment"]
+  },
+  {
+    icon: MessageSquare,
+    title: "Automated Screening",
+    description: "Let AI conduct initial candidate screening via SMS or email with intelligent question routing and automatic qualification decisions.",
+    items: ["Multi-channel screening", "Smart question flow", "Auto-qualification", "Instant feedback"]
+  },
+  {
+    icon: Brain,
+    title: "AI Copilot",
+    description: "Your AI assistant for writing job descriptions, summarizing candidates, generating interview questions, and providing hiring insights.",
+    items: ["Job description drafting", "Candidate summaries", "Interview prep", "Hiring insights"]
+  },
+  {
+    icon: FileText,
+    title: "Resume Intelligence",
+    description: "AI-powered resume parsing automatically extracts skills, experience, education, and contact information with high accuracy.",
+    items: ["Automatic parsing", "Skills extraction", "Social enrichment", "Duplicate detection"]
+  }
+];
+---
+
+<MarketingLayout
+  title="AI Features | Jatura - AI-Native Hiring Platform"
+  description="Discover Jatura's AI-powered hiring features including intelligent candidate matching, automated screening, AI copilot, and smart insights to transform your recruitment process."
+  ogTitle="AI Features | Jatura"
+  ogDescription="AI-powered hiring features to transform your recruitment process"
+  canonicalUrl="https://jatura.com/ai"
+  {schemaOrg}
+>
+  <!-- Hero Section -->
+  <section class="pt-24 sm:pt-32 pb-16 sm:pb-20 px-4 sm:px-6 lg:px-8">
+    <div class="max-w-7xl mx-auto text-center">
+      <Badge variant="secondary" class="mb-6 px-4 py-1.5 text-sm font-medium bg-slate-100 dark:bg-slate-900">
+        <Sparkles className="w-3.5 h-3.5 mr-1.5" />
+        AI-powered hiring
+      </Badge>
+
+      <h1 class="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-slate-900 dark:text-white mb-6 leading-tight px-4">
+        Hiring intelligence.
+        <span class="block">Built to make you <span class="text-blue-500">smarter.</span></span>
+      </h1>
+
+      <p class="text-lg sm:text-xl md:text-2xl text-slate-600 dark:text-slate-400 mb-10 max-w-3xl mx-auto leading-relaxed px-4">
+        Deploy AI across your entire hiring workflow. From candidate screening to interview insights,
+        our AI works alongside your team to make better hiring decisions.
+      </p>
+
+      <div class="flex flex-col sm:flex-row gap-4 justify-center">
+        <a href="/login">
+          <Button
+            size="lg"
+            class="bg-slate-900 dark:bg-white text-white dark:text-slate-900 hover:bg-slate-800 dark:hover:bg-slate-100 px-8 shadow-sm group"
+          >
+            Start for free
+            <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition" />
+          </Button>
+        </a>
+        <a href="/pricing">
+          <Button
+            size="lg"
+            variant="outline"
+            class="px-8 border-slate-300 dark:border-slate-700 hover:bg-slate-50 dark:hover:bg-slate-900"
+          >
+            See pricing
+          </Button>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Core AI Features -->
+  <section class="py-28 px-4 sm:px-6 lg:px-8 bg-slate-50 dark:bg-slate-900/50">
+    <div class="max-w-7xl mx-auto">
+      <div class="text-center mb-16 md:mb-20 px-4">
+        <span class="text-xs sm:text-sm font-mono text-slate-400 mb-4 block">
+          [01] CORE AI CAPABILITIES
+        </span>
+        <h2 class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-slate-900 dark:text-white mb-4 md:mb-6 leading-tight">
+          AI that works for you
+        </h2>
+        <p class="text-lg sm:text-xl text-slate-600 dark:text-slate-400 max-w-3xl mx-auto">
+          Powerful AI features that augment your hiring team's capabilities
+        </p>
+      </div>
+
+      <div class="grid md:grid-cols-2 gap-6 md:gap-8">
+        {coreFeatures.map((feature) => {
+          const Icon = feature.icon;
+          return (
+            <div class="bg-white dark:bg-slate-950 rounded-2xl p-8 border border-slate-200 dark:border-slate-800 hover:shadow-lg transition-shadow">
+              <div class="w-12 h-12 bg-slate-900 dark:bg-white rounded-xl flex items-center justify-center mb-6">
+                <Icon className="w-6 h-6 text-white dark:text-slate-900" />
+              </div>
+              <h3 class="text-2xl font-bold text-slate-900 dark:text-white mb-4">
+                {feature.title}
+              </h3>
+              <p class="text-slate-600 dark:text-slate-400 mb-6 leading-relaxed">
+                {feature.description}
+              </p>
+              <ul class="space-y-3">
+                {feature.items.map((item) => (
+                  <li class="flex items-center gap-2 text-sm text-slate-600 dark:text-slate-400">
+                    <CheckCircle className="w-4 h-4 text-emerald-600 dark:text-emerald-500 flex-shrink-0" />
+                    {item}
+                  </li>
+                ))}
+              </ul>
+            </div>
+          );
+        })}
+      </div>
+    </div>
+  </section>
+
+  <!-- AI Benefits -->
+  <section class="py-28 px-4 sm:px-6 lg:px-8">
+    <div class="max-w-7xl mx-auto">
+      <div class="text-center mb-16 md:mb-20 px-4">
+        <span class="text-xs sm:text-sm font-mono text-slate-400 mb-4 block">
+          [02] MEASURABLE IMPACT
+        </span>
+        <h2 class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-slate-900 dark:text-white mb-4 md:mb-6 leading-tight">
+          Real results, real fast
+        </h2>
+        <p class="text-lg sm:text-xl text-slate-600 dark:text-slate-400 max-w-3xl mx-auto">
+          See how AI transforms your hiring metrics
+        </p>
+      </div>
+
+      <div class="grid sm:grid-cols-2 md:grid-cols-3 gap-6 md:gap-8">
+        <div class="text-center p-8 bg-slate-50 dark:bg-slate-900/50 rounded-2xl">
+          <Clock className="w-12 h-12 text-slate-900 dark:text-white mx-auto mb-4" />
+          <div class="text-5xl font-bold text-slate-900 dark:text-white mb-2">85%</div>
+          <p class="text-slate-600 dark:text-slate-400">Time saved on screening</p>
+        </div>
+
+        <div class="text-center p-8 bg-slate-50 dark:bg-slate-900/50 rounded-2xl">
+          <TrendingUp className="w-12 h-12 text-slate-900 dark:text-white mx-auto mb-4" />
+          <div class="text-5xl font-bold text-slate-900 dark:text-white mb-2">3x</div>
+          <p class="text-slate-600 dark:text-slate-400">Higher quality matches</p>
+        </div>
+
+        <div class="text-center p-8 bg-slate-50 dark:bg-slate-900/50 rounded-2xl">
+          <Zap className="w-12 h-12 text-slate-900 dark:text-white mx-auto mb-4" />
+          <div class="text-5xl font-bold text-slate-900 dark:text-white mb-2">50%</div>
+          <p class="text-slate-600 dark:text-slate-400">Faster time-to-hire</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- AI in Action -->
+  <section class="py-28 px-4 sm:px-6 lg:px-8 bg-slate-50 dark:bg-slate-900/50">
+    <div class="max-w-7xl mx-auto">
+      <div class="text-center mb-16 md:mb-20 px-4">
+        <span class="text-xs sm:text-sm font-mono text-slate-400 mb-4 block">
+          [03] USE CASES
+        </span>
+        <h2 class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-slate-900 dark:text-white mb-4 md:mb-6 leading-tight">
+          AI across your workflow
+        </h2>
+      </div>
+
+      <div class="grid md:grid-cols-2 gap-8 md:gap-12">
+        <div class="space-y-6">
+          <div class="flex gap-4">
+            <div class="flex-shrink-0">
+              <div class="w-10 h-10 bg-slate-900 dark:bg-white rounded-lg flex items-center justify-center">
+                <Users className="w-5 h-5 text-white dark:text-slate-900" />
+              </div>
+            </div>
+            <div>
+              <h3 class="text-xl font-bold text-slate-900 dark:text-white mb-2">Intelligent Sourcing</h3>
+              <p class="text-slate-600 dark:text-slate-400 leading-relaxed">
+                AI scans thousands of profiles to find candidates that match your requirements,
+                saving hours of manual searching.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="space-y-6">
+          <div class="flex gap-4">
+            <div class="flex-shrink-0">
+              <div class="w-10 h-10 bg-slate-900 dark:bg-white rounded-lg flex items-center justify-center">
+                <Lightbulb className="w-5 h-5 text-white dark:text-slate-900" />
+              </div>
+            </div>
+            <div>
+              <h3 class="text-xl font-bold text-slate-900 dark:text-white mb-2">Interview Intelligence</h3>
+              <p class="text-slate-600 dark:text-slate-400 leading-relaxed">
+                Generate tailored interview questions, provide candidate insights, and
+                help interviewers make more informed decisions.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="space-y-6">
+          <div class="flex gap-4">
+            <div class="flex-shrink-0">
+              <div class="w-10 h-10 bg-slate-900 dark:bg-white rounded-lg flex items-center justify-center">
+                <BarChart3 className="w-5 h-5 text-white dark:text-slate-900" />
+              </div>
+            </div>
+            <div>
+              <h3 class="text-xl font-bold text-slate-900 dark:text-white mb-2">Predictive Analytics</h3>
+              <p class="text-slate-600 dark:text-slate-400 leading-relaxed">
+                Understand hiring trends, predict bottlenecks, and get actionable
+                recommendations to improve your process.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="space-y-6">
+          <div class="flex gap-4">
+            <div class="flex-shrink-0">
+              <div class="w-10 h-10 bg-slate-900 dark:bg-white rounded-lg flex items-center justify-center">
+                <Shield className="w-5 h-5 text-white dark:text-slate-900" />
+              </div>
+            </div>
+            <div>
+              <h3 class="text-xl font-bold text-slate-900 dark:text-white mb-2">Bias Detection</h3>
+              <p class="text-slate-600 dark:text-slate-400 leading-relaxed">
+                AI monitors for potential bias in job descriptions and screening decisions
+                to promote fair and inclusive hiring.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <section class="py-28 px-4 sm:px-6 lg:px-8">
+    <div class="max-w-4xl mx-auto text-center">
+      <h2 class="text-4xl sm:text-5xl font-bold text-slate-900 dark:text-white mb-6 tracking-tight">
+        Ready to hire with AI?
+      </h2>
+      <p class="text-xl text-slate-600 dark:text-slate-400 mb-10">
+        Start your free 14-day trial. No credit card required.
+      </p>
+      <div class="flex flex-col sm:flex-row gap-4 justify-center">
+        <a href="/login">
+          <Button
+            size="lg"
+            class="bg-slate-900 dark:bg-white text-white dark:text-slate-900 hover:bg-slate-800 dark:hover:bg-slate-100 px-8 shadow-sm group"
+          >
+            Start for free
+            <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition" />
+          </Button>
+        </a>
+        <a href="/platform">
+          <Button
+            size="lg"
+            variant="outline"
+            class="px-8 border-slate-300 dark:border-slate-700 hover:bg-slate-50 dark:hover:bg-slate-900"
+          >
+            Explore platform
+          </Button>
+        </a>
+      </div>
+    </div>
+  </section>
+</MarketingLayout>

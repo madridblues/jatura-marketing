@@ -1,0 +1,18 @@
+---
+export const prerender = true;
+import MarketingLayout from '@/layouts/MarketingLayout.astro';
+import SupportPage from '@/components/islands/SupportPage';
+
+const schemaOrg = [
+  {
+    "@type": "ContactPage",
+    "name": "Jatura Support",
+    "url": "https://jatura.com/support",
+    "description": "Contact Jatura support for technical help, billing, or sales questions"
+  }
+];
+---
+
+<MarketingLayout title="Support Center | Jatura ATS" description="Get help from the Jatura support team. Submit a support ticket for technical issues, billing questions, sales inquiries, or feature requests. Average response time under 2 hours." {schemaOrg}>
+  <SupportPage client:load />
+</MarketingLayout>

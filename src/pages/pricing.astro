@@ -1,0 +1,35 @@
+---
+export const prerender = true;
+import MarketingLayout from '@/layouts/MarketingLayout.astro';
+import PricingPage from '@/components/islands/PricingPage';
+
+const schemaOrg = [
+  {
+    "@type": "SoftwareApplication",
+    "name": "Jatura ATS",
+    "@id": "https://jatura.com/#software",
+    "applicationCategory": "BusinessApplication",
+    "operatingSystem": "Web",
+    "offers": [
+      { "@type": "Offer", "name": "Launch (Free)", "price": "0", "priceCurrency": "USD", "description": "Up to 3 active jobs, 1 user, core ATS features" },
+      { "@type": "Offer", "name": "Plus", "price": "49", "priceCurrency": "USD", "priceSpecification": { "@type": "UnitPriceSpecification", "billingDuration": "P1M" }, "description": "Unlimited jobs, up to 5 users" },
+      { "@type": "Offer", "name": "Pro", "price": "129", "priceCurrency": "USD", "priceSpecification": { "@type": "UnitPriceSpecification", "billingDuration": "P1M" }, "description": "Unlimited jobs, up to 15 users, advanced analytics" },
+      { "@type": "Offer", "name": "Enterprise", "price": "299", "priceCurrency": "USD", "priceSpecification": { "@type": "UnitPriceSpecification", "billingDuration": "P1M" }, "description": "Unlimited everything, custom integrations, dedicated support" }
+    ]
+  },
+  {
+    "@type": "FAQPage",
+    "mainEntity": [
+      { "@type": "Question", "name": "Is Jatura really free to start?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. The Launch plan is completely free with no credit card required. It includes up to 3 active jobs and core ATS features." } },
+      { "@type": "Question", "name": "Can I switch plans at any time?", "acceptedAnswer": { "@type": "Answer", "text": "Yes, you can upgrade or downgrade your plan at any time from your account settings. Changes take effect immediately." } },
+      { "@type": "Question", "name": "What is included in the free plan?", "acceptedAnswer": { "@type": "Answer", "text": "The Launch plan includes up to 3 active jobs, 1 user seat, the core Kanban ATS pipeline, basic analytics, and a public career page." } },
+      { "@type": "Question", "name": "Do you offer annual billing discounts?", "acceptedAnswer": { "@type": "Answer", "text": "Yes, annual billing saves 20% compared to monthly billing on Plus, Pro, and Enterprise plans." } },
+      { "@type": "Question", "name": "Is there a setup fee?", "acceptedAnswer": { "@type": "Answer", "text": "No. There are no setup fees, implementation costs, or hidden charges on any Jatura plan." } }
+    ]
+  }
+];
+---
+
+<MarketingLayout title="Pricing | Jatura - Start Free, Scale as You Grow" description="Jatura pricing from $0 to Enterprise. Launch plan is free with no credit card required. Plus at $49/mo, Pro at $129/mo, Enterprise from $299/mo. No setup fees." {schemaOrg}>
+  <PricingPage client:load />
+</MarketingLayout>
