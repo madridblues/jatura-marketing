@@ -7,7 +7,7 @@
   },
   "scripts": {
     "dev": "astro dev",
-    "build": "astro build && node -e \"const fs=require('fs'),p='.vercel/output/functions/_render.func/.vc-config.json';if(fs.existsSync(p)){const c=JSON.parse(fs.readFileSync(p,'utf8'));c.runtime='nodejs20.x';fs.writeFileSync(p,JSON.stringify(c,null,2));console.log('Patched runtime -> nodejs20.x');}\"",
+    "build": "astro build && node -e \"const fs=require('fs'),path=require('path');const d=process.env.VERCEL_OUTPUT_DIR||'.vercel/output';const p=path.join(d,'functions/_render.func/.vc-config.json');if(fs.existsSync(p)){const c=JSON.parse(fs.readFileSync(p,'utf8'));c.runtime='nodejs20.x';fs.writeFileSync(p,JSON.stringify(c,null,2));console.log('Patched runtime -> nodejs20.x at '+p);}else{console.log('vc-config not found at '+p);}\"",
     "preview": "astro preview",
     "astro": "astro"
   },
