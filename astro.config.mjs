@@ -9,6 +9,7 @@ export default defineConfig({
   output: 'server',
   adapter: vercel({
     imageService: true,
+    nodeVersion: '20',
   }),
   image: {
     service: { entrypoint: 'astro/assets/services/noop' },
