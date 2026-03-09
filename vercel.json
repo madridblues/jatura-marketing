@@ -1,7 +1,7 @@
 {
   "$schema": "https://openapi.vercel.sh/vercel.json",
   "framework": "astro",
-  "buildCommand": "npx astro build",
+  "buildCommand": "npm run build",
   "installCommand": "npm install",
   "headers": [
     {
