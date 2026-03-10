@@ -119,7 +119,7 @@ export default function WhyJaturaPage() {
             Jatura helps you simplify complex hiring across every team, role, and location.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <a href="/login">
+            <a href="/signup">
               <Button
                 size="lg"
                 className="bg-slate-900 dark:bg-white text-white dark:text-slate-900 hover:bg-slate-800 dark:hover:bg-slate-100 px-10 py-6 text-lg group shadow-lg"
@@ -375,7 +375,7 @@ export default function WhyJaturaPage() {
             Join teams using Jatura to hire better, faster, and smarter.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <a href="/login">
+            <a href="/signup">
               <Button size="lg" className="bg-white dark:bg-slate-900 text-slate-900 dark:text-white hover:bg-slate-100 dark:hover:bg-slate-800 px-10 py-6 text-lg">
                 Start free trial
                 <ArrowRight className="ml-2 h-5 w-5" />

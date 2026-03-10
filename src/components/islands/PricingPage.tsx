@@ -547,7 +547,7 @@ export default function PricingPage() {
             <p className="text-lg text-slate-600 dark:text-slate-400 mb-6">
               Still have questions? Chat with us or start free. No card required.
             </p>
-            <a href="/login">
+            <a href="/signup">
               <Button size="lg" className="bg-slate-900 dark:bg-white text-white dark:text-slate-900 hover:bg-slate-800 dark:hover:bg-slate-100">
                 Get started free
                 <ArrowRight className="ml-2 h-4 w-4" />
@@ -567,7 +567,7 @@ export default function PricingPage() {
             Join hundreds of companies hiring better, faster with Jatura. Start your free trial today.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <a href="/login">
+            <a href="/signup">
               <Button size="lg" className="bg-white dark:bg-slate-900 text-slate-900 dark:text-white hover:bg-slate-100 dark:hover:bg-slate-800 px-10 py-6 text-lg group">
                 Start free trial
                 <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition" />

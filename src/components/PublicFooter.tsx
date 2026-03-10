@@ -65,7 +65,7 @@ export default function PublicFooter() {
             <div className="flex flex-col sm:flex-row gap-4 lg:justify-end">
               <a href="/signup">
                 <Button size="lg" className="w-full sm:w-auto" data-testid="button-footer-cta-signup">
-                  Start Free - Up to 10 active jobs
+                  Start Free - Up to 3 active jobs
                   <ArrowRight className="ml-2 h-5 w-5" />
                 </Button>
               </a>
