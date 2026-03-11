@@ -1,6 +1,7 @@
 ---
 import PublicHeader from '@/components/PublicHeader';
 import PublicFooter from '@/components/PublicFooter';
+import { Analytics } from '@vercel/analytics/astro';
 import '@/styles/global.css';
 
 const SITE_URL = 'https://jatura.com';
@@ -130,5 +131,6 @@ const mergedSchema = {
     <PublicHeader client:load />
     <slot />
     <PublicFooter client:load />
+    <Analytics />
   </body>
 </html>
