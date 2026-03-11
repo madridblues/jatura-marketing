@@ -163,7 +163,7 @@ export default function APIDocsPage() {
               Access Jatura's complete recruiting platform through our RESTful API. Build custom integrations, automate workflows, and extend functionality with enterprise-grade reliability.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a href="/signup">
+              <a href="https://app.jatura.com/signup">
                 <Button size="lg" className="w-full sm:w-auto">
                   Get API Key
                   <ArrowRight className="ml-2 h-5 w-5" />
@@ -441,7 +441,7 @@ fetch('https://api.jatura.com/v1/candidates', {
             Get your API key and start integrating in minutes. Free for up to 3 active jobs.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <a href="/signup">
+            <a href="https://app.jatura.com/signup">
               <Button size="lg" className="bg-white text-blue-600 hover:bg-blue-50 w-full sm:w-auto">
                 Get API Key Free
                 <ArrowRight className="ml-2 h-5 w-5" />

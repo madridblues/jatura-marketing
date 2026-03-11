@@ -400,7 +400,7 @@ export default function ATSAssessmentPage() {
                   Jatura helps organizations move to the "Optimized" level with AI-powered automation, analytics, and seamless collaboration.
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                  <a href="/signup">
+                  <a href="https://app.jatura.com/signup">
                     <Button size="lg" className="bg-white text-blue-600 hover:bg-blue-50">
                       Start free trial
                       <ArrowRight className="ml-2 h-5 w-5" />

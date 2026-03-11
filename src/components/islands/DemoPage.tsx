@@ -217,7 +217,7 @@ export default function DemoPage() {
                 <PlayCircle className="w-5 h-5 mr-2" />
                 Start Interactive Tour
               </Button>
-              <a href="/signup">
+              <a href="https://app.jatura.com/signup">
                 <Button
                   size="lg"
                   variant="outline"
@@ -1589,7 +1589,7 @@ export default function DemoPage() {
               You've explored all the key features of Jatura ATS. Ready to transform your hiring process?
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a href="/signup">
+              <a href="https://app.jatura.com/signup">
                 <Button
                   size="lg"
                   className="bg-blue-600 hover:bg-blue-700 text-white"
@@ -1624,7 +1624,7 @@ export default function DemoPage() {
             Start your free 14-day trial. No credit card required.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <a href="/signup">
+            <a href="https://app.jatura.com/signup">
               <Button
                 size="lg"
                 className="bg-white text-slate-900 hover:bg-slate-100"

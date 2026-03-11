@@ -288,7 +288,7 @@ export default function ContactPage() {
             Join hundreds of companies using Jatura to transform their recruiting. Start your free trial today.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <a href="/signup">
+            <a href="https://app.jatura.com/signup">
               <Button size="lg" className="bg-white text-blue-600 hover:bg-blue-50 w-full sm:w-auto">
                 Start Free Trial
                 <ArrowRight className="ml-2 h-5 w-5" />

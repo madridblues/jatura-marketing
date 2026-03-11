@@ -504,7 +504,7 @@ export default function ROICalculatorPage() {
                       Start your free 14-day trial. No credit card required.
                     </p>
                     <div className="flex flex-col sm:flex-row gap-3 justify-center">
-                      <a href="/signup">
+                      <a href="https://app.jatura.com/signup">
                         <Button size="lg" className="bg-white text-blue-600 hover:bg-blue-50" data-testid="button-start-trial">
                           Start free trial
                           <ArrowRight className="ml-2 h-5 w-5" />

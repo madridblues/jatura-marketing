@@ -84,7 +84,7 @@ export default function PricingPage() {
                 <p className="text-xs text-slate-500 dark:text-slate-500 italic">Why NOT try this?</p>
               </div>
 
-              <a href="/signup">
+              <a href="https://app.jatura.com/signup">
                 <Button className="w-full mb-6 bg-slate-900 dark:bg-white text-white dark:text-slate-900 hover:bg-slate-800 dark:hover:bg-slate-100">
                   Get started free
                   <ArrowRight className="ml-2 h-4 w-4" />
@@ -156,7 +156,7 @@ export default function PricingPage() {
                 <p className="text-sm text-slate-300 dark:text-slate-700 mb-2">Perfect for founders and SMBs hiring without recruiters.</p>
               </div>
 
-              <a href="/signup">
+              <a href="https://app.jatura.com/signup">
                 <Button className="w-full mb-6 bg-white dark:bg-slate-900 text-slate-900 dark:text-white hover:bg-slate-100 dark:hover:bg-slate-800">
                   Try Jatura free
                   <ArrowRight className="ml-2 h-4 w-4" />
@@ -225,7 +225,7 @@ export default function PricingPage() {
                 <p className="text-sm text-slate-600 dark:text-slate-400">Ideal for teams and agencies handling multiple roles at once.</p>
               </div>
 
-              <a href="/signup">
+              <a href="https://app.jatura.com/signup">
                 <Button variant="outline" className="w-full mb-6 border-slate-300 dark:border-slate-700 hover:bg-slate-50 dark:hover:bg-slate-800">
                   See Jatura in action
                   <ArrowRight className="ml-2 h-4 w-4" />
@@ -547,7 +547,7 @@ export default function PricingPage() {
             <p className="text-lg text-slate-600 dark:text-slate-400 mb-6">
               Still have questions? Chat with us or start free. No card required.
             </p>
-            <a href="/signup">
+            <a href="https://app.jatura.com/signup">
               <Button size="lg" className="bg-slate-900 dark:bg-white text-white dark:text-slate-900 hover:bg-slate-800 dark:hover:bg-slate-100">
                 Get started free
                 <ArrowRight className="ml-2 h-4 w-4" />
@@ -567,7 +567,7 @@ export default function PricingPage() {
             Join hundreds of companies hiring better, faster with Jatura. Start your free trial today.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <a href="/signup">
+            <a href="https://app.jatura.com/signup">
               <Button size="lg" className="bg-white dark:bg-slate-900 text-slate-900 dark:text-white hover:bg-slate-100 dark:hover:bg-slate-800 px-10 py-6 text-lg group">
                 Start free trial
                 <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition" />

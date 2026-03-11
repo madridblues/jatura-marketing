@@ -204,14 +204,14 @@ export default function PublicHeader({ currentPath = "/" }: PublicHeaderProps) {
             {/* CTA Buttons - Desktop */}
             <div className="hidden md:flex items-center gap-4">
               <a
-                href="/login"
+                href="https://app.jatura.com/login"
                 className="inline-flex items-center justify-center rounded-md text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:opacity-50 disabled:pointer-events-none ring-offset-background hover:bg-accent hover:text-accent-foreground h-9 px-4 text-muted-foreground hover:text-foreground dark:hover:text-white"
                 data-testid="button-login"
               >
                 Sign in
               </a>
               <a
-                href="/signup"
+                href="https://app.jatura.com/signup"
                 className="inline-flex items-center justify-center rounded-md text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:opacity-50 disabled:pointer-events-none ring-offset-background h-9 px-4 bg-slate-900 dark:bg-background text-white dark:text-foreground hover:bg-slate-800 dark:hover:bg-muted shadow-sm"
                 data-testid="button-get-started"
               >
@@ -378,7 +378,7 @@ export default function PublicHeader({ currentPath = "/" }: PublicHeaderProps) {
           {/* CTA Buttons - Mobile */}
           <div className="border-t border-border px-4 py-6 space-y-4">
             <a
-              href="/login"
+              href="https://app.jatura.com/login"
               onClick={() => setMobileMenuOpen(false)}
               className="inline-flex items-center justify-center w-full rounded-md border border-border bg-transparent hover:bg-accent hover:text-accent-foreground h-10 px-4 py-2 text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2"
               data-testid="mobile-button-login"
@@ -386,7 +386,7 @@ export default function PublicHeader({ currentPath = "/" }: PublicHeaderProps) {
               Sign in
             </a>
             <a
-              href="/signup"
+              href="https://app.jatura.com/signup"
               onClick={() => setMobileMenuOpen(false)}
               className="inline-flex items-center justify-center w-full rounded-md text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 bg-slate-900 dark:bg-background text-white dark:text-foreground hover:bg-slate-800 dark:hover:bg-muted h-10 px-4 py-2"
               data-testid="mobile-button-get-started"
